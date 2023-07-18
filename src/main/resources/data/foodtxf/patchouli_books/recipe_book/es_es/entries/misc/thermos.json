@@ -16,6 +16,11 @@
       "title": " "
     },
     {
+      "type": "patchouli:crafting",
+      "recipe": "foodtxf:chocomilk_thermos_recipe",
+      "title": " "
+    },
+    {
       "type": "patchouli:spotlight",
       "item": "foodtxf:water_thermos",
       "text": "Clic derecho sobre agua con un termo en la mano",
@@ -41,7 +46,8 @@
         "foodtxf:food/dough_ball",
         "foodtxf:drink/glass_of_water",
         "foodtxf:drink/glass_of_lava",
-        "foodtxf:drink/glass_of_milk"
+        "foodtxf:drink/glass_of_milk",
+	"foodtxf:drink/glass_of_chocomilk"
       ]
     }
   ]

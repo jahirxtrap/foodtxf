@@ -21,17 +21,17 @@
       "type": "forge:and",
       "values": [
         {
-	      "type": "forge:not",
-	      "value": {
-          	"type": "forge:item_exists",
-          	"item": "minecraft:pointed_dripstone"
+          "type": "forge:not",
+          "value": {
+            "type": "forge:item_exists",
+            "item": "minecraft:pointed_dripstone"
           }
         },
         {
           "type": "forge:tag_empty",
           "tag": "forge:pointed_dripstone"
         }
-	  ]
+      ]
     }
   ]
 }
