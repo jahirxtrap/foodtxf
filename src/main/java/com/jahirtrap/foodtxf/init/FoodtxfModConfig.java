@@ -7,9 +7,8 @@ import net.minecraftforge.fml.event.config.ModConfigEvent;
 
 @Mod.EventBusSubscriber
 public class FoodtxfModConfig {
-    public static ForgeConfigSpec COMMON_CONFIG;
-
     public static final ForgeConfigSpec.BooleanValue ENABLE_CANNIBALISM;
+    public static ForgeConfigSpec COMMON_CONFIG;
 
     static {
         ForgeConfigSpec.Builder COMMON_BUILDER = new ForgeConfigSpec.Builder();
@@ -20,8 +19,10 @@ public class FoodtxfModConfig {
     }
 
     @SubscribeEvent
-    public static void onLoad(final ModConfigEvent.Loading configEvent) { }
+    public static void onLoad(final ModConfigEvent.Loading configEvent) {
+    }
 
     @SubscribeEvent
-    public static void onReload(final ModConfigEvent.Reloading configEvent) { }
+    public static void onReload(final ModConfigEvent.Reloading configEvent) {
+    }
 }
