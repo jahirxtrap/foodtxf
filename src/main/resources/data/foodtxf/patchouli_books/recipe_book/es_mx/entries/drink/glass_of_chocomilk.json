@@ -6,6 +6,7 @@
     {
       "type": "patchouli:crafting",
       "recipe": "foodtxf:glass_of_chocomilk_recipe",
+      "recipe2": "foodtxf:glass_of_chocomilk_recipe_alt",
       "title": " "
     },
     {

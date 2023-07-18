@@ -21,8 +21,8 @@ import org.jetbrains.annotations.Nullable;
 import java.util.Collections;
 import java.util.List;
 
-public class BlackKitchenBlockBlock extends Block {
-    public BlackKitchenBlockBlock() {
+public class BaseKitchenBlock extends Block {
+    public BaseKitchenBlock() {
         super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).strength(0.8f, 3f).requiresCorrectToolForDrops());
     }
 

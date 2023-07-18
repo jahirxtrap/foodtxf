@@ -6,9 +6,7 @@ import net.minecraftforge.event.CreativeModeTabEvent;
 public class FoodtxfModTab {
 
     public static void buildContents(CreativeModeTabEvent.BuildContents event) {
-        if (event.getTab() != FoodtxfMod.MODTAB) {
-            return;
-        }
+        if (event.getTab() != FoodtxfMod.MODTAB) return;
 
         event.accept(FoodtxfModItems.PLAYER_FLESH.get());
         event.accept(FoodtxfModItems.COOKED_PLAYER_FLESH.get());
@@ -49,6 +47,7 @@ public class FoodtxfModTab {
         event.accept(FoodtxfModItems.WATER_THERMOS.get());
         event.accept(FoodtxfModItems.LAVA_THERMOS.get());
         event.accept(FoodtxfModItems.MILK_THERMOS.get());
+        event.accept(FoodtxfModItems.CHOCOMILK_THERMOS.get());
         event.accept(FoodtxfModItems.GLASS.get());
         event.accept(FoodtxfModItems.GLASS_OF_FRUIT_JUICE.get());
         event.accept(FoodtxfModItems.GLASS_OF_VEGETABLE_JUICE.get());

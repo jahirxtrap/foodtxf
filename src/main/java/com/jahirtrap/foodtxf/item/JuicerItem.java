@@ -3,17 +3,11 @@ package com.jahirtrap.foodtxf.item;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.UseAnim;
 
 
 public class JuicerItem extends Item {
     public JuicerItem() {
         super(new Item.Properties().durability(200).rarity(Rarity.COMMON));
-    }
-
-    @Override
-    public UseAnim getUseAnimation(ItemStack itemstack) {
-        return UseAnim.EAT;
     }
 
     @Override
@@ -38,6 +32,6 @@ public class JuicerItem extends Item {
 
     @Override
     public int getEnchantmentValue() {
-        return 4;
+        return 5;
     }
 }
