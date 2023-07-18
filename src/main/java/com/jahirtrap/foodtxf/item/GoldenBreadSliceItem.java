@@ -1,15 +1,7 @@
 package com.jahirtrap.foodtxf.item;
 
-import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Rarity;
-
-
-public class GoldenBreadSliceItem extends Item {
+public class GoldenBreadSliceItem extends BaseFoodItem {
     public GoldenBreadSliceItem() {
-        super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)
-                .food((new FoodProperties.Builder()).nutrition(8).saturationMod(0.625f)
-
-                        .build()));
+        super(8, 0.625f);
     }
 }

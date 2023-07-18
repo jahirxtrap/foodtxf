@@ -42,11 +42,11 @@ public class BaseKnifeItem extends SwordItem {
 
     @Override
     public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
-        InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
+        InteractionResultHolder<ItemStack> holder = super.use(world, entity, hand);
         if (FoodtxfModConfig.ENABLE_CANNIBALISM.get()) {
-            PlayerDropsFleshKnifeProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity, ar.getObject());
+            PlayerDropsFleshKnifeProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity, holder.getObject());
         }
-        return ar;
+        return holder;
     }
 
     @Override
@@ -56,12 +56,12 @@ public class BaseKnifeItem extends SwordItem {
 
     @Override
     public ItemStack getCraftingRemainingItem(ItemStack itemstack) {
-        ItemStack retval = new ItemStack(this);
-        retval.setDamageValue(itemstack.getDamageValue() + 1);
-        if (retval.getDamageValue() >= retval.getMaxDamage()) {
+        ItemStack retVal = new ItemStack(this);
+        retVal.setDamageValue(itemstack.getDamageValue() + 1);
+        if (retVal.getDamageValue() >= retVal.getMaxDamage()) {
             return ItemStack.EMPTY;
         }
-        return retval;
+        return retVal;
     }
 
     @Override

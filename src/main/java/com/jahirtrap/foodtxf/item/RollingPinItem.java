@@ -39,7 +39,7 @@ public class RollingPinItem extends Item {
 
     @Override
     public int getEnchantmentValue() {
-        return 0;
+        return 15;
     }
 
     @Override
