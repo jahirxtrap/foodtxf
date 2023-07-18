@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "foodtxf:items/netherite_knife"
+    "layer0": "foodtxf:item/netherite_knife"
   }
 }

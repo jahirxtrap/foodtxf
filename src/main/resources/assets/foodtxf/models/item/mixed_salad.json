@@ -1,8 +1,8 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "foodtxf:items/mixed_salad",
-    "particle": "foodtxf:items/particle/mixed_salad"
+    "layer0": "foodtxf:item/mixed_salad",
+    "particle": "foodtxf:item/particle/mixed_salad"
   },
   "overrides": [
     {

@@ -1,13 +1,13 @@
 package com.jahirtrap.foodtxf.util;
 
-import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.TextFormatting;
-import net.minecraft.util.text.TranslationTextComponent;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TranslatableComponent;
 
 public class TextUtils {
-    public static ITextComponent coloredTextComponent(String i18n, TextFormatting color) {
-        TranslationTextComponent textComponent = new TranslationTextComponent(i18n);
-        textComponent.getStyle().withColor(color);
-        return textComponent;
-    }
+	public static Component coloredTextComponent(String i18n, ChatFormatting color) {
+		var textComponent = new TranslatableComponent(i18n);
+		textComponent.withStyle(color);
+		return textComponent;
+	}
 }

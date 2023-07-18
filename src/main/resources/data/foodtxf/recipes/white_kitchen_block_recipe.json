@@ -1,37 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "012",
-    "345",
-    "678"
+    "DDD",
+    "DQD",
+    "DDD"
   ],
   "key": {
-    "0": {
+    "D": {
       "item": "minecraft:diorite"
     },
-    "1": {
-      "item": "minecraft:diorite"
-    },
-    "2": {
-      "item": "minecraft:diorite"
-    },
-    "3": {
-      "item": "minecraft:diorite"
-    },
-    "4": {
-      "item": "foodtxf:black_kitchen_block"
-    },
-    "5": {
-      "item": "minecraft:diorite"
-    },
-    "6": {
-      "item": "minecraft:diorite"
-    },
-    "7": {
-      "item": "minecraft:diorite"
-    },
-    "8": {
-      "item": "minecraft:diorite"
+    "Q": {
+      "item": "minecraft:quartz_block"
     }
   },
   "result": {

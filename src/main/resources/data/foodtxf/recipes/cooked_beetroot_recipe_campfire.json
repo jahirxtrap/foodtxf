@@ -5,7 +5,5 @@
   "ingredient": {
     "item": "minecraft:beetroot"
   },
-  "result": {
-    "item": "foodtxf:cooked_beetroot"
-  }
+  "result": "foodtxf:cooked_beetroot"
 }

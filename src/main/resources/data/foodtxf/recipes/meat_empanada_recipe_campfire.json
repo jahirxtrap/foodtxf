@@ -5,7 +5,5 @@
   "ingredient": {
     "item": "foodtxf:raw_meat_empanada"
   },
-  "result": {
-    "item": "foodtxf:meat_empanada"
-  }
+  "result": "foodtxf:meat_empanada"
 }

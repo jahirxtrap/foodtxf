@@ -1,95 +1,77 @@
 package com.jahirtrap.foodtxf.procedures;
 
-import com.jahirtrap.foodtxf.FoodtxfMod;
-import com.jahirtrap.foodtxf.item.CookedPlayerFleshItem;
-import com.jahirtrap.foodtxf.item.PlayerFleshItem;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.item.ItemEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.world.IWorld;
-import net.minecraft.world.World;
-import net.minecraftforge.event.entity.living.LivingDeathEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import com.jahirtrap.foodtxf.init.FoodtxfModConfig;
+import net.minecraft.nbt.ListTag;
+import net.minecraft.nbt.StringTag;
+import net.minecraft.world.item.Items;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.event.entity.living.LivingDeathEvent;
 
-import java.util.HashMap;
-import java.util.Map;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.entity.Entity;
+
+import com.jahirtrap.foodtxf.init.FoodtxfModItems;
+
+import javax.annotation.Nullable;
+
 import java.util.Random;
 
+@Mod.EventBusSubscriber
 public class PlayerDropsFleshProcedure {
-    public static void executeProcedure(Map<String, Object> dependencies) {
-        if (dependencies.get("world") == null) {
-            if (!dependencies.containsKey("world"))
-                FoodtxfMod.LOGGER.warn("Failed to load dependency world for procedure PlayerDropsFlesh!");
-            return;
-        }
-        if (dependencies.get("x") == null) {
-            if (!dependencies.containsKey("x"))
-                FoodtxfMod.LOGGER.warn("Failed to load dependency x for procedure PlayerDropsFlesh!");
-            return;
-        }
-        if (dependencies.get("y") == null) {
-            if (!dependencies.containsKey("y"))
-                FoodtxfMod.LOGGER.warn("Failed to load dependency y for procedure PlayerDropsFlesh!");
-            return;
-        }
-        if (dependencies.get("z") == null) {
-            if (!dependencies.containsKey("z"))
-                FoodtxfMod.LOGGER.warn("Failed to load dependency z for procedure PlayerDropsFlesh!");
-            return;
-        }
-        if (dependencies.get("entity") == null) {
-            if (!dependencies.containsKey("entity"))
-                FoodtxfMod.LOGGER.warn("Failed to load dependency entity for procedure PlayerDropsFlesh!");
-            return;
-        }
-        IWorld world = (IWorld) dependencies.get("world");
-        double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
-        double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
-        double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-        Entity entity = (Entity) dependencies.get("entity");
-        if (entity instanceof PlayerEntity) {
-            Random random = new Random();
-            if (entity.isOnFire()) {
-                if (world instanceof World && !((World) world).isClientSide) {
-                    ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z,
-                            new ItemStack(CookedPlayerFleshItem.block, random.ints(1, 3 + 1).findFirst().getAsInt()));
-                    entityToSpawn.setPickUpDelay(10);
-                    world.addFreshEntity(entityToSpawn);
-                }
-            } else {
-                if (world instanceof World && !((World) world).isClientSide) {
-                    ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z,
-                            new ItemStack(PlayerFleshItem.block, random.ints(1, 3 + 1).findFirst().getAsInt()));
-                    entityToSpawn.setPickUpDelay(10);
-                    world.addFreshEntity(entityToSpawn);
-                }
-            }
-        }
-    }
+	@SubscribeEvent
+	public static void onEntityDeath(LivingDeathEvent event) {
+		if (FoodtxfModConfig.ENABLE_CANNIBALISM.get()) {
+			if (event != null && event.getEntity() != null) {
+				execute(event, event.getEntity().level, event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity());
+			}
+		}
+	}
 
-    @Mod.EventBusSubscriber
-    private static class GlobalTrigger {
-        @SubscribeEvent
-        public static void onEntityDeath(LivingDeathEvent event) {
-            if (event != null && event.getEntity() != null) {
-                Entity entity = event.getEntity();
-                Entity sourceentity = event.getSource().getEntity();
-                double i = entity.getX();
-                double j = entity.getY();
-                double k = entity.getZ();
-                World world = entity.level;
-                Map<String, Object> dependencies = new HashMap<>();
-                dependencies.put("x", i);
-                dependencies.put("y", j);
-                dependencies.put("z", k);
-                dependencies.put("world", world);
-                dependencies.put("entity", entity);
-                dependencies.put("sourceentity", sourceentity);
-                dependencies.put("event", event);
-                executeProcedure(dependencies);
-            }
-        }
-    }
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+		execute(null, world, x, y, z, entity);
+	}
+
+	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
+		if (entity == null)
+			return;
+		if (entity instanceof Player) {
+			Random random = new Random();
+			if (world instanceof Level _level && !_level.isClientSide()) {
+				if (entity.isOnFire()) {
+					ItemStack itemStack = new ItemStack(FoodtxfModItems.COOKED_PLAYER_FLESH.get(), random.ints(1, 3 + 1).findFirst().getAsInt());
+					CompoundTag compoundTag = itemStack.getOrCreateTag();
+					ListTag loreTag = new ListTag();
+
+					loreTag.add(StringTag.valueOf("{\"text\":\"" + entity.getName().getString() + "\",\"color\":\"red\",\"italic\":false}"));
+
+					compoundTag.put("display", new CompoundTag());
+					compoundTag.getCompound("display").put("Lore", loreTag);
+
+					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, itemStack);
+					entityToSpawn.setPickUpDelay(10);
+					_level.addFreshEntity(entityToSpawn);
+				} else {
+					ItemStack itemStack = new ItemStack(FoodtxfModItems.PLAYER_FLESH.get(), random.ints(1, 3 + 1).findFirst().getAsInt());
+					CompoundTag compoundTag = itemStack.getOrCreateTag();
+					ListTag loreTag = new ListTag();
+
+					loreTag.add(StringTag.valueOf("{\"text\":\"" + entity.getName().getString() + "\",\"color\":\"red\",\"italic\":false}"));
+
+					compoundTag.put("display", new CompoundTag());
+					compoundTag.getCompound("display").put("Lore", loreTag);
+
+					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, itemStack);
+					entityToSpawn.setPickUpDelay(10);
+					_level.addFreshEntity(entityToSpawn);
+				}
+			}
+		}
+	}
 }

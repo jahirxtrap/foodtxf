@@ -1,66 +1,60 @@
 package com.jahirtrap.foodtxf.item;
 
-import com.jahirtrap.foodtxf.FoodtxfModElements;
-import com.jahirtrap.foodtxf.itemgroup.FoodTXFItemGroup;
-import net.minecraft.item.*;
-import net.minecraft.item.crafting.Ingredient;
-import net.minecraftforge.registries.ObjectHolder;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.SwordItem;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Item;
 
-@FoodtxfModElements.ModElement.Tag
-public class DiamondSkilletItem extends FoodtxfModElements.ModElement {
-    @ObjectHolder("foodtxf:diamond_skillet")
-    public static final Item block = null;
+import com.jahirtrap.foodtxf.init.FoodtxfModTabs;
 
-    public DiamondSkilletItem(FoodtxfModElements instance) {
-        super(instance, 61);
-    }
+public class DiamondSkilletItem extends SwordItem {
+	public DiamondSkilletItem() {
+		super(new Tier() {
+			public int getUses() {
+				return 1561;
+			}
 
-    @Override
-    public void initElements() {
-        elements.items.add(() -> new SwordItem(new IItemTier() {
-            public int getUses() {
-                return 1561;
-            }
+			public float getSpeed() {
+				return 8f;
+			}
 
-            public float getSpeed() {
-                return 8f;
-            }
+			public float getAttackDamageBonus() {
+				return 4f;
+			}
 
-            public float getAttackDamageBonus() {
-                return 4f;
-            }
+			public int getLevel() {
+				return 3;
+			}
 
-            public int getLevel() {
-                return 3;
-            }
+			public int getEnchantmentValue() {
+				return 10;
+			}
 
-            public int getEnchantmentValue() {
-                return 10;
-            }
+			public Ingredient getRepairIngredient() {
+				return Ingredient.of(new ItemStack(Items.DIAMOND));
+			}
+		}, 3, -2.6f, new Item.Properties().tab(FoodtxfModTabs.TAB_FOOD_TXF));
+	}
 
-            public Ingredient getRepairIngredient() {
-                return Ingredient.of(new ItemStack(Items.DIAMOND));
-            }
-        }, 3, -2.6f, new Item.Properties().tab(FoodTXFItemGroup.tab)) {
-            @Override
-            public boolean hasCraftingRemainingItem() {
-                return true;
-            }
+	@Override
+	public boolean hasContainerItem(ItemStack stack) {
+		return true;
+	}
 
-            @Override
-            public ItemStack getContainerItem(ItemStack itemstack) {
-                ItemStack retval = new ItemStack(this);
-                retval.setDamageValue(itemstack.getDamageValue() + 1);
-                if (retval.getDamageValue() >= retval.getMaxDamage()) {
-                    return ItemStack.EMPTY;
-                }
-                return retval;
-            }
+	@Override
+	public ItemStack getContainerItem(ItemStack itemstack) {
+		ItemStack retval = new ItemStack(this);
+		retval.setDamageValue(itemstack.getDamageValue() + 1);
+		if (retval.getDamageValue() >= retval.getMaxDamage()) {
+			return ItemStack.EMPTY;
+		}
+		return retval;
+	}
 
-            @Override
-            public boolean isRepairable(ItemStack itemstack) {
-                return false;
-            }
-        }.setRegistryName("diamond_skillet"));
-    }
+	@Override
+	public boolean isRepairable(ItemStack itemstack) {
+		return false;
+	}
 }

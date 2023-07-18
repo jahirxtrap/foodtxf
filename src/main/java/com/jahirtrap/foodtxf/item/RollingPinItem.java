@@ -1,84 +1,71 @@
 package com.jahirtrap.foodtxf.item;
 
-import com.google.common.collect.ImmutableMultimap;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attribute;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.core.BlockPos;
+
+import com.jahirtrap.foodtxf.init.FoodtxfModTabs;
+
+import java.util.List;
+
 import com.google.common.collect.Multimap;
-import com.jahirtrap.foodtxf.FoodtxfModElements;
-import com.jahirtrap.foodtxf.itemgroup.FoodTXFItemGroup;
-import net.minecraft.block.BlockState;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.ai.attributes.Attribute;
-import net.minecraft.entity.ai.attributes.AttributeModifier;
-import net.minecraft.entity.ai.attributes.Attributes;
-import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
-import net.minecraftforge.registries.ObjectHolder;
+import com.google.common.collect.ImmutableMultimap;
 
-@FoodtxfModElements.ModElement.Tag
-public class RollingPinItem extends FoodtxfModElements.ModElement {
-    @ObjectHolder("foodtxf:rolling_pin")
-    public static final Item block = null;
+public class RollingPinItem extends Item {
+	public RollingPinItem() {
+		super(new Item.Properties().tab(FoodtxfModTabs.TAB_FOOD_TXF).durability(0));
+	}
 
-    public RollingPinItem(FoodtxfModElements instance) {
-        super(instance, 67);
-    }
+	@Override
+	public float getDestroySpeed(ItemStack itemstack, BlockState blockstate) {
+		return List.of().contains(blockstate.getBlock()) ? 1f : 1;
+	}
 
-    @Override
-    public void initElements() {
-        elements.items.add(() -> new ItemToolCustom() {
-            @Override
-            public boolean hasCraftingRemainingItem() {
-                return true;
-            }
+	@Override
+	public boolean mineBlock(ItemStack itemstack, Level world, BlockState blockstate, BlockPos pos, LivingEntity entity) {
+		itemstack.hurtAndBreak(1, entity, i -> i.broadcastBreakEvent(EquipmentSlot.MAINHAND));
+		return true;
+	}
 
-            @Override
-            public ItemStack getContainerItem(ItemStack itemstack) {
-                return new ItemStack(this);
-            }
-        }.setRegistryName("rolling_pin"));
-    }
+	@Override
+	public boolean hurtEnemy(ItemStack itemstack, LivingEntity entity, LivingEntity sourceentity) {
+		itemstack.hurtAndBreak(2, entity, i -> i.broadcastBreakEvent(EquipmentSlot.MAINHAND));
+		return true;
+	}
 
-    private static class ItemToolCustom extends Item {
-        protected ItemToolCustom() {
-            super(new Item.Properties().tab(FoodTXFItemGroup.tab).durability(0));
-        }
+	@Override
+	public int getEnchantmentValue() {
+		return 0;
+	}
 
-        @Override
-        public float getDestroySpeed(ItemStack itemstack, BlockState blockstate) {
-            return 1;
-        }
+	@Override
+	public Multimap<Attribute, AttributeModifier> getDefaultAttributeModifiers(EquipmentSlot equipmentSlot) {
+		if (equipmentSlot == EquipmentSlot.MAINHAND) {
+			ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
+			builder.putAll(super.getDefaultAttributeModifiers(equipmentSlot));
+			builder.put(Attributes.ATTACK_DAMAGE,
+					new AttributeModifier(BASE_ATTACK_DAMAGE_UUID, "Tool modifier", 1.5f, AttributeModifier.Operation.ADDITION));
+			builder.put(Attributes.ATTACK_SPEED,
+					new AttributeModifier(BASE_ATTACK_SPEED_UUID, "Tool modifier", -2.8, AttributeModifier.Operation.ADDITION));
+			return builder.build();
+		}
+		return super.getDefaultAttributeModifiers(equipmentSlot);
+	}
 
-        @Override
-        public boolean mineBlock(ItemStack stack, World worldIn, BlockState state, BlockPos pos, LivingEntity entityLiving) {
-            stack.hurtAndBreak(1, entityLiving, i -> i.broadcastBreakEvent(EquipmentSlotType.MAINHAND));
-            return true;
-        }
+	@Override
+	public boolean hasContainerItem(ItemStack stack) {
+		return true;
+	}
 
-        @Override
-        public boolean hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-            stack.hurtAndBreak(2, attacker, i -> i.broadcastBreakEvent(EquipmentSlotType.MAINHAND));
-            return true;
-        }
-
-        @Override
-        public int getEnchantmentValue() {
-            return 0;
-        }
-
-        @Override
-        public Multimap<Attribute, AttributeModifier> getDefaultAttributeModifiers(EquipmentSlotType equipmentSlot) {
-            if (equipmentSlot == EquipmentSlotType.MAINHAND) {
-                ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
-                builder.putAll(super.getDefaultAttributeModifiers(equipmentSlot));
-                builder.put(Attributes.ATTACK_DAMAGE,
-                        new AttributeModifier(BASE_ATTACK_DAMAGE_UUID, "Tool modifier", 1.5f, AttributeModifier.Operation.ADDITION));
-                builder.put(Attributes.ATTACK_SPEED,
-                        new AttributeModifier(BASE_ATTACK_DAMAGE_UUID, "Tool modifier", -2.8, AttributeModifier.Operation.ADDITION));
-                return builder.build();
-            }
-            return super.getDefaultAttributeModifiers(equipmentSlot);
-        }
-    }
+	@Override
+	public ItemStack getContainerItem(ItemStack itemstack) {
+		return new ItemStack(this);
+	}
 }

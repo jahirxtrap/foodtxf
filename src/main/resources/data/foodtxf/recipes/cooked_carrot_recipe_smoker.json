@@ -5,7 +5,5 @@
   "ingredient": {
     "item": "minecraft:carrot"
   },
-  "result": {
-    "item": "foodtxf:cooked_carrot"
-  }
+  "result": "foodtxf:cooked_carrot"
 }

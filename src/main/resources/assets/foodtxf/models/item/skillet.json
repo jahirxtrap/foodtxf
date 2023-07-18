@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "foodtxf:items/skillet"
+    "layer0": "foodtxf:item/skillet"
   }
 }

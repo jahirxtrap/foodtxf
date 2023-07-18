@@ -5,7 +5,5 @@
   "ingredient": {
     "item": "foodtxf:player_flesh"
   },
-  "result": {
-    "item": "foodtxf:cooked_player_flesh"
-  }
+  "result": "foodtxf:cooked_player_flesh"
 }

@@ -1,57 +1,29 @@
 package com.jahirtrap.foodtxf.item;
 
-import com.jahirtrap.foodtxf.FoodtxfModElements;
-import com.jahirtrap.foodtxf.itemgroup.FoodTXFItemGroup;
-import net.minecraft.block.BlockState;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Rarity;
-import net.minecraft.item.UseAction;
-import net.minecraftforge.registries.ObjectHolder;
+import net.minecraft.world.item.UseAnim;
+import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Item;
 
-@FoodtxfModElements.ModElement.Tag
-public class MixingBowlItem extends FoodtxfModElements.ModElement {
-    @ObjectHolder("foodtxf:mixing_bowl")
-    public static final Item block = null;
+import com.jahirtrap.foodtxf.init.FoodtxfModTabs;
 
-    public MixingBowlItem(FoodtxfModElements instance) {
-        super(instance, 66);
-    }
+public class MixingBowlItem extends Item {
+	public MixingBowlItem() {
+		super(new Item.Properties().tab(FoodtxfModTabs.TAB_FOOD_TXF).stacksTo(1).rarity(Rarity.COMMON));
+	}
 
-    @Override
-    public void initElements() {
-        elements.items.add(() -> new ItemCustom());
-    }
+	@Override
+	public UseAnim getUseAnimation(ItemStack itemstack) {
+		return UseAnim.EAT;
+	}
 
-    public static class ItemCustom extends Item {
-        public ItemCustom() {
-            super(new Item.Properties().tab(FoodTXFItemGroup.tab).stacksTo(1).rarity(Rarity.COMMON));
-            setRegistryName("mixing_bowl");
-        }
+	@Override
+	public boolean hasCraftingRemainingItem() {
+		return true;
+	}
 
-        @Override
-        public UseAction getUseAnimation(ItemStack itemstack) {
-            return UseAction.EAT;
-        }
-
-        @Override
-        public boolean hasCraftingRemainingItem() {
-            return true;
-        }
-
-        @Override
-        public ItemStack getContainerItem(ItemStack itemstack) {
-            return new ItemStack(this);
-        }
-
-        @Override
-        public int getEnchantmentValue() {
-            return 0;
-        }
-
-        @Override
-        public float getDestroySpeed(ItemStack par1ItemStack, BlockState par2Block) {
-            return 1F;
-        }
-    }
+	@Override
+	public ItemStack getContainerItem(ItemStack itemstack) {
+		return new ItemStack(this);
+	}
 }

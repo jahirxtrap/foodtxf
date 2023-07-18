@@ -1,14 +1,14 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    " 1",
-    "2 "
+    " S",
+    "R "
   ],
   "key": {
-    "1": {
+    "S": {
       "tag": "minecraft:stone_tool_materials"
     },
-    "2": {
+    "R": {
       "tag": "forge:rods/wooden"
     }
   },

@@ -1,24 +1,12 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "0 2",
-    "3 5",
-    " 7 "
+    "# #",
+    "# #",
+    " # "
   ],
   "key": {
-    "0": {
-      "tag": "forge:glass/colorless"
-    },
-    "2": {
-      "tag": "forge:glass/colorless"
-    },
-    "3": {
-      "tag": "forge:glass/colorless"
-    },
-    "5": {
-      "tag": "forge:glass/colorless"
-    },
-    "7": {
+    "#": {
       "tag": "forge:glass/colorless"
     }
   },

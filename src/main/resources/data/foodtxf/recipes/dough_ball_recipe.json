@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "foodtxf:water_thermos"
+      "tag": "foodtxf:water"
     },
     {
       "item": "foodtxf:mixing_bowl"

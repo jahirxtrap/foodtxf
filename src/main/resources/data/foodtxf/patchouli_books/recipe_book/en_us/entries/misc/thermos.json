@@ -36,6 +36,7 @@
     {
       "type": "patchouli:relations",
       "entries": [
+        "foodtxf:misc/box",
         "foodtxf:food/cheese",
         "foodtxf:food/dough_ball",
         "foodtxf:drink/glass_of_water",

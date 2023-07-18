@@ -33,6 +33,7 @@
   "item.foodtxf.meat_empanada": "Meat Empanada",
   "item.foodtxf.glass_of_water": "Glass of Water",
   "death.attack.suicide": "%1$s has committed suicide",
+  "death.attack.suicide.player": "%1$s has committed suicide",
   "item.foodtxf.water_thermos": "Water Thermos",
   "item.foodtxf.glass_of_milk": "Glass of Milk",
   "item.foodtxf.golden_potato": "Golden Potato",
@@ -73,5 +74,9 @@
   "item.foodtxf.rolling_pin": "Rolling Pin",
   "item.foodtxf.golden_knife": "Golden Knife",
   "item.foodtxf.glass_of_chocomilk": "Glass of Chocomilk",
+  "item.foodtxf.golden_sweet_berries": "Golden Sweet Berries",
+  "item.foodtxf.golden_glow_berries": "Golden Glow Berries",
+  "item.foodtxf.box": "Box",
+  "item.foodtxf.box_of_cookies": "Box of Cookies",
   "block.foodtxf.white_kitchen_block": "White Kitchen Block"
 }

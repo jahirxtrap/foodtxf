@@ -1,19 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "  2",
-    " 4 ",
-    "6  "
+    "  R",
+    " L ",
+    "R  "
   ],
   "key": {
-    "2": {
+    "R": {
       "tag": "forge:rods/wooden"
     },
-    "4": {
+    "L": {
       "tag": "minecraft:logs"
-    },
-    "6": {
-      "tag": "forge:rods/wooden"
     }
   },
   "result": {

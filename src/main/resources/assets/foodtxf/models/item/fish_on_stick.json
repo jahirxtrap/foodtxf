@@ -1,8 +1,8 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "foodtxf:items/fish_on_stick",
-    "particle": "foodtxf:items/particle/fish_on_stick"
+    "layer0": "foodtxf:item/fish_on_stick",
+    "particle": "foodtxf:item/particle/fish_on_stick"
   },
   "overrides": [
     {

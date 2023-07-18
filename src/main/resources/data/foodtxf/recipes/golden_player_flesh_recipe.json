@@ -1,37 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "012",
-    "345",
-    "678"
+    "GGG",
+    "GCG",
+    "GGG"
   ],
   "key": {
-    "0": {
-      "item": "minecraft:gold_nugget"
+    "G": {
+      "tag": "forge:nuggets/gold"
     },
-    "1": {
-      "item": "minecraft:gold_nugget"
-    },
-    "2": {
-      "item": "minecraft:gold_nugget"
-    },
-    "3": {
-      "item": "minecraft:gold_nugget"
-    },
-    "4": {
+    "C": {
       "item": "foodtxf:cooked_player_flesh"
-    },
-    "5": {
-      "item": "minecraft:gold_nugget"
-    },
-    "6": {
-      "item": "minecraft:gold_nugget"
-    },
-    "7": {
-      "item": "minecraft:gold_nugget"
-    },
-    "8": {
-      "item": "minecraft:gold_nugget"
     }
   },
   "result": {

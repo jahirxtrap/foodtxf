@@ -5,7 +5,5 @@
   "ingredient": {
     "item": "foodtxf:fish_on_stick"
   },
-  "result": {
-    "item": "foodtxf:cooked_fish_on_stick"
-  }
+  "result": "foodtxf:cooked_fish_on_stick"
 }

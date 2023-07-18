@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "foodtxf:items/toasted_bread_slice"
+    "layer0": "foodtxf:item/toasted_bread_slice"
   },
   "overrides": [
     {

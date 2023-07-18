@@ -1,84 +1,48 @@
 package com.jahirtrap.foodtxf.item;
 
-import com.jahirtrap.foodtxf.FoodtxfModElements;
-import com.jahirtrap.foodtxf.itemgroup.FoodTXFItemGroup;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.item.UseAnim;
+import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
+
 import com.jahirtrap.foodtxf.procedures.EntityDrinksWaterProcedure;
-import net.minecraft.block.BlockState;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.*;
-import net.minecraft.util.SoundEvents;
-import net.minecraft.world.World;
-import net.minecraftforge.registries.ObjectHolder;
+import com.jahirtrap.foodtxf.init.FoodtxfModTabs;
+import com.jahirtrap.foodtxf.init.FoodtxfModItems;
 
-import java.util.AbstractMap;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.stream.Stream;
+public class GlassOfWaterItem extends Item {
+	public GlassOfWaterItem() {
+		super(new Item.Properties().tab(FoodtxfModTabs.TAB_FOOD_TXF).stacksTo(64).rarity(Rarity.COMMON)
+				.food((new FoodProperties.Builder()).nutrition(4).saturationMod(0f).alwaysEat()
 
-@FoodtxfModElements.ModElement.Tag
-public class GlassOfWaterItem extends FoodtxfModElements.ModElement {
-    @ObjectHolder("foodtxf:glass_of_water")
-    public static final Item block = null;
+						.build()));
+	}
 
-    public GlassOfWaterItem(FoodtxfModElements instance) {
-        super(instance, 42);
-    }
+	@Override
+	public UseAnim getUseAnimation(ItemStack itemstack) {
+		return UseAnim.DRINK;
+	}
 
-    @Override
-    public void initElements() {
-        elements.items.add(() -> new ItemCustom());
-    }
+	@Override
+	public ItemStack finishUsingItem(ItemStack itemstack, Level world, LivingEntity entity) {
+		ItemStack retval = new ItemStack(FoodtxfModItems.GLASS.get());
+		super.finishUsingItem(itemstack, world, entity);
+		double x = entity.getX();
+		double y = entity.getY();
+		double z = entity.getZ();
 
-    public static class ItemCustom extends Item {
-        public ItemCustom() {
-            super(new Item.Properties().tab(FoodTXFItemGroup.tab).stacksTo(64).rarity(Rarity.COMMON)
-                    .food((new Food.Builder()).nutrition(4).saturationMod(0f).alwaysEat().build()));
-            setRegistryName("glass_of_water");
-        }
-
-        @Override
-        public UseAction getUseAnimation(ItemStack itemstack) {
-            return UseAction.DRINK;
-        }
-
-        @Override
-        public net.minecraft.util.SoundEvent getEatingSound() {
-            return SoundEvents.GENERIC_DRINK;
-        }
-
-        @Override
-        public int getEnchantmentValue() {
-            return 0;
-        }
-
-        @Override
-        public float getDestroySpeed(ItemStack par1ItemStack, BlockState par2Block) {
-            return 1F;
-        }
-
-        @Override
-        public ItemStack finishUsingItem(ItemStack itemstack, World world, LivingEntity entity) {
-            ItemStack retval = new ItemStack(GlassItem.block);
-            super.finishUsingItem(itemstack, world, entity);
-            double x = entity.getX();
-            double y = entity.getY();
-            double z = entity.getZ();
-
-            EntityDrinksWaterProcedure.executeProcedure(Stream
-                    .of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
-                            new AbstractMap.SimpleEntry<>("z", z), new AbstractMap.SimpleEntry<>("entity", entity))
-                    .collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-            if (itemstack.isEmpty()) {
-                return retval;
-            } else {
-                if (entity instanceof PlayerEntity) {
-                    PlayerEntity player = (PlayerEntity) entity;
-                    if (!player.isCreative() && !player.inventory.add(retval))
-                        player.drop(retval, false);
-                }
-                return itemstack;
-            }
-        }
-    }
+		EntityDrinksWaterProcedure.execute(world, x, y, z, entity);
+		if (itemstack.isEmpty()) {
+			return retval;
+		} else {
+			if (entity instanceof Player player && !player.getAbilities().instabuild) {
+				if (!player.getInventory().add(retval))
+					player.drop(retval, false);
+			}
+			return itemstack;
+		}
+	}
 }

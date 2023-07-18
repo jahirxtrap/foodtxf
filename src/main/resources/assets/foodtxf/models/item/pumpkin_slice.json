@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "foodtxf:items/pumpkin_slice"
+    "layer0": "foodtxf:item/pumpkin_slice"
   },
   "overrides": [
     {

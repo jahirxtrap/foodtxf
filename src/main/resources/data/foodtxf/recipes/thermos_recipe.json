@@ -1,19 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "0",
-    "1",
-    "2"
+    "I",
+    "G",
+    "I"
   ],
   "key": {
-    "0": {
+    "I": {
       "tag": "forge:ingots/iron"
     },
-    "1": {
+    "G": {
       "tag": "forge:glass/colorless"
-    },
-    "2": {
-      "tag": "forge:ingots/iron"
     }
   },
   "result": {

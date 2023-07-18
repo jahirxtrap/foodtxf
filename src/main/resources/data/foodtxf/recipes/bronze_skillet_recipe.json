@@ -1,24 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    " 12",
-    " 45",
-    "6  "
+    " II",
+    " II",
+    "R  "
   ],
   "key": {
-    "1": {
+    "I": {
       "tag": "forge:ingots/bronze"
     },
-    "2": {
-      "tag": "forge:ingots/bronze"
-    },
-    "4": {
-      "tag": "forge:ingots/bronze"
-    },
-    "5": {
-      "tag": "forge:ingots/bronze"
-    },
-    "6": {
+    "R": {
       "tag": "forge:rods/wooden"
     }
   },

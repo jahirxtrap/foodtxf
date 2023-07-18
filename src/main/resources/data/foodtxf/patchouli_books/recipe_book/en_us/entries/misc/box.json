@@ -1,0 +1,18 @@
+{
+  "name": "Box",
+  "icon": "foodtxf:box",
+  "category": "foodtxf:misc",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "foodtxf:box_recipe",
+      "title": " "
+    },
+    {
+      "type": "patchouli:relations",
+      "entries": [
+        "foodtxf:food/box_of_cookies"
+      ]
+    }
+  ]
+}

@@ -1,66 +1,59 @@
 package com.jahirtrap.foodtxf.item;
 
-import com.jahirtrap.foodtxf.FoodtxfModElements;
-import com.jahirtrap.foodtxf.itemgroup.FoodTXFItemGroup;
-import net.minecraft.item.*;
-import net.minecraft.item.crafting.Ingredient;
-import net.minecraftforge.registries.ObjectHolder;
+import com.jahirtrap.foodtxf.init.FoodtxfModTabs;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.SwordItem;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Item;
 
-@FoodtxfModElements.ModElement.Tag
-public class GoldenSkilletItem extends FoodtxfModElements.ModElement {
-    @ObjectHolder("foodtxf:golden_skillet")
-    public static final Item block = null;
+public class GoldenSkilletItem extends SwordItem {
+	public GoldenSkilletItem() {
+		super(new Tier() {
+			public int getUses() {
+				return 32;
+			}
 
-    public GoldenSkilletItem(FoodtxfModElements instance) {
-        super(instance, 60);
-    }
+			public float getSpeed() {
+				return 12f;
+			}
 
-    @Override
-    public void initElements() {
-        elements.items.add(() -> new SwordItem(new IItemTier() {
-            public int getUses() {
-                return 32;
-            }
+			public float getAttackDamageBonus() {
+				return 1f;
+			}
 
-            public float getSpeed() {
-                return 12f;
-            }
+			public int getLevel() {
+				return 0;
+			}
 
-            public float getAttackDamageBonus() {
-                return 1f;
-            }
+			public int getEnchantmentValue() {
+				return 22;
+			}
 
-            public int getLevel() {
-                return 0;
-            }
+			public Ingredient getRepairIngredient() {
+				return Ingredient.of(new ItemStack(Items.GOLD_INGOT));
+			}
+		}, 3, -2.6f, new Item.Properties().tab(FoodtxfModTabs.TAB_FOOD_TXF));
+	}
 
-            public int getEnchantmentValue() {
-                return 22;
-            }
+	@Override
+	public boolean hasContainerItem(ItemStack stack) {
+		return true;
+	}
 
-            public Ingredient getRepairIngredient() {
-                return Ingredient.of(new ItemStack(Items.GOLD_INGOT));
-            }
-        }, 3, -2.6f, new Item.Properties().tab(FoodTXFItemGroup.tab)) {
-            @Override
-            public boolean hasCraftingRemainingItem() {
-                return true;
-            }
+	@Override
+	public ItemStack getContainerItem(ItemStack itemstack) {
+		ItemStack retval = new ItemStack(this);
+		retval.setDamageValue(itemstack.getDamageValue() + 1);
+		if (retval.getDamageValue() >= retval.getMaxDamage()) {
+			return ItemStack.EMPTY;
+		}
+		return retval;
+	}
 
-            @Override
-            public ItemStack getContainerItem(ItemStack itemstack) {
-                ItemStack retval = new ItemStack(this);
-                retval.setDamageValue(itemstack.getDamageValue() + 1);
-                if (retval.getDamageValue() >= retval.getMaxDamage()) {
-                    return ItemStack.EMPTY;
-                }
-                return retval;
-            }
-
-            @Override
-            public boolean isRepairable(ItemStack itemstack) {
-                return false;
-            }
-        }.setRegistryName("golden_skillet"));
-    }
+	@Override
+	public boolean isRepairable(ItemStack itemstack) {
+		return false;
+	}
 }

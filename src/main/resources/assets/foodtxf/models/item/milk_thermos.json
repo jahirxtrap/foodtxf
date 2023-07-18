@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "foodtxf:items/milk_thermos"
+    "layer0": "foodtxf:item/milk_thermos"
   },
   "overrides": [
     {

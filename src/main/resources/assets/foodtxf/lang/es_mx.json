@@ -1,13 +1,13 @@
 {
-  "item.foodtxf.glass_of_fruit_juice": "Vaso de jugo de frutas",
   "item.foodtxf.lava_thermos": "Termo de lava",
+  "item.foodtxf.glass_of_fruit_juice": "Vaso de jugo de frutas",
   "item.foodtxf.netherite_skillet": "Sartén de netherita",
   "item.foodtxf.vegetable_salad": "Ensalada de vegetales",
   "item.foodtxf.cutting_board": "Tabla de picar",
   "item.foodtxf.thermos": "Termo",
   "item.foodtxf.bread_slice": "Rebanada de pan",
-  "item.foodtxf.clean_pufferfish": "Pez globo limpio",
   "item.foodtxf.player_flesh": "Carne de jugador ",
+  "item.foodtxf.clean_pufferfish": "Pez globo limpio",
   "item.foodtxf.cheese_slice": "Rebanada de queso",
   "item.foodtxf.skillet": "Sartén",
   "item.foodtxf.recipe_book": "Libro de recetas",
@@ -33,6 +33,7 @@
   "item.foodtxf.meat_empanada": "Empanada de carne",
   "item.foodtxf.glass_of_water": "Vaso de agua",
   "death.attack.suicide": "%1$s se ha suicidado",
+  "death.attack.suicide.player": "%1$s se ha suicidado",
   "item.foodtxf.water_thermos": "Termo de agua",
   "item.foodtxf.glass_of_milk": "Vaso de leche",
   "item.foodtxf.golden_potato": "Papa de oro",
@@ -73,5 +74,9 @@
   "item.foodtxf.rolling_pin": "Rodillo de cocina",
   "item.foodtxf.golden_knife": "Cuchillo de oro",
   "item.foodtxf.glass_of_chocomilk": "Vaso de chocomilk",
+  "item.foodtxf.golden_sweet_berries": "Bayas dulces de oro",
+  "item.foodtxf.golden_glow_berries": "Bayas brillantes de oro",
+  "item.foodtxf.box": "Caja",
+  "item.foodtxf.box_of_cookies": "Caja de galletas",
   "block.foodtxf.white_kitchen_block": "Bloque de cocina blanco"
 }

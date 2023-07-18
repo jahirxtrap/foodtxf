@@ -1,0 +1,13 @@
+{
+  "name": "Bayas",
+  "icon": "foodtxf:golden_sweet_berries",
+  "category": "foodtxf:food",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "foodtxf:golden_sweet_berries_recipe",
+      "recipe2": "foodtxf:golden_glow_berries_recipe",
+      "title": " "
+    }
+  ]
+}

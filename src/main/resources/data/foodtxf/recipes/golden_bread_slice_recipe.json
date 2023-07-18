@@ -1,25 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    " 1 ",
-    "345",
-    " 7 "
+    " G ",
+    "GBG",
+    " G "
   ],
   "key": {
-    "1": {
-      "item": "minecraft:gold_nugget"
+    "G": {
+      "tag": "forge:nuggets/gold"
     },
-    "3": {
-      "item": "minecraft:gold_nugget"
-    },
-    "4": {
+    "B": {
       "item": "foodtxf:bread_slice"
-    },
-    "5": {
-      "item": "minecraft:gold_nugget"
-    },
-    "7": {
-      "item": "minecraft:gold_nugget"
     }
   },
   "result": {

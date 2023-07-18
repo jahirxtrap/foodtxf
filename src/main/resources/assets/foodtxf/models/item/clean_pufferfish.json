@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "foodtxf:items/clean_pufferfish"
+    "layer0": "foodtxf:item/clean_pufferfish"
   },
   "overrides": [
     {

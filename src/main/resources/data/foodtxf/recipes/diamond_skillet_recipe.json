@@ -1,24 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    " 12",
-    " 45",
-    "6  "
+    " GG",
+    " GG",
+    "R  "
   ],
   "key": {
-    "1": {
+    "G": {
       "tag": "forge:gems/diamond"
     },
-    "2": {
-      "tag": "forge:gems/diamond"
-    },
-    "4": {
-      "tag": "forge:gems/diamond"
-    },
-    "5": {
-      "tag": "forge:gems/diamond"
-    },
-    "6": {
+    "R": {
       "tag": "forge:rods/wooden"
     }
   },

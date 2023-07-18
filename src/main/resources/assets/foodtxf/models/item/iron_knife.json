@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "foodtxf:items/iron_knife"
+    "layer0": "foodtxf:item/iron_knife"
   }
 }

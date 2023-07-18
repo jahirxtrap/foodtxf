@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "foodtxf:items/cheese_empanada"
+    "layer0": "foodtxf:item/cheese_empanada"
   },
   "overrides": [
     {

@@ -1,14 +1,14 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    " 1",
-    "2 "
+    " I",
+    "R "
   ],
   "key": {
-    "1": {
+    "I": {
       "tag": "forge:ingots/steel"
     },
-    "2": {
+    "R": {
       "tag": "forge:rods/wooden"
     }
   },

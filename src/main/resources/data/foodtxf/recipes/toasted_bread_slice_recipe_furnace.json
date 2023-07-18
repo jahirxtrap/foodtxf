@@ -5,7 +5,5 @@
   "ingredient": {
     "item": "foodtxf:bread_slice"
   },
-  "result": {
-    "item": "foodtxf:toasted_bread_slice"
-  }
+  "result": "foodtxf:toasted_bread_slice"
 }

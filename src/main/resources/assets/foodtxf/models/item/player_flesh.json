@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "foodtxf:items/player_flesh"
+    "layer0": "foodtxf:item/player_flesh"
   },
   "overrides": [
     {

@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "foodtxf:items/glass_of_lava"
+    "layer0": "foodtxf:item/glass_of_lava"
   },
   "overrides": [
     {

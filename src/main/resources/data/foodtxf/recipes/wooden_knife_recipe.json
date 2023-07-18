@@ -1,14 +1,14 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    " 1",
-    "2 "
+    " P",
+    "R "
   ],
   "key": {
-    "1": {
+    "P": {
       "tag": "minecraft:planks"
     },
-    "2": {
+    "R": {
       "tag": "forge:rods/wooden"
     }
   },

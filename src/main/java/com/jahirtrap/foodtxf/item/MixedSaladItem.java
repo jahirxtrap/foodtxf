@@ -1,61 +1,36 @@
 package com.jahirtrap.foodtxf.item;
 
-import com.jahirtrap.foodtxf.FoodtxfModElements;
-import com.jahirtrap.foodtxf.itemgroup.FoodTXFItemGroup;
-import net.minecraft.block.BlockState;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.*;
-import net.minecraft.world.World;
-import net.minecraftforge.registries.ObjectHolder;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 
-@FoodtxfModElements.ModElement.Tag
-public class MixedSaladItem extends FoodtxfModElements.ModElement {
-    @ObjectHolder("foodtxf:mixed_salad")
-    public static final Item block = null;
+import com.jahirtrap.foodtxf.init.FoodtxfModTabs;
 
-    public MixedSaladItem(FoodtxfModElements instance) {
-        super(instance, 31);
-    }
+public class MixedSaladItem extends Item {
+	public MixedSaladItem() {
+		super(new Item.Properties().tab(FoodtxfModTabs.TAB_FOOD_TXF).stacksTo(64).rarity(Rarity.COMMON)
+				.food((new FoodProperties.Builder()).nutrition(6).saturationMod(0.65f)
 
-    @Override
-    public void initElements() {
-        elements.items.add(() -> new ItemCustom());
-    }
+						.build()));
+	}
 
-    public static class ItemCustom extends Item {
-        public ItemCustom() {
-            super(new Item.Properties().tab(FoodTXFItemGroup.tab).stacksTo(64).rarity(Rarity.COMMON)
-                    .food((new Food.Builder()).nutrition(6).saturationMod(0.65f)
-
-                            .build()));
-            setRegistryName("mixed_salad");
-        }
-
-        @Override
-        public int getEnchantmentValue() {
-            return 0;
-        }
-
-        @Override
-        public float getDestroySpeed(ItemStack par1ItemStack, BlockState par2Block) {
-            return 1F;
-        }
-
-        @Override
-        public ItemStack finishUsingItem(ItemStack itemstack, World world, LivingEntity entity) {
-            ItemStack retval = new ItemStack(Items.BOWL);
-            super.finishUsingItem(itemstack, world, entity);
-            if (itemstack.isEmpty()) {
-                return retval;
-            } else {
-                if (entity instanceof PlayerEntity) {
-                    PlayerEntity player = (PlayerEntity) entity;
-                    if (!player.isCreative() && !player.inventory.add(retval))
-                        player.drop(retval, false);
-                }
-                return itemstack;
-            }
-        }
-    }
+	@Override
+	public ItemStack finishUsingItem(ItemStack itemstack, Level world, LivingEntity entity) {
+		ItemStack retval = new ItemStack(Items.BOWL);
+		super.finishUsingItem(itemstack, world, entity);
+		if (itemstack.isEmpty()) {
+			return retval;
+		} else {
+			if (entity instanceof Player player && !player.getAbilities().instabuild) {
+				if (!player.getInventory().add(retval))
+					player.drop(retval, false);
+			}
+			return itemstack;
+		}
+	}
 }

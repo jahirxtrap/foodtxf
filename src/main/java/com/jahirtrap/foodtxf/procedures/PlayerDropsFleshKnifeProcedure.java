@@ -1,436 +1,460 @@
 package com.jahirtrap.foodtxf.procedures;
 
-import com.jahirtrap.foodtxf.FoodtxfMod;
-import com.jahirtrap.foodtxf.item.CookedPlayerFleshItem;
-import com.jahirtrap.foodtxf.item.PlayerFleshItem;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.entity.player.AbstractClientPlayerEntity;
-import net.minecraft.client.network.play.NetworkPlayerInfo;
-import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.enchantment.Enchantments;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.item.ItemEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.player.ServerPlayerEntity;
-import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.DamageSource;
-import net.minecraft.util.Hand;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.SoundCategory;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.GameType;
-import net.minecraft.world.IWorld;
-import net.minecraft.world.World;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.ListTag;
+import net.minecraft.nbt.StringTag;
 import net.minecraftforge.registries.ForgeRegistries;
 
-import java.util.Map;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.GameType;
+import net.minecraft.world.item.enchantment.Enchantments;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.BlockPos;
+import net.minecraft.client.Minecraft;
+
+import com.jahirtrap.foodtxf.init.FoodtxfModItems;
+
 import java.util.Random;
 
 public class PlayerDropsFleshKnifeProcedure {
-    public static void executeProcedure(Map<String, Object> dependencies) {
-        if (dependencies.get("world") == null) {
-            if (!dependencies.containsKey("world"))
-                FoodtxfMod.LOGGER.warn("Failed to load dependency world for procedure PlayerDropsFleshKnife!");
-            return;
-        }
-        if (dependencies.get("x") == null) {
-            if (!dependencies.containsKey("x"))
-                FoodtxfMod.LOGGER.warn("Failed to load dependency x for procedure PlayerDropsFleshKnife!");
-            return;
-        }
-        if (dependencies.get("y") == null) {
-            if (!dependencies.containsKey("y"))
-                FoodtxfMod.LOGGER.warn("Failed to load dependency y for procedure PlayerDropsFleshKnife!");
-            return;
-        }
-        if (dependencies.get("z") == null) {
-            if (!dependencies.containsKey("z"))
-                FoodtxfMod.LOGGER.warn("Failed to load dependency z for procedure PlayerDropsFleshKnife!");
-            return;
-        }
-        if (dependencies.get("entity") == null) {
-            if (!dependencies.containsKey("entity"))
-                FoodtxfMod.LOGGER.warn("Failed to load dependency entity for procedure PlayerDropsFleshKnife!");
-            return;
-        }
-        if (dependencies.get("itemstack") == null) {
-            if (!dependencies.containsKey("itemstack"))
-                FoodtxfMod.LOGGER.warn("Failed to load dependency itemstack for procedure PlayerDropsFleshKnife!");
-            return;
-        }
-        IWorld world = (IWorld) dependencies.get("world");
-        double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
-        double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
-        double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-        Entity entity = (Entity) dependencies.get("entity");
-        ItemStack itemstack = (ItemStack) dependencies.get("itemstack");
-        if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getMainHandItem() : ItemStack.EMPTY).getItem() == itemstack.getItem()
-                && ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getOffhandItem() : ItemStack.EMPTY).getItem() == (ItemStack.EMPTY)
-                .getItem()
-                && ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getOffhandItem() : ItemStack.EMPTY)
-                .getItem() != ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getMainHandItem() : ItemStack.EMPTY)
-                .getItem()) {
-            if (entity.isShiftKeyDown()) {
-                if (entity instanceof PlayerEntity) {
-                    if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getMainHandItem() : ItemStack.EMPTY).getItem() == itemstack
-                            .getItem()) {
-                        int fa_level = EnchantmentHelper.getItemEnchantmentLevel(Enchantments.FIRE_ASPECT,
-                                (entity instanceof LivingEntity) ? ((LivingEntity) entity).getMainHandItem() : ItemStack.EMPTY);
-                        if (fa_level != 0) {
-                            entity.setSecondsOnFire(4 * fa_level);
-                        }
-                    } else {
-                        int fa_level = EnchantmentHelper.getItemEnchantmentLevel(Enchantments.FIRE_ASPECT, itemstack);
-                        if (fa_level != 0) {
-                            entity.setSecondsOnFire(4 * fa_level);
-                        }
-                    }
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, ItemStack itemstack) {
+		if (entity == null)
+			return;
+		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == itemstack.getItem()
+				&& (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == (ItemStack.EMPTY).getItem()
+				&& (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY)
+						.getItem() != (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem()) {
+			if (entity.isShiftKeyDown()) {
+				if (entity instanceof Player _entity) {
+					if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == itemstack.getItem()) {
+						int fa_level = EnchantmentHelper.getItemEnchantmentLevel(Enchantments.FIRE_ASPECT,
+								(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY));
+						if (fa_level != 0) {
+							entity.setSecondsOnFire(4 * fa_level);
+						}
+					} else {
+						int fa_level = EnchantmentHelper.getItemEnchantmentLevel(Enchantments.FIRE_ASPECT, itemstack);
+						if (fa_level != 0) {
+							entity.setSecondsOnFire(4 * fa_level);
+						}
+					}
 
-                    if (entity.isOnFire()) {
-                        if (entity.hurt(new DamageSource("suicide").bypassArmor().bypassMagic(), (float) 6)) {
-                            {
-                                ItemStack _ist = itemstack;
-                                if (_ist.hurt(1, new Random(), null)) {
-                                    _ist.shrink(1);
-                                    _ist.setDamageValue(0);
-                                }
-                            }
-                            {
-                                ItemStack _ist = ((entity instanceof LivingEntity)
-                                        ? ((LivingEntity) entity).getItemBySlot(EquipmentSlotType.HEAD)
-                                        : ItemStack.EMPTY);
-                                if (_ist.hurt(1, new Random(), null)) {
-                                    _ist.shrink(1);
-                                    _ist.setDamageValue(0);
-                                }
-                            }
-                            {
-                                ItemStack _ist = ((entity instanceof LivingEntity)
-                                        ? ((LivingEntity) entity).getItemBySlot(EquipmentSlotType.CHEST)
-                                        : ItemStack.EMPTY);
-                                if (_ist.hurt(1, new Random(), null)) {
-                                    _ist.shrink(1);
-                                    _ist.setDamageValue(0);
-                                }
-                            }
-                            {
-                                ItemStack _ist = ((entity instanceof LivingEntity)
-                                        ? ((LivingEntity) entity).getItemBySlot(EquipmentSlotType.LEGS)
-                                        : ItemStack.EMPTY);
-                                if (_ist.hurt(1, new Random(), null)) {
-                                    _ist.shrink(1);
-                                    _ist.setDamageValue(0);
-                                }
-                            }
-                            {
-                                ItemStack _ist = ((entity instanceof LivingEntity)
-                                        ? ((LivingEntity) entity).getItemBySlot(EquipmentSlotType.FEET)
-                                        : ItemStack.EMPTY);
-                                if (_ist.hurt(1, new Random(), null)) {
-                                    _ist.shrink(1);
-                                    _ist.setDamageValue(0);
-                                }
-                            }
-                            if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getMainHandItem() : ItemStack.EMPTY)
-                                    .getItem() == itemstack.getItem()) {
-                                ((LivingEntity) entity).swing(Hand.MAIN_HAND, true);
-                            } else {
-                                ((LivingEntity) entity).swing(Hand.OFF_HAND, true);
-                            }
-                            if (world instanceof World && !world.isClientSide()) {
-                                ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, new ItemStack(CookedPlayerFleshItem.block));
-                                entityToSpawn.setPickUpDelay(10);
-                                world.addFreshEntity(entityToSpawn);
-                            }
-                        }
-                    } else {
-                        if (entity.hurt(new DamageSource("suicide").bypassArmor().bypassMagic(), (float) 6)) {
-                            {
-                                ItemStack _ist = itemstack;
-                                if (_ist.hurt(1, new Random(), null)) {
-                                    _ist.shrink(1);
-                                    _ist.setDamageValue(0);
-                                }
-                            }
-                            {
-                                ItemStack _ist = ((entity instanceof LivingEntity)
-                                        ? ((LivingEntity) entity).getItemBySlot(EquipmentSlotType.HEAD)
-                                        : ItemStack.EMPTY);
-                                if (_ist.hurt(1, new Random(), null)) {
-                                    _ist.shrink(1);
-                                    _ist.setDamageValue(0);
-                                }
-                            }
-                            {
-                                ItemStack _ist = ((entity instanceof LivingEntity)
-                                        ? ((LivingEntity) entity).getItemBySlot(EquipmentSlotType.CHEST)
-                                        : ItemStack.EMPTY);
-                                if (_ist.hurt(1, new Random(), null)) {
-                                    _ist.shrink(1);
-                                    _ist.setDamageValue(0);
-                                }
-                            }
-                            {
-                                ItemStack _ist = ((entity instanceof LivingEntity)
-                                        ? ((LivingEntity) entity).getItemBySlot(EquipmentSlotType.LEGS)
-                                        : ItemStack.EMPTY);
-                                if (_ist.hurt(1, new Random(), null)) {
-                                    _ist.shrink(1);
-                                    _ist.setDamageValue(0);
-                                }
-                            }
-                            {
-                                ItemStack _ist = ((entity instanceof LivingEntity)
-                                        ? ((LivingEntity) entity).getItemBySlot(EquipmentSlotType.FEET)
-                                        : ItemStack.EMPTY);
-                                if (_ist.hurt(1, new Random(), null)) {
-                                    _ist.shrink(1);
-                                    _ist.setDamageValue(0);
-                                }
-                            }
-                            if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getMainHandItem() : ItemStack.EMPTY)
-                                    .getItem() == itemstack.getItem()) {
-                                ((LivingEntity) entity).swing(Hand.MAIN_HAND, true);
-                            } else {
-                                ((LivingEntity) entity).swing(Hand.OFF_HAND, true);
-                            }
-                            if (world instanceof World && !world.isClientSide()) {
-                                ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, new ItemStack(PlayerFleshItem.block));
-                                entityToSpawn.setPickUpDelay(10);
-                                world.addFreshEntity(entityToSpawn);
-                            }
-                        }
-                    }
-                    if (new Object() {
-                        public boolean checkGamemode(Entity _ent) {
-                            if (_ent instanceof ServerPlayerEntity) {
-                                return ((ServerPlayerEntity) _ent).gameMode.getGameModeForPlayer() == GameType.CREATIVE;
-                            } else if (_ent instanceof PlayerEntity && _ent.level.isClientSide()) {
-                                NetworkPlayerInfo _npi = Minecraft.getInstance().getConnection()
-                                        .getPlayerInfo(((AbstractClientPlayerEntity) _ent).getGameProfile().getId());
-                                return _npi != null && _npi.getGameMode() == GameType.CREATIVE;
-                            }
-                            return false;
-                        }
-                    }.checkGamemode(entity)) {
-                        if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getMainHandItem() : ItemStack.EMPTY)
-                                .getItem() == itemstack.getItem()) {
-                            if (entity instanceof LivingEntity) {
-                                ((LivingEntity) entity).swing(Hand.MAIN_HAND, true);
-                            }
-                        } else {
-                            if (entity instanceof LivingEntity) {
-                                ((LivingEntity) entity).swing(Hand.OFF_HAND, true);
-                            }
-                        }
-                        if (world instanceof World && !world.isClientSide()) {
-                            world.playSound(null, new BlockPos((int) x, (int) y, (int) z),
-                                    ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.hurt")),
-                                    SoundCategory.PLAYERS, (float) 0.8, (float) 1);
-                        } else {
-                            ((World) world).playLocalSound(x, y, z,
-                                    ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.hurt")),
-                                    SoundCategory.PLAYERS, (float) 0.8, (float) 1, false);
-                        }
-                        if (entity.isOnFire()) {
-                            if (world instanceof World && !world.isClientSide()) {
-                                ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, new ItemStack(CookedPlayerFleshItem.block));
-                                entityToSpawn.setPickUpDelay(10);
-                                world.addFreshEntity(entityToSpawn);
-                            }
-                        } else {
-                            if (world instanceof World && !world.isClientSide()) {
-                                ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, new ItemStack(PlayerFleshItem.block));
-                                entityToSpawn.setPickUpDelay(10);
-                                world.addFreshEntity(entityToSpawn);
-                            }
-                        }
-                    }
-                }
-            }
-        } else if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getOffhandItem() : ItemStack.EMPTY).getItem() == itemstack
-                .getItem()) {
-            if (entity.isShiftKeyDown()) {
-                if (entity instanceof PlayerEntity) {
-                    if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getOffhandItem() : ItemStack.EMPTY).getItem() == itemstack
-                            .getItem()) {
-                        int fa_level = EnchantmentHelper.getItemEnchantmentLevel(Enchantments.FIRE_ASPECT,
-                                (entity instanceof LivingEntity) ? ((LivingEntity) entity).getOffhandItem() : ItemStack.EMPTY);
-                        if (fa_level != 0) {
-                            entity.setSecondsOnFire(4 * fa_level);
-                        }
-                    } else {
-                        int fa_level = EnchantmentHelper.getItemEnchantmentLevel(Enchantments.FIRE_ASPECT,
-                                (entity instanceof LivingEntity) ? ((LivingEntity) entity).getOffhandItem() : ItemStack.EMPTY);
-                        if (fa_level != 0) {
-                            entity.setSecondsOnFire(4 * fa_level);
-                        }
-                    }
+					if (entity.isOnFire()) {
+						if (_entity.hurt(new DamageSource("suicide").bypassArmor().bypassMagic(), 6)) {
+							{
+								ItemStack _ist = itemstack;
+								if (_ist.hurt(1, new Random(), null)) {
+									_ist.shrink(1);
+									_ist.setDamageValue(0);
+								}
+							}
+							{
+								ItemStack _ist = (entity instanceof LivingEntity _entGetArmor
+										? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD)
+										: ItemStack.EMPTY);
+								if (_ist.hurt(1, new Random(), null)) {
+									_ist.shrink(1);
+									_ist.setDamageValue(0);
+								}
+							}
+							{
+								ItemStack _ist = (entity instanceof LivingEntity _entGetArmor
+										? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST)
+										: ItemStack.EMPTY);
+								if (_ist.hurt(1, new Random(), null)) {
+									_ist.shrink(1);
+									_ist.setDamageValue(0);
+								}
+							}
+							{
+								ItemStack _ist = (entity instanceof LivingEntity _entGetArmor
+										? _entGetArmor.getItemBySlot(EquipmentSlot.LEGS)
+										: ItemStack.EMPTY);
+								if (_ist.hurt(1, new Random(), null)) {
+									_ist.shrink(1);
+									_ist.setDamageValue(0);
+								}
+							}
+							{
+								ItemStack _ist = (entity instanceof LivingEntity _entGetArmor
+										? _entGetArmor.getItemBySlot(EquipmentSlot.FEET)
+										: ItemStack.EMPTY);
+								if (_ist.hurt(1, new Random(), null)) {
+									_ist.shrink(1);
+									_ist.setDamageValue(0);
+								}
+							}
+							if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == itemstack
+									.getItem()) {
+								_entity.swing(InteractionHand.MAIN_HAND, true);
+							} else {
+								_entity.swing(InteractionHand.OFF_HAND, true);
+							}
+							if (world instanceof Level _level && !_level.isClientSide()) {
+								ItemStack itemStack = new ItemStack(FoodtxfModItems.COOKED_PLAYER_FLESH.get());
+								CompoundTag compoundTag = itemStack.getOrCreateTag();
+								ListTag loreTag = new ListTag();
 
-                    if (entity.isOnFire()) {
-                        if (entity.hurt(new DamageSource("suicide").bypassArmor().bypassMagic(), (float) 6)) {
-                            {
-                                ItemStack _ist = (entity instanceof LivingEntity) ? ((LivingEntity) entity).getOffhandItem() : ItemStack.EMPTY;
-                                if (_ist.hurt(1, new Random(), null)) {
-                                    _ist.shrink(1);
-                                    _ist.setDamageValue(0);
-                                }
-                            }
-                            {
-                                ItemStack _ist = ((entity instanceof LivingEntity)
-                                        ? ((LivingEntity) entity).getItemBySlot(EquipmentSlotType.HEAD)
-                                        : ItemStack.EMPTY);
-                                if (_ist.hurt(1, new Random(), null)) {
-                                    _ist.shrink(1);
-                                    _ist.setDamageValue(0);
-                                }
-                            }
-                            {
-                                ItemStack _ist = ((entity instanceof LivingEntity)
-                                        ? ((LivingEntity) entity).getItemBySlot(EquipmentSlotType.CHEST)
-                                        : ItemStack.EMPTY);
-                                if (_ist.hurt(1, new Random(), null)) {
-                                    _ist.shrink(1);
-                                    _ist.setDamageValue(0);
-                                }
-                            }
-                            {
-                                ItemStack _ist = ((entity instanceof LivingEntity)
-                                        ? ((LivingEntity) entity).getItemBySlot(EquipmentSlotType.LEGS)
-                                        : ItemStack.EMPTY);
-                                if (_ist.hurt(1, new Random(), null)) {
-                                    _ist.shrink(1);
-                                    _ist.setDamageValue(0);
-                                }
-                            }
-                            {
-                                ItemStack _ist = ((entity instanceof LivingEntity)
-                                        ? ((LivingEntity) entity).getItemBySlot(EquipmentSlotType.FEET)
-                                        : ItemStack.EMPTY);
-                                if (_ist.hurt(1, new Random(), null)) {
-                                    _ist.shrink(1);
-                                    _ist.setDamageValue(0);
-                                }
-                            }
-                            if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getOffhandItem() : ItemStack.EMPTY)
-                                    .getItem() == itemstack.getItem()) {
-                                ((LivingEntity) entity).swing(Hand.OFF_HAND, true);
-                            } else {
-                                ((LivingEntity) entity).swing(Hand.MAIN_HAND, true);
-                            }
-                            if (world instanceof World && !world.isClientSide()) {
-                                ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, new ItemStack(CookedPlayerFleshItem.block));
-                                entityToSpawn.setPickUpDelay(10);
-                                world.addFreshEntity(entityToSpawn);
-                            }
-                        }
-                    } else {
-                        if (entity.hurt(new DamageSource("suicide").bypassArmor().bypassMagic(), (float) 6)) {
-                            {
-                                ItemStack _ist = (entity instanceof LivingEntity) ? ((LivingEntity) entity).getOffhandItem() : ItemStack.EMPTY;
-                                if (_ist.hurt(1, new Random(), null)) {
-                                    _ist.shrink(1);
-                                    _ist.setDamageValue(0);
-                                }
-                            }
-                            {
-                                ItemStack _ist = ((entity instanceof LivingEntity)
-                                        ? ((LivingEntity) entity).getItemBySlot(EquipmentSlotType.HEAD)
-                                        : ItemStack.EMPTY);
-                                if (_ist.hurt(1, new Random(), null)) {
-                                    _ist.shrink(1);
-                                    _ist.setDamageValue(0);
-                                }
-                            }
-                            {
-                                ItemStack _ist = ((entity instanceof LivingEntity)
-                                        ? ((LivingEntity) entity).getItemBySlot(EquipmentSlotType.CHEST)
-                                        : ItemStack.EMPTY);
-                                if (_ist.hurt(1, new Random(), null)) {
-                                    _ist.shrink(1);
-                                    _ist.setDamageValue(0);
-                                }
-                            }
-                            {
-                                ItemStack _ist = ((entity instanceof LivingEntity)
-                                        ? ((LivingEntity) entity).getItemBySlot(EquipmentSlotType.LEGS)
-                                        : ItemStack.EMPTY);
-                                if (_ist.hurt(1, new Random(), null)) {
-                                    _ist.shrink(1);
-                                    _ist.setDamageValue(0);
-                                }
-                            }
-                            {
-                                ItemStack _ist = ((entity instanceof LivingEntity)
-                                        ? ((LivingEntity) entity).getItemBySlot(EquipmentSlotType.FEET)
-                                        : ItemStack.EMPTY);
-                                if (_ist.hurt(1, new Random(), null)) {
-                                    _ist.shrink(1);
-                                    _ist.setDamageValue(0);
-                                }
-                            }
-                            if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getOffhandItem() : ItemStack.EMPTY)
-                                    .getItem() == itemstack.getItem()) {
-                                ((LivingEntity) entity).swing(Hand.OFF_HAND, true);
-                            } else {
-                                ((LivingEntity) entity).swing(Hand.MAIN_HAND, true);
-                            }
-                            if (world instanceof World && !world.isClientSide()) {
-                                ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, new ItemStack(PlayerFleshItem.block));
-                                entityToSpawn.setPickUpDelay(10);
-                                world.addFreshEntity(entityToSpawn);
-                            }
-                        }
-                    }
-                    if (new Object() {
-                        public boolean checkGamemode(Entity _ent) {
-                            if (_ent instanceof ServerPlayerEntity) {
-                                return ((ServerPlayerEntity) _ent).gameMode.getGameModeForPlayer() == GameType.CREATIVE;
-                            } else if (_ent instanceof PlayerEntity && _ent.level.isClientSide()) {
-                                NetworkPlayerInfo _npi = Minecraft.getInstance().getConnection()
-                                        .getPlayerInfo(((AbstractClientPlayerEntity) _ent).getGameProfile().getId());
-                                return _npi != null && _npi.getGameMode() == GameType.CREATIVE;
-                            }
-                            return false;
-                        }
-                    }.checkGamemode(entity)) {
-                        if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getOffhandItem() : ItemStack.EMPTY).getItem() == itemstack
-                                .getItem()) {
-                            if (entity instanceof LivingEntity) {
-                                ((LivingEntity) entity).swing(Hand.OFF_HAND, true);
-                            }
-                        } else {
-                            if (entity instanceof LivingEntity) {
-                                ((LivingEntity) entity).swing(Hand.MAIN_HAND, true);
-                            }
-                        }
-                        if (world instanceof World && !world.isClientSide()) {
-                            world.playSound(null, new BlockPos((int) x, (int) y, (int) z),
-                                    ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.hurt")),
-                                    SoundCategory.PLAYERS, (float) 0.8, (float) 1);
-                        } else {
-                            ((World) world).playLocalSound(x, y, z,
-                                    ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.hurt")),
-                                    SoundCategory.PLAYERS, (float) 0.8, (float) 1, false);
-                        }
-                        if (entity.isOnFire()) {
-                            if (world instanceof World && !world.isClientSide()) {
-                                ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, new ItemStack(CookedPlayerFleshItem.block));
-                                entityToSpawn.setPickUpDelay(10);
-                                world.addFreshEntity(entityToSpawn);
-                            }
-                        } else {
-                            if (world instanceof World && !world.isClientSide()) {
-                                ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, new ItemStack(PlayerFleshItem.block));
-                                entityToSpawn.setPickUpDelay(10);
-                                world.addFreshEntity(entityToSpawn);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
+								loreTag.add(StringTag.valueOf("{\"text\":\"" + entity.getName().getString() + "\",\"color\":\"red\",\"italic\":false}"));
+
+								compoundTag.put("display", new CompoundTag());
+								compoundTag.getCompound("display").put("Lore", loreTag);
+
+								ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, itemStack);
+								entityToSpawn.setPickUpDelay(10);
+								_level.addFreshEntity(entityToSpawn);
+							}
+						}
+					} else {
+						if (_entity.hurt(new DamageSource("suicide").bypassArmor().bypassMagic(), 6)) {
+							{
+								ItemStack _ist = itemstack;
+								if (_ist.hurt(1, new Random(), null)) {
+									_ist.shrink(1);
+									_ist.setDamageValue(0);
+								}
+							}
+							{
+								ItemStack _ist = (entity instanceof LivingEntity _entGetArmor
+										? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD)
+										: ItemStack.EMPTY);
+								if (_ist.hurt(1, new Random(), null)) {
+									_ist.shrink(1);
+									_ist.setDamageValue(0);
+								}
+							}
+							{
+								ItemStack _ist = (entity instanceof LivingEntity _entGetArmor
+										? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST)
+										: ItemStack.EMPTY);
+								if (_ist.hurt(1, new Random(), null)) {
+									_ist.shrink(1);
+									_ist.setDamageValue(0);
+								}
+							}
+							{
+								ItemStack _ist = (entity instanceof LivingEntity _entGetArmor
+										? _entGetArmor.getItemBySlot(EquipmentSlot.LEGS)
+										: ItemStack.EMPTY);
+								if (_ist.hurt(1, new Random(), null)) {
+									_ist.shrink(1);
+									_ist.setDamageValue(0);
+								}
+							}
+							{
+								ItemStack _ist = (entity instanceof LivingEntity _entGetArmor
+										? _entGetArmor.getItemBySlot(EquipmentSlot.FEET)
+										: ItemStack.EMPTY);
+								if (_ist.hurt(1, new Random(), null)) {
+									_ist.shrink(1);
+									_ist.setDamageValue(0);
+								}
+							}
+							if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == itemstack
+									.getItem()) {
+								_entity.swing(InteractionHand.MAIN_HAND, true);
+							} else {
+								_entity.swing(InteractionHand.OFF_HAND, true);
+							}
+							if (world instanceof Level _level && !_level.isClientSide()) {
+								ItemStack itemStack = new ItemStack(FoodtxfModItems.PLAYER_FLESH.get());
+								CompoundTag compoundTag = itemStack.getOrCreateTag();
+								ListTag loreTag = new ListTag();
+
+								loreTag.add(StringTag.valueOf("{\"text\":\"" + entity.getName().getString() + "\",\"color\":\"red\",\"italic\":false}"));
+
+								compoundTag.put("display", new CompoundTag());
+								compoundTag.getCompound("display").put("Lore", loreTag);
+
+								ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, itemStack);
+								entityToSpawn.setPickUpDelay(10);
+								_level.addFreshEntity(entityToSpawn);
+							}
+						}
+					}
+					if (new Object() {
+						public boolean checkGamemode(Entity _ent) {
+							if (_ent instanceof ServerPlayer _serverPlayer) {
+								return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.CREATIVE;
+							} else if (_ent.level.isClientSide() && _ent instanceof Player _player) {
+								return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
+										&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId())
+												.getGameMode() == GameType.CREATIVE;
+							}
+							return false;
+						}
+					}.checkGamemode(entity)) {
+						if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == itemstack.getItem()) {
+							_entity.swing(InteractionHand.MAIN_HAND, true);
+						} else {
+							_entity.swing(InteractionHand.OFF_HAND, true);
+						}
+						if (world instanceof Level _level) {
+							if (!_level.isClientSide()) {
+								_level.playSound(null, new BlockPos((int) x, (int) y, (int) z),
+										ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.hurt")), SoundSource.PLAYERS,
+										(float) 0.8, 1);
+							} else {
+								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.hurt")),
+										SoundSource.PLAYERS, (float) 0.8, 1, false);
+							}
+						}
+						if (entity.isOnFire()) {
+							if (world instanceof Level _level && !_level.isClientSide()) {
+								ItemStack itemStack = new ItemStack(FoodtxfModItems.COOKED_PLAYER_FLESH.get());
+								CompoundTag compoundTag = itemStack.getOrCreateTag();
+								ListTag loreTag = new ListTag();
+
+								loreTag.add(StringTag.valueOf("{\"text\":\"" + entity.getName().getString() + "\",\"color\":\"red\",\"italic\":false}"));
+
+								compoundTag.put("display", new CompoundTag());
+								compoundTag.getCompound("display").put("Lore", loreTag);
+
+								ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, itemStack);
+								entityToSpawn.setPickUpDelay(10);
+								_level.addFreshEntity(entityToSpawn);
+							}
+						} else {
+							if (world instanceof Level _level && !_level.isClientSide()) {
+								ItemStack itemStack = new ItemStack(FoodtxfModItems.PLAYER_FLESH.get());
+								CompoundTag compoundTag = itemStack.getOrCreateTag();
+								ListTag loreTag = new ListTag();
+
+								loreTag.add(StringTag.valueOf("{\"text\":\"" + entity.getName().getString() + "\",\"color\":\"red\",\"italic\":false}"));
+
+								compoundTag.put("display", new CompoundTag());
+								compoundTag.getCompound("display").put("Lore", loreTag);
+
+								ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, itemStack);
+								entityToSpawn.setPickUpDelay(10);
+								_level.addFreshEntity(entityToSpawn);
+							}
+						}
+					}
+				}
+			}
+		} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == itemstack.getItem()) {
+			if (entity.isShiftKeyDown()) {
+				if (entity instanceof Player _entity) {
+					if ((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == itemstack.getItem()) {
+						int fa_level = EnchantmentHelper.getItemEnchantmentLevel(Enchantments.FIRE_ASPECT,
+								(entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY));
+						if (fa_level != 0) {
+							entity.setSecondsOnFire(4 * fa_level);
+						}
+					} else {
+						int fa_level = EnchantmentHelper.getItemEnchantmentLevel(Enchantments.FIRE_ASPECT, itemstack);
+						if (fa_level != 0) {
+							entity.setSecondsOnFire(4 * fa_level);
+						}
+					}
+
+					if (entity.isOnFire()) {
+						if (_entity.hurt(new DamageSource("suicide").bypassArmor().bypassMagic(), 6)) {
+							{
+								ItemStack _ist = (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY);
+								if (_ist.hurt(1, new Random(), null)) {
+									_ist.shrink(1);
+									_ist.setDamageValue(0);
+								}
+							}
+							{
+								ItemStack _ist = (entity instanceof LivingEntity _entGetArmor
+										? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD)
+										: ItemStack.EMPTY);
+								if (_ist.hurt(1, new Random(), null)) {
+									_ist.shrink(1);
+									_ist.setDamageValue(0);
+								}
+							}
+							{
+								ItemStack _ist = (entity instanceof LivingEntity _entGetArmor
+										? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST)
+										: ItemStack.EMPTY);
+								if (_ist.hurt(1, new Random(), null)) {
+									_ist.shrink(1);
+									_ist.setDamageValue(0);
+								}
+							}
+							{
+								ItemStack _ist = (entity instanceof LivingEntity _entGetArmor
+										? _entGetArmor.getItemBySlot(EquipmentSlot.LEGS)
+										: ItemStack.EMPTY);
+								if (_ist.hurt(1, new Random(), null)) {
+									_ist.shrink(1);
+									_ist.setDamageValue(0);
+								}
+							}
+							{
+								ItemStack _ist = (entity instanceof LivingEntity _entGetArmor
+										? _entGetArmor.getItemBySlot(EquipmentSlot.FEET)
+										: ItemStack.EMPTY);
+								if (_ist.hurt(1, new Random(), null)) {
+									_ist.shrink(1);
+									_ist.setDamageValue(0);
+								}
+							}
+							if ((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == itemstack
+									.getItem()) {
+								_entity.swing(InteractionHand.OFF_HAND, true);
+							} else {
+								_entity.swing(InteractionHand.MAIN_HAND, true);
+							}
+							if (world instanceof Level _level && !_level.isClientSide()) {
+								ItemStack itemStack = new ItemStack(FoodtxfModItems.COOKED_PLAYER_FLESH.get());
+								CompoundTag compoundTag = itemStack.getOrCreateTag();
+								ListTag loreTag = new ListTag();
+
+								loreTag.add(StringTag.valueOf("{\"text\":\"" + entity.getName().getString() + "\",\"color\":\"red\",\"italic\":false}"));
+
+								compoundTag.put("display", new CompoundTag());
+								compoundTag.getCompound("display").put("Lore", loreTag);
+
+								ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, itemStack);
+								entityToSpawn.setPickUpDelay(10);
+								_level.addFreshEntity(entityToSpawn);
+							}
+						}
+					} else {
+						if (_entity.hurt(new DamageSource("suicide").bypassArmor().bypassMagic(), 6)) {
+							{
+								ItemStack _ist = (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY);
+								if (_ist.hurt(1, new Random(), null)) {
+									_ist.shrink(1);
+									_ist.setDamageValue(0);
+								}
+							}
+							{
+								ItemStack _ist = (entity instanceof LivingEntity _entGetArmor
+										? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD)
+										: ItemStack.EMPTY);
+								if (_ist.hurt(1, new Random(), null)) {
+									_ist.shrink(1);
+									_ist.setDamageValue(0);
+								}
+							}
+							{
+								ItemStack _ist = (entity instanceof LivingEntity _entGetArmor
+										? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST)
+										: ItemStack.EMPTY);
+								if (_ist.hurt(1, new Random(), null)) {
+									_ist.shrink(1);
+									_ist.setDamageValue(0);
+								}
+							}
+							{
+								ItemStack _ist = (entity instanceof LivingEntity _entGetArmor
+										? _entGetArmor.getItemBySlot(EquipmentSlot.LEGS)
+										: ItemStack.EMPTY);
+								if (_ist.hurt(1, new Random(), null)) {
+									_ist.shrink(1);
+									_ist.setDamageValue(0);
+								}
+							}
+							{
+								ItemStack _ist = (entity instanceof LivingEntity _entGetArmor
+										? _entGetArmor.getItemBySlot(EquipmentSlot.FEET)
+										: ItemStack.EMPTY);
+								if (_ist.hurt(1, new Random(), null)) {
+									_ist.shrink(1);
+									_ist.setDamageValue(0);
+								}
+							}
+							if ((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == itemstack
+									.getItem()) {
+								_entity.swing(InteractionHand.OFF_HAND, true);
+							} else {
+								_entity.swing(InteractionHand.MAIN_HAND, true);
+							}
+							if (world instanceof Level _level && !_level.isClientSide()) {
+								ItemStack itemStack = new ItemStack(FoodtxfModItems.PLAYER_FLESH.get());
+								CompoundTag compoundTag = itemStack.getOrCreateTag();
+								ListTag loreTag = new ListTag();
+
+								loreTag.add(StringTag.valueOf("{\"text\":\"" + entity.getName().getString() + "\",\"color\":\"red\",\"italic\":false}"));
+
+								compoundTag.put("display", new CompoundTag());
+								compoundTag.getCompound("display").put("Lore", loreTag);
+
+								ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, itemStack);
+								entityToSpawn.setPickUpDelay(10);
+								_level.addFreshEntity(entityToSpawn);
+							}
+						}
+					}
+					if (new Object() {
+						public boolean checkGamemode(Entity _ent) {
+							if (_ent instanceof ServerPlayer _serverPlayer) {
+								return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.CREATIVE;
+							} else if (_ent.level.isClientSide() && _ent instanceof Player _player) {
+								return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
+										&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId())
+												.getGameMode() == GameType.CREATIVE;
+							}
+							return false;
+						}
+					}.checkGamemode(entity)) {
+						if ((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == itemstack.getItem()) {
+							_entity.swing(InteractionHand.OFF_HAND, true);
+						} else {
+							_entity.swing(InteractionHand.MAIN_HAND, true);
+						}
+						if (world instanceof Level _level) {
+							if (!_level.isClientSide()) {
+								_level.playSound(null, new BlockPos((int) x, (int) y, (int) z),
+										ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.hurt")), SoundSource.PLAYERS,
+										(float) 0.8, 1);
+							} else {
+								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.hurt")),
+										SoundSource.PLAYERS, (float) 0.8, 1, false);
+							}
+						}
+						if (entity.isOnFire()) {
+							if (world instanceof Level _level && !_level.isClientSide()) {
+								ItemStack itemStack = new ItemStack(FoodtxfModItems.COOKED_PLAYER_FLESH.get());
+								CompoundTag compoundTag = itemStack.getOrCreateTag();
+								ListTag loreTag = new ListTag();
+
+								loreTag.add(StringTag.valueOf("{\"text\":\"" + entity.getName().getString() + "\",\"color\":\"red\",\"italic\":false}"));
+
+								compoundTag.put("display", new CompoundTag());
+								compoundTag.getCompound("display").put("Lore", loreTag);
+
+								ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, itemStack);
+								entityToSpawn.setPickUpDelay(10);
+								_level.addFreshEntity(entityToSpawn);
+							}
+						} else {
+							if (world instanceof Level _level && !_level.isClientSide()) {
+								ItemStack itemStack = new ItemStack(FoodtxfModItems.PLAYER_FLESH.get());
+								CompoundTag compoundTag = itemStack.getOrCreateTag();
+								ListTag loreTag = new ListTag();
+
+								loreTag.add(StringTag.valueOf("{\"text\":\"" + entity.getName().getString() + "\",\"color\":\"red\",\"italic\":false}"));
+
+								compoundTag.put("display", new CompoundTag());
+								compoundTag.getCompound("display").put("Lore", loreTag);
+
+								ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, itemStack);
+								entityToSpawn.setPickUpDelay(10);
+								_level.addFreshEntity(entityToSpawn);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
