@@ -4,7 +4,7 @@ plugins {
     id 'net.minecraftforge.gradle' version '5.1.+'
 }
 
-version = '1.19.2-1.4.5-forge'
+version = '1.19.2-1.4.6-forge'
 group = 'com.jahirtrap.foodtxf'
 archivesBaseName = 'foodtxf'
 
