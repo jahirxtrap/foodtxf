@@ -38,12 +38,12 @@ public class SteelSkilletItem extends SwordItem {
 	}
 
 	@Override
-	public boolean hasContainerItem(ItemStack stack) {
+	public boolean hasCraftingRemainingItem(ItemStack stack) {
 		return true;
 	}
 
 	@Override
-	public ItemStack getContainerItem(ItemStack itemstack) {
+	public ItemStack getCraftingRemainingItem(ItemStack itemstack) {
 		ItemStack retval = new ItemStack(this);
 		retval.setDamageValue(itemstack.getDamageValue() + 1);
 		if (retval.getDamageValue() >= retval.getMaxDamage()) {

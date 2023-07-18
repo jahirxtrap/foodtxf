@@ -60,12 +60,12 @@ public class RollingPinItem extends Item {
 	}
 
 	@Override
-	public boolean hasContainerItem(ItemStack stack) {
+	public boolean hasCraftingRemainingItem(ItemStack stack) {
 		return true;
 	}
 
 	@Override
-	public ItemStack getContainerItem(ItemStack itemstack) {
+	public ItemStack getCraftingRemainingItem(ItemStack itemstack) {
 		return new ItemStack(this);
 	}
 }

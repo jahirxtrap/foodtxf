@@ -30,9 +30,9 @@ import javax.annotation.Nullable;
 public class FillMilkProcedure {
 	@SubscribeEvent
 	public static void onRightClickEntity(PlayerInteractEvent.EntityInteract event) {
-		if (event.getHand() != event.getPlayer().getUsedItemHand())
+		if (event.getHand() != event.getEntity().getUsedItemHand())
 			return;
-		execute(event, event.getWorld(), event.getPos().getX(), event.getPos().getY(), event.getPos().getZ(), event.getTarget(), event.getPlayer());
+		execute(event, event.getLevel(), event.getPos().getX(), event.getPos().getY(), event.getPos().getZ(), event.getTarget(), event.getEntity());
 	}
 
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity) {

@@ -24,7 +24,7 @@ public class BoxOfCookiesItem extends Item {
 	}
 
 	@Override
-	public ItemStack getContainerItem(ItemStack itemstack) {
+	public ItemStack getCraftingRemainingItem(ItemStack itemstack) {
 		return new ItemStack(FoodtxfModItems.BOX.get());
 	}
 

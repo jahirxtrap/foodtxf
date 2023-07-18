@@ -22,7 +22,7 @@ public class BlenderItem extends Item {
 	}
 
 	@Override
-	public ItemStack getContainerItem(ItemStack itemstack) {
+	public ItemStack getCraftingRemainingItem(ItemStack itemstack) {
 		return new ItemStack(this);
 	}
 }

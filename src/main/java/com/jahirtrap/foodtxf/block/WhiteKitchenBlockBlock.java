@@ -1,6 +1,5 @@
 package com.jahirtrap.foodtxf.block;
 
-import com.jahirtrap.foodtxf.util.TextUtils;
 import org.jetbrains.annotations.Nullable;
 
 import net.minecraft.world.level.storage.loot.LootContext;
@@ -18,6 +17,8 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.core.BlockPos;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.ChatFormatting;
+
+import com.jahirtrap.foodtxf.util.TextUtils;
 
 import java.util.List;
 import java.util.Collections;

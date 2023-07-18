@@ -1,8 +1,5 @@
 package com.jahirtrap.foodtxf.init;
 
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
-
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.CreativeModeTab;
 
@@ -16,7 +13,7 @@ public class FoodtxfModTabs {
 				return new ItemStack(FoodtxfModItems.DIAMOND_KNIFE.get());
 			}
 
-			@OnlyIn(Dist.CLIENT)
+			@Override
 			public boolean hasSearchBar() {
 				return false;
 			}

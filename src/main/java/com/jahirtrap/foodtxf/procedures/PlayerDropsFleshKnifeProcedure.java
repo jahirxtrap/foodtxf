@@ -3,6 +3,7 @@ package com.jahirtrap.foodtxf.procedures;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.nbt.StringTag;
+import net.minecraft.util.RandomSource;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import net.minecraft.world.level.LevelAccessor;
@@ -55,7 +56,7 @@ public class PlayerDropsFleshKnifeProcedure {
 						if (_entity.hurt(new DamageSource("suicide").bypassArmor().bypassMagic(), 6)) {
 							{
 								ItemStack _ist = itemstack;
-								if (_ist.hurt(1, new Random(), null)) {
+								if (_ist.hurt(1, RandomSource.create(), null)) {
 									_ist.shrink(1);
 									_ist.setDamageValue(0);
 								}
@@ -64,7 +65,7 @@ public class PlayerDropsFleshKnifeProcedure {
 								ItemStack _ist = (entity instanceof LivingEntity _entGetArmor
 										? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD)
 										: ItemStack.EMPTY);
-								if (_ist.hurt(1, new Random(), null)) {
+								if (_ist.hurt(1, RandomSource.create(), null)) {
 									_ist.shrink(1);
 									_ist.setDamageValue(0);
 								}
@@ -73,7 +74,7 @@ public class PlayerDropsFleshKnifeProcedure {
 								ItemStack _ist = (entity instanceof LivingEntity _entGetArmor
 										? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST)
 										: ItemStack.EMPTY);
-								if (_ist.hurt(1, new Random(), null)) {
+								if (_ist.hurt(1, RandomSource.create(), null)) {
 									_ist.shrink(1);
 									_ist.setDamageValue(0);
 								}
@@ -82,7 +83,7 @@ public class PlayerDropsFleshKnifeProcedure {
 								ItemStack _ist = (entity instanceof LivingEntity _entGetArmor
 										? _entGetArmor.getItemBySlot(EquipmentSlot.LEGS)
 										: ItemStack.EMPTY);
-								if (_ist.hurt(1, new Random(), null)) {
+								if (_ist.hurt(1, RandomSource.create(), null)) {
 									_ist.shrink(1);
 									_ist.setDamageValue(0);
 								}
@@ -91,7 +92,7 @@ public class PlayerDropsFleshKnifeProcedure {
 								ItemStack _ist = (entity instanceof LivingEntity _entGetArmor
 										? _entGetArmor.getItemBySlot(EquipmentSlot.FEET)
 										: ItemStack.EMPTY);
-								if (_ist.hurt(1, new Random(), null)) {
+								if (_ist.hurt(1, RandomSource.create(), null)) {
 									_ist.shrink(1);
 									_ist.setDamageValue(0);
 								}
@@ -121,7 +122,7 @@ public class PlayerDropsFleshKnifeProcedure {
 						if (_entity.hurt(new DamageSource("suicide").bypassArmor().bypassMagic(), 6)) {
 							{
 								ItemStack _ist = itemstack;
-								if (_ist.hurt(1, new Random(), null)) {
+								if (_ist.hurt(1, RandomSource.create(), null)) {
 									_ist.shrink(1);
 									_ist.setDamageValue(0);
 								}
@@ -130,7 +131,7 @@ public class PlayerDropsFleshKnifeProcedure {
 								ItemStack _ist = (entity instanceof LivingEntity _entGetArmor
 										? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD)
 										: ItemStack.EMPTY);
-								if (_ist.hurt(1, new Random(), null)) {
+								if (_ist.hurt(1, RandomSource.create(), null)) {
 									_ist.shrink(1);
 									_ist.setDamageValue(0);
 								}
@@ -139,7 +140,7 @@ public class PlayerDropsFleshKnifeProcedure {
 								ItemStack _ist = (entity instanceof LivingEntity _entGetArmor
 										? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST)
 										: ItemStack.EMPTY);
-								if (_ist.hurt(1, new Random(), null)) {
+								if (_ist.hurt(1, RandomSource.create(), null)) {
 									_ist.shrink(1);
 									_ist.setDamageValue(0);
 								}
@@ -148,7 +149,7 @@ public class PlayerDropsFleshKnifeProcedure {
 								ItemStack _ist = (entity instanceof LivingEntity _entGetArmor
 										? _entGetArmor.getItemBySlot(EquipmentSlot.LEGS)
 										: ItemStack.EMPTY);
-								if (_ist.hurt(1, new Random(), null)) {
+								if (_ist.hurt(1, RandomSource.create(), null)) {
 									_ist.shrink(1);
 									_ist.setDamageValue(0);
 								}
@@ -157,7 +158,7 @@ public class PlayerDropsFleshKnifeProcedure {
 								ItemStack _ist = (entity instanceof LivingEntity _entGetArmor
 										? _entGetArmor.getItemBySlot(EquipmentSlot.FEET)
 										: ItemStack.EMPTY);
-								if (_ist.hurt(1, new Random(), null)) {
+								if (_ist.hurt(1, RandomSource.create(), null)) {
 									_ist.shrink(1);
 									_ist.setDamageValue(0);
 								}
@@ -265,7 +266,7 @@ public class PlayerDropsFleshKnifeProcedure {
 						if (_entity.hurt(new DamageSource("suicide").bypassArmor().bypassMagic(), 6)) {
 							{
 								ItemStack _ist = (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY);
-								if (_ist.hurt(1, new Random(), null)) {
+								if (_ist.hurt(1, RandomSource.create(), null)) {
 									_ist.shrink(1);
 									_ist.setDamageValue(0);
 								}
@@ -274,7 +275,7 @@ public class PlayerDropsFleshKnifeProcedure {
 								ItemStack _ist = (entity instanceof LivingEntity _entGetArmor
 										? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD)
 										: ItemStack.EMPTY);
-								if (_ist.hurt(1, new Random(), null)) {
+								if (_ist.hurt(1, RandomSource.create(), null)) {
 									_ist.shrink(1);
 									_ist.setDamageValue(0);
 								}
@@ -283,7 +284,7 @@ public class PlayerDropsFleshKnifeProcedure {
 								ItemStack _ist = (entity instanceof LivingEntity _entGetArmor
 										? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST)
 										: ItemStack.EMPTY);
-								if (_ist.hurt(1, new Random(), null)) {
+								if (_ist.hurt(1, RandomSource.create(), null)) {
 									_ist.shrink(1);
 									_ist.setDamageValue(0);
 								}
@@ -292,7 +293,7 @@ public class PlayerDropsFleshKnifeProcedure {
 								ItemStack _ist = (entity instanceof LivingEntity _entGetArmor
 										? _entGetArmor.getItemBySlot(EquipmentSlot.LEGS)
 										: ItemStack.EMPTY);
-								if (_ist.hurt(1, new Random(), null)) {
+								if (_ist.hurt(1, RandomSource.create(), null)) {
 									_ist.shrink(1);
 									_ist.setDamageValue(0);
 								}
@@ -301,7 +302,7 @@ public class PlayerDropsFleshKnifeProcedure {
 								ItemStack _ist = (entity instanceof LivingEntity _entGetArmor
 										? _entGetArmor.getItemBySlot(EquipmentSlot.FEET)
 										: ItemStack.EMPTY);
-								if (_ist.hurt(1, new Random(), null)) {
+								if (_ist.hurt(1, RandomSource.create(), null)) {
 									_ist.shrink(1);
 									_ist.setDamageValue(0);
 								}
@@ -331,7 +332,7 @@ public class PlayerDropsFleshKnifeProcedure {
 						if (_entity.hurt(new DamageSource("suicide").bypassArmor().bypassMagic(), 6)) {
 							{
 								ItemStack _ist = (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY);
-								if (_ist.hurt(1, new Random(), null)) {
+								if (_ist.hurt(1, RandomSource.create(), null)) {
 									_ist.shrink(1);
 									_ist.setDamageValue(0);
 								}
@@ -340,7 +341,7 @@ public class PlayerDropsFleshKnifeProcedure {
 								ItemStack _ist = (entity instanceof LivingEntity _entGetArmor
 										? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD)
 										: ItemStack.EMPTY);
-								if (_ist.hurt(1, new Random(), null)) {
+								if (_ist.hurt(1, RandomSource.create(), null)) {
 									_ist.shrink(1);
 									_ist.setDamageValue(0);
 								}
@@ -349,7 +350,7 @@ public class PlayerDropsFleshKnifeProcedure {
 								ItemStack _ist = (entity instanceof LivingEntity _entGetArmor
 										? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST)
 										: ItemStack.EMPTY);
-								if (_ist.hurt(1, new Random(), null)) {
+								if (_ist.hurt(1, RandomSource.create(), null)) {
 									_ist.shrink(1);
 									_ist.setDamageValue(0);
 								}
@@ -358,7 +359,7 @@ public class PlayerDropsFleshKnifeProcedure {
 								ItemStack _ist = (entity instanceof LivingEntity _entGetArmor
 										? _entGetArmor.getItemBySlot(EquipmentSlot.LEGS)
 										: ItemStack.EMPTY);
-								if (_ist.hurt(1, new Random(), null)) {
+								if (_ist.hurt(1, RandomSource.create(), null)) {
 									_ist.shrink(1);
 									_ist.setDamageValue(0);
 								}
@@ -367,7 +368,7 @@ public class PlayerDropsFleshKnifeProcedure {
 								ItemStack _ist = (entity instanceof LivingEntity _entGetArmor
 										? _entGetArmor.getItemBySlot(EquipmentSlot.FEET)
 										: ItemStack.EMPTY);
-								if (_ist.hurt(1, new Random(), null)) {
+								if (_ist.hurt(1, RandomSource.create(), null)) {
 									_ist.shrink(1);
 									_ist.setDamageValue(0);
 								}
