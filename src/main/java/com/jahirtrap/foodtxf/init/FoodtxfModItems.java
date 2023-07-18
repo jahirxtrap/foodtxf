@@ -1,175 +1,100 @@
 package com.jahirtrap.foodtxf.init;
 
 import com.jahirtrap.foodtxf.FoodtxfMod;
-import net.minecraftforge.registries.RegistryObject;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.DeferredRegister;
-
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.CreativeModeTab;
+import com.jahirtrap.foodtxf.item.*;
 import net.minecraft.world.item.BlockItem;
-
-import com.jahirtrap.foodtxf.item.WoodenKnifeItem;
-import com.jahirtrap.foodtxf.item.WaterThermosItem;
-import com.jahirtrap.foodtxf.item.VegetableSaladItem;
-import com.jahirtrap.foodtxf.item.ToastedBreadSliceItem;
-import com.jahirtrap.foodtxf.item.ToastedBreadItem;
-import com.jahirtrap.foodtxf.item.ThermosItem;
-import com.jahirtrap.foodtxf.item.StoneKnifeItem;
-import com.jahirtrap.foodtxf.item.SteelSkilletItem;
-import com.jahirtrap.foodtxf.item.SteelKnifeItem;
-import com.jahirtrap.foodtxf.item.SkilletItem;
-import com.jahirtrap.foodtxf.item.RollingPinItem;
-import com.jahirtrap.foodtxf.item.RawMeatEmpanadaItem;
-import com.jahirtrap.foodtxf.item.RawCheeseEmpanadaItem;
-import com.jahirtrap.foodtxf.item.PumpkinSliceItem;
-import com.jahirtrap.foodtxf.item.PlayerFleshItem;
-import com.jahirtrap.foodtxf.item.NetheriteSkilletItem;
-import com.jahirtrap.foodtxf.item.NetheriteKnifeItem;
-import com.jahirtrap.foodtxf.item.MixingBowlItem;
-import com.jahirtrap.foodtxf.item.MixedSaladItem;
-import com.jahirtrap.foodtxf.item.MilkThermosItem;
-import com.jahirtrap.foodtxf.item.MeatEmpanadaItem;
-import com.jahirtrap.foodtxf.item.LavaThermosItem;
-import com.jahirtrap.foodtxf.item.JuicerItem;
-import com.jahirtrap.foodtxf.item.IronKnifeItem;
-import com.jahirtrap.foodtxf.item.GoldenSweetBerriesItem;
-import com.jahirtrap.foodtxf.item.GoldenSkilletItem;
-import com.jahirtrap.foodtxf.item.GoldenPotatoItem;
-import com.jahirtrap.foodtxf.item.GoldenPorkchopItem;
-import com.jahirtrap.foodtxf.item.GoldenPlayerFleshItem;
-import com.jahirtrap.foodtxf.item.GoldenKnifeItem;
-import com.jahirtrap.foodtxf.item.GoldenGlowBerriesItem;
-import com.jahirtrap.foodtxf.item.GoldenFishItem;
-import com.jahirtrap.foodtxf.item.GoldenBreadSliceItem;
-import com.jahirtrap.foodtxf.item.GoldenBreadItem;
-import com.jahirtrap.foodtxf.item.GoldenBeetrootItem;
-import com.jahirtrap.foodtxf.item.GoldenBeefItem;
-import com.jahirtrap.foodtxf.item.GlisteringPumpkinSliceItem;
-import com.jahirtrap.foodtxf.item.GlassOfWaterItem;
-import com.jahirtrap.foodtxf.item.GlassOfWaterAndBreadItem;
-import com.jahirtrap.foodtxf.item.GlassOfVegetableJuiceItem;
-import com.jahirtrap.foodtxf.item.GlassOfMixedJuiceItem;
-import com.jahirtrap.foodtxf.item.GlassOfMilkItem;
-import com.jahirtrap.foodtxf.item.GlassOfMilkAndToastedBreadItem;
-import com.jahirtrap.foodtxf.item.GlassOfMilkAndCookiesItem;
-import com.jahirtrap.foodtxf.item.GlassOfLavaItem;
-import com.jahirtrap.foodtxf.item.GlassOfFruitJuiceItem;
-import com.jahirtrap.foodtxf.item.GlassOfChocomilkItem;
-import com.jahirtrap.foodtxf.item.GlassOfChocomilkAndToastedBreadItem;
-import com.jahirtrap.foodtxf.item.GlassOfChocomilkAndCookiesItem;
-import com.jahirtrap.foodtxf.item.GlassItem;
-import com.jahirtrap.foodtxf.item.FruitSaladItem;
-import com.jahirtrap.foodtxf.item.FishOnStickItem;
-import com.jahirtrap.foodtxf.item.DoughBallItem;
-import com.jahirtrap.foodtxf.item.DiamondSkilletItem;
-import com.jahirtrap.foodtxf.item.DiamondKnifeItem;
-import com.jahirtrap.foodtxf.item.CuttingBoardItem;
-import com.jahirtrap.foodtxf.item.CookedTropicalFishItem;
-import com.jahirtrap.foodtxf.item.CookedPufferfishItem;
-import com.jahirtrap.foodtxf.item.CookedPlayerFleshItem;
-import com.jahirtrap.foodtxf.item.CookedFishOnStickItem;
-import com.jahirtrap.foodtxf.item.CookedCarrotItem;
-import com.jahirtrap.foodtxf.item.CookedBeetrootItem;
-import com.jahirtrap.foodtxf.item.CleanPufferfishItem;
-import com.jahirtrap.foodtxf.item.CheeseSliceItem;
-import com.jahirtrap.foodtxf.item.CheeseSandwichItem;
-import com.jahirtrap.foodtxf.item.CheeseItem;
-import com.jahirtrap.foodtxf.item.CheeseEmpanadaItem;
-import com.jahirtrap.foodtxf.item.BronzeSkilletItem;
-import com.jahirtrap.foodtxf.item.BronzeKnifeItem;
-import com.jahirtrap.foodtxf.item.BreadSliceItem;
-import com.jahirtrap.foodtxf.item.BoxOfCookiesItem;
-import com.jahirtrap.foodtxf.item.BoxItem;
-import com.jahirtrap.foodtxf.item.BlenderItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 
 public class FoodtxfModItems {
-	public static final DeferredRegister<Item> REGISTRY = DeferredRegister.create(ForgeRegistries.ITEMS, FoodtxfMod.MODID);
-	public static final RegistryObject<Item> PLAYER_FLESH = REGISTRY.register("player_flesh", PlayerFleshItem::new);
-	public static final RegistryObject<Item> COOKED_PLAYER_FLESH = REGISTRY.register("cooked_player_flesh", CookedPlayerFleshItem::new);
-	public static final RegistryObject<Item> CLEAN_PUFFERFISH = REGISTRY.register("clean_pufferfish", CleanPufferfishItem::new);
-	public static final RegistryObject<Item> COOKED_PUFFERFISH = REGISTRY.register("cooked_pufferfish", CookedPufferfishItem::new);
-	public static final RegistryObject<Item> COOKED_TROPICAL_FISH = REGISTRY.register("cooked_tropical_fish", CookedTropicalFishItem::new);
-	public static final RegistryObject<Item> DOUGH_BALL = REGISTRY.register("dough_ball", DoughBallItem::new);
-	public static final RegistryObject<Item> TOASTED_BREAD = REGISTRY.register("toasted_bread", ToastedBreadItem::new);
-	public static final RegistryObject<Item> BREAD_SLICE = REGISTRY.register("bread_slice", BreadSliceItem::new);
-	public static final RegistryObject<Item> TOASTED_BREAD_SLICE = REGISTRY.register("toasted_bread_slice", ToastedBreadSliceItem::new);
-	public static final RegistryObject<Item> COOKED_CARROT = REGISTRY.register("cooked_carrot", CookedCarrotItem::new);
-	public static final RegistryObject<Item> COOKED_BEETROOT = REGISTRY.register("cooked_beetroot", CookedBeetrootItem::new);
-	public static final RegistryObject<Item> PUMPKIN_SLICE = REGISTRY.register("pumpkin_slice", PumpkinSliceItem::new);
-	public static final RegistryObject<Item> GOLDEN_BEEF = REGISTRY.register("golden_beef", GoldenBeefItem::new);
-	public static final RegistryObject<Item> GOLDEN_PORKCHOP = REGISTRY.register("golden_porkchop", GoldenPorkchopItem::new);
-	public static final RegistryObject<Item> GOLDEN_PLAYER_FLESH = REGISTRY.register("golden_player_flesh", GoldenPlayerFleshItem::new);
-	public static final RegistryObject<Item> GOLDEN_FISH = REGISTRY.register("golden_fish", GoldenFishItem::new);
-	public static final RegistryObject<Item> GOLDEN_BREAD = REGISTRY.register("golden_bread", GoldenBreadItem::new);
-	public static final RegistryObject<Item> GOLDEN_BREAD_SLICE = REGISTRY.register("golden_bread_slice", GoldenBreadSliceItem::new);
-	public static final RegistryObject<Item> GOLDEN_POTATO = REGISTRY.register("golden_potato", GoldenPotatoItem::new);
-	public static final RegistryObject<Item> GOLDEN_BEETROOT = REGISTRY.register("golden_beetroot", GoldenBeetrootItem::new);
-	public static final RegistryObject<Item> GOLDEN_SWEET_BERRIES = REGISTRY.register("golden_sweet_berries", GoldenSweetBerriesItem::new);
-	public static final RegistryObject<Item> GOLDEN_GLOW_BERRIES = REGISTRY.register("golden_glow_berries", GoldenGlowBerriesItem::new);
-	public static final RegistryObject<Item> GLISTERING_PUMPKIN_SLICE = REGISTRY.register("glistering_pumpkin_slice",
-			GlisteringPumpkinSliceItem::new);
-	public static final RegistryObject<Item> CHEESE = REGISTRY.register("cheese", CheeseItem::new);
-	public static final RegistryObject<Item> CHEESE_SLICE = REGISTRY.register("cheese_slice", CheeseSliceItem::new);
-	public static final RegistryObject<Item> RAW_CHEESE_EMPANADA = REGISTRY.register("raw_cheese_empanada", RawCheeseEmpanadaItem::new);
-	public static final RegistryObject<Item> RAW_MEAT_EMPANADA = REGISTRY.register("raw_meat_empanada", RawMeatEmpanadaItem::new);
-	public static final RegistryObject<Item> CHEESE_EMPANADA = REGISTRY.register("cheese_empanada", CheeseEmpanadaItem::new);
-	public static final RegistryObject<Item> MEAT_EMPANADA = REGISTRY.register("meat_empanada", MeatEmpanadaItem::new);
-	public static final RegistryObject<Item> CHEESE_SANDWICH = REGISTRY.register("cheese_sandwich", CheeseSandwichItem::new);
-	public static final RegistryObject<Item> FRUIT_SALAD = REGISTRY.register("fruit_salad", FruitSaladItem::new);
-	public static final RegistryObject<Item> VEGETABLE_SALAD = REGISTRY.register("vegetable_salad", VegetableSaladItem::new);
-	public static final RegistryObject<Item> MIXED_SALAD = REGISTRY.register("mixed_salad", MixedSaladItem::new);
-	public static final RegistryObject<Item> FISH_ON_STICK = REGISTRY.register("fish_on_stick", FishOnStickItem::new);
-	public static final RegistryObject<Item> COOKED_FISH_ON_STICK = REGISTRY.register("cooked_fish_on_stick", CookedFishOnStickItem::new);
-	public static final RegistryObject<Item> THERMOS = REGISTRY.register("thermos", ThermosItem::new);
-	public static final RegistryObject<Item> WATER_THERMOS = REGISTRY.register("water_thermos", WaterThermosItem::new);
-	public static final RegistryObject<Item> LAVA_THERMOS = REGISTRY.register("lava_thermos", LavaThermosItem::new);
-	public static final RegistryObject<Item> MILK_THERMOS = REGISTRY.register("milk_thermos", MilkThermosItem::new);
-	public static final RegistryObject<Item> GLASS = REGISTRY.register("glass", GlassItem::new);
-	public static final RegistryObject<Item> GLASS_OF_FRUIT_JUICE = REGISTRY.register("glass_of_fruit_juice", GlassOfFruitJuiceItem::new);
-	public static final RegistryObject<Item> GLASS_OF_VEGETABLE_JUICE = REGISTRY.register("glass_of_vegetable_juice",
-			GlassOfVegetableJuiceItem::new);
-	public static final RegistryObject<Item> GLASS_OF_MIXED_JUICE = REGISTRY.register("glass_of_mixed_juice", GlassOfMixedJuiceItem::new);
-	public static final RegistryObject<Item> GLASS_OF_WATER = REGISTRY.register("glass_of_water", GlassOfWaterItem::new);
-	public static final RegistryObject<Item> GLASS_OF_WATER_AND_BREAD = REGISTRY.register("glass_of_water_and_bread",
-			GlassOfWaterAndBreadItem::new);
-	public static final RegistryObject<Item> GLASS_OF_LAVA = REGISTRY.register("glass_of_lava", GlassOfLavaItem::new);
-	public static final RegistryObject<Item> GLASS_OF_MILK = REGISTRY.register("glass_of_milk", GlassOfMilkItem::new);
-	public static final RegistryObject<Item> GLASS_OF_MILK_AND_COOKIES = REGISTRY.register("glass_of_milk_and_cookies",
-			GlassOfMilkAndCookiesItem::new);
-	public static final RegistryObject<Item> GLASS_OF_MILK_AND_TOASTED_BREAD = REGISTRY.register("glass_of_milk_and_toasted_bread",
-			GlassOfMilkAndToastedBreadItem::new);
-	public static final RegistryObject<Item> GLASS_OF_CHOCOMILK = REGISTRY.register("glass_of_chocomilk", GlassOfChocomilkItem::new);
-	public static final RegistryObject<Item> GLASS_OF_CHOCOMILK_AND_COOKIES = REGISTRY.register("glass_of_chocomilk_and_cookies",
-			GlassOfChocomilkAndCookiesItem::new);
-	public static final RegistryObject<Item> GLASS_OF_CHOCOMILK_AND_TOASTED_BREAD = REGISTRY.register("glass_of_chocomilk_and_toasted_bread",
-			GlassOfChocomilkAndToastedBreadItem::new);
-	public static final RegistryObject<Item> BOX = REGISTRY.register("box", BoxItem::new);
-	public static final RegistryObject<Item> BOX_OF_COOKIES = REGISTRY.register("box_of_cookies", BoxOfCookiesItem::new);
-	public static final RegistryObject<Item> WOODEN_KNIFE = REGISTRY.register("wooden_knife", WoodenKnifeItem::new);
-	public static final RegistryObject<Item> STONE_KNIFE = REGISTRY.register("stone_knife", StoneKnifeItem::new);
-	public static final RegistryObject<Item> IRON_KNIFE = REGISTRY.register("iron_knife", IronKnifeItem::new);
-	public static final RegistryObject<Item> GOLDEN_KNIFE = REGISTRY.register("golden_knife", GoldenKnifeItem::new);
-	public static final RegistryObject<Item> DIAMOND_KNIFE = REGISTRY.register("diamond_knife", DiamondKnifeItem::new);
-	public static final RegistryObject<Item> NETHERITE_KNIFE = REGISTRY.register("netherite_knife", NetheriteKnifeItem::new);
-	public static final RegistryObject<Item> STEEL_KNIFE = REGISTRY.register("steel_knife", SteelKnifeItem::new);
-	public static final RegistryObject<Item> BRONZE_KNIFE = REGISTRY.register("bronze_knife", BronzeKnifeItem::new);
-	public static final RegistryObject<Item> SKILLET = REGISTRY.register("skillet", SkilletItem::new);
-	public static final RegistryObject<Item> GOLDEN_SKILLET = REGISTRY.register("golden_skillet", GoldenSkilletItem::new);
-	public static final RegistryObject<Item> DIAMOND_SKILLET = REGISTRY.register("diamond_skillet", DiamondSkilletItem::new);
-	public static final RegistryObject<Item> NETHERITE_SKILLET = REGISTRY.register("netherite_skillet", NetheriteSkilletItem::new);
-	public static final RegistryObject<Item> STEEL_SKILLET = REGISTRY.register("steel_skillet", SteelSkilletItem::new);
-	public static final RegistryObject<Item> BRONZE_SKILLET = REGISTRY.register("bronze_skillet", BronzeSkilletItem::new);
-	public static final RegistryObject<Item> CUTTING_BOARD = REGISTRY.register("cutting_board", CuttingBoardItem::new);
-	public static final RegistryObject<Item> MIXING_BOWL = REGISTRY.register("mixing_bowl", MixingBowlItem::new);
-	public static final RegistryObject<Item> ROLLING_PIN = REGISTRY.register("rolling_pin", RollingPinItem::new);
-	public static final RegistryObject<Item> JUICER = REGISTRY.register("juicer", JuicerItem::new);
-	public static final RegistryObject<Item> BLENDER = REGISTRY.register("blender", BlenderItem::new);
-	public static final RegistryObject<Item> BLACK_KITCHEN_BLOCK = block(FoodtxfModBlocks.BLACK_KITCHEN_BLOCK, FoodtxfModTabs.TAB_FOOD_TXF);
-	public static final RegistryObject<Item> WHITE_KITCHEN_BLOCK = block(FoodtxfModBlocks.WHITE_KITCHEN_BLOCK, FoodtxfModTabs.TAB_FOOD_TXF);
+    public static final DeferredRegister<Item> REGISTRY = DeferredRegister.create(ForgeRegistries.ITEMS, FoodtxfMod.MODID);
+    public static final RegistryObject<Item> PLAYER_FLESH = REGISTRY.register("player_flesh", PlayerFleshItem::new);
+    public static final RegistryObject<Item> COOKED_PLAYER_FLESH = REGISTRY.register("cooked_player_flesh", CookedPlayerFleshItem::new);
+    public static final RegistryObject<Item> CLEAN_PUFFERFISH = REGISTRY.register("clean_pufferfish", CleanPufferfishItem::new);
+    public static final RegistryObject<Item> COOKED_PUFFERFISH = REGISTRY.register("cooked_pufferfish", CookedPufferfishItem::new);
+    public static final RegistryObject<Item> COOKED_TROPICAL_FISH = REGISTRY.register("cooked_tropical_fish", CookedTropicalFishItem::new);
+    public static final RegistryObject<Item> DOUGH_BALL = REGISTRY.register("dough_ball", DoughBallItem::new);
+    public static final RegistryObject<Item> TOASTED_BREAD = REGISTRY.register("toasted_bread", ToastedBreadItem::new);
+    public static final RegistryObject<Item> BREAD_SLICE = REGISTRY.register("bread_slice", BreadSliceItem::new);
+    public static final RegistryObject<Item> TOASTED_BREAD_SLICE = REGISTRY.register("toasted_bread_slice", ToastedBreadSliceItem::new);
+    public static final RegistryObject<Item> COOKED_CARROT = REGISTRY.register("cooked_carrot", CookedCarrotItem::new);
+    public static final RegistryObject<Item> COOKED_BEETROOT = REGISTRY.register("cooked_beetroot", CookedBeetrootItem::new);
+    public static final RegistryObject<Item> PUMPKIN_SLICE = REGISTRY.register("pumpkin_slice", PumpkinSliceItem::new);
+    public static final RegistryObject<Item> GOLDEN_BEEF = REGISTRY.register("golden_beef", GoldenBeefItem::new);
+    public static final RegistryObject<Item> GOLDEN_PORKCHOP = REGISTRY.register("golden_porkchop", GoldenPorkchopItem::new);
+    public static final RegistryObject<Item> GOLDEN_PLAYER_FLESH = REGISTRY.register("golden_player_flesh", GoldenPlayerFleshItem::new);
+    public static final RegistryObject<Item> GOLDEN_FISH = REGISTRY.register("golden_fish", GoldenFishItem::new);
+    public static final RegistryObject<Item> GOLDEN_BREAD = REGISTRY.register("golden_bread", GoldenBreadItem::new);
+    public static final RegistryObject<Item> GOLDEN_BREAD_SLICE = REGISTRY.register("golden_bread_slice", GoldenBreadSliceItem::new);
+    public static final RegistryObject<Item> GOLDEN_POTATO = REGISTRY.register("golden_potato", GoldenPotatoItem::new);
+    public static final RegistryObject<Item> GOLDEN_BEETROOT = REGISTRY.register("golden_beetroot", GoldenBeetrootItem::new);
+    public static final RegistryObject<Item> GOLDEN_SWEET_BERRIES = REGISTRY.register("golden_sweet_berries", GoldenSweetBerriesItem::new);
+    public static final RegistryObject<Item> GOLDEN_GLOW_BERRIES = REGISTRY.register("golden_glow_berries", GoldenGlowBerriesItem::new);
+    public static final RegistryObject<Item> GLISTERING_PUMPKIN_SLICE = REGISTRY.register("glistering_pumpkin_slice",
+            GlisteringPumpkinSliceItem::new);
+    public static final RegistryObject<Item> CHEESE = REGISTRY.register("cheese", CheeseItem::new);
+    public static final RegistryObject<Item> CHEESE_SLICE = REGISTRY.register("cheese_slice", CheeseSliceItem::new);
+    public static final RegistryObject<Item> RAW_CHEESE_EMPANADA = REGISTRY.register("raw_cheese_empanada", RawCheeseEmpanadaItem::new);
+    public static final RegistryObject<Item> RAW_MEAT_EMPANADA = REGISTRY.register("raw_meat_empanada", RawMeatEmpanadaItem::new);
+    public static final RegistryObject<Item> CHEESE_EMPANADA = REGISTRY.register("cheese_empanada", CheeseEmpanadaItem::new);
+    public static final RegistryObject<Item> MEAT_EMPANADA = REGISTRY.register("meat_empanada", MeatEmpanadaItem::new);
+    public static final RegistryObject<Item> CHEESE_SANDWICH = REGISTRY.register("cheese_sandwich", CheeseSandwichItem::new);
+    public static final RegistryObject<Item> FRUIT_SALAD = REGISTRY.register("fruit_salad", FruitSaladItem::new);
+    public static final RegistryObject<Item> VEGETABLE_SALAD = REGISTRY.register("vegetable_salad", VegetableSaladItem::new);
+    public static final RegistryObject<Item> MIXED_SALAD = REGISTRY.register("mixed_salad", MixedSaladItem::new);
+    public static final RegistryObject<Item> FISH_ON_STICK = REGISTRY.register("fish_on_stick", FishOnStickItem::new);
+    public static final RegistryObject<Item> COOKED_FISH_ON_STICK = REGISTRY.register("cooked_fish_on_stick", CookedFishOnStickItem::new);
+    public static final RegistryObject<Item> THERMOS = REGISTRY.register("thermos", ThermosItem::new);
+    public static final RegistryObject<Item> WATER_THERMOS = REGISTRY.register("water_thermos", WaterThermosItem::new);
+    public static final RegistryObject<Item> LAVA_THERMOS = REGISTRY.register("lava_thermos", LavaThermosItem::new);
+    public static final RegistryObject<Item> MILK_THERMOS = REGISTRY.register("milk_thermos", MilkThermosItem::new);
+    public static final RegistryObject<Item> GLASS = REGISTRY.register("glass", GlassItem::new);
+    public static final RegistryObject<Item> GLASS_OF_FRUIT_JUICE = REGISTRY.register("glass_of_fruit_juice", GlassOfFruitJuiceItem::new);
+    public static final RegistryObject<Item> GLASS_OF_VEGETABLE_JUICE = REGISTRY.register("glass_of_vegetable_juice",
+            GlassOfVegetableJuiceItem::new);
+    public static final RegistryObject<Item> GLASS_OF_MIXED_JUICE = REGISTRY.register("glass_of_mixed_juice", GlassOfMixedJuiceItem::new);
+    public static final RegistryObject<Item> GLASS_OF_WATER = REGISTRY.register("glass_of_water", GlassOfWaterItem::new);
+    public static final RegistryObject<Item> GLASS_OF_WATER_AND_BREAD = REGISTRY.register("glass_of_water_and_bread",
+            GlassOfWaterAndBreadItem::new);
+    public static final RegistryObject<Item> GLASS_OF_LAVA = REGISTRY.register("glass_of_lava", GlassOfLavaItem::new);
+    public static final RegistryObject<Item> GLASS_OF_MILK = REGISTRY.register("glass_of_milk", GlassOfMilkItem::new);
+    public static final RegistryObject<Item> GLASS_OF_MILK_AND_COOKIES = REGISTRY.register("glass_of_milk_and_cookies",
+            GlassOfMilkAndCookiesItem::new);
+    public static final RegistryObject<Item> GLASS_OF_MILK_AND_TOASTED_BREAD = REGISTRY.register("glass_of_milk_and_toasted_bread",
+            GlassOfMilkAndToastedBreadItem::new);
+    public static final RegistryObject<Item> GLASS_OF_CHOCOMILK = REGISTRY.register("glass_of_chocomilk", GlassOfChocomilkItem::new);
+    public static final RegistryObject<Item> GLASS_OF_CHOCOMILK_AND_COOKIES = REGISTRY.register("glass_of_chocomilk_and_cookies",
+            GlassOfChocomilkAndCookiesItem::new);
+    public static final RegistryObject<Item> GLASS_OF_CHOCOMILK_AND_TOASTED_BREAD = REGISTRY.register("glass_of_chocomilk_and_toasted_bread",
+            GlassOfChocomilkAndToastedBreadItem::new);
+    public static final RegistryObject<Item> BOX = REGISTRY.register("box", BoxItem::new);
+    public static final RegistryObject<Item> BOX_OF_COOKIES = REGISTRY.register("box_of_cookies", BoxOfCookiesItem::new);
+    public static final RegistryObject<Item> WOODEN_KNIFE = REGISTRY.register("wooden_knife", WoodenKnifeItem::new);
+    public static final RegistryObject<Item> STONE_KNIFE = REGISTRY.register("stone_knife", StoneKnifeItem::new);
+    public static final RegistryObject<Item> IRON_KNIFE = REGISTRY.register("iron_knife", IronKnifeItem::new);
+    public static final RegistryObject<Item> GOLDEN_KNIFE = REGISTRY.register("golden_knife", GoldenKnifeItem::new);
+    public static final RegistryObject<Item> DIAMOND_KNIFE = REGISTRY.register("diamond_knife", DiamondKnifeItem::new);
+    public static final RegistryObject<Item> NETHERITE_KNIFE = REGISTRY.register("netherite_knife", NetheriteKnifeItem::new);
+    public static final RegistryObject<Item> STEEL_KNIFE = REGISTRY.register("steel_knife", SteelKnifeItem::new);
+    public static final RegistryObject<Item> BRONZE_KNIFE = REGISTRY.register("bronze_knife", BronzeKnifeItem::new);
+    public static final RegistryObject<Item> SKILLET = REGISTRY.register("skillet", SkilletItem::new);
+    public static final RegistryObject<Item> GOLDEN_SKILLET = REGISTRY.register("golden_skillet", GoldenSkilletItem::new);
+    public static final RegistryObject<Item> DIAMOND_SKILLET = REGISTRY.register("diamond_skillet", DiamondSkilletItem::new);
+    public static final RegistryObject<Item> NETHERITE_SKILLET = REGISTRY.register("netherite_skillet", NetheriteSkilletItem::new);
+    public static final RegistryObject<Item> STEEL_SKILLET = REGISTRY.register("steel_skillet", SteelSkilletItem::new);
+    public static final RegistryObject<Item> BRONZE_SKILLET = REGISTRY.register("bronze_skillet", BronzeSkilletItem::new);
+    public static final RegistryObject<Item> CUTTING_BOARD = REGISTRY.register("cutting_board", CuttingBoardItem::new);
+    public static final RegistryObject<Item> MIXING_BOWL = REGISTRY.register("mixing_bowl", MixingBowlItem::new);
+    public static final RegistryObject<Item> ROLLING_PIN = REGISTRY.register("rolling_pin", RollingPinItem::new);
+    public static final RegistryObject<Item> JUICER = REGISTRY.register("juicer", JuicerItem::new);
+    public static final RegistryObject<Item> BLENDER = REGISTRY.register("blender", BlenderItem::new);
+    public static final RegistryObject<Item> BLACK_KITCHEN_BLOCK = block(FoodtxfModBlocks.BLACK_KITCHEN_BLOCK);
+    public static final RegistryObject<Item> WHITE_KITCHEN_BLOCK = block(FoodtxfModBlocks.WHITE_KITCHEN_BLOCK);
 
-	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
-		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
-	}
+    private static RegistryObject<Item> block(RegistryObject<Block> block) {
+        return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
+    }
 }
