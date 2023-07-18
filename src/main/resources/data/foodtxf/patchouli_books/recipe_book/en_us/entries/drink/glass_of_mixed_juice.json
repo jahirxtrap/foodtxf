@@ -1,0 +1,13 @@
+{
+  "name": "Mixed Juice",
+  "icon": "foodtxf:glass_of_mixed_juice",
+  "category": "foodtxf:drink",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "foodtxf:glass_of_mixed_juice_recipe",
+      "recipe2": "foodtxf:glass_of_mixed_juice_recipe_alt",
+      "title": " "
+    }
+  ]
+}

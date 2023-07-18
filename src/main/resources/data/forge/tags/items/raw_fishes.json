@@ -1,0 +1,20 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:cod",
+    "minecraft:pufferfish",
+    "minecraft:salmon",
+    "minecraft:tropical_fish",
+    "foodtxf:clean_pufferfish",
+    { "id": "alexsdelight:raw_catfish_slice", "required": false },
+    { "id": "alexsmobs:blobfish", "required": false },
+    { "id": "alexsmobs:raw_catfish", "required": false },
+    { "id": "blue_skies:grittle_flatfish", "required": false },
+    { "id": "blue_skies:municipal_monkfish", "required": false },
+    { "id": "blue_skies:charscale_moki", "required": false },
+    { "id": "blue_skies:horizofin_tunid", "required": false },
+    { "id": "decade_of_digging:raw_tuna", "required": false },
+    { "id": "farmersdelight:cod_slice", "required": false },
+    { "id": "farmersdelight:salmon_slice", "required": false }
+  ]
+}

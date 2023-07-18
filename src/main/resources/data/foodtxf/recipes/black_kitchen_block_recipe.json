@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:blackstone"
+    },
+    "1": {
+      "item": "minecraft:blackstone"
+    },
+    "2": {
+      "item": "minecraft:blackstone"
+    },
+    "3": {
+      "item": "minecraft:blackstone"
+    },
+    "4": {
+      "item": "minecraft:quartz_block"
+    },
+    "5": {
+      "item": "minecraft:blackstone"
+    },
+    "6": {
+      "item": "minecraft:blackstone"
+    },
+    "7": {
+      "item": "minecraft:blackstone"
+    },
+    "8": {
+      "item": "minecraft:blackstone"
+    }
+  },
+  "result": {
+    "item": "foodtxf:black_kitchen_block",
+    "count": 9
+  }
+}

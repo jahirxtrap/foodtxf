@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    { "id": "#forge:vegetables/cabbage", "required": false },
+    { "id": "#forge:vegetables/tomato", "required": false }
+  ]
+}

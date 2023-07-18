@@ -1,0 +1,12 @@
+{
+  "name": "Filete",
+  "icon": "foodtxf:golden_beef",
+  "category": "foodtxf:food",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "foodtxf:golden_beef_recipe",
+      "title": " "
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "Tabla de picar",
+  "icon": "foodtxf:cutting_board",
+  "category": "foodtxf:tool",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "foodtxf:cutting_board_recipe",
+      "title": " "
+    },
+    {
+      "type": "patchouli:relations",
+      "entries": [
+        "foodtxf:food/cheese",
+        "foodtxf:food/fish",
+        "foodtxf:food/melon_slice",
+        "foodtxf:food/pumpkin_slice",
+        "foodtxf:bowl/fruit_salad",
+        "foodtxf:bowl/vegetable_salad",
+        "foodtxf:bowl/mixed_salad"
+      ]
+    }
+  ]
+}

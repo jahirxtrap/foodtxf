@@ -1,0 +1,30 @@
+{
+  "name": "Rebanada de pan",
+  "icon": "foodtxf:bread_slice",
+  "category": "foodtxf:food",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "foodtxf:bread_slice_recipe",
+      "recipe2": "foodtxf:toasted_bread_slice_recipe",
+      "title": " "
+    },
+    {
+      "type": "patchouli:smelting",
+      "recipe": "foodtxf:toasted_bread_slice_recipe_furnace",
+      "title": " "
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "foodtxf:golden_bread_slice_recipe",
+      "recipe2": "foodtxf:golden_bread_slice_recipe_alt",
+      "title": " "
+    },
+    {
+      "type": "patchouli:relations",
+      "entries": [
+        "foodtxf:food/sandwich"
+      ]
+    }
+  ]
+}

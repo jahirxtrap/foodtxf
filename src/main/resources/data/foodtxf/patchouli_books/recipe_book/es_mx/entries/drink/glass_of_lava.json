@@ -1,0 +1,12 @@
+{
+  "name": "Lava",
+  "icon": "foodtxf:glass_of_lava",
+  "category": "foodtxf:drink",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "foodtxf:glass_of_lava_recipe",
+      "title": " "
+    }
+  ]
+}

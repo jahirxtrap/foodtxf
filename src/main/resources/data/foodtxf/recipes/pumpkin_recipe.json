@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23"
+  ],
+  "key": {
+    "0": {
+      "item": "foodtxf:pumpkin_slice"
+    },
+    "1": {
+      "item": "foodtxf:pumpkin_slice"
+    },
+    "2": {
+      "item": "foodtxf:pumpkin_slice"
+    },
+    "3": {
+      "item": "foodtxf:pumpkin_slice"
+    }
+  },
+  "result": {
+    "item": "minecraft:pumpkin",
+    "count": 1
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "replace": false,
+  "values": [
+    { "id": "#forge:raw_meat", "required": false }
+  ]
+}

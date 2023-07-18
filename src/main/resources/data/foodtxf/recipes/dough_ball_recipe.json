@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "foodtxf:water_thermos"
+    },
+    {
+      "item": "foodtxf:mixing_bowl"
+    },
+    {
+      "item": "minecraft:wheat"
+    }
+  ],
+  "result": {
+    "item": "foodtxf:dough_ball",
+    "count": 1
+  }
+}

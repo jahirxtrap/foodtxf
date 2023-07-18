@@ -1,0 +1,12 @@
+{
+  "name": "Rodaja de sandía",
+  "icon": "minecraft:melon_slice",
+  "category": "foodtxf:food",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "foodtxf:melon_slice_recipe",
+      "title": " "
+    }
+  ]
+}

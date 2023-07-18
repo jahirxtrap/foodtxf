@@ -1,0 +1,12 @@
+{
+  "name": "Zanahoria",
+  "icon": "foodtxf:cooked_carrot",
+  "category": "foodtxf:food",
+  "pages": [
+    {
+      "type": "patchouli:smelting",
+      "recipe": "foodtxf:cooked_carrot_recipe_furnace",
+      "title": " "
+    }
+  ]
+}

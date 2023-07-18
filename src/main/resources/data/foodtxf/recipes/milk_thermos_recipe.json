@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "foodtxf:thermos"
+    },
+    {
+      "tag": "forge:buckets/milk"
+    }
+  ],
+  "result": {
+    "item": "foodtxf:milk_thermos",
+    "count": 1
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Papa",
+  "icon": "foodtxf:golden_potato",
+  "category": "foodtxf:food",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "foodtxf:golden_potato_recipe",
+      "title": " "
+    }
+  ]
+}

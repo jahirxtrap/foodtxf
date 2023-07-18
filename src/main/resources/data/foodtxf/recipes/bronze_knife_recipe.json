@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1",
+    "2 "
+  ],
+  "key": {
+    "1": {
+      "tag": "forge:ingots/bronze"
+    },
+    "2": {
+      "tag": "forge:rods/wooden"
+    }
+  },
+  "result": {
+    "item": "foodtxf:bronze_knife",
+    "count": 1
+  }
+}

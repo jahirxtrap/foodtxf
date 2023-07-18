@@ -1,0 +1,10 @@
+{
+  "name": "item.foodtxf.recipe_book",
+  "landing_text": "book.foodtxf.landing_text",
+  "book_texture": "foodtxf:textures/gui/recipe_book.png",
+  "filler_texture":"foodtxf:textures/gui/page_filler.png",
+  "model": "foodtxf:recipe_book",
+  "show_progress": false,
+  "version": 1,
+  "creative_tab": "tabfood_txf"
+}

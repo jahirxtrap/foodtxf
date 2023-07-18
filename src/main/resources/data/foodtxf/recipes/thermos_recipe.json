@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0",
+    "1",
+    "2"
+  ],
+  "key": {
+    "0": {
+      "tag": "forge:ingots/iron"
+    },
+    "1": {
+      "tag": "forge:glass/colorless"
+    },
+    "2": {
+      "tag": "forge:ingots/iron"
+    }
+  },
+  "result": {
+    "item": "foodtxf:thermos",
+    "count": 1
+  }
+}

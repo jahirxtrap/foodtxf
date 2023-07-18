@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "experience": 0,
+  "cookingtime": 600,
+  "ingredient": {
+    "item": "foodtxf:fish_on_stick"
+  },
+  "result": {
+    "item": "foodtxf:cooked_fish_on_stick"
+  }
+}

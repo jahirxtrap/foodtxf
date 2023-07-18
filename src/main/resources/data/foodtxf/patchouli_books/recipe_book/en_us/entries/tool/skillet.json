@@ -1,0 +1,29 @@
+{
+  "name": "Skillet",
+  "icon": "foodtxf:skillet",
+  "category": "foodtxf:tool",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "foodtxf:skillet_recipe",
+      "recipe2": "foodtxf:golden_skillet_recipe",
+      "title": " "
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "foodtxf:diamond_skillet_recipe",
+      "title": " "
+    },
+    {
+      "type": "patchouli:smithing",
+      "recipe": "foodtxf:netherite_skillet_recipe",
+      "title": " "
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "foodtxf:steel_skillet_recipe",
+      "recipe2": "foodtxf:bronze_skillet_recipe",
+      "title": " "
+    }
+  ]
+}

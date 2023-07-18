@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "foodtxf:juicer",
+    { "id": "#foodtxf:blenders", "required": false }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 12",
+    " 45",
+    "6  "
+  ],
+  "key": {
+    "1": {
+      "tag": "forge:gems/diamond"
+    },
+    "2": {
+      "tag": "forge:gems/diamond"
+    },
+    "4": {
+      "tag": "forge:gems/diamond"
+    },
+    "5": {
+      "tag": "forge:gems/diamond"
+    },
+    "6": {
+      "tag": "forge:rods/wooden"
+    }
+  },
+  "result": {
+    "item": "foodtxf:diamond_skillet",
+    "count": 1
+  }
+}

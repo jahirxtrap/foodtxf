@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "experience": 0,
+  "cookingtime": 600,
+  "ingredient": {
+    "item": "foodtxf:raw_cheese_empanada"
+  },
+  "result": {
+    "item": "foodtxf:cheese_empanada"
+  }
+}

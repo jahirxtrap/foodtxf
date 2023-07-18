@@ -1,0 +1,18 @@
+{
+  "name": "Leche y pan tostado",
+  "icon": "foodtxf:glass_of_milk_and_toasted_bread",
+  "category": "foodtxf:food",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "foodtxf:glass_of_milk_and_toasted_bread_recipe",
+      "title": " "
+    },
+    {
+      "type": "patchouli:relations",
+      "entries": [
+        "foodtxf:food/glass_of_chocomilk_and_toasted_bread"
+      ]
+    }
+  ]
+}

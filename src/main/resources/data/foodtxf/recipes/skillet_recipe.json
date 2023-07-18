@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 12",
+    " 45",
+    "6  "
+  ],
+  "key": {
+    "1": {
+      "tag": "forge:ingots/iron"
+    },
+    "2": {
+      "tag": "forge:ingots/iron"
+    },
+    "4": {
+      "tag": "forge:ingots/iron"
+    },
+    "5": {
+      "tag": "forge:ingots/iron"
+    },
+    "6": {
+      "tag": "forge:rods/wooden"
+    }
+  },
+  "result": {
+    "item": "foodtxf:skillet",
+    "count": 1
+  }
+}

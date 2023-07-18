@@ -1,0 +1,23 @@
+{
+  "name": "Player Flesh",
+  "icon": "foodtxf:player_flesh",
+  "category": "foodtxf:food",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "foodtxf:player_flesh",
+      "text": "Shift Right-click with any Knife in hand",
+      "title": " "
+    },
+    {
+      "type": "patchouli:smelting",
+      "recipe": "foodtxf:cooked_player_flesh_recipe_furnace",
+      "title": " "
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "foodtxf:golden_player_flesh_recipe",
+      "title": " "
+    }
+  ]
+}

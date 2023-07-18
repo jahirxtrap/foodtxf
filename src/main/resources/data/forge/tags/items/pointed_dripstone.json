@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    { "id": "minecraft:pointed_dripstone", "required": false },
+    { "id": "cavesandcliffs:pointed_dripstone", "required": false },
+    { "id": "caves_and_cliffs_mod:pointeddripstone", "required": false },
+    { "id": "minecraft__concept_vicale:stalagmite", "required": false }
+  ]
+}

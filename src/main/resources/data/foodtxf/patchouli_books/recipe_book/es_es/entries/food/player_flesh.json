@@ -1,0 +1,23 @@
+{
+  "name": "Carne de jugador",
+  "icon": "foodtxf:player_flesh",
+  "category": "foodtxf:food",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "foodtxf:player_flesh",
+      "text": "Agacharse y clic derecho con un cuchillo en la mano",
+      "title": " "
+    },
+    {
+      "type": "patchouli:smelting",
+      "recipe": "foodtxf:cooked_player_flesh_recipe_furnace",
+      "title": " "
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "foodtxf:golden_player_flesh_recipe",
+      "title": " "
+    }
+  ]
+}

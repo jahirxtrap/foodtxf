@@ -1,0 +1,13 @@
+{
+  "name": "Rebanada de calabaza",
+  "icon": "foodtxf:pumpkin_slice",
+  "category": "foodtxf:food",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "foodtxf:pumpkin_slice_recipe",
+      "recipe2": "foodtxf:glistering_pumpkin_slice_recipe",
+      "title": " "
+    }
+  ]
+}

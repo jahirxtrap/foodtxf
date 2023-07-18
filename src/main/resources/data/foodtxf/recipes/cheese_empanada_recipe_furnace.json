@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "experience": 0.35,
+  "cookingtime": 200,
+  "ingredient": {
+    "item": "foodtxf:raw_cheese_empanada"
+  },
+  "result": {
+    "item": "foodtxf:cheese_empanada"
+  }
+}

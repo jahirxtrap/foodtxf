@@ -1,0 +1,12 @@
+{
+  "name": "Water & Bread",
+  "icon": "foodtxf:glass_of_water_and_bread",
+  "category": "foodtxf:food",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "foodtxf:glass_of_water_and_bread_recipe",
+      "title": " "
+    }
+  ]
+}

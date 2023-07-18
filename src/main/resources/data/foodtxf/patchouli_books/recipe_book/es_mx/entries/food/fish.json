@@ -1,0 +1,25 @@
+{
+  "name": "Pez",
+  "icon": "foodtxf:clean_pufferfish",
+  "category": "foodtxf:food",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "foodtxf:clean_pufferfish_recipe",
+      "recipe2": "foodtxf:golden_fish_recipe",
+      "title": " "
+    },
+    {
+      "type": "patchouli:smelting",
+      "recipe": "foodtxf:cooked_pufferfish_recipe_furnace",
+      "recipe2": "foodtxf:cooked_tropical_fish_recipe_furnace",
+      "title": " "
+    },
+    {
+      "type": "patchouli:relations",
+      "entries": [
+        "foodtxf:stick/fish_on_stick"
+      ]
+    }
+  ]
+}

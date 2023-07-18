@@ -1,0 +1,17 @@
+{
+  "name": "Beetroot",
+  "icon": "foodtxf:cooked_beetroot",
+  "category": "foodtxf:food",
+  "pages": [
+    {
+      "type": "patchouli:smelting",
+      "recipe": "foodtxf:cooked_beetroot_recipe_furnace",
+      "title": " "
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "foodtxf:golden_beetroot_recipe",
+      "title": " "
+    }
+  ]
+}

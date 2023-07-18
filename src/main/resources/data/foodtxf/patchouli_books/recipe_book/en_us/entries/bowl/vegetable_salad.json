@@ -1,0 +1,18 @@
+{
+  "name": "Vegetable Salad",
+  "icon": "foodtxf:vegetable_salad",
+  "category": "foodtxf:bowl",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "foodtxf:vegetable_salad_recipe",
+      "title": " "
+    },
+    {
+      "type": "patchouli:relations",
+      "entries": [
+        "foodtxf:bowl/vegetable_salad"
+      ]
+    }
+  ]
+}

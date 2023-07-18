@@ -1,0 +1,27 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="All Rights Reserved"
+
+[[mods]]
+modId = "foodtxf"
+version = "1.16.5-1.4.2-forge"
+displayName = "Food TXF"
+displayURL = "https://www.curseforge.com/minecraft/mc-mods/food-txf"
+logoFile = "logo.png"
+authors = "jahirtrap"
+description = "Some useful food & cannibalism"
+itemIcon = "foodtxf:golden_beef"
+
+[[dependencies.foodtxf]]
+    modId = "forge"
+    mandatory = true
+    versionRange = "[36,)"
+    ordering = "NONE"
+    side = "BOTH"
+
+[[dependencies.foodtxf]]
+    modId = "minecraft"
+    mandatory = true
+    versionRange = "[1.16.5,1.17)"
+    ordering = "NONE"
+    side = "BOTH"

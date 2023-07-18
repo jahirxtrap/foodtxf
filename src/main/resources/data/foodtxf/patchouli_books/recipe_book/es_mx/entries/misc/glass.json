@@ -1,0 +1,24 @@
+{
+  "name": "Vaso",
+  "icon": "foodtxf:glass",
+  "category": "foodtxf:misc",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "foodtxf:glass_recipe",
+      "title": " "
+    },
+    {
+      "type": "patchouli:relations",
+      "entries": [
+        "foodtxf:drink/glass_of_fruit_juice",
+        "foodtxf:drink/glass_of_vegetable_juice",
+        "foodtxf:drink/glass_of_mixed_juice",
+        "foodtxf:drink/glass_of_water",
+        "foodtxf:drink/glass_of_lava",
+        "foodtxf:drink/glass_of_milk",
+        "foodtxf:drink/glass_of_chocomilk"
+      ]
+    }
+  ]
+}

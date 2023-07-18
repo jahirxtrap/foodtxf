@@ -1,0 +1,13 @@
+{
+  "name": "Kitchen Block",
+  "icon": "foodtxf:black_kitchen_block",
+  "category": "foodtxf:misc",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "foodtxf:black_kitchen_block_recipe",
+      "recipe2": "foodtxf:white_kitchen_block_recipe",
+      "title": " "
+    }
+  ]
+}

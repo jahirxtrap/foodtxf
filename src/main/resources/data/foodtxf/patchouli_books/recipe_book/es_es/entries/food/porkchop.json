@@ -1,0 +1,12 @@
+{
+  "name": "Chuleta de cerdo",
+  "icon": "foodtxf:golden_porkchop",
+  "category": "foodtxf:food",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "foodtxf:golden_porkchop_recipe",
+      "title": " "
+    }
+  ]
+}
