@@ -22,6 +22,7 @@ public class FoodtxfModItems {
     public static final RegistryObject<Item> TOASTED_BREAD = REGISTRY.register("toasted_bread", ToastedBreadItem::new);
     public static final RegistryObject<Item> BREAD_SLICE = REGISTRY.register("bread_slice", BreadSliceItem::new);
     public static final RegistryObject<Item> TOASTED_BREAD_SLICE = REGISTRY.register("toasted_bread_slice", ToastedBreadSliceItem::new);
+    public static final RegistryObject<Item> BAGUETTE = REGISTRY.register("baguette", BaguetteItem::new);
     public static final RegistryObject<Item> COOKED_CARROT = REGISTRY.register("cooked_carrot", CookedCarrotItem::new);
     public static final RegistryObject<Item> COOKED_BEETROOT = REGISTRY.register("cooked_beetroot", CookedTuberItem::new);
     public static final RegistryObject<Item> PUMPKIN_SLICE = REGISTRY.register("pumpkin_slice", PumpkinSliceItem::new);
@@ -89,6 +90,7 @@ public class FoodtxfModItems {
     public static final RegistryObject<Item> BLENDER = REGISTRY.register("blender", BaseReusableItem::new);
     public static final RegistryObject<Item> BLACK_KITCHEN_BLOCK = block(FoodtxfModBlocks.BLACK_KITCHEN_BLOCK);
     public static final RegistryObject<Item> WHITE_KITCHEN_BLOCK = block(FoodtxfModBlocks.WHITE_KITCHEN_BLOCK);
+    public static final RegistryObject<Item> RECIPE_BOOK = REGISTRY.register("recipe_book", RecipeBookItem::new);
 
     private static RegistryObject<Item> block(RegistryObject<Block> block) {
         return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(TAB_FOOD_TXF)));

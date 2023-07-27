@@ -79,5 +79,7 @@
   "item.foodtxf.box": "Box",
   "item.foodtxf.box_of_cookies": "Box of Cookies",
   "block.foodtxf.white_kitchen_block": "White Kitchen Block",
-  "item.foodtxf.chocomilk_thermos": "Chocomilk Thermos"
+  "item.foodtxf.chocomilk_thermos": "Chocomilk Thermos",
+  "item.foodtxf.baguette": "Baguette",
+  "tooltip.foodtxf.patchouli": "Patchouli is not installed"
 }

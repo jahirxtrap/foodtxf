@@ -17,6 +17,7 @@
     {
       "type": "patchouli:relations",
       "entries": [
+        "foodtxf:food/baguette",
         "foodtxf:food/bread_slice",
         "foodtxf:food/glass_of_water_and_bread",
         "foodtxf:food/glass_of_milk_and_toasted_bread",

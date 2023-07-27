@@ -76,10 +76,17 @@ minecraft {
 
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
-repositories { }
+repositories {
+    maven {
+        url 'https://maven.blamejared.com'
+    }
+}
 
 dependencies {
     minecraft 'net.minecraftforge:forge:1.19.2-43.2.8'
+
+    compileOnly fg.deobf("vazkii.patchouli:Patchouli:1.19.2-77:api")
+    runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:1.19.2-77")
 }
 
 jar {
