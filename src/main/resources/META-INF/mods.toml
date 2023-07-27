@@ -1,5 +1,5 @@
 modLoader = "javafml"
-loaderVersion = "[40,)"
+loaderVersion = "[38,)"
 license = "All Rights Reserved"
 
 [[mods]]
@@ -15,7 +15,7 @@ itemIcon = "foodtxf:diamond_knife"
 [[dependencies.foodtxf]]
     modId = "forge"
     mandatory = true
-    versionRange = "[40,)"
+    versionRange = "[38,)"
     ordering = "NONE"
     side = "BOTH"
 

@@ -1,0 +1,12 @@
+{
+  "name": "Baguette",
+  "icon": "foodtxf:baguette",
+  "category": "foodtxf:food",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "foodtxf:baguette_recipe",
+      "title": " "
+    }
+  ]
+}
