@@ -1,6 +1,6 @@
-modLoader="javafml"
-loaderVersion="[36,)"
-license="All Rights Reserved"
+modLoader = "javafml"
+loaderVersion = "[36,)"
+license = "All Rights Reserved"
 
 [[mods]]
 modId = "foodtxf"
