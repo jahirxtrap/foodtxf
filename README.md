@@ -9,7 +9,7 @@ Some useful food & cannibalism
 - Beetroot (Cooked, Golden)
 - Berries (Golden Sweet, Golden Glow)
 - Box (Empty, Cookies)
-- Bread (Toasted, Golden, Slice, Toasted Slice, Golden Slice)
+- Bread (Baguette, Toasted, Golden, Slice, Toasted Slice, Golden Slice)
 - Carrot (Cooked)
 - Cheese (Normal, Slice)
 - Dough Ball (Wheat)
@@ -57,6 +57,6 @@ Some useful food & cannibalism
 <details>
   <summary>Spoiler</summary>
 
-<img src="https://cdn.modrinth.com/data/gHfCZDqf/images/8dd71b10592625ff0f2c460b3e8d29cc6780b74f.png" width="500">
+<img src="https://cdn.modrinth.com/data/gHfCZDqf/images/46171e4de6dcabf9c3cebadf8ace9f5733759746.png" width="500">
 
 </details>

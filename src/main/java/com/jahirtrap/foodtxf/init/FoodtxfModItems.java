@@ -20,6 +20,7 @@ public class FoodtxfModItems {
     public static final RegistryObject<Item> TOASTED_BREAD = REGISTRY.register("toasted_bread", ToastedBreadItem::new);
     public static final RegistryObject<Item> BREAD_SLICE = REGISTRY.register("bread_slice", BreadSliceItem::new);
     public static final RegistryObject<Item> TOASTED_BREAD_SLICE = REGISTRY.register("toasted_bread_slice", ToastedBreadSliceItem::new);
+    public static final RegistryObject<Item> BAGUETTE = REGISTRY.register("baguette", BaguetteItem::new);
     public static final RegistryObject<Item> COOKED_CARROT = REGISTRY.register("cooked_carrot", CookedCarrotItem::new);
     public static final RegistryObject<Item> COOKED_BEETROOT = REGISTRY.register("cooked_beetroot", CookedTuberItem::new);
     public static final RegistryObject<Item> PUMPKIN_SLICE = REGISTRY.register("pumpkin_slice", PumpkinSliceItem::new);
