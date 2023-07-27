@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "foodtxf:cooked_tropical_fish",
+    "foodtxf:clean_pufferfish",
+    "foodtxf:cooked_pufferfish",
+    { "id": "bettas:betta_fish", "required": false },
+    { "id": "biomemakeover:cooked_glowfish", "required": false },
+    { "id": "decade_of_digging:raw_tuna", "required": false },
+    { "id": "decade_of_digging:cooked_tuna", "required": false },
+    { "id": "sullysmod:raw_lanternfish", "required": false },
+    { "id": "sullysmod:cooked_lanternfish", "required": false }
+  ]
+}

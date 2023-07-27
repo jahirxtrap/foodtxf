@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "foodtxf:glass"
+    },
+    {
+      "item": "minecraft:milk_bucket"
+    },
+    {
+      "item": "foodtxf:glass"
+    },
+    {
+      "item": "foodtxf:glass"
+    }
+  ],
+  "result": {
+    "item": "foodtxf:glass_of_milk",
+    "count": 3
+  }
+}

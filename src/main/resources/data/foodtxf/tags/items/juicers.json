@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "foodtxf:juicer",
+    "foodtxf:iron_juicer",
+    "foodtxf:golden_juicer",
+    "foodtxf:diamond_juicer",
+    "foodtxf:netherite_juicer",
+    "foodtxf:steel_juicer",
+    "foodtxf:bronze_juicer",
+    { "id": "#foodtxf:blenders", "required": false }
+  ]
+}

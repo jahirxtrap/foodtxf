@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "DDD",
+    "DBD",
+    "DDD"
+  ],
+  "key": {
+    "D": {
+      "item": "minecraft:diorite"
+    },
+    "B": {
+      "item": "foodtxf:black_kitchen_block"
+    }
+  },
+  "result": {
+    "item": "foodtxf:white_kitchen_block",
+    "count": 9
+  }
+}

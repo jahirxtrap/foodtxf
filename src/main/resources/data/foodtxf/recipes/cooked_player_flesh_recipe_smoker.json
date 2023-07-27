@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smoking",
+  "experience": 0.35,
+  "cookingtime": 100,
+  "ingredient": {
+    "item": "foodtxf:player_flesh"
+  },
+  "result": {
+    "item": "foodtxf:cooked_player_flesh"
+  }
+}

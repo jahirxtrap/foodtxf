@@ -1,0 +1,37 @@
+{
+  "modid": "foodtxf",
+  "tools": [
+    "foodtxf:blender",
+    "foodtxf:cutting_board",
+    "foodtxf:glass",
+    "foodtxf:mixing_bowl",
+    "foodtxf:juicer",
+    "foodtxf:iron_juicer",
+    "foodtxf:golden_juicer",
+    "foodtxf:diamond_juicer",
+    "foodtxf:netherite_juicer",
+    "foodtxf:steel_juicer",
+    "foodtxf:bronze_juicer",
+    "foodtxf:wooden_knife",
+    "foodtxf:stone_knife",
+    "foodtxf:iron_knife",
+    "foodtxf:golden_knife",
+    "foodtxf:diamond_knife",
+    "foodtxf:netherite_knife",
+    "foodtxf:steel_knife",
+    "foodtxf:bronze_knife"
+  ],
+  "toaster": [
+    {
+      "input": "minecraft:bread",
+      "output": "foodtxf:toasted_bread"
+    },
+    {
+      "input": "foodtxf:bread_slice",
+      "output": "foodtxf:toasted_bread_slice"
+    }
+  ],
+  "kitchenConnectors": [
+    "foodtxf:black_kitchen_block"
+  ]
+}

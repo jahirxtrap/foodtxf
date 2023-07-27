@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "eatinganimation:item/foodtxf/cooked_player_flesh_eating_2"
+  }
+}

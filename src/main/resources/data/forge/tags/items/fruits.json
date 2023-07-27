@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    { "id": "#forge:fruits/berries", "required": false },
+    { "id": "#forge:fruits/cherry", "required": false },
+    { "id": "#forge:fruits/coconut", "required": false },
+    { "id": "#forge:fruits/fig", "required": false },
+    { "id": "#forge:fruits/orange", "required": false },
+    { "id": "#forge:fruits/pumpkin", "required": false },
+    { "id": "#forge:fruits/wolfberry", "required": false }
+  ]
+}

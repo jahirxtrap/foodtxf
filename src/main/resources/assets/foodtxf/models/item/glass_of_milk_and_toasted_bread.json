@@ -1,0 +1,30 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "foodtxf:items/glass_of_milk_and_toasted_bread",
+    "particle": "foodtxf:items/particle/toasted_bread"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "eatinganimation:eating": 1.0,
+        "eatinganimation:eat": 0.35
+      },
+      "model": "eatinganimation:item/foodtxf/glass_of_milk_and_toasted_bread_eating_0"
+    },
+    {
+      "predicate": {
+        "eatinganimation:eating": 1.0,
+        "eatinganimation:eat": 0.7
+      },
+      "model": "eatinganimation:item/foodtxf/glass_of_milk_and_toasted_bread_eating_1"
+    },
+    {
+      "predicate": {
+        "eatinganimation:eating": 1.0,
+        "eatinganimation:eat": 0.9
+      },
+      "model": "eatinganimation:item/foodtxf/glass_of_milk_and_toasted_bread_eating_2"
+    }
+  ]
+}

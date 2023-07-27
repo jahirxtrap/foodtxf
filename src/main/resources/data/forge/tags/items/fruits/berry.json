@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    { "id": "minecraft:glow_berries", "required": false },
+    { "id": "createcafe:mana_berries", "required": false },
+    { "id": "cavesandcliffs:glow_berries", "required": false },
+    { "id": "caves_and_cliffs_mod:glow_berry", "required": false },
+    { "id": "minecraft__concept_vicale:glowberry", "required": false }
+  ]
+}

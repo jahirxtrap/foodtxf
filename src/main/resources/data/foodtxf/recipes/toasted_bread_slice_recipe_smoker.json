@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smoking",
+  "experience": 0.35,
+  "cookingtime": 50,
+  "ingredient": {
+    "item": "foodtxf:bread_slice"
+  },
+  "result": {
+    "item": "foodtxf:toasted_bread_slice"
+  }
+}

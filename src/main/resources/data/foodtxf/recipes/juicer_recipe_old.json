@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "C",
+    "S"
+  ],
+  "key": {
+    "C": {
+      "tag": "forge:cobblestone"
+    },
+    "S": {
+      "item": "minecraft:stone_slab"
+    }
+  },
+  "result": {
+    "item": "foodtxf:juicer",
+    "count": 1
+  },
+  "conditions": [
+    {
+      "type": "forge:and",
+      "values": [
+        {
+	      "type": "forge:not",
+	      "value": {
+          	"type": "forge:item_exists",
+          	"item": "minecraft:pointed_dripstone"
+          }
+        },
+        {
+          "type": "forge:tag_empty",
+          "tag": "forge:pointed_dripstone"
+        }
+	  ]
+    }
+  ]
+}

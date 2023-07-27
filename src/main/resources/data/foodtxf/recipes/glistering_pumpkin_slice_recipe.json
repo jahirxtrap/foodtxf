@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GGG",
+    "GPG",
+    "GGG"
+  ],
+  "key": {
+    "G": {
+      "item": "minecraft:gold_nugget"
+    },
+    "P": {
+      "item": "foodtxf:pumpkin_slice"
+    }
+  },
+  "result": {
+    "item": "foodtxf:glistering_pumpkin_slice",
+    "count": 1
+  }
+}

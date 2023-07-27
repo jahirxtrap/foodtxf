@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+	"foodtxf:glass_of_fruit_juice",
+	"foodtxf:glass_of_vegetable_juice",
+	"foodtxf:glass_of_mixed_juice",
+	"foodtxf:glass_of_water",
+	"foodtxf:glass_of_milk",
+	"foodtxf:glass_of_chocolate_milk"
+  ]
+}

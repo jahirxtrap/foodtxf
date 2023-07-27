@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "foodtxf:blocks/white_kitchen_block",
+    "particle": "foodtxf:blocks/white_kitchen_block"
+  }
+}
