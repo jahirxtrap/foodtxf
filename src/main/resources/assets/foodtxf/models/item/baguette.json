@@ -1,0 +1,57 @@
+{
+  "parent": "foodtxf:item/baguette_template",
+  "textures": {
+    "layer0": "foodtxf:item/baguette"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "eatinganimation:eating": 1.0,
+        "eatinganimation:eat": 0.4
+      },
+      "model": "eatinganimation:item/foodtxf/baguette_eating_0"
+    },
+    {
+      "predicate": {
+        "eatinganimation:eating": 1.0,
+        "eatinganimation:eat": 0.65
+      },
+      "model": "eatinganimation:item/foodtxf/baguette_eating_1"
+    },
+    {
+      "predicate": {
+        "eatinganimation:eating": 1.0,
+        "eatinganimation:eat": 0.9
+      },
+      "model": "eatinganimation:item/foodtxf/baguette_eating_2"
+    },
+    {
+      "predicate": {
+        "eatinganimation:eating": 1.0,
+        "eatinganimation:eat": 1.15
+      },
+      "model": "eatinganimation:item/foodtxf/baguette_eating_3"
+    },
+    {
+      "predicate": {
+        "eatinganimation:eating": 1.0,
+        "eatinganimation:eat": 1.4
+      },
+      "model": "eatinganimation:item/foodtxf/baguette_eating_4"
+    },
+    {
+      "predicate": {
+        "eatinganimation:eating": 1.0,
+        "eatinganimation:eat": 1.65
+      },
+      "model": "eatinganimation:item/foodtxf/baguette_eating_5"
+    },
+    {
+      "predicate": {
+        "eatinganimation:eating": 1.0,
+        "eatinganimation:eat": 1.9
+      },
+      "model": "eatinganimation:item/foodtxf/baguette_eating_6"
+    }
+  ]
+}

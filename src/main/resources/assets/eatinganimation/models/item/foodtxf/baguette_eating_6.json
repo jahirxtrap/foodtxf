@@ -1,0 +1,6 @@
+{
+  "parent": "foodtxf:item/baguette_template",
+  "textures": {
+    "layer0": "eatinganimation:item/foodtxf/baguette_eating_6"
+  }
+}

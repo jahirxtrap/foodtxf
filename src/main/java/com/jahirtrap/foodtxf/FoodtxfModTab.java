@@ -17,6 +17,7 @@ public class FoodtxfModTab {
         event.accept(FoodtxfModItems.TOASTED_BREAD.get());
         event.accept(FoodtxfModItems.BREAD_SLICE.get());
         event.accept(FoodtxfModItems.TOASTED_BREAD_SLICE.get());
+        event.accept(FoodtxfModItems.BAGUETTE.get());
         event.accept(FoodtxfModItems.COOKED_CARROT.get());
         event.accept(FoodtxfModItems.COOKED_BEETROOT.get());
         event.accept(FoodtxfModItems.PUMPKIN_SLICE.get());
@@ -84,5 +85,6 @@ public class FoodtxfModTab {
         event.accept(FoodtxfModItems.BLENDER.get());
         event.accept(FoodtxfModItems.BLACK_KITCHEN_BLOCK.get());
         event.accept(FoodtxfModItems.WHITE_KITCHEN_BLOCK.get());
+        event.accept(FoodtxfModItems.RECIPE_BOOK.get());
     }
 }
