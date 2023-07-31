@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " G ",
+    "GBG",
+    " G "
+  ],
+  "key": {
+    "G": {
+      "tag": "c:gold_nuggets"
+    },
+    "B": {
+      "item": "foodtxf:bread_slice"
+    }
+  },
+  "result": {
+    "item": "foodtxf:golden_bread_slice",
+    "count": 1
+  }
+}

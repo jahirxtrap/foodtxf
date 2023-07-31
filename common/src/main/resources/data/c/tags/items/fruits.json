@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    { "id": "#c:fruits/apple", "required": false },
+    { "id": "#c:fruits/baobab_fruit", "required": false },
+    { "id": "#c:fruits/berries", "required": false },
+    { "id": "#c:fruits/cherry", "required": false },
+    { "id": "#c:fruits/coconut", "required": false },
+    { "id": "#c:fruits/fig", "required": false },
+    { "id": "#c:fruits/gysahl", "required": false },
+    { "id": "#c:fruits/joshua_fruit", "required": false },
+    { "id": "#c:fruits/olive", "required": false },
+    { "id": "#c:fruits/orange", "required": false },
+    { "id": "#c:fruits/pumpkin", "required": false },
+    { "id": "#c:fruits/wolfberry", "required": false }
+  ]
+}

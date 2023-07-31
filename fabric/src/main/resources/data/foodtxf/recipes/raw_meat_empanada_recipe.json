@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "c:raw_meat"
+    },
+    {
+      "item": "foodtxf:dough_ball"
+    },
+    {
+      "item": "foodtxf:rolling_pin"
+    }
+  ],
+  "result": {
+    "item": "foodtxf:raw_meat_empanada",
+    "count": 1
+  }
+}

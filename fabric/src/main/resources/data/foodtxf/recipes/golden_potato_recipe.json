@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GGG",
+    "GBG",
+    "GGG"
+  ],
+  "key": {
+    "G": {
+      "tag": "c:gold_nuggets"
+    },
+    "B": {
+      "item": "minecraft:baked_potato"
+    }
+  },
+  "result": {
+    "item": "foodtxf:golden_potato",
+    "count": 1
+  }
+}

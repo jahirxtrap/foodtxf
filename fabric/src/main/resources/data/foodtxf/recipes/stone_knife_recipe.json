@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " S",
+    "R "
+  ],
+  "key": {
+    "S": {
+      "tag": "minecraft:stone_tool_materials"
+    },
+    "R": {
+      "tag": "c:wooden_rods"
+    }
+  },
+  "result": {
+    "item": "foodtxf:stone_knife",
+    "count": 1
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "foodtxf:cheese_slice"
+    },
+    {
+      "item": "foodtxf:dough_ball"
+    },
+    {
+      "item": "foodtxf:rolling_pin"
+    }
+  ],
+  "result": {
+    "item": "foodtxf:raw_cheese_empanada",
+    "count": 1
+  }
+}
