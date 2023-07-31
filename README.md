@@ -50,6 +50,15 @@ Some useful food & cannibalism
 - <a href="https://www.curseforge.com/minecraft/mc-mods/pams-harvestcraft-2-food-core" target="_blank">Pam's Harvestcraft 2 mod</a>
 - <a href="https://www.curseforge.com/minecraft/mc-mods/tough-as-nails" target="_blank">Tough As Nails mod</a>
 
+<strong>Forge dependencies:</strong>
+
+- <a href="https://www.curseforge.com/minecraft/mc-mods/configured" target="_blank">Configured mod</a> or <a href="https://www.curseforge.com/minecraft/mc-mods/config-menus-forge" target="_blank">Forge Config Screens mod</a> <strong>(Optional)</strong>
+
+<strong>Fabric/Quilt dependencies:</strong>
+
+- <a href="https://www.curseforge.com/minecraft/mc-mods/configured-fabric" target="_blank">Configured mod</a> or <a href="https://www.curseforge.com/minecraft/mc-mods/config-menus-forge" target="_blank">Forge Config Screens mod</a> <strong>(Optional)</strong>
+- <a href="https://www.curseforge.com/minecraft/mc-mods/forge-config-api-port-fabric" target="_blank">Forge Config Api Port mod</a> <strong>(Required)</strong>
+
 <img src="https://s4.gifyu.com/images/Untitled22.gif" width="1200" /><br>
 
 <strong>This mod uses Tags therefore it is compatible with other mods</strong>
