@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "foodtxf:chocomilk_thermos",
+    { "id": "#c:buckets/chocomilk", "required": false }
+  ]
+}

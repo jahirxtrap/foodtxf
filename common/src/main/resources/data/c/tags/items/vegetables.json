@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    { "id": "#c:vegetables/cabbage", "required": false },
+    { "id": "#c:vegetables/tomato", "required": false }
+  ]
+}

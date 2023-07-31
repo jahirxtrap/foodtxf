@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "foodtxf:juicers"
+    },
+    {
+      "tag": "foodtxf:fruits"
+    },
+    {
+      "item": "foodtxf:glass"
+    },
+    {
+      "tag": "foodtxf:vegetables"
+    }
+  ],
+  "result": {
+    "item": "foodtxf:glass_of_mixed_juice",
+    "count": 1
+  }
+}

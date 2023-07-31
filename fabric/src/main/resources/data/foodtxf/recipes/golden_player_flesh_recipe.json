@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GGG",
+    "GCG",
+    "GGG"
+  ],
+  "key": {
+    "G": {
+      "tag": "c:gold_nuggets"
+    },
+    "C": {
+      "item": "foodtxf:cooked_player_flesh"
+    }
+  },
+  "result": {
+    "item": "foodtxf:golden_player_flesh",
+    "count": 1
+  }
+}

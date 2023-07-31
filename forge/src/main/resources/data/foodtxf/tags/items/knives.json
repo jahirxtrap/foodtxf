@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "foodtxf:wooden_knife",
+    "foodtxf:stone_knife",
+    "foodtxf:iron_knife",
+    "foodtxf:golden_knife",
+    "foodtxf:diamond_knife",
+    "foodtxf:netherite_knife",
+    "foodtxf:steel_knife",
+    "foodtxf:bronze_knife"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " G",
+    "R "
+  ],
+  "key": {
+    "G": {
+      "tag": "c:diamonds"
+    },
+    "R": {
+      "tag": "c:wooden_rods"
+    }
+  },
+  "result": {
+    "item": "foodtxf:diamond_knife",
+    "count": 1
+  }
+}

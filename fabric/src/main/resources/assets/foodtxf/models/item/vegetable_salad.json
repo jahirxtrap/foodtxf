@@ -1,0 +1,30 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "foodtxf:item/vegetable_salad",
+    "particle": "foodtxf:item/particle/vegetable_salad"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "eating": 1.0,
+        "eat": 0.35
+      },
+      "model": "eatinganimation:item/foodtxf/vegetable_salad_eating_0"
+    },
+    {
+      "predicate": {
+        "eating": 1.0,
+        "eat": 0.7
+      },
+      "model": "eatinganimation:item/foodtxf/vegetable_salad_eating_1"
+    },
+    {
+      "predicate": {
+        "eating": 1.0,
+        "eat": 0.9
+      },
+      "model": "eatinganimation:item/foodtxf/vegetable_salad_eating_2"
+    }
+  ]
+}

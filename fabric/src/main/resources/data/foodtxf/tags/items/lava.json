@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "foodtxf:lava_thermos",
+    { "id": "#c:buckets/lava", "required": false }
+  ]
+}

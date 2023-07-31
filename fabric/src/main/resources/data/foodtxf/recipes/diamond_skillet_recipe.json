@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " GG",
+    " GG",
+    "R  "
+  ],
+  "key": {
+    "G": {
+      "tag": "c:diamonds"
+    },
+    "R": {
+      "tag": "c:wooden_rods"
+    }
+  },
+  "result": {
+    "item": "foodtxf:diamond_skillet",
+    "count": 1
+  }
+}
