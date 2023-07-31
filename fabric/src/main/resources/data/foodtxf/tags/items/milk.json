@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "foodtxf:milk_thermos",
+    { "id": "#c:buckets/milk", "required": false }
+  ]
+}

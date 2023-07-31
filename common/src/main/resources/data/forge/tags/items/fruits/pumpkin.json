@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "foodtxf:pumpkin_slice",
+    { "id": "farmersdelight:pumpkin_slice", "required": false }
+  ]
+}

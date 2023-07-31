@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "experience": 0.35,
+  "cookingtime": 100,
+  "ingredient": {
+    "item": "foodtxf:bread_slice"
+  },
+  "result": "foodtxf:toasted_bread_slice"
+}

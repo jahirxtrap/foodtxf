@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "experience": 0,
+  "cookingtime": 600,
+  "ingredient": {
+    "item": "minecraft:tropical_fish"
+  },
+  "result": "foodtxf:cooked_tropical_fish"
+}

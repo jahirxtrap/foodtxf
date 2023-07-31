@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:cocoa_beans"
+    },
+    {
+      "tag": "foodtxf:milk"
+    },
+    {
+      "item": "minecraft:cocoa_beans"
+    },
+    {
+      "item": "foodtxf:thermos"
+    }
+  ],
+  "result": {
+    "item": "foodtxf:chocomilk_thermos",
+    "count": 1
+  }
+}

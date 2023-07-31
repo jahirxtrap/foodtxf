@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  R",
+    " L ",
+    "R  "
+  ],
+  "key": {
+    "R": {
+      "tag": "c:wooden_rods"
+    },
+    "L": {
+      "tag": "minecraft:logs"
+    }
+  },
+  "result": {
+    "item": "foodtxf:rolling_pin",
+    "count": 1
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+	"foodtxf:glass_of_water",
+	"foodtxf:glass_of_milk",
+	"foodtxf:water_thermos",
+	"foodtxf:milk_thermos"
+  ]
+}

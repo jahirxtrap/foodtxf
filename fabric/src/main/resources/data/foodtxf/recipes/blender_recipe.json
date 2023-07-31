@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " G ",
+    "DWD",
+    "ISI"
+  ],
+  "key": {
+    "G": {
+      "tag": "c:glass_colorless"
+    },
+    "D": {
+      "tag": "c:redstone_dusts"
+    },
+    "W": {
+      "tag": "minecraft:wooden_buttons"
+    },
+    "I": {
+      "tag": "c:iron_ingots"
+    },
+    "S": {
+      "tag": "c:iron_blocks"
+    }
+  },
+  "result": {
+    "item": "foodtxf:blender",
+    "count": 1
+  }
+}
