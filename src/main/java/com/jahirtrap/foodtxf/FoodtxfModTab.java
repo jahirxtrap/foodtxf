@@ -11,7 +11,7 @@ public class FoodtxfModTab {
         TAB_FOOD_TXF = new CreativeModeTab("tabfood_txf") {
             @Override
             public ItemStack makeIcon() {
-                return new ItemStack(FoodtxfModItems.DIAMOND_KNIFE.get());
+                return new ItemStack(FoodtxfModItems.NETHERITE_KNIFE.get());
             }
 
             @Override
