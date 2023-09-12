@@ -25,12 +25,7 @@ import java.util.List;
 
 public class BaseKitchenBlock extends Block implements HarvestableBlock {
     public BaseKitchenBlock() {
-        super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).strength(0.8f, 3f).requiresCorrectToolForDrops());
-    }
-
-    @Override
-    public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
-        return 15;
+        super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).strength(0.8f, 3f).lightLevel($ -> 0).requiresCorrectToolForDrops());
     }
 
     @Override

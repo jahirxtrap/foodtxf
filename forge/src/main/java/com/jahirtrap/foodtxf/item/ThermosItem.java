@@ -1,6 +1,6 @@
 package com.jahirtrap.foodtxf.item;
 
-import com.jahirtrap.foodtxf.procedures.FillFluidProcedure;
+import com.jahirtrap.foodtxf.event.FillFluidEvent;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Player;
@@ -11,7 +11,7 @@ public class ThermosItem extends BaseContainerItem {
     @Override
     public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
         InteractionResultHolder<ItemStack> holder = super.use(world, entity, hand);
-        FillFluidProcedure.execute(world, entity);
+        FillFluidEvent.execute(world, entity);
         return holder;
     }
 }

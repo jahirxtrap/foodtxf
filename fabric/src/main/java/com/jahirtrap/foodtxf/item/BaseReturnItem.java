@@ -1,8 +1,6 @@
 package com.jahirtrap.foodtxf.item;
 
-import com.jahirtrap.foodtxf.procedures.EntityDrinksLavaProcedure;
-import com.jahirtrap.foodtxf.procedures.EntityDrinksMilkProcedure;
-import com.jahirtrap.foodtxf.procedures.EntityDrinksWaterProcedure;
+import com.jahirtrap.foodtxf.event.EntityDrinksEvent;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.food.FoodProperties;
@@ -31,9 +29,9 @@ public class BaseReturnItem extends Item {
             int y = entity.getBlockY();
             int z = entity.getBlockZ();
 
-            EntityDrinksWaterProcedure.execute(world, x, y, z, entity);
-        } else if (fluidType == "lava") EntityDrinksLavaProcedure.execute(entity);
-        else if (fluidType == "milk") EntityDrinksMilkProcedure.execute(entity);
+            EntityDrinksEvent.water(world, x, y, z, entity);
+        } else if (fluidType == "lava") EntityDrinksEvent.lava(entity);
+        else if (fluidType == "milk") EntityDrinksEvent.milk(entity);
 
         if (itemstack.isEmpty()) {
             return retVal;
