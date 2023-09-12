@@ -33,6 +33,7 @@ Some useful food & cannibalism
 - Rolling Pin (Wooden)
 - Skillet (Iron, Golden, Diamond, Netherite, Steel, Bronze)
 - Kitchen Block (Black, White, shows tooltip if <a href="https://www.curseforge.com/minecraft/mc-mods/cooking-for-blockheads" target="_blank">Cooking For Blockheads mod</a> is loaded)
+- Lamp => Can be equipped on head
 - Player Flesh (Raw, Cooked, Golden) => Can be obtained when player dies or by shifting and right clicking with a knife in hand, credits to <a href="https://www.curseforge.com/minecraft/mc-mods/cannibalism" target="_blank">Cannibalism mod</a>
 - Recipe Book (if <a href="https://www.curseforge.com/minecraft/mc-mods/patchouli" target="_blank">Patchouli mod</a> is loaded) => Book + Toasted Bread
 
@@ -56,16 +57,15 @@ Some useful food & cannibalism
 
 <strong>Fabric/Quilt dependencies:</strong>
 
-- <a href="https://www.curseforge.com/minecraft/mc-mods/configured-fabric" target="_blank">Configured mod</a> or <a href="https://www.curseforge.com/minecraft/mc-mods/config-menus-forge" target="_blank">Forge Config Screens mod</a> <strong>(Optional)</strong>
-- <a href="https://www.curseforge.com/minecraft/mc-mods/forge-config-api-port-fabric" target="_blank">Forge Config Api Port mod</a> <strong>(Required)</strong>
+- <a href="https://modrinth.com/mod/modmenu" target="_blank">Mod Menu mod</a> <strong>(Optional)</strong>
 
-<img src="https://s4.gifyu.com/images/Untitled22.gif" width="1200" /><br>
+<img src="https://cdn.modrinth.com/data/gHfCZDqf/images/b4a7135b6c3adcb22bb264ce345442a9b7f325b0.png"><br>
 
 <strong>This mod uses Tags therefore it is compatible with other mods</strong>
 
 <details>
   <summary>Spoiler</summary>
 
-<img src="https://cdn.modrinth.com/data/gHfCZDqf/images/46171e4de6dcabf9c3cebadf8ace9f5733759746.png" width="500">
+<img src="https://cdn.modrinth.com/data/gHfCZDqf/images/34af4861b86cd5a9b806b966b8c4823557e52a0b.png" width="500">
 
 </details>
