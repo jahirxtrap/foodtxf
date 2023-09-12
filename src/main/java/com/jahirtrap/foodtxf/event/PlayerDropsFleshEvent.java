@@ -1,4 +1,4 @@
-package com.jahirtrap.foodtxf.procedures;
+package com.jahirtrap.foodtxf.event;
 
 import com.jahirtrap.foodtxf.init.FoodtxfModConfig;
 import net.minecraft.world.entity.Entity;
@@ -14,10 +14,10 @@ import java.util.Random;
 import static com.jahirtrap.foodtxf.util.CommonUtils.dropFlesh;
 
 @Mod.EventBusSubscriber
-public class PlayerDropsFleshProcedure {
+public class PlayerDropsFleshEvent {
     @SubscribeEvent
     public static void onEntityDeath(LivingDeathEvent event) {
-        if (FoodtxfModConfig.ENABLE_CANNIBALISM.get()) {
+        if (FoodtxfModConfig.ENABLE_CANNIBALISM.get() && FoodtxfModConfig.PlAYER_DROP_FLESH.get()) {
             if (event != null && event.getEntity() != null) {
                 execute(event.getEntity().level, event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity());
             }

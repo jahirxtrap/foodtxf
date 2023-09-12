@@ -1,4 +1,4 @@
-package com.jahirtrap.foodtxf.procedures;
+package com.jahirtrap.foodtxf.event;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
@@ -20,7 +20,7 @@ import java.util.Random;
 import static com.jahirtrap.foodtxf.util.CommonUtils.checkCreativeMode;
 import static com.jahirtrap.foodtxf.util.CommonUtils.dropFlesh;
 
-public class PlayerDropsFleshKnifeProcedure {
+public class PlayerDropsFleshKnifeEvent {
     public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, ItemStack itemstack) {
         if (!(entity instanceof Player player)) return;
         if (!player.isShiftKeyDown()) return;
