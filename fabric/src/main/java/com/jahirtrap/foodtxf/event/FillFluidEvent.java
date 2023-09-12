@@ -1,4 +1,4 @@
-package com.jahirtrap.foodtxf.procedures;
+package com.jahirtrap.foodtxf.event;
 
 import com.jahirtrap.foodtxf.init.FoodtxfModItems;
 import net.minecraft.world.InteractionHand;
@@ -12,7 +12,7 @@ import net.minecraft.world.level.block.Blocks;
 
 import static com.jahirtrap.foodtxf.util.CommonUtils.*;
 
-public class FillFluidProcedure {
+public class FillFluidEvent {
     public static void execute(LevelAccessor world, Entity entity) {
         if (!(entity instanceof Player player)) return;
         Item mainHandItem = player.getMainHandItem().getItem(), offHandItem = player.getOffhandItem().getItem();

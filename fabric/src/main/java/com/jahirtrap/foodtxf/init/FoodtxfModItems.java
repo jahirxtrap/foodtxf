@@ -88,6 +88,7 @@ public class FoodtxfModItems {
     public static final Item BLENDER = RegistryObject("blender", new BaseReusableItem());
     public static final Item BLACK_KITCHEN_BLOCK = block("black_kitchen_block", FoodtxfModBlocks.BLACK_KITCHEN_BLOCK);
     public static final Item WHITE_KITCHEN_BLOCK = block("white_kitchen_block", FoodtxfModBlocks.WHITE_KITCHEN_BLOCK);
+    public static final Item LAMP = blockWearable("lamp", FoodtxfModBlocks.LAMP);
     public static final Item RECIPE_BOOK = RegistryObject("recipe_book", new RecipeBookItem());
 
     public static void init() {
@@ -99,5 +100,9 @@ public class FoodtxfModItems {
 
     public static Item block(String name, Block block) {
         return Registry.register(Registry.ITEM, new ResourceLocation(MODID, name), new BlockItem(block, new Item.Properties().tab(TAB_FOOD_TXF)));
+    }
+
+    private static Item blockWearable(String name, Block blockW) {
+        return Registry.register(Registry.ITEM, new ResourceLocation(MODID, name), new BaseWearableItem(blockW, new Item.Properties().tab(TAB_FOOD_TXF)));
     }
 }

@@ -90,9 +90,14 @@ public class FoodtxfModItems {
     public static final RegistryObject<Item> BLENDER = REGISTRY.register("blender", BaseReusableItem::new);
     public static final RegistryObject<Item> BLACK_KITCHEN_BLOCK = block(FoodtxfModBlocks.BLACK_KITCHEN_BLOCK);
     public static final RegistryObject<Item> WHITE_KITCHEN_BLOCK = block(FoodtxfModBlocks.WHITE_KITCHEN_BLOCK);
+    public static final RegistryObject<Item> LAMP = blockWearable(FoodtxfModBlocks.LAMP);
     public static final RegistryObject<Item> RECIPE_BOOK = REGISTRY.register("recipe_book", RecipeBookItem::new);
 
     private static RegistryObject<Item> block(RegistryObject<Block> block) {
         return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(TAB_FOOD_TXF)));
+    }
+
+    private static RegistryObject<Item> blockWearable(RegistryObject<Block> block) {
+        return REGISTRY.register(block.getId().getPath(), () -> new BaseWearableItem(block.get(), new Item.Properties().tab(TAB_FOOD_TXF)));
     }
 }

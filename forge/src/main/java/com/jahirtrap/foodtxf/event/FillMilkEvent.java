@@ -1,4 +1,4 @@
-package com.jahirtrap.foodtxf.procedures;
+package com.jahirtrap.foodtxf.event;
 
 import com.jahirtrap.foodtxf.init.FoodtxfModItems;
 import net.minecraft.world.InteractionHand;
@@ -20,7 +20,7 @@ import net.minecraftforge.items.ItemHandlerHelper;
 import static com.jahirtrap.foodtxf.util.CommonUtils.*;
 
 @Mod.EventBusSubscriber
-public class FillMilkProcedure {
+public class FillMilkEvent {
     @SubscribeEvent
     public static void onRightClickEntity(PlayerInteractEvent.EntityInteract event) {
         if (event.getHand() != event.getEntity().getUsedItemHand()) return;
