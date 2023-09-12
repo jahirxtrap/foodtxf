@@ -1,4 +1,4 @@
-package com.jahirtrap.foodtxf.procedures;
+package com.jahirtrap.foodtxf.event;
 
 import com.jahirtrap.foodtxf.init.FoodtxfModItems;
 import net.fabricmc.fabric.api.event.player.UseEntityCallback;
@@ -17,8 +17,8 @@ import net.minecraft.world.level.block.Blocks;
 
 import static com.jahirtrap.foodtxf.util.CommonUtils.*;
 
-public class FillMilkProcedure {
-    public FillMilkProcedure() {
+public class FillMilkEvent {
+    public FillMilkEvent() {
         UseEntityCallback.EVENT.register((entity, world, hand, target, hitResult) -> {
             if (hand == entity.getUsedItemHand())
                 execute(world, target, entity);

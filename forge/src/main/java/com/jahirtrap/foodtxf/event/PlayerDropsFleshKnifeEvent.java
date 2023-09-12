@@ -1,8 +1,7 @@
-package com.jahirtrap.foodtxf.procedures;
+package com.jahirtrap.foodtxf.event;
 
 import com.jahirtrap.foodtxf.init.FoodtxfDamageSources;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundSource;
@@ -16,13 +15,14 @@ import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.Objects;
 
 import static com.jahirtrap.foodtxf.util.CommonUtils.checkCreativeMode;
 import static com.jahirtrap.foodtxf.util.CommonUtils.dropFlesh;
 
-public class PlayerDropsFleshKnifeProcedure {
+public class PlayerDropsFleshKnifeEvent {
     public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, ItemStack itemstack) {
         if (!(entity instanceof Player player)) return;
         if (!player.isShiftKeyDown()) return;
@@ -40,7 +40,7 @@ public class PlayerDropsFleshKnifeProcedure {
         } else return;
 
         int faLevel = 0;
-        faLevel = EnchantmentHelper.getItemEnchantmentLevel(Enchantments.FIRE_ASPECT, ist);
+        faLevel = EnchantmentHelper.getTagEnchantmentLevel(Enchantments.FIRE_ASPECT, ist);
 
         if (faLevel != 0) entity.setSecondsOnFire(4 * faLevel);
 
@@ -62,10 +62,10 @@ public class PlayerDropsFleshKnifeProcedure {
             if (!(world instanceof Level level)) return;
             if (!level.isClientSide()) {
                 level.playSound(null, new BlockPos((int) x, (int) y, (int) z),
-                        Objects.requireNonNull(BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.player.hurt"))), SoundSource.PLAYERS,
+                        Objects.requireNonNull(ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.hurt"))), SoundSource.PLAYERS,
                         (float) 0.8, 1);
             } else {
-                level.playLocalSound(x, y, z, Objects.requireNonNull(BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.player.hurt"))),
+                level.playLocalSound(x, y, z, Objects.requireNonNull(ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.hurt"))),
                         SoundSource.PLAYERS, (float) 0.8, 1, false);
             }
 

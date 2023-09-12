@@ -1,27 +1,26 @@
-package com.jahirtrap.foodtxf.procedures;
+package com.jahirtrap.foodtxf.event;
 
 import com.jahirtrap.foodtxf.init.FoodtxfModConfig;
+import net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraftforge.event.entity.living.LivingDeathEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
 
 import java.util.Random;
 
 import static com.jahirtrap.foodtxf.util.CommonUtils.dropFlesh;
 
-@Mod.EventBusSubscriber
-public class PlayerDropsFleshProcedure {
-    @SubscribeEvent
-    public static void onEntityDeath(LivingDeathEvent event) {
-        if (FoodtxfModConfig.ENABLE_CANNIBALISM.get()) {
-            if (event != null && event.getEntity() != null) {
-                execute(event.getEntity().level(), event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity());
+public class PlayerDropsFleshEvent {
+    public PlayerDropsFleshEvent() {
+        ServerLivingEntityEvents.ALLOW_DEATH.register((entity, damageSource, amount) -> {
+            if (FoodtxfModConfig.enableCannibalism && FoodtxfModConfig.playerDropFlesh) {
+                if (entity != null) {
+                    execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
+                }
             }
-        }
+            return true;
+        });
     }
 
     private static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
