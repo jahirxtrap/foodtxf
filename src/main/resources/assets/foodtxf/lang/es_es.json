@@ -56,6 +56,7 @@
   "item.foodtxf.fruit_salad": "Ensalada de frutas",
   "item.foodtxf.netherite_knife": "Cuchillo de netherita",
   "itemGroup.tabfood_txf": "Food TXF",
+  "itemGroup.foodtxf.tabfood_txf": "Food TXF",
   "item.foodtxf.cooked_tropical_fish": "Pez tropical ahumado",
   "item.foodtxf.toasted_bread": "Pan tostado",
   "item.foodtxf.cooked_beetroot": "Remolacha cocida",
@@ -82,5 +83,8 @@
   "item.foodtxf.chocomilk_thermos": "Termo de chocomilk",
   "item.foodtxf.baguette": "Baguette",
   "block.foodtxf.lamp": "Lámpara",
-  "tooltip.foodtxf.patchouli": "Patchouli no está instalado"
+  "item.foodtxf.enderite_knife": "Cuchillo de enderita",
+  "item.foodtxf.enderite_skillet": "Sartén de enderita",
+  "tooltip.foodtxf.patchouli": "Patchouli no está instalado",
+  "foodtxf.config.title": "Food TXF"
 }

@@ -56,6 +56,7 @@
   "item.foodtxf.fruit_salad": "Fruit Salad",
   "item.foodtxf.netherite_knife": "Netherite Knife",
   "itemGroup.tabfood_txf": "Food TXF",
+  "itemGroup.foodtxf.tabfood_txf": "Food TXF",
   "item.foodtxf.cooked_tropical_fish": "Cooked Tropical Fish",
   "item.foodtxf.toasted_bread": "Toasted Bread",
   "item.foodtxf.cooked_beetroot": "Cooked Beetroot",
@@ -82,5 +83,8 @@
   "item.foodtxf.chocomilk_thermos": "Chocomilk Thermos",
   "item.foodtxf.baguette": "Baguette",
   "block.foodtxf.lamp": "Lamp",
-  "tooltip.foodtxf.patchouli": "Patchouli is not installed"
+  "item.foodtxf.enderite_knife": "Enderite Knife",
+  "item.foodtxf.enderite_skillet": "Enderite Skillet",
+  "tooltip.foodtxf.patchouli": "Patchouli is not installed",
+  "foodtxf.config.title": "Food TXF"
 }
