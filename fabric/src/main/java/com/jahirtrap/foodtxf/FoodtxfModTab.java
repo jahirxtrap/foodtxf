@@ -75,12 +75,14 @@ public class FoodtxfModTab {
                     event.accept(FoodtxfModItems.GOLDEN_KNIFE);
                     event.accept(FoodtxfModItems.DIAMOND_KNIFE);
                     event.accept(FoodtxfModItems.NETHERITE_KNIFE);
+                    event.accept(FoodtxfModItems.ENDERITE_KNIFE);
                     event.accept(FoodtxfModItems.STEEL_KNIFE);
                     event.accept(FoodtxfModItems.BRONZE_KNIFE);
                     event.accept(FoodtxfModItems.SKILLET);
                     event.accept(FoodtxfModItems.GOLDEN_SKILLET);
                     event.accept(FoodtxfModItems.DIAMOND_SKILLET);
                     event.accept(FoodtxfModItems.NETHERITE_SKILLET);
+                    event.accept(FoodtxfModItems.ENDERITE_SKILLET);
                     event.accept(FoodtxfModItems.STEEL_SKILLET);
                     event.accept(FoodtxfModItems.BRONZE_SKILLET);
                     event.accept(FoodtxfModItems.CUTTING_BOARD);
