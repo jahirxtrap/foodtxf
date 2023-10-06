@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "foodtxf:netherite_skillet"
+  },
+  "addition": {
+    "item": "enderitemod:enderite_ingot"
+  },
+  "result": {
+    "item": "foodtxf:enderite_skillet"
+  }
+}

@@ -1,8 +1,8 @@
 package com.jahirtrap.foodtxf.init;
 
-import eu.midnightdust.lib.config.MidnightConfig;
+import com.jahirtrap.configlib.TXFConfig;
 
-public class FoodtxfModConfig extends MidnightConfig {
+public class FoodtxfModConfig extends TXFConfig {
     @Entry(name = "Enable Cannibalism")
     public static boolean enableCannibalism = true;
     @Entry(name = "Player Drop Flesh")

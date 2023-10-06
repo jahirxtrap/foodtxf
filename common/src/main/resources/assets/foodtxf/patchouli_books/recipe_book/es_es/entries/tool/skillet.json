@@ -17,6 +17,7 @@
     {
       "type": "patchouli:smithing",
       "recipe": "foodtxf:netherite_skillet_recipe",
+      "recipe2": "foodtxf:enderite_skillet_recipe",
       "title": " "
     },
     {

@@ -6,6 +6,7 @@
     "minecraft:melon_slice",
     "minecraft:sweet_berries",
     "foodtxf:pumpkin_slice",
+    { "id": "aether:blue_berry", "required": false },
     { "id": "blue_skies:crescent_fruit", "required": false },
     { "id": "blue_skies:scalefruit", "required": false },
     { "id": "#c:fruits/apple", "required": false },

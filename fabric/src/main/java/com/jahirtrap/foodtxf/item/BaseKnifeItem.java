@@ -12,6 +12,8 @@ import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
 
+import static com.jahirtrap.foodtxf.FoodtxfMod.TAB_FOOD_TXF;
+
 public class BaseKnifeItem extends SwordItem implements RepairableItem {
     public BaseKnifeItem(int uses, float speed, float damage, int level, int enchantment, Ingredient repair, Properties properties) {
         super(new Tier() {
@@ -38,7 +40,7 @@ public class BaseKnifeItem extends SwordItem implements RepairableItem {
             public Ingredient getRepairIngredient() {
                 return repair;
             }
-        }, 3, -2f, properties);
+        }, 3, -2f, properties.tab(TAB_FOOD_TXF));
     }
 
     @Override

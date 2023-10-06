@@ -75,12 +75,14 @@ public class FoodtxfModItems {
     public static final RegistryObject<Item> GOLDEN_KNIFE = REGISTRY.register("golden_knife", GoldenKnifeItem::new);
     public static final RegistryObject<Item> DIAMOND_KNIFE = REGISTRY.register("diamond_knife", DiamondKnifeItem::new);
     public static final RegistryObject<Item> NETHERITE_KNIFE = REGISTRY.register("netherite_knife", NetheriteKnifeItem::new);
+    public static final RegistryObject<Item> ENDERITE_KNIFE = REGISTRY.register("enderite_knife", EnderiteKnifeItem::new);
     public static final RegistryObject<Item> STEEL_KNIFE = REGISTRY.register("steel_knife", SteelKnifeItem::new);
     public static final RegistryObject<Item> BRONZE_KNIFE = REGISTRY.register("bronze_knife", BronzeKnifeItem::new);
     public static final RegistryObject<Item> SKILLET = REGISTRY.register("skillet", SkilletItem::new);
     public static final RegistryObject<Item> GOLDEN_SKILLET = REGISTRY.register("golden_skillet", GoldenSkilletItem::new);
     public static final RegistryObject<Item> DIAMOND_SKILLET = REGISTRY.register("diamond_skillet", DiamondSkilletItem::new);
     public static final RegistryObject<Item> NETHERITE_SKILLET = REGISTRY.register("netherite_skillet", NetheriteSkilletItem::new);
+    public static final RegistryObject<Item> ENDERITE_SKILLET = REGISTRY.register("enderite_skillet", EnderiteSkilletItem::new);
     public static final RegistryObject<Item> STEEL_SKILLET = REGISTRY.register("steel_skillet", SteelSkilletItem::new);
     public static final RegistryObject<Item> BRONZE_SKILLET = REGISTRY.register("bronze_skillet", BronzeSkilletItem::new);
     public static final RegistryObject<Item> CUTTING_BOARD = REGISTRY.register("cutting_board", BaseReusableItem::new);
