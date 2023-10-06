@@ -28,10 +28,10 @@ Some useful food & cannibalism
 - Blender (Iron)
 - Cutting Board (Wooden)
 - Juicer (Dripstone)
-- Knife (Wooden, Stone, Iron, Golden, Diamond, Netherite, Steel, Bronze)
+- Knife (Wooden, Stone, Iron, Golden, Diamond, Netherite, Enderite, Steel, Bronze)
 - Mixin Bowl (Stone)
 - Rolling Pin (Wooden)
-- Skillet (Iron, Golden, Diamond, Netherite, Steel, Bronze)
+- Skillet (Iron, Golden, Diamond, Netherite, Enderite, Steel, Bronze)
 - Kitchen Block (Black, White, shows tooltip if <a href="https://www.curseforge.com/minecraft/mc-mods/cooking-for-blockheads" target="_blank">Cooking For Blockheads mod</a> is loaded)
 - Lamp => Can be equipped on head
 - Player Flesh (Raw, Cooked, Golden) => Can be obtained when player dies or by shifting and right clicking with a knife in hand, credits to <a href="https://www.curseforge.com/minecraft/mc-mods/cannibalism" target="_blank">Cannibalism mod</a>
@@ -41,6 +41,7 @@ Some useful food & cannibalism
 
 - <a href="https://www.curseforge.com/minecraft/mc-mods/better-combat-by-daedelus" target="_blank">Better Combat mod</a>
 - <a href="https://www.curseforge.com/minecraft/mc-mods/eating-animation-forge" target="_blank">Eating Animation mod</a>
+- <a href="https://www.curseforge.com/minecraft/mc-mods/enderite-mod-for-forge" target="_blank">Enderite mod</a>
 - <a href="https://www.curseforge.com/minecraft/mc-mods/ingotcraft" target="_blank">IngotCraft mod</a>
 - <a href="https://www.curseforge.com/minecraft/mc-mods/patchouli" target="_blank">Patchoulli mod</a>
 - <a href="https://www.curseforge.com/minecraft/mc-mods/cooking-for-blockheads" target="_blank">Cooking For Blockheads mod</a>
@@ -66,6 +67,6 @@ Some useful food & cannibalism
 <details>
   <summary>Spoiler</summary>
 
-<img src="https://cdn.modrinth.com/data/gHfCZDqf/images/34af4861b86cd5a9b806b966b8c4823557e52a0b.png" width="500">
+<img src="https://cdn.modrinth.com/data/gHfCZDqf/images/23e49abcd4eaf61fe21d7015b3a2c3e303332f38.png" width="500">
 
 </details>
