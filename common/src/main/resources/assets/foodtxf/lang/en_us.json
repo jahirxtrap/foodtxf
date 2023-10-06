@@ -83,6 +83,8 @@
   "item.foodtxf.chocomilk_thermos": "Chocomilk Thermos",
   "item.foodtxf.baguette": "Baguette",
   "block.foodtxf.lamp": "Lamp",
+  "item.foodtxf.enderite_knife": "Enderite Knife",
+  "item.foodtxf.enderite_skillet": "Enderite Skillet",
   "tooltip.foodtxf.patchouli": "Patchouli is not installed",
-  "foodtxf.midnightconfig.title": "Food TXF"
+  "foodtxf.config.title": "Food TXF"
 }

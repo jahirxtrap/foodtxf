@@ -71,12 +71,14 @@ public class FoodtxfModItems {
     public static final Item GOLDEN_KNIFE = RegistryObject("golden_knife", new GoldenKnifeItem());
     public static final Item DIAMOND_KNIFE = RegistryObject("diamond_knife", new DiamondKnifeItem());
     public static final Item NETHERITE_KNIFE = RegistryObject("netherite_knife", new NetheriteKnifeItem());
+    public static final Item ENDERITE_KNIFE = RegistryObject("enderite_knife", new EnderiteKnifeItem());
     public static final Item STEEL_KNIFE = RegistryObject("steel_knife", new SteelKnifeItem());
     public static final Item BRONZE_KNIFE = RegistryObject("bronze_knife", new BronzeKnifeItem());
     public static final Item SKILLET = RegistryObject("skillet", new SkilletItem());
     public static final Item GOLDEN_SKILLET = RegistryObject("golden_skillet", new GoldenSkilletItem());
     public static final Item DIAMOND_SKILLET = RegistryObject("diamond_skillet", new DiamondSkilletItem());
     public static final Item NETHERITE_SKILLET = RegistryObject("netherite_skillet", new NetheriteSkilletItem());
+    public static final Item ENDERITE_SKILLET = RegistryObject("enderite_skillet", new EnderiteSkilletItem());
     public static final Item STEEL_SKILLET = RegistryObject("steel_skillet", new SteelSkilletItem());
     public static final Item BRONZE_SKILLET = RegistryObject("bronze_skillet", new BronzeSkilletItem());
     public static final Item CUTTING_BOARD = RegistryObject("cutting_board", new BaseReusableItem());

@@ -10,4 +10,3 @@ public class NetheriteSkilletItem extends BaseSkilletItem {
         super(2031, 9f, 5f, 4, 15, Ingredient.of(new ItemStack(Items.NETHERITE_INGOT)), new Item.Properties().fireResistant());
     }
 }
-

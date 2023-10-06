@@ -1,10 +1,10 @@
 {
   "type": "minecraft:smithing_transform",
-  "addition": {
-    "tag": "forge:ingots/netherite"
-  },
   "base": {
     "item": "foodtxf:diamond_knife"
+  },
+  "addition": {
+    "tag": "forge:ingots/netherite"
   },
   "result": {
     "item": "foodtxf:netherite_knife"
