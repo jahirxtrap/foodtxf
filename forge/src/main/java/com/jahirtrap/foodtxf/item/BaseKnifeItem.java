@@ -43,7 +43,7 @@ public class BaseKnifeItem extends SwordItem {
     @Override
     public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
         InteractionResultHolder<ItemStack> holder = super.use(world, entity, hand);
-        if (FoodtxfModConfig.ENABLE_CANNIBALISM.get() && FoodtxfModConfig.KNIFE_DROP_FLESH.get()) {
+        if (FoodtxfModConfig.enableCannibalism && FoodtxfModConfig.knifeDropFlesh) {
             PlayerDropsFleshKnifeEvent.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity, holder.getObject());
         }
         return holder;
