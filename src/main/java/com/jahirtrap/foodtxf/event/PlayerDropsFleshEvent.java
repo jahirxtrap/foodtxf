@@ -17,7 +17,7 @@ import static com.jahirtrap.foodtxf.util.CommonUtils.dropFlesh;
 public class PlayerDropsFleshEvent {
     @SubscribeEvent
     public static void onEntityDeath(LivingDeathEvent event) {
-        if (FoodtxfModConfig.ENABLE_CANNIBALISM.get() && FoodtxfModConfig.PlAYER_DROP_FLESH.get()) {
+        if (FoodtxfModConfig.enableCannibalism && FoodtxfModConfig.playerDropFlesh) {
             if (event != null && event.getEntity() != null) {
                 execute(event.getEntity().level, event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity());
             }
