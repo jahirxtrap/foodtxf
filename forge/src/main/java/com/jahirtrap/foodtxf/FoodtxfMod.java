@@ -21,7 +21,6 @@ public class FoodtxfMod {
         ModLoadingContext.get().registerExtensionPoint(ConfigScreenHandler.ConfigScreenFactory.class, () ->
                 new ConfigScreenHandler.ConfigScreenFactory((client, parent) -> TXFConfig.getScreen(parent, MODID)));
 
-        FoodtxfModTab.init();
         FoodtxfModBlocks.REGISTRY.register(bus);
         FoodtxfModItems.REGISTRY.register(bus);
         FoodtxfModTab.init();

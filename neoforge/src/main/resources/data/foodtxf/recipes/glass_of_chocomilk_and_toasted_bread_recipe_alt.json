@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:cocoa_beans"
+    },
+    {
+      "item": "foodtxf:glass_of_milk"
+    },
+    {
+      "item": "foodtxf:toasted_bread"
+    }
+  ],
+  "result": {
+    "item": "foodtxf:glass_of_chocomilk_and_toasted_bread",
+    "count": 1
+  }
+}

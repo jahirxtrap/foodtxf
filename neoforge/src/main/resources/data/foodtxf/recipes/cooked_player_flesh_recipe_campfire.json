@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "experience": 0,
+  "cookingtime": 600,
+  "ingredient": {
+    "item": "foodtxf:player_flesh"
+  },
+  "result": "foodtxf:cooked_player_flesh"
+}

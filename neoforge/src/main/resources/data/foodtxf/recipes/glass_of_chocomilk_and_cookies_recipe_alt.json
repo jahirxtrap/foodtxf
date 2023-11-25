@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:cocoa_beans"
+    },
+    {
+      "item": "minecraft:cookie"
+    },
+    {
+      "item": "foodtxf:glass_of_milk"
+    },
+    {
+      "item": "minecraft:cookie"
+    }
+  ],
+  "result": {
+    "item": "foodtxf:glass_of_chocomilk_and_cookies",
+    "count": 1
+  }
+}

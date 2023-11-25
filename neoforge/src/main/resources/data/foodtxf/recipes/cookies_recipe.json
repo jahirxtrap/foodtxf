@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "foodtxf:box_of_cookies"
+    }
+  ],
+  "result": {
+    "item": "minecraft:cookie",
+    "count": 8
+  }
+}

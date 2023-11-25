@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GGG",
+    "GFG",
+    "GGG"
+  ],
+  "key": {
+    "G": {
+      "tag": "forge:nuggets/gold"
+    },
+    "F": {
+      "tag": "minecraft:fishes"
+    }
+  },
+  "result": {
+    "item": "foodtxf:golden_fish",
+    "count": 1
+  }
+}
