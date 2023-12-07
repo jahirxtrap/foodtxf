@@ -12,6 +12,7 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 
 public class FoodtxfMod implements ModInitializer {
+
     public static final String MODID = "foodtxf";
 
     public static final CreativeModeTab TAB_FOOD_TXF = FabricItemGroupBuilder.build(new ResourceLocation(FoodtxfMod.MODID, "tabfood_txf"), () -> new ItemStack(FoodtxfModItems.NETHERITE_KNIFE));
