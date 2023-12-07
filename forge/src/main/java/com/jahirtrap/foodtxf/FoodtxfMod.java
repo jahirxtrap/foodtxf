@@ -1,9 +1,9 @@
 package com.jahirtrap.foodtxf;
 
+import com.jahirtrap.configlib.TXFConfig;
 import com.jahirtrap.foodtxf.init.FoodtxfModBlocks;
 import com.jahirtrap.foodtxf.init.FoodtxfModConfig;
 import com.jahirtrap.foodtxf.init.FoodtxfModItems;
-import com.jahirtrap.foodtxf.util.configlib.TXFConfig;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
@@ -17,6 +17,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 @Mod(FoodtxfMod.MODID)
 public class FoodtxfMod {
+
     public static final String MODID = "foodtxf";
     public static CreativeModeTab MODTAB;
 
