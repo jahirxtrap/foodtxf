@@ -1,9 +1,9 @@
 package com.jahirtrap.foodtxf;
 
+import com.jahirtrap.configlib.TXFConfig;
 import com.jahirtrap.foodtxf.init.FoodtxfModBlocks;
 import com.jahirtrap.foodtxf.init.FoodtxfModConfig;
 import com.jahirtrap.foodtxf.init.FoodtxfModItems;
-import com.jahirtrap.foodtxf.util.configlib.TXFConfig;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModLoadingContext;
 import net.neoforged.fml.common.Mod;
@@ -12,6 +12,7 @@ import net.neoforged.neoforge.client.ConfigScreenHandler;
 
 @Mod(FoodtxfMod.MODID)
 public class FoodtxfMod {
+
     public static final String MODID = "foodtxf";
 
     public FoodtxfMod() {
