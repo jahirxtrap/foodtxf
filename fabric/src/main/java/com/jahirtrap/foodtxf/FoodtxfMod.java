@@ -8,6 +8,7 @@ import com.jahirtrap.foodtxf.init.FoodtxfModItems;
 import net.fabricmc.api.ModInitializer;
 
 public class FoodtxfMod implements ModInitializer {
+
     public static final String MODID = "foodtxf";
 
     @Override
