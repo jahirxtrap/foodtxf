@@ -25,10 +25,10 @@ import java.util.Objects;
 
 public class CommonUtils {
     public static ItemEntity dropFlesh(Entity entity, Level level, double x, double y, double z, int num) {
-        ItemStack itemStack;
-        if (entity.isOnFire()) itemStack = new ItemStack(FoodtxfModItems.COOKED_PLAYER_FLESH.get(), num);
-        else itemStack = new ItemStack(FoodtxfModItems.PLAYER_FLESH.get(), num);
-        CompoundTag compoundTag = itemStack.getOrCreateTag();
+        ItemStack stack;
+        if (entity.isOnFire()) stack = new ItemStack(FoodtxfModItems.COOKED_PLAYER_FLESH.get(), num);
+        else stack = new ItemStack(FoodtxfModItems.PLAYER_FLESH.get(), num);
+        CompoundTag compoundTag = stack.getOrCreateTag();
         ListTag loreTag = new ListTag();
 
         loreTag.add(StringTag.valueOf("{\"text\":\"" + entity.getName().getString() + "\",\"color\":\"red\",\"italic\":false}"));
@@ -36,7 +36,7 @@ public class CommonUtils {
         compoundTag.put("display", new CompoundTag());
         compoundTag.getCompound("display").put("Lore", loreTag);
 
-        ItemEntity entityToSpawn = new ItemEntity(level, x, y, z, itemStack);
+        ItemEntity entityToSpawn = new ItemEntity(level, x, y, z, stack);
         entityToSpawn.setPickUpDelay(10);
         return entityToSpawn;
     }
@@ -52,9 +52,9 @@ public class CommonUtils {
         return false;
     }
 
-    public static Block getViewedBlock(LevelAccessor world, Entity entity) {
+    public static Block getViewedBlock(LevelAccessor accesor, Entity entity) {
         ClipContext clipContext = new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(5)), ClipContext.Block.OUTLINE, ClipContext.Fluid.SOURCE_ONLY, entity);
-        return (world.getFluidState(new BlockPos(
+        return (accesor.getFluidState(new BlockPos(
                         entity.level().clip(clipContext).getBlockPos().getX(),
                         entity.level().clip(clipContext).getBlockPos().getY(),
                         entity.level().clip(clipContext).getBlockPos().getZ()))
@@ -76,8 +76,8 @@ public class CommonUtils {
         }
     }
 
-    public static void playSound(LevelAccessor world, Entity entity, String sound) {
-        if (world instanceof Level level) {
+    public static void playSound(LevelAccessor accesor, Entity entity, String sound) {
+        if (accesor instanceof Level level) {
             int x = entity.getBlockX(), y = entity.getBlockY(), z = entity.getBlockZ();
             if (!level.isClientSide()) {
                 level.playSound(null, new BlockPos(x, y, z),

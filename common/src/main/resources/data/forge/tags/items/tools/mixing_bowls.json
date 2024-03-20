@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    { "id": "#foodtxf:mixing_bowls", "required": false }
+    "#foodtxf:mixing_bowls"
   ]
 }

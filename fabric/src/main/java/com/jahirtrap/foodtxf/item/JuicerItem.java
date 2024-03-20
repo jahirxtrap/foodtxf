@@ -17,13 +17,14 @@ public class JuicerItem extends Item implements RepairableItem {
     }
 
     @Override
-    public ItemStack getRecipeRemainder(ItemStack itemstack) {
-        ItemStack retval = new ItemStack(this);
-        retval.setDamageValue(itemstack.getDamageValue() + 1);
-        if (retval.getDamageValue() >= retval.getMaxDamage()) {
+    public ItemStack getRecipeRemainder(ItemStack stack) {
+        ItemStack retVal = stack.copy();
+        if (retVal.getTag() != null && retVal.getTag().getBoolean("Unbreakable")) return retVal;
+        retVal.setDamageValue(stack.getDamageValue() + 1);
+        if (retVal.getDamageValue() >= retVal.getMaxDamage()) {
             return ItemStack.EMPTY;
         }
-        return retval;
+        return retVal;
     }
 
     @Override

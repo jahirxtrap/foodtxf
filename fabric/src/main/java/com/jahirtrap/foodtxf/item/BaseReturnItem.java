@@ -21,25 +21,25 @@ public class BaseReturnItem extends Item {
     }
 
     @Override
-    public ItemStack finishUsingItem(ItemStack itemstack, Level world, LivingEntity entity) {
+    public ItemStack finishUsingItem(ItemStack stack, Level level, LivingEntity entity) {
         ItemStack retVal = new ItemStack(itemRet);
-        super.finishUsingItem(itemstack, world, entity);
+        super.finishUsingItem(stack, level, entity);
         if (fluidType == "water") {
             int x = entity.getBlockX();
             int y = entity.getBlockY();
             int z = entity.getBlockZ();
 
-            EntityDrinksEvent.water(world, x, y, z, entity);
+            EntityDrinksEvent.water(level, x, y, z, entity);
         } else if (fluidType == "lava") EntityDrinksEvent.lava(entity);
         else if (fluidType == "milk") EntityDrinksEvent.milk(entity);
 
-        if (itemstack.isEmpty()) {
+        if (stack.isEmpty()) {
             return retVal;
         } else {
             if (entity instanceof Player player && !player.getAbilities().instabuild) {
                 if (!player.getInventory().add(retVal)) player.drop(retVal, false);
             }
-            return itemstack;
+            return stack;
         }
     }
 }

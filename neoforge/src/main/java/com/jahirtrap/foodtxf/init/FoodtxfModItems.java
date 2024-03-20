@@ -52,7 +52,7 @@ public class FoodtxfModItems {
     public static final DeferredItem<Item> LAVA_THERMOS = REGISTRY.register("lava_thermos", LavaThermosItem::new);
     public static final DeferredItem<Item> MILK_THERMOS = REGISTRY.register("milk_thermos", MilkThermosItem::new);
     public static final DeferredItem<Item> CHOCOMILK_THERMOS = REGISTRY.register("chocomilk_thermos", ChocomilkThermosItem::new);
-    public static final DeferredItem<Item> GLASS = REGISTRY.register("glass", BaseContainerItem::new);
+    public static final DeferredItem<Item> GLASS = REGISTRY.register("glass", BaseItem::new);
     public static final DeferredItem<Item> GLASS_OF_FRUIT_JUICE = REGISTRY.register("glass_of_fruit_juice", BaseJuiceItem::new);
     public static final DeferredItem<Item> GLASS_OF_VEGETABLE_JUICE = REGISTRY.register("glass_of_vegetable_juice", BaseJuiceItem::new);
     public static final DeferredItem<Item> GLASS_OF_MIXED_JUICE = REGISTRY.register("glass_of_mixed_juice", BaseJuiceItem::new);
@@ -65,7 +65,7 @@ public class FoodtxfModItems {
     public static final DeferredItem<Item> GLASS_OF_CHOCOMILK = REGISTRY.register("glass_of_chocomilk", GlassOfChocomilkItem::new);
     public static final DeferredItem<Item> GLASS_OF_CHOCOMILK_AND_COOKIES = REGISTRY.register("glass_of_chocomilk_and_cookies", GlassOfChocomilkAndCookiesItem::new);
     public static final DeferredItem<Item> GLASS_OF_CHOCOMILK_AND_TOASTED_BREAD = REGISTRY.register("glass_of_chocomilk_and_toasted_bread", GlassOfChocomilkAndToastedBreadItem::new);
-    public static final DeferredItem<Item> BOX = REGISTRY.register("box", BaseContainerItem::new);
+    public static final DeferredItem<Item> BOX = REGISTRY.register("box", BaseItem::new);
     public static final DeferredItem<Item> BOX_OF_COOKIES = REGISTRY.register("box_of_cookies", BoxOfCookiesItem::new);
     public static final DeferredItem<Item> WOODEN_KNIFE = REGISTRY.register("wooden_knife", WoodenKnifeItem::new);
     public static final DeferredItem<Item> STONE_KNIFE = REGISTRY.register("stone_knife", StoneKnifeItem::new);
@@ -90,14 +90,11 @@ public class FoodtxfModItems {
     public static final DeferredItem<Item> BLENDER = REGISTRY.register("blender", BaseReusableItem::new);
     public static final DeferredItem<Item> BLACK_KITCHEN_BLOCK = block(FoodtxfModBlocks.BLACK_KITCHEN_BLOCK);
     public static final DeferredItem<Item> WHITE_KITCHEN_BLOCK = block(FoodtxfModBlocks.WHITE_KITCHEN_BLOCK);
-    public static final DeferredItem<Item> LAMP = blockWearable(FoodtxfModBlocks.LAMP);
+    public static final DeferredItem<Item> LAMP = REGISTRY.register("lamp", () -> new BaseWearableItem(FoodtxfModBlocks.LAMP.get(), new Item.Properties()));
+    public static final DeferredItem<Item> NETHERITE_LAMP = REGISTRY.register("netherite_lamp", () -> new NetheriteLampItem(FoodtxfModBlocks.NETHERITE_LAMP.get(), new Item.Properties()));
     public static final DeferredItem<Item> RECIPE_BOOK = REGISTRY.register("recipe_book", RecipeBookItem::new);
 
     private static DeferredItem<Item> block(DeferredBlock<Block> block) {
         return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
-    }
-
-    private static DeferredItem<Item> blockWearable(DeferredBlock<Block> block) {
-        return REGISTRY.register(block.getId().getPath(), () -> new BaseWearableItem(block.get(), new Item.Properties()));
     }
 }

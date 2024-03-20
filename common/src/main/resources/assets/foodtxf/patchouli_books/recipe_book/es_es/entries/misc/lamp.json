@@ -9,6 +9,11 @@
       "title": " "
     },
     {
+      "type": "patchouli:smithing",
+      "recipe": "foodtxf:netherite_lamp_recipe",
+      "title": " "
+    },
+    {
       "type": "patchouli:spotlight",
       "item": "foodtxf:lamp",
       "text": "Se puede equipar en la cabeza",

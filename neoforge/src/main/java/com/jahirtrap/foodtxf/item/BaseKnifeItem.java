@@ -41,23 +41,24 @@ public class BaseKnifeItem extends SwordItem {
     }
 
     @Override
-    public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
-        InteractionResultHolder<ItemStack> holder = super.use(world, entity, hand);
+    public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
+        InteractionResultHolder<ItemStack> holder = super.use(level, player, hand);
         if (FoodtxfModConfig.enableCannibalism && FoodtxfModConfig.knifeDropFlesh) {
-            PlayerDropsFleshKnifeEvent.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity, holder.getObject());
+            PlayerDropsFleshKnifeEvent.execute(level, player.getX(), player.getY(), player.getZ(), player, holder.getObject());
         }
         return holder;
     }
 
     @Override
-    public boolean hasCraftingRemainingItem(ItemStack itemstack) {
+    public boolean hasCraftingRemainingItem(ItemStack stack) {
         return true;
     }
 
     @Override
-    public ItemStack getCraftingRemainingItem(ItemStack itemstack) {
-        ItemStack retVal = new ItemStack(this);
-        retVal.setDamageValue(itemstack.getDamageValue() + 1);
+    public ItemStack getCraftingRemainingItem(ItemStack stack) {
+        ItemStack retVal = stack.copy();
+        if (retVal.getTag() != null && retVal.getTag().getBoolean("Unbreakable")) return retVal;
+        retVal.setDamageValue(stack.getDamageValue() + 1);
         if (retVal.getDamageValue() >= retVal.getMaxDamage()) {
             return ItemStack.EMPTY;
         }
@@ -65,7 +66,7 @@ public class BaseKnifeItem extends SwordItem {
     }
 
     @Override
-    public boolean isRepairable(ItemStack itemstack) {
+    public boolean isRepairable(ItemStack stack) {
         return false;
     }
 }

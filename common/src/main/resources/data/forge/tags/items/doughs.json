@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    { "id": "#forge:dough/dough", "required": false }
+    "#forge:dough/dough"
   ]
 }

@@ -6,7 +6,6 @@
     {
       "type": "patchouli:crafting",
       "recipe": "foodtxf:juicer_recipe",
-      "recipe2": "foodtxf:juicer_recipe_old",
       "title": " "
     },
     {

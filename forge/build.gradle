@@ -110,7 +110,7 @@ processResources {
     filesMatching(resourceTargets) {
         expand replaceProperties
     }
-    exclude '**/data/c/**'
+    exclude '**/data/c/**', '**/data/fabric/**'
     from project(":common").sourceSets.main.resources
 }
 

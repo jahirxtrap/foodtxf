@@ -3,6 +3,7 @@ package com.jahirtrap.foodtxf.item;
 import com.jahirtrap.foodtxf.event.PlayerDropsFleshKnifeEvent;
 import com.jahirtrap.foodtxf.init.FoodtxfModConfig;
 import com.jahirtrap.foodtxf.util.RepairableItem;
+import net.fabricmc.fabric.api.item.v1.FabricItem;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Player;
@@ -12,7 +13,7 @@ import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
 
-public class BaseKnifeItem extends SwordItem implements RepairableItem {
+public class BaseKnifeItem extends SwordItem implements RepairableItem, FabricItem {
     public BaseKnifeItem(int uses, float speed, float damage, int level, int enchantment, Ingredient repair, Properties properties) {
         super(new Tier() {
             public int getUses() {
@@ -42,10 +43,10 @@ public class BaseKnifeItem extends SwordItem implements RepairableItem {
     }
 
     @Override
-    public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
-        InteractionResultHolder<ItemStack> holder = super.use(world, entity, hand);
+    public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
+        InteractionResultHolder<ItemStack> holder = super.use(level, player, hand);
         if (FoodtxfModConfig.enableCannibalism && FoodtxfModConfig.knifeDropFlesh) {
-            PlayerDropsFleshKnifeEvent.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity, holder.getObject());
+            PlayerDropsFleshKnifeEvent.execute(level, player.getX(), player.getY(), player.getZ(), player, holder.getObject());
         }
         return holder;
     }
@@ -56,9 +57,10 @@ public class BaseKnifeItem extends SwordItem implements RepairableItem {
     }
 
     @Override
-    public ItemStack getRecipeRemainder(ItemStack itemstack) {
-        ItemStack retVal = new ItemStack(this);
-        retVal.setDamageValue(itemstack.getDamageValue() + 1);
+    public ItemStack getRecipeRemainder(ItemStack stack) {
+        ItemStack retVal = stack.copy();
+        if (retVal.getTag() != null && retVal.getTag().getBoolean("Unbreakable")) return retVal;
+        retVal.setDamageValue(stack.getDamageValue() + 1);
         if (retVal.getDamageValue() >= retVal.getMaxDamage()) {
             return ItemStack.EMPTY;
         }

@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    { "id": "#foodtxf:skillets", "required": false }
+    "#foodtxf:skillets"
   ]
 }

@@ -21,6 +21,6 @@ public class FoodtxfMod {
 
         FoodtxfModBlocks.REGISTRY.register(bus);
         FoodtxfModItems.REGISTRY.register(bus);
-        FoodtxfModTab.init();
+        FoodtxfModTab.init(bus);
     }
 }

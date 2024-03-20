@@ -5,7 +5,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -13,7 +13,7 @@ public class FoodtxfModTab {
 
     private static final DeferredRegister<CreativeModeTab> TAB_REGISTER = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, FoodtxfMod.MODID);
 
-    public static final RegistryObject<CreativeModeTab> TAB_FOOD_TXF = TAB_REGISTER.register("tabfood_txf", () -> CreativeModeTab.builder()
+    public static final RegistryObject<CreativeModeTab> TAB_FOOD_TXF = TAB_REGISTER.register("tab_foodtxf", () -> CreativeModeTab.builder()
             .icon(() -> new ItemStack(FoodtxfModItems.NETHERITE_KNIFE.get()))
             .displayItems((features, event) -> {
                 event.accept(FoodtxfModItems.PLAYER_FLESH.get());
@@ -96,13 +96,14 @@ public class FoodtxfModTab {
                 event.accept(FoodtxfModItems.BLACK_KITCHEN_BLOCK.get());
                 event.accept(FoodtxfModItems.WHITE_KITCHEN_BLOCK.get());
                 event.accept(FoodtxfModItems.LAMP.get());
+                event.accept(FoodtxfModItems.NETHERITE_LAMP.get());
                 event.accept(FoodtxfModItems.RECIPE_BOOK.get());
             })
-            .title(Component.translatable("itemGroup.tabfood_txf"))
+            .title(Component.translatable("itemGroup.foodtxf.tab_foodtxf"))
             .build());
 
-    public static void init() {
-        TAB_REGISTER.register(FMLJavaModLoadingContext.get().getModEventBus());
+    public static void init(IEventBus bus) {
+        TAB_REGISTER.register(bus);
     }
 
 }

@@ -13,7 +13,7 @@ public class BaseWearableItem extends BlockItem implements WearableItem {
     }
 
     @Override
-    public EquipmentSlot getEquipmentSlot(ItemStack itemstack) {
+    public EquipmentSlot getEquipmentSlot(ItemStack stack) {
         return EquipmentSlot.HEAD;
     }
 }
