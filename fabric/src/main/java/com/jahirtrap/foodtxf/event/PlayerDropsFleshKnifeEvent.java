@@ -21,7 +21,7 @@ import static com.jahirtrap.foodtxf.util.CommonUtils.checkCreativeMode;
 import static com.jahirtrap.foodtxf.util.CommonUtils.dropFlesh;
 
 public class PlayerDropsFleshKnifeEvent {
-    public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, ItemStack itemstack) {
+    public static void execute(LevelAccessor accesor, double x, double y, double z, Entity entity, ItemStack stack) {
         if (!(entity instanceof Player player)) return;
         if (!player.isShiftKeyDown()) return;
         ItemStack mainHandIst = player.getMainHandItem(), offHandIst = player.getOffhandItem();
@@ -29,10 +29,10 @@ public class PlayerDropsFleshKnifeEvent {
         boolean creativeMode = checkCreativeMode(entity), mainHand;
 
         if (offHandIst == mainHandIst) mainHandIst = empty;
-        if (mainHandIst == itemstack && offHandIst == empty) {
+        if (mainHandIst == stack && offHandIst == empty) {
             ist = mainHandIst;
             mainHand = true;
-        } else if (offHandIst == itemstack) {
+        } else if (offHandIst == stack) {
             ist = offHandIst;
             mainHand = false;
         } else return;
@@ -51,13 +51,13 @@ public class PlayerDropsFleshKnifeEvent {
             if (mainHand) player.swing(InteractionHand.MAIN_HAND, true);
             else player.swing(InteractionHand.OFF_HAND, true);
 
-            if (world instanceof Level level && !level.isClientSide())
+            if (accesor instanceof Level level && !level.isClientSide())
                 level.addFreshEntity(dropFlesh(entity, level, x, y, z, 1));
         } else if (creativeMode) {
             if (mainHand) player.swing(InteractionHand.MAIN_HAND, true);
             else player.swing(InteractionHand.OFF_HAND, true);
 
-            if (!(world instanceof Level level)) return;
+            if (!(accesor instanceof Level level)) return;
             if (!level.isClientSide()) {
                 level.playSound(null, new BlockPos((int) x, (int) y, (int) z),
                         Objects.requireNonNull(Registry.SOUND_EVENT.get(new ResourceLocation("entity.player.hurt"))), SoundSource.PLAYERS,

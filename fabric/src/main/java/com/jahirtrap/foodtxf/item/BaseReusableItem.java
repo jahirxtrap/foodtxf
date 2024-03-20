@@ -4,7 +4,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Rarity;
 
-import static com.jahirtrap.foodtxf.FoodtxfMod.TAB_FOOD_TXF;
+import static com.jahirtrap.foodtxf.FoodtxfModTab.TAB_FOOD_TXF;
 
 public class BaseReusableItem extends Item {
     public BaseReusableItem() {
@@ -17,7 +17,7 @@ public class BaseReusableItem extends Item {
     }
 
     @Override
-    public ItemStack getRecipeRemainder(ItemStack itemstack) {
+    public ItemStack getRecipeRemainder(ItemStack stack) {
         return new ItemStack(this);
     }
 }

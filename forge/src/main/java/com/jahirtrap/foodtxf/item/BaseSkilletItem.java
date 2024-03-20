@@ -42,9 +42,10 @@ public class BaseSkilletItem extends SwordItem {
     }
 
     @Override
-    public ItemStack getCraftingRemainingItem(ItemStack itemstack) {
-        ItemStack retVal = new ItemStack(this);
-        retVal.setDamageValue(itemstack.getDamageValue() + 1);
+    public ItemStack getCraftingRemainingItem(ItemStack stack) {
+        ItemStack retVal = stack.copy();
+        if (retVal.getTag() != null && retVal.getTag().getBoolean("Unbreakable")) return retVal;
+        retVal.setDamageValue(stack.getDamageValue() + 1);
         if (retVal.getDamageValue() >= retVal.getMaxDamage()) {
             return ItemStack.EMPTY;
         }
@@ -52,7 +53,7 @@ public class BaseSkilletItem extends SwordItem {
     }
 
     @Override
-    public boolean isRepairable(ItemStack itemstack) {
+    public boolean isRepairable(ItemStack stack) {
         return false;
     }
 }

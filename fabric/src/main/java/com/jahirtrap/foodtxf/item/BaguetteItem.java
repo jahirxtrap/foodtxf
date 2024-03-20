@@ -8,7 +8,7 @@ public class BaguetteItem extends BaseFoodItem {
     }
 
     @Override
-    public int getUseDuration(ItemStack itemstack) {
+    public int getUseDuration(ItemStack stack) {
         return 64;
     }
 }

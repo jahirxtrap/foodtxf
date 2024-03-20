@@ -12,7 +12,7 @@ public class ChocomilkThermosItem extends BaseReturnItem {
     }
 
     @Override
-    public UseAnim getUseAnimation(ItemStack itemstack) {
+    public UseAnim getUseAnimation(ItemStack stack) {
         return UseAnim.DRINK;
     }
 
@@ -22,7 +22,7 @@ public class ChocomilkThermosItem extends BaseReturnItem {
     }
 
     @Override
-    public ItemStack getCraftingRemainingItem(ItemStack itemstack) {
+    public ItemStack getCraftingRemainingItem(ItemStack stack) {
         return new ItemStack(FoodtxfModItems.THERMOS.get());
     }
 }

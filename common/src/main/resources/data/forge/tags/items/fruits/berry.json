@@ -1,14 +1,11 @@
 {
   "replace": false,
   "values": [
-    { "id": "minecraft:glow_berries", "required": false },
+    "minecraft:glow_berries",
     { "id": "byg:blueberries", "required": false },
     { "id": "byg:crimson_berries", "required": false },
     { "id": "byg:holly_berries", "required": false },
     { "id": "byg:nightshade_berries", "required": false },
-    { "id": "createcafe:mana_berries", "required": false },
-    { "id": "cavesandcliffs:glow_berries", "required": false },
-    { "id": "caves_and_cliffs_mod:glow_berry", "required": false },
-    { "id": "minecraft__concept_vicale:glowberry", "required": false }
+    { "id": "createcafe:mana_berries", "required": false }
   ]
 }

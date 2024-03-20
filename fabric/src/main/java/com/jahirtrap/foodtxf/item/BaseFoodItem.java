@@ -4,7 +4,7 @@ import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 
-import static com.jahirtrap.foodtxf.FoodtxfMod.TAB_FOOD_TXF;
+import static com.jahirtrap.foodtxf.FoodtxfModTab.TAB_FOOD_TXF;
 
 public class BaseFoodItem extends Item {
     public BaseFoodItem(int nutrition, float saturation) {

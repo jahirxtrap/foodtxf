@@ -5,7 +5,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.UseAnim;
 
-import static com.jahirtrap.foodtxf.FoodtxfMod.TAB_FOOD_TXF;
+import static com.jahirtrap.foodtxf.FoodtxfModTab.TAB_FOOD_TXF;
 
 
 public class MixingBowlItem extends Item {
@@ -14,7 +14,7 @@ public class MixingBowlItem extends Item {
     }
 
     @Override
-    public UseAnim getUseAnimation(ItemStack itemstack) {
+    public UseAnim getUseAnimation(ItemStack stack) {
         return UseAnim.EAT;
     }
 
@@ -24,7 +24,7 @@ public class MixingBowlItem extends Item {
     }
 
     @Override
-    public ItemStack getRecipeRemainder(ItemStack itemstack) {
+    public ItemStack getRecipeRemainder(ItemStack stack) {
         return new ItemStack(this);
     }
 }

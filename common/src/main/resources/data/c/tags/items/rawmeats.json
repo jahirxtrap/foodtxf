@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    { "id": "#c:raw_meat", "required": false }
+    "#c:raw_meat"
   ]
 }

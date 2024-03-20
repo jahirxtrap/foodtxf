@@ -18,7 +18,7 @@ import vazkii.patchouli.api.PatchouliAPI;
 
 import java.util.List;
 
-import static com.jahirtrap.foodtxf.FoodtxfMod.TAB_FOOD_TXF;
+import static com.jahirtrap.foodtxf.FoodtxfModTab.TAB_FOOD_TXF;
 
 public class RecipeBookItem extends Item {
     public RecipeBookItem() {
@@ -26,12 +26,12 @@ public class RecipeBookItem extends Item {
     }
 
     @Override
-    public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
-        InteractionResultHolder<ItemStack> holder = super.use(world, entity, hand);
-        ItemStack stack = entity.getItemInHand(hand);
+    public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
+        InteractionResultHolder<ItemStack> holder = super.use(level, player, hand);
+        ItemStack stack = player.getItemInHand(hand);
 
-        if (entity instanceof ServerPlayer player && FabricLoader.getInstance().isModLoaded("patchouli")) {
-            PatchouliAPI.get().openBookGUI(player, Registry.ITEM.getKey(this));
+        if (player instanceof ServerPlayer serverPlayer && FabricLoader.getInstance().isModLoaded("patchouli")) {
+            PatchouliAPI.get().openBookGUI(serverPlayer, Registry.ITEM.getKey(this));
         } else {
             return holder;
         }
@@ -40,7 +40,7 @@ public class RecipeBookItem extends Item {
     }
 
     @Override
-    public void appendHoverText(ItemStack itemStack, Level level, List<Component> tooltip, TooltipFlag tooltipFlag) {
+    public void appendHoverText(ItemStack stack, Level level, List<Component> tooltip, TooltipFlag tooltipFlag) {
         if (!FabricLoader.getInstance().isModLoaded("patchouli")) {
             tooltip.add(Component.translatable("tooltip.foodtxf.patchouli").withStyle(ChatFormatting.GRAY));
         } else {

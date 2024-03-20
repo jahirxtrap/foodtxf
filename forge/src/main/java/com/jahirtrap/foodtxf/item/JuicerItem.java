@@ -18,17 +18,18 @@ public class JuicerItem extends Item {
     }
 
     @Override
-    public ItemStack getCraftingRemainingItem(ItemStack itemstack) {
-        ItemStack retval = new ItemStack(this);
-        retval.setDamageValue(itemstack.getDamageValue() + 1);
-        if (retval.getDamageValue() >= retval.getMaxDamage()) {
+    public ItemStack getCraftingRemainingItem(ItemStack stack) {
+        ItemStack retVal = stack.copy();
+        if (retVal.getTag() != null && retVal.getTag().getBoolean("Unbreakable")) return retVal;
+        retVal.setDamageValue(stack.getDamageValue() + 1);
+        if (retVal.getDamageValue() >= retVal.getMaxDamage()) {
             return ItemStack.EMPTY;
         }
-        return retval;
+        return retVal;
     }
 
     @Override
-    public boolean isRepairable(ItemStack itemstack) {
+    public boolean isRepairable(ItemStack stack) {
         return false;
     }
 

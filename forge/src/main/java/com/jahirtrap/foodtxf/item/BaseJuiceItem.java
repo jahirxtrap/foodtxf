@@ -12,7 +12,7 @@ public class BaseJuiceItem extends BaseReturnItem {
     }
 
     @Override
-    public UseAnim getUseAnimation(ItemStack itemstack) {
+    public UseAnim getUseAnimation(ItemStack stack) {
         return UseAnim.DRINK;
     }
 }

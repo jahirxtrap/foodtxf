@@ -13,14 +13,14 @@ import net.minecraft.world.level.block.Blocks;
 import static com.jahirtrap.foodtxf.util.CommonUtils.*;
 
 public class FillFluidEvent {
-    public static void execute(LevelAccessor world, Entity entity) {
+    public static void execute(LevelAccessor accesor, Entity entity) {
         if (!(entity instanceof Player player)) return;
         Item mainHandItem = player.getMainHandItem().getItem(), offHandItem = player.getOffhandItem().getItem();
         Item thermosItem = FoodtxfModItems.THERMOS;
         boolean mainHand;
         String sound;
 
-        Block block = getViewedBlock(world, entity);
+        Block block = getViewedBlock(accesor, entity);
         if (mainHandItem == offHandItem) return;
         if (mainHandItem == thermosItem) mainHand = true;
         else if (offHandItem == thermosItem) mainHand = false;
@@ -42,6 +42,6 @@ public class FillFluidEvent {
         else player.swing(InteractionHand.OFF_HAND, true);
         Ist.setCount(1);
         player.getInventory().add(Ist);
-        playSound(world, entity, sound);
+        playSound(accesor, entity, sound);
     }
 }

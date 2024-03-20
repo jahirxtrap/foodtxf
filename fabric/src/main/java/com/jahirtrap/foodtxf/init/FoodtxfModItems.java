@@ -8,7 +8,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 
 import static com.jahirtrap.foodtxf.FoodtxfMod.MODID;
-import static com.jahirtrap.foodtxf.FoodtxfMod.TAB_FOOD_TXF;
+import static com.jahirtrap.foodtxf.FoodtxfModTab.TAB_FOOD_TXF;
 
 public class FoodtxfModItems {
     public static final Item PLAYER_FLESH = RegistryObject("player_flesh", new PlayerFleshItem());
@@ -52,7 +52,7 @@ public class FoodtxfModItems {
     public static final Item LAVA_THERMOS = RegistryObject("lava_thermos", new LavaThermosItem());
     public static final Item MILK_THERMOS = RegistryObject("milk_thermos", new MilkThermosItem());
     public static final Item CHOCOMILK_THERMOS = RegistryObject("chocomilk_thermos", new ChocomilkThermosItem());
-    public static final Item GLASS = RegistryObject("glass", new BaseContainerItem());
+    public static final Item GLASS = RegistryObject("glass", new BaseItem());
     public static final Item GLASS_OF_FRUIT_JUICE = RegistryObject("glass_of_fruit_juice", new BaseJuiceItem());
     public static final Item GLASS_OF_VEGETABLE_JUICE = RegistryObject("glass_of_vegetable_juice", new BaseJuiceItem());
     public static final Item GLASS_OF_MIXED_JUICE = RegistryObject("glass_of_mixed_juice", new BaseJuiceItem());
@@ -65,7 +65,7 @@ public class FoodtxfModItems {
     public static final Item GLASS_OF_CHOCOMILK = RegistryObject("glass_of_chocomilk", new GlassOfChocomilkItem());
     public static final Item GLASS_OF_CHOCOMILK_AND_COOKIES = RegistryObject("glass_of_chocomilk_and_cookies", new GlassOfChocomilkAndCookiesItem());
     public static final Item GLASS_OF_CHOCOMILK_AND_TOASTED_BREAD = RegistryObject("glass_of_chocomilk_and_toasted_bread", new GlassOfChocomilkAndToastedBreadItem());
-    public static final Item BOX = RegistryObject("box", new BaseContainerItem());
+    public static final Item BOX = RegistryObject("box", new BaseItem());
     public static final Item BOX_OF_COOKIES = RegistryObject("box_of_cookies", new BoxOfCookiesItem());
     public static final Item WOODEN_KNIFE = RegistryObject("wooden_knife", new WoodenKnifeItem());
     public static final Item STONE_KNIFE = RegistryObject("stone_knife", new StoneKnifeItem());
@@ -90,7 +90,8 @@ public class FoodtxfModItems {
     public static final Item BLENDER = RegistryObject("blender", new BaseReusableItem());
     public static final Item BLACK_KITCHEN_BLOCK = block("black_kitchen_block", FoodtxfModBlocks.BLACK_KITCHEN_BLOCK);
     public static final Item WHITE_KITCHEN_BLOCK = block("white_kitchen_block", FoodtxfModBlocks.WHITE_KITCHEN_BLOCK);
-    public static final Item LAMP = blockWearable("lamp", FoodtxfModBlocks.LAMP);
+    public static final Item LAMP = Registry.register(Registry.ITEM, new ResourceLocation(MODID, "lamp"), new BaseWearableItem(FoodtxfModBlocks.LAMP, new Item.Properties()));
+    public static final Item NETHERITE_LAMP = Registry.register(Registry.ITEM, new ResourceLocation(MODID, "netherite_lamp"), new NetheriteLampItem(FoodtxfModBlocks.NETHERITE_LAMP, new Item.Properties()));
     public static final Item RECIPE_BOOK = RegistryObject("recipe_book", new RecipeBookItem());
 
     public static void init() {
@@ -102,9 +103,5 @@ public class FoodtxfModItems {
 
     public static Item block(String name, Block block) {
         return Registry.register(Registry.ITEM, new ResourceLocation(MODID, name), new BlockItem(block, new Item.Properties().tab(TAB_FOOD_TXF)));
-    }
-
-    private static Item blockWearable(String name, Block blockW) {
-        return Registry.register(Registry.ITEM, new ResourceLocation(MODID, name), new BaseWearableItem(blockW, new Item.Properties().tab(TAB_FOOD_TXF)));
     }
 }

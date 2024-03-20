@@ -1,14 +1,15 @@
 package com.jahirtrap.foodtxf.item;
 
 import com.jahirtrap.foodtxf.util.RepairableItem;
+import net.fabricmc.fabric.api.item.v1.FabricItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
 
-import static com.jahirtrap.foodtxf.FoodtxfMod.TAB_FOOD_TXF;
+import static com.jahirtrap.foodtxf.FoodtxfModTab.TAB_FOOD_TXF;
 
-public class BaseSkilletItem extends SwordItem implements RepairableItem {
+public class BaseSkilletItem extends SwordItem implements RepairableItem, FabricItem {
     public BaseSkilletItem(int uses, float speed, float damage, int level, int enchantment, Ingredient repair, Properties properties) {
         super(new Tier() {
             public int getUses() {
@@ -43,9 +44,10 @@ public class BaseSkilletItem extends SwordItem implements RepairableItem {
     }
 
     @Override
-    public ItemStack getRecipeRemainder(ItemStack itemstack) {
-        ItemStack retVal = new ItemStack(this);
-        retVal.setDamageValue(itemstack.getDamageValue() + 1);
+    public ItemStack getRecipeRemainder(ItemStack stack) {
+        ItemStack retVal = stack.copy();
+        if (retVal.getTag() != null && retVal.getTag().getBoolean("Unbreakable")) return retVal;
+        retVal.setDamageValue(stack.getDamageValue() + 1);
         if (retVal.getDamageValue() >= retVal.getMaxDamage()) {
             return ItemStack.EMPTY;
         }
