@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "com.jahirtrap.foodtxf.init.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "LivingEntityMixin",
+    "RecipeMixin",
+    "RepairItemRecipeMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

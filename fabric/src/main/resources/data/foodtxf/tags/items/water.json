@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "foodtxf:water_thermos",
+    { "id": "#c:water_buckets", "required": false }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " I",
+    "R "
+  ],
+  "key": {
+    "I": {
+      "tag": "c:steel_ingots"
+    },
+    "R": {
+      "tag": "c:wooden_rods"
+    }
+  },
+  "result": {
+    "item": "foodtxf:steel_knife",
+    "count": 1
+  }
+}

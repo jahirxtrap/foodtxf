@@ -1,0 +1,6 @@
+{
+  "replace": false,
+  "values": [
+    { "id": "byg:green_apple", "required": false }
+  ]
+}

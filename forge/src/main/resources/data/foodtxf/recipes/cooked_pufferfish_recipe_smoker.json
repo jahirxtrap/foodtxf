@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "experience": 0.35,
+  "cookingtime": 100,
+  "ingredient": {
+    "item": "foodtxf:clean_pufferfish"
+  },
+  "result": "foodtxf:cooked_pufferfish"
+}

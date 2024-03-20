@@ -1,6 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    { "id": "#forge:fruits/berry", "required": false }
-  ]
-}

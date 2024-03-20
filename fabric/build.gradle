@@ -1,0 +1,108 @@
+plugins {
+    id 'java'
+    id 'idea'
+    id 'maven-publish'
+    id 'fabric-loom'
+}
+
+version = "${version}-fabric"
+
+base {
+    archivesName = mod_id
+}
+
+repositories {
+    maven {
+        url 'https://maven.blamejared.com'
+    }
+    maven {
+        name "modrinth"
+        url "https://api.modrinth.com/maven"
+    }
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${minecraft_version}"
+    mappings loom.officialMojangMappings()
+    modImplementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_api_version}"
+    implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
+    compileOnly project(":common")
+
+    modImplementation include(fileTree(dir: 'libs', include: ['*.jar']))
+    modImplementation "vazkii.patchouli:Patchouli:[${fabric_patchouli_version}]"
+}
+
+loom {
+    if (project(":common").file("src/main/resources/${mod_id}.accesswidener").exists()) {
+        accessWidenerPath.set(project(":common").file("src/main/resources/${mod_id}.aw"))
+    }
+    mixin {
+        defaultRefmapName.set("${mod_id}.refmap.json")
+    }
+    runs {
+        client {
+            client()
+            setConfigName("Fabric Client")
+            ideConfigGenerated(true)
+            runDir("run")
+        }
+        server {
+            server()
+            setConfigName("Fabric Server")
+            ideConfigGenerated(true)
+            runDir("run")
+        }
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    source(project(":common").sourceSets.main.allSource)
+}
+tasks.withType(Javadoc).configureEach {
+    source(project(":common").sourceSets.main.allJava)
+}
+tasks.named("sourcesJar", Jar) {
+    from(project(":common").sourceSets.main.allSource)
+}
+
+def resourceTargets = ['fabric.mod.json']
+def replaceProperties = [
+        minecraft_version_range: fabric_minecraft_version_range,
+        loader_version_range: fabric_loader_version_range,
+        mod_id: mod_id, mod_name: mod_name, mod_license: mod_license, mod_version: version,
+        mod_author: mod_author, mod_description: mod_description,
+        mod_url: mod_url, side: fabric_side,
+        configlibtxf_version: configlibtxf_version
+]
+
+processResources {
+    inputs.properties replaceProperties
+    replaceProperties.put 'project', project
+
+    filesMatching(resourceTargets) {
+        expand replaceProperties
+    }
+    exclude '**/data/forge/**'
+    from project(":common").sourceSets.main.resources
+}
+
+jar {
+    from('libs') {
+        include '*.jar'
+        into('META-INF/jars')
+    }
+}
+
+jar.finalizedBy('remapJar')
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId project.group
+            artifactId project.archivesBaseName
+            version project.version
+            from components.java
+        }
+    }
+}

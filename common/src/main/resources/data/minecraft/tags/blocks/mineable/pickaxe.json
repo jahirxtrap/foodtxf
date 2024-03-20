@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "foodtxf:black_kitchen_block",
+    "foodtxf:white_kitchen_block",
+    "foodtxf:lamp",
+    "foodtxf:netherite_lamp"
+  ]
+}
