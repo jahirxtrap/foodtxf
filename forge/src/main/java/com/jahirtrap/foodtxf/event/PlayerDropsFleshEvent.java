@@ -24,12 +24,12 @@ public class PlayerDropsFleshEvent {
         }
     }
 
-    private static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+    private static void execute(LevelAccessor accesor, double x, double y, double z, Entity entity) {
         if (!(entity instanceof Player))
             return;
         Random random = new Random();
         int rand = random.ints(1, 3 + 1).findFirst().getAsInt();
-        if (world instanceof Level level && !level.isClientSide()) {
+        if (accesor instanceof Level level && !level.isClientSide()) {
             level.addFreshEntity(dropFlesh(entity, level, x, y, z, rand));
         }
     }

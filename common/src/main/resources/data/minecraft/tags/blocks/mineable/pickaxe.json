@@ -3,6 +3,7 @@
   "values": [
     "foodtxf:black_kitchen_block",
     "foodtxf:white_kitchen_block",
-    "foodtxf:lamp"
+    "foodtxf:lamp",
+    "foodtxf:netherite_lamp"
   ]
 }

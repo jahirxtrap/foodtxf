@@ -27,7 +27,7 @@ public class FillMilkEvent {
         execute(event.getLevel(), event.getTarget(), event.getEntity());
     }
 
-    private static void execute(LevelAccessor world, Entity target, Entity entity) {
+    private static void execute(LevelAccessor accesor, Entity target, Entity entity) {
         if (!(target instanceof LivingEntity livTar)) return;
         if (!(entity instanceof Player player)) return;
         boolean mainHand;
@@ -39,7 +39,7 @@ public class FillMilkEvent {
         else if (offHandItem == thermosItem) mainHand = false;
         else return;
 
-        Block block = getViewedBlock(world, entity);
+        Block block = getViewedBlock(accesor, entity);
 
         if (!(block == Blocks.WATER) && !(block == Blocks.LAVA)) {
             if ((target instanceof Cow || target instanceof Goat) && !(livTar.isBaby())) {
@@ -55,7 +55,7 @@ public class FillMilkEvent {
                 String sound;
                 if (target instanceof Cow) sound = "entity.cow.milk";
                 else sound = "entity.goat.milk";
-                playSound(world, entity, sound);
+                playSound(accesor, entity, sound);
             }
         }
     }

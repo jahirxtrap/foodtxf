@@ -7,7 +7,7 @@
     "minecraft:porkchop",
     "minecraft:rabbit",
     "foodtxf:player_flesh",
-    { "id": "#forge:raw_fishes", "required": false },
+    "#forge:raw_fishes",
     { "id": "alexsdelight:bison_mince", "required": false },
     { "id": "alexsdelight:kangaroo_shank", "required": false },
     { "id": "alexsdelight:loose_moose_rib", "required": false },

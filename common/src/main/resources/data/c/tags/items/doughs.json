@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    { "id": "#c:dough/dough", "required": false }
+    "#c:dough/dough"
   ]
 }

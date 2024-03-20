@@ -22,8 +22,8 @@
     },
     {
       "type": "patchouli:smithing",
-      "recipe": "foodtxf:netherite_knife_recipe_new",
-      "recipe2": "foodtxf:enderite_knife_recipe_new",
+      "recipe": "foodtxf:netherite_knife_recipe",
+      "recipe2": "foodtxf:enderite_knife_recipe",
       "title": " "
     },
     {

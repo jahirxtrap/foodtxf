@@ -24,12 +24,12 @@ public class RecipeBookItem extends Item {
     }
 
     @Override
-    public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
-        InteractionResultHolder<ItemStack> holder = super.use(world, entity, hand);
-        ItemStack stack = entity.getItemInHand(hand);
+    public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
+        InteractionResultHolder<ItemStack> holder = super.use(level, player, hand);
+        ItemStack stack = player.getItemInHand(hand);
 
-        if (entity instanceof ServerPlayer player && ModList.get().isLoaded("patchouli")) {
-            PatchouliAPI.get().openBookGUI(player, ForgeRegistries.ITEMS.getKey(this));
+        if (player instanceof ServerPlayer serverPlayer && ModList.get().isLoaded("patchouli")) {
+            PatchouliAPI.get().openBookGUI(serverPlayer, ForgeRegistries.ITEMS.getKey(this));
         } else {
             return holder;
         }
@@ -38,7 +38,7 @@ public class RecipeBookItem extends Item {
     }
 
     @Override
-    public void appendHoverText(ItemStack itemStack, Level level, List<Component> tooltip, TooltipFlag tooltipFlag) {
+    public void appendHoverText(ItemStack stack, Level level, List<Component> tooltip, TooltipFlag tooltipFlag) {
         if (!ModList.get().isLoaded("patchouli")) {
             tooltip.add(Component.translatable("tooltip.foodtxf.patchouli").withStyle(ChatFormatting.GRAY));
         } else {
