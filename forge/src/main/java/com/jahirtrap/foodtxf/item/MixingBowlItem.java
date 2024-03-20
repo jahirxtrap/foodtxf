@@ -12,7 +12,7 @@ public class MixingBowlItem extends Item {
     }
 
     @Override
-    public UseAnim getUseAnimation(ItemStack itemstack) {
+    public UseAnim getUseAnimation(ItemStack stack) {
         return UseAnim.EAT;
     }
 
@@ -22,7 +22,7 @@ public class MixingBowlItem extends Item {
     }
 
     @Override
-    public ItemStack getCraftingRemainingItem(ItemStack itemstack) {
+    public ItemStack getCraftingRemainingItem(ItemStack stack) {
         return new ItemStack(this);
     }
 }

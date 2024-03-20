@@ -4,8 +4,7 @@
   "compatibilityLevel": "JAVA_17",
   "mixins": [
     "LivingEntityMixin",
-    "RepairItemRecipeMixin",
-    "ServerPlayerGameModeMixin"
+    "RepairItemRecipeMixin"
   ],
   "injectors": {
     "defaultRequire": 1

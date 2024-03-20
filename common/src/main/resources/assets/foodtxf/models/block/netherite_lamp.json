@@ -1,0 +1,7 @@
+{
+  "parent": "foodtxf:block/lamp",
+  "textures": {
+    "0": "foodtxf:block/netherite_lamp",
+    "particle": "foodtxf:block/netherite_lamp"
+  }
+}

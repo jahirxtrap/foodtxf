@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    { "id": "#c:fruits/berry", "required": false }
+    "#c:fruits/berry"
   ]
 }

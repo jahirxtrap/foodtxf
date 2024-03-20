@@ -15,7 +15,7 @@ public class BaseReusableItem extends Item {
     }
 
     @Override
-    public ItemStack getRecipeRemainder(ItemStack itemstack) {
+    public ItemStack getRecipeRemainder(ItemStack stack) {
         return new ItemStack(this);
     }
 }

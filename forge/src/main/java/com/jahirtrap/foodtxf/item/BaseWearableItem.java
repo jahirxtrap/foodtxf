@@ -12,12 +12,12 @@ public class BaseWearableItem extends BlockItem {
     }
 
     @Override
-    public boolean canEquip(ItemStack itemstack, EquipmentSlot slot, Entity entity) {
+    public boolean canEquip(ItemStack stack, EquipmentSlot slot, Entity entity) {
         return slot == EquipmentSlot.HEAD;
     }
 
     @Override
-    public EquipmentSlot getEquipmentSlot(ItemStack itemstack) {
+    public EquipmentSlot getEquipmentSlot(ItemStack stack) {
         return EquipmentSlot.HEAD;
     }
 }

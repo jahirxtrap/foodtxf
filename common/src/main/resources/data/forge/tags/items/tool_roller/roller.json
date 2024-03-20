@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    { "id": "#foodtxf:rolling_pins", "required": false }
+    "#foodtxf:rolling_pins"
   ]
 }
