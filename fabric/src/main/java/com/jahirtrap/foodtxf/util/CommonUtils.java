@@ -14,16 +14,24 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.level.GameType;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Objects;
 
 public class CommonUtils {
+    public static final List<String> fluid = new ArrayList<>(Arrays.asList("none", "water", "lava", "milk"));
+    public static final List<Item> container = new ArrayList<>(Arrays.asList(FoodtxfModItems.BOX, Items.BOWL, FoodtxfModItems.GLASS, Items.STICK, FoodtxfModItems.THERMOS));
+
     public static ItemEntity dropFlesh(Entity entity, Level level, double x, double y, double z, int num) {
         ItemStack stack;
         if (entity.isOnFire()) stack = new ItemStack(FoodtxfModItems.COOKED_PLAYER_FLESH, num);
