@@ -7,14 +7,14 @@
   ],
   "key": {
     "G": {
-      "tag": "forge:nuggets/gold"
+      "tag": "c:nuggets/gold"
     },
     "F": {
       "tag": "minecraft:fishes"
     }
   },
   "result": {
-    "item": "foodtxf:golden_fish",
+    "id": "foodtxf:golden_fish",
     "count": 1
   }
 }

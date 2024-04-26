@@ -6,23 +6,14 @@
   ],
   "key": {
     "P": {
-      "tag": "forge:pointed_dripstone"
+      "tag": "c:pointed_dripstone"
     },
     "S": {
       "item": "minecraft:stone_slab"
     }
   },
   "result": {
-    "item": "foodtxf:juicer",
+    "id": "foodtxf:juicer",
     "count": 1
-  },
-  "conditions": [
-    {
-      "type": "forge:not",
-      "value": {
-        "type": "forge:tag_empty",
-        "tag": "forge:pointed_dripstone"
-      }
-    }
-  ]
+  }
 }

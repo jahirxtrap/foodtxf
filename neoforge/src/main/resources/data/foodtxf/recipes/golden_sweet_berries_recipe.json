@@ -7,14 +7,14 @@
   ],
   "key": {
     "G": {
-      "tag": "forge:nuggets/gold"
+      "tag": "c:nuggets/gold"
     },
     "S": {
       "item": "minecraft:sweet_berries"
     }
   },
   "result": {
-    "item": "foodtxf:golden_sweet_berries",
+    "id": "foodtxf:golden_sweet_berries",
     "count": 1
   }
 }

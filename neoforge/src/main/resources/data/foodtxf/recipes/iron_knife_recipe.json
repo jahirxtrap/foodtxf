@@ -6,14 +6,14 @@
   ],
   "key": {
     "I": {
-      "tag": "forge:ingots/iron"
+      "tag": "c:ingots/iron"
     },
     "R": {
-      "tag": "forge:rods/wooden"
+      "tag": "c:rods/wooden"
     }
   },
   "result": {
-    "item": "foodtxf:iron_knife",
+    "id": "foodtxf:iron_knife",
     "count": 1
   }
 }

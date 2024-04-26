@@ -6,14 +6,14 @@
   ],
   "key": {
     "I": {
-      "tag": "forge:nuggets/iron"
+      "tag": "c:nuggets/iron"
     },
     "G": {
-      "tag": "forge:dusts/glowstone"
+      "tag": "c:dusts/glowstone"
     }
   },
   "result": {
-    "item": "foodtxf:lamp",
+    "id": "foodtxf:lamp",
     "count": 1
   }
 }

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smoking",
+  "experience": 0.35,
+  "cookingtime": 100,
+  "ingredient": {
+    "item": "foodtxf:raw_meat_empanada"
+  },
+  "result": {
+    "id": "foodtxf:meat_empanada"
+  }
+}

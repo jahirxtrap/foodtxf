@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "#c:raw_meat"
+    "#c:foods/raw_meats"
   ]
 }

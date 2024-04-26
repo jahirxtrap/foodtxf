@@ -7,11 +7,11 @@
   ],
   "key": {
     "#": {
-      "tag": "c:glass_colorless"
+      "tag": "c:glass_blocks/colorless"
     }
   },
   "result": {
-    "item": "foodtxf:glass",
+    "id": "foodtxf:glass",
     "count": 3
   }
 }

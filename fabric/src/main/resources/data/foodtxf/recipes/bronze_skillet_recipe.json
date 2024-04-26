@@ -7,14 +7,14 @@
   ],
   "key": {
     "I": {
-      "tag": "c:bronze_ingots"
+      "tag": "c:ingots/bronze"
     },
     "R": {
-      "tag": "c:wooden_rods"
+      "tag": "c:rods/wooden"
     }
   },
   "result": {
-    "item": "foodtxf:bronze_skillet",
+    "id": "foodtxf:bronze_skillet",
     "count": 1
   }
 }

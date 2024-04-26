@@ -7,14 +7,14 @@
   ],
   "key": {
     "G": {
-      "tag": "c:diamonds"
+      "tag": "c:gems/diamond"
     },
     "R": {
-      "tag": "c:wooden_rods"
+      "tag": "c:rods/wooden"
     }
   },
   "result": {
-    "item": "foodtxf:diamond_skillet",
+    "id": "foodtxf:diamond_skillet",
     "count": 1
   }
 }

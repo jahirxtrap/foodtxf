@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "tag": "forge:raw_meat"
+      "tag": "c:foods/raw_meats"
     },
     {
       "item": "foodtxf:dough_ball"
@@ -12,7 +12,7 @@
     }
   ],
   "result": {
-    "item": "foodtxf:raw_meat_empanada",
+    "id": "foodtxf:raw_meat_empanada",
     "count": 1
   }
 }

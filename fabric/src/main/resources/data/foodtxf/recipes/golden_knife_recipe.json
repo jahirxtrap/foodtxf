@@ -6,14 +6,14 @@
   ],
   "key": {
     "I": {
-      "tag": "c:gold_ingots"
+      "tag": "c:ingots/gold"
     },
     "R": {
-      "tag": "c:wooden_rods"
+      "tag": "c:rods/wooden"
     }
   },
   "result": {
-    "item": "foodtxf:golden_knife",
+    "id": "foodtxf:golden_knife",
     "count": 1
   }
 }

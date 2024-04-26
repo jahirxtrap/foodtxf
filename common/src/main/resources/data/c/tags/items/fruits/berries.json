@@ -1,6 +1,10 @@
 {
   "replace": false,
   "values": [
-    "#c:fruits/berry"
+    { "id": "byg:blueberries", "required": false },
+    { "id": "byg:crimson_berries", "required": false },
+    { "id": "byg:holly_berries", "required": false },
+    { "id": "byg:nightshade_berries", "required": false },
+    { "id": "createcafe:mana_berries", "required": false }
   ]
 }

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smoking",
+  "experience": 0.35,
+  "cookingtime": 100,
+  "ingredient": {
+    "item": "minecraft:carrot"
+  },
+  "result": {
+    "id": "foodtxf:cooked_carrot"
+  }
+}

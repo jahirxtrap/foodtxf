@@ -7,14 +7,14 @@
   ],
   "key": {
     "G": {
-      "tag": "c:gold_nuggets"
+      "tag": "c:nuggets/gold"
     },
     "B": {
       "item": "foodtxf:bread_slice"
     }
   },
   "result": {
-    "item": "foodtxf:golden_bread_slice",
+    "id": "foodtxf:golden_bread_slice",
     "count": 1
   }
 }

@@ -7,14 +7,14 @@
   ],
   "key": {
     "G": {
-      "tag": "forge:nuggets/gold"
+      "tag": "c:nuggets/gold"
     },
     "C": {
       "item": "minecraft:cooked_beef"
     }
   },
   "result": {
-    "item": "foodtxf:golden_beef",
+    "id": "foodtxf:golden_beef",
     "count": 1
   }
 }

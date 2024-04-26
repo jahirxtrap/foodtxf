@@ -6,14 +6,14 @@
   ],
   "key": {
     "I": {
-      "tag": "c:iron_nuggets"
+      "tag": "c:nuggets/iron"
     },
     "G": {
-      "tag": "c:glowstone_dusts"
+      "tag": "c:dusts/glowstone"
     }
   },
   "result": {
-    "item": "foodtxf:lamp",
+    "id": "foodtxf:lamp",
     "count": 1
   }
 }

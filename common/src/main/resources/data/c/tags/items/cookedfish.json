@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    { "id": "#c:cooked_fishes", "required": false }
+    "#c:foods/cooked_fishes"
   ]
 }

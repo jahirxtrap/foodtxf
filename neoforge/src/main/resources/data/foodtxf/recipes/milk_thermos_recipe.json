@@ -5,11 +5,11 @@
       "item": "foodtxf:thermos"
     },
     {
-      "tag": "forge:buckets/milk"
+      "tag": "c:buckets/milk"
     }
   ],
   "result": {
-    "item": "foodtxf:milk_thermos",
+    "id": "foodtxf:milk_thermos",
     "count": 1
   }
 }

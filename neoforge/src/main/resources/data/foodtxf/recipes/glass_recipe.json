@@ -7,11 +7,11 @@
   ],
   "key": {
     "#": {
-      "tag": "forge:glass/colorless"
+      "tag": "c:glass_blocks/colorless"
     }
   },
   "result": {
-    "item": "foodtxf:glass",
+    "id": "foodtxf:glass",
     "count": 3
   }
 }

@@ -30,7 +30,7 @@ public class EntityDrinksEvent {
 
     public static void lava(Entity entity) {
         if (!(entity instanceof LivingEntity livEnt)) return;
-        livEnt.setSecondsOnFire(6);
+        livEnt.setRemainingFireTicks(20 * 6);
     }
 
     public static void milk(Entity entity) {

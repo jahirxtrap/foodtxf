@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "foodtxf:glass"
+    },
+    {
+      "tag": "foodtxf:lava"
+    },
+    {
+      "item": "foodtxf:glass"
+    },
+    {
+      "item": "foodtxf:glass"
+    }
+  ],
+  "result": {
+    "id": "foodtxf:glass_of_lava",
+    "count": 3
+  }
+}

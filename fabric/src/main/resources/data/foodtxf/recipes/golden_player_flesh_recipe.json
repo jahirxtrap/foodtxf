@@ -7,14 +7,14 @@
   ],
   "key": {
     "G": {
-      "tag": "c:gold_nuggets"
+      "tag": "c:nuggets/gold"
     },
     "C": {
       "item": "foodtxf:cooked_player_flesh"
     }
   },
   "result": {
-    "item": "foodtxf:golden_player_flesh",
+    "id": "foodtxf:golden_player_flesh",
     "count": 1
   }
 }

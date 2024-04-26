@@ -7,14 +7,14 @@
   ],
   "key": {
     "I": {
-      "tag": "forge:ingots/iron"
+      "tag": "c:ingots/iron"
     },
     "G": {
-      "tag": "forge:glass/colorless"
+      "tag": "c:glass_blocks/colorless"
     }
   },
   "result": {
-    "item": "foodtxf:thermos",
+    "id": "foodtxf:thermos",
     "count": 1
   }
 }

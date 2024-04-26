@@ -5,11 +5,11 @@
       "item": "foodtxf:thermos"
     },
     {
-      "tag": "forge:buckets/lava"
+      "tag": "c:buckets/lava"
     }
   ],
   "result": {
-    "item": "foodtxf:lava_thermos",
+    "id": "foodtxf:lava_thermos",
     "count": 1
   }
 }

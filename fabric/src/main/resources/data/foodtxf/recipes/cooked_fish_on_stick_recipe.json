@@ -2,17 +2,17 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "tag": "c:cooked_fishes"
+      "tag": "c:foods/cooked_fishes"
     },
     {
       "item": "minecraft:stick"
     },
     {
-      "tag": "c:cooked_fishes"
+      "tag": "c:foods/cooked_fishes"
     }
   ],
   "result": {
-    "item": "foodtxf:cooked_fish_on_stick",
+    "id": "foodtxf:cooked_fish_on_stick",
     "count": 1
   }
 }

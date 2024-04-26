@@ -7,7 +7,7 @@ import com.jahirtrap.foodtxf.util.configlib.TXFConfig;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModLoadingContext;
 import net.neoforged.fml.common.Mod;
-import net.neoforged.neoforge.client.ConfigScreenHandler;
+import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 
 @Mod(FoodtxfMod.MODID)
 public class FoodtxfMod {
@@ -16,8 +16,8 @@ public class FoodtxfMod {
 
     public FoodtxfMod(IEventBus bus) {
         TXFConfig.init(MODID, FoodtxfModConfig.class);
-        ModLoadingContext.get().registerExtensionPoint(ConfigScreenHandler.ConfigScreenFactory.class, () ->
-                new ConfigScreenHandler.ConfigScreenFactory((client, parent) -> TXFConfig.getScreen(parent, MODID)));
+        ModLoadingContext.get().registerExtensionPoint(IConfigScreenFactory.class, () ->
+                (client, parent) -> TXFConfig.getScreen(parent, MODID));
 
         FoodtxfModBlocks.REGISTRY.register(bus);
         FoodtxfModItems.REGISTRY.register(bus);

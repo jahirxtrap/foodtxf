@@ -2,6 +2,6 @@
   "replace": false,
   "values": [
     "foodtxf:water_thermos",
-    { "id": "#forge:buckets/water", "required": false }
+    "#c:buckets/water"
   ]
 }

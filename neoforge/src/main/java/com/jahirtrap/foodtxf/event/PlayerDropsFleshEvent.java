@@ -6,19 +6,19 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
 
 import java.util.Random;
 
 import static com.jahirtrap.foodtxf.util.CommonUtils.dropFlesh;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class PlayerDropsFleshEvent {
     @SubscribeEvent
     public static void onEntityDeath(LivingDeathEvent event) {
         if (FoodtxfModConfig.enableCannibalism && FoodtxfModConfig.playerDropFlesh) {
-            if (event != null && event.getEntity() != null) {
+            if (event != null) {
                 execute(event.getEntity().level(), event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity());
             }
         }

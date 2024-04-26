@@ -7,14 +7,14 @@
   ],
   "key": {
     "G": {
-      "tag": "forge:nuggets/gold"
+      "tag": "c:nuggets/gold"
     },
     "L": {
       "item": "minecraft:glow_berries"
     }
   },
   "result": {
-    "item": "foodtxf:golden_glow_berries",
+    "id": "foodtxf:golden_glow_berries",
     "count": 1
   }
 }

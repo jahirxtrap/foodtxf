@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "foodtxf:pumpkin_slice"
+    }
+  ],
+  "result": {
+    "id": "minecraft:pumpkin_seeds",
+    "count": 1
+  }
+}

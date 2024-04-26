@@ -7,23 +7,23 @@
   ],
   "key": {
     "G": {
-      "tag": "c:glass_colorless"
+      "tag": "c:glass_blocks/colorless"
     },
     "D": {
-      "tag": "c:redstone_dusts"
+      "tag": "c:dusts/redstone"
     },
     "W": {
       "tag": "minecraft:wooden_buttons"
     },
     "I": {
-      "tag": "c:iron_ingots"
+      "tag": "c:ingots/iron"
     },
     "S": {
-      "tag": "c:iron_blocks"
+      "tag": "c:storage_blocks/iron"
     }
   },
   "result": {
-    "item": "foodtxf:blender",
+    "id": "foodtxf:blender",
     "count": 1
   }
 }
