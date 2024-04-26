@@ -12,7 +12,6 @@ import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import vazkii.patchouli.api.PatchouliAPI;
@@ -23,7 +22,7 @@ import static com.jahirtrap.foodtxf.FoodtxfModTab.TAB_FOOD_TXF;
 
 public class RecipeBookItem extends Item {
     public RecipeBookItem() {
-        super(new Item.Properties().tab(TAB_FOOD_TXF).stacksTo(1).rarity(Rarity.COMMON));
+        super(new Item.Properties().tab(TAB_FOOD_TXF).stacksTo(1));
     }
 
     @Override

@@ -1,15 +1,22 @@
 package com.jahirtrap.foodtxf.item;
 
-import com.jahirtrap.foodtxf.init.FoodtxfModItems;
 import com.jahirtrap.foodtxf.util.ContainerItem;
+import net.fabricmc.fabric.api.item.v1.FabricItem;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.UseAnim;
 
-public class ChocomilkThermosItem extends BaseReturnItem implements ContainerItem {
-    public ChocomilkThermosItem() {
-        super(FoodtxfModItems.THERMOS, "none", 16, (new FoodProperties.Builder()).alwaysEat()
+import static com.jahirtrap.foodtxf.util.CommonUtils.container;
+import static com.jahirtrap.foodtxf.util.CommonUtils.fluid;
+
+public class FluidThermosItem extends BaseReturnItem implements ContainerItem, FabricItem {
+    public FluidThermosItem(int fluidType) {
+        super(container.get(4), fluid.get(fluidType), 16, (new FoodProperties.Builder()).alwaysEat()
                 .build());
+    }
+
+    public FluidThermosItem() {
+        this(0);
     }
 
     @Override
@@ -24,6 +31,6 @@ public class ChocomilkThermosItem extends BaseReturnItem implements ContainerIte
 
     @Override
     public ItemStack getContainerItem(ItemStack stack) {
-        return new ItemStack(FoodtxfModItems.THERMOS);
+        return new ItemStack(container.get(4));
     }
 }

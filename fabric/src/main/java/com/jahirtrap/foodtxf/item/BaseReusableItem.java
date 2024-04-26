@@ -1,15 +1,15 @@
 package com.jahirtrap.foodtxf.item;
 
 import com.jahirtrap.foodtxf.util.ContainerItem;
+import net.fabricmc.fabric.api.item.v1.FabricItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Rarity;
 
 import static com.jahirtrap.foodtxf.FoodtxfModTab.TAB_FOOD_TXF;
 
-public class BaseReusableItem extends Item implements ContainerItem {
+public class BaseReusableItem extends Item implements ContainerItem, FabricItem {
     public BaseReusableItem() {
-        super(new Item.Properties().tab(TAB_FOOD_TXF).stacksTo(1).rarity(Rarity.COMMON));
+        super(new Item.Properties().tab(TAB_FOOD_TXF).stacksTo(1));
     }
 
     @Override
