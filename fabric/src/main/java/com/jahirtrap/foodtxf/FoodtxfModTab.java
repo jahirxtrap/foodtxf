@@ -46,17 +46,18 @@ public class FoodtxfModTab {
                 event.accept(FoodtxfModItems.CHEESE_EMPANADA);
                 event.accept(FoodtxfModItems.MEAT_EMPANADA);
                 event.accept(FoodtxfModItems.CHEESE_SANDWICH);
+                event.accept(FoodtxfModItems.THERMOS);
+                event.accept(FoodtxfModItems.GLASS);
+                event.accept(FoodtxfModItems.BOX);
                 event.accept(FoodtxfModItems.FRUIT_SALAD);
                 event.accept(FoodtxfModItems.VEGETABLE_SALAD);
                 event.accept(FoodtxfModItems.MIXED_SALAD);
                 event.accept(FoodtxfModItems.FISH_ON_STICK);
                 event.accept(FoodtxfModItems.COOKED_FISH_ON_STICK);
-                event.accept(FoodtxfModItems.THERMOS);
                 event.accept(FoodtxfModItems.WATER_THERMOS);
                 event.accept(FoodtxfModItems.LAVA_THERMOS);
                 event.accept(FoodtxfModItems.MILK_THERMOS);
                 event.accept(FoodtxfModItems.CHOCOMILK_THERMOS);
-                event.accept(FoodtxfModItems.GLASS);
                 event.accept(FoodtxfModItems.GLASS_OF_FRUIT_JUICE);
                 event.accept(FoodtxfModItems.GLASS_OF_VEGETABLE_JUICE);
                 event.accept(FoodtxfModItems.GLASS_OF_MIXED_JUICE);
@@ -69,7 +70,6 @@ public class FoodtxfModTab {
                 event.accept(FoodtxfModItems.GLASS_OF_CHOCOMILK);
                 event.accept(FoodtxfModItems.GLASS_OF_CHOCOMILK_AND_COOKIES);
                 event.accept(FoodtxfModItems.GLASS_OF_CHOCOMILK_AND_TOASTED_BREAD);
-                event.accept(FoodtxfModItems.BOX);
                 event.accept(FoodtxfModItems.BOX_OF_COOKIES);
                 event.accept(FoodtxfModItems.WOODEN_KNIFE);
                 event.accept(FoodtxfModItems.STONE_KNIFE);
@@ -94,8 +94,8 @@ public class FoodtxfModTab {
                 event.accept(FoodtxfModItems.BLENDER);
                 event.accept(FoodtxfModBlocks.BLACK_KITCHEN_BLOCK);
                 event.accept(FoodtxfModBlocks.WHITE_KITCHEN_BLOCK);
-                event.accept(FoodtxfModItems.LAMP);
-                event.accept(FoodtxfModItems.NETHERITE_LAMP);
+                event.accept(FoodtxfModBlocks.LAMP);
+                event.accept(FoodtxfModBlocks.NETHERITE_LAMP);
                 event.accept(FoodtxfModItems.RECIPE_BOOK);
             })
             .title(Component.translatable("itemGroup.foodtxf.tab_foodtxf"))
@@ -104,4 +104,5 @@ public class FoodtxfModTab {
     public static void init() {
         Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, new ResourceLocation(FoodtxfMod.MODID, "tab_foodtxf"), TAB_FOOD_TXF);
     }
+
 }

@@ -2,12 +2,10 @@ package com.jahirtrap.foodtxf.item;
 
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Rarity;
-
 
 public class JuicerItem extends Item {
     public JuicerItem() {
-        super(new Item.Properties().durability(200).rarity(Rarity.COMMON));
+        super(new Item.Properties().durability(200));
     }
 
     @Override
