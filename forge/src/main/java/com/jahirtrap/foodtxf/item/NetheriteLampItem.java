@@ -17,6 +17,7 @@ public class NetheriteLampItem extends BaseWearableItem {
         super(block, properties.fireResistant().rarity(Rarity.RARE));
     }
 
+    @Override
     public Multimap<Attribute, AttributeModifier> getDefaultAttributeModifiers(EquipmentSlot slot) {
         if (slot == EquipmentSlot.HEAD) {
             ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();

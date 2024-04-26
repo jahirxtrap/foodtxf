@@ -39,8 +39,7 @@ public class PlayerDropsFleshKnifeEvent {
             mainHand = false;
         } else return;
 
-        int faLevel = 0;
-        faLevel = EnchantmentHelper.getItemEnchantmentLevel(Enchantments.FIRE_ASPECT, ist);
+        int faLevel = EnchantmentHelper.getItemEnchantmentLevel(Enchantments.FIRE_ASPECT, ist);
 
         if (faLevel != 0) entity.setSecondsOnFire(4 * faLevel);
 

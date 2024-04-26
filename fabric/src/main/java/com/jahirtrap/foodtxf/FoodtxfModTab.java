@@ -9,6 +9,7 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 
 public class FoodtxfModTab {
+
     public static void init() {
         CreativeModeTab TAB_FOOD_TXF = FabricItemGroup.builder(new ResourceLocation(FoodtxfMod.MODID, "tabfood_txf"))
                 .icon(() -> new ItemStack(FoodtxfModItems.NETHERITE_KNIFE))
@@ -44,17 +45,18 @@ public class FoodtxfModTab {
                     event.accept(FoodtxfModItems.CHEESE_EMPANADA);
                     event.accept(FoodtxfModItems.MEAT_EMPANADA);
                     event.accept(FoodtxfModItems.CHEESE_SANDWICH);
+                    event.accept(FoodtxfModItems.THERMOS);
+                    event.accept(FoodtxfModItems.GLASS);
+                    event.accept(FoodtxfModItems.BOX);
                     event.accept(FoodtxfModItems.FRUIT_SALAD);
                     event.accept(FoodtxfModItems.VEGETABLE_SALAD);
                     event.accept(FoodtxfModItems.MIXED_SALAD);
                     event.accept(FoodtxfModItems.FISH_ON_STICK);
                     event.accept(FoodtxfModItems.COOKED_FISH_ON_STICK);
-                    event.accept(FoodtxfModItems.THERMOS);
                     event.accept(FoodtxfModItems.WATER_THERMOS);
                     event.accept(FoodtxfModItems.LAVA_THERMOS);
                     event.accept(FoodtxfModItems.MILK_THERMOS);
                     event.accept(FoodtxfModItems.CHOCOMILK_THERMOS);
-                    event.accept(FoodtxfModItems.GLASS);
                     event.accept(FoodtxfModItems.GLASS_OF_FRUIT_JUICE);
                     event.accept(FoodtxfModItems.GLASS_OF_VEGETABLE_JUICE);
                     event.accept(FoodtxfModItems.GLASS_OF_MIXED_JUICE);
@@ -67,7 +69,6 @@ public class FoodtxfModTab {
                     event.accept(FoodtxfModItems.GLASS_OF_CHOCOMILK);
                     event.accept(FoodtxfModItems.GLASS_OF_CHOCOMILK_AND_COOKIES);
                     event.accept(FoodtxfModItems.GLASS_OF_CHOCOMILK_AND_TOASTED_BREAD);
-                    event.accept(FoodtxfModItems.BOX);
                     event.accept(FoodtxfModItems.BOX_OF_COOKIES);
                     event.accept(FoodtxfModItems.WOODEN_KNIFE);
                     event.accept(FoodtxfModItems.STONE_KNIFE);
@@ -98,6 +99,6 @@ public class FoodtxfModTab {
                 })
                 .title(Component.translatable("itemGroup.foodtxf.tab_foodtxf"))
                 .build();
-
     }
+
 }

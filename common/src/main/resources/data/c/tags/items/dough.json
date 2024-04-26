@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "#c:dough/dough"
+    "foodtxf:dough_ball"
   ]
 }

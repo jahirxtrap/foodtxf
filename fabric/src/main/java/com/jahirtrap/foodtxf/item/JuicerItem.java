@@ -1,14 +1,13 @@
 package com.jahirtrap.foodtxf.item;
 
 import com.jahirtrap.foodtxf.util.RepairableItem;
+import net.fabricmc.fabric.api.item.v1.FabricItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Rarity;
 
-
-public class JuicerItem extends Item implements RepairableItem {
+public class JuicerItem extends Item implements RepairableItem, FabricItem {
     public JuicerItem() {
-        super(new Item.Properties().durability(200).rarity(Rarity.COMMON));
+        super(new Item.Properties().durability(200));
     }
 
     @Override

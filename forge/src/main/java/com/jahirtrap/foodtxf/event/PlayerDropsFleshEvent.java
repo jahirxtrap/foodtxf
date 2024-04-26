@@ -18,7 +18,7 @@ public class PlayerDropsFleshEvent {
     @SubscribeEvent
     public static void onEntityDeath(LivingDeathEvent event) {
         if (FoodtxfModConfig.enableCannibalism && FoodtxfModConfig.playerDropFlesh) {
-            if (event != null && event.getEntity() != null) {
+            if (event != null) {
                 execute(event.getEntity().level, event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity());
             }
         }
