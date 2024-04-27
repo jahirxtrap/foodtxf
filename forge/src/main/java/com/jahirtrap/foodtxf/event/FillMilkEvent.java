@@ -12,7 +12,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraftforge.event.entity.player.PlayerInteractEvent;
+import net.minecraftforge.event.entity.player.PlayerInteractEvent.EntityInteract;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.items.ItemHandlerHelper;
@@ -22,7 +22,7 @@ import static com.jahirtrap.foodtxf.util.CommonUtils.*;
 @Mod.EventBusSubscriber
 public class FillMilkEvent {
     @SubscribeEvent
-    public static void onRightClickEntity(PlayerInteractEvent.EntityInteract event) {
+    public static void onPlayerInteractEntity(EntityInteract event) {
         if (event.getHand() != event.getPlayer().getUsedItemHand()) return;
         execute(event.getWorld(), event.getTarget(), event.getEntity());
     }
