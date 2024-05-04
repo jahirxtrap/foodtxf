@@ -1,14 +1,20 @@
 package com.jahirtrap.foodtxf.item;
 
-import com.jahirtrap.foodtxf.init.FoodtxfModItems;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.UseAnim;
 
-public class MilkThermosItem extends BaseReturnItem {
-    public MilkThermosItem() {
-        super(FoodtxfModItems.THERMOS.get(), "milk", 16, (new FoodProperties.Builder()).alwaysEat()
+import static com.jahirtrap.foodtxf.util.CommonUtils.container;
+import static com.jahirtrap.foodtxf.util.CommonUtils.fluid;
+
+public class FluidThermosItem extends BaseReturnItem {
+    public FluidThermosItem(int fluidType) {
+        super(container.get(4), fluid.get(fluidType), 16, (new FoodProperties.Builder()).alwaysEdible()
                 .build());
+    }
+
+    public FluidThermosItem() {
+        this(0);
     }
 
     @Override
@@ -23,6 +29,6 @@ public class MilkThermosItem extends BaseReturnItem {
 
     @Override
     public ItemStack getCraftingRemainingItem(ItemStack stack) {
-        return new ItemStack(FoodtxfModItems.THERMOS.get());
+        return new ItemStack(container.get(4));
     }
 }

@@ -14,7 +14,7 @@
     }
   },
   "result": {
-    "item": "foodtxf:golden_bread_slice",
+    "id": "foodtxf:golden_bread_slice",
     "count": 1
   }
 }

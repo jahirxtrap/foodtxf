@@ -7,7 +7,7 @@
     "tag": "forge:ingots/netherite"
   },
   "result": {
-    "item": "foodtxf:netherite_knife"
+    "id": "foodtxf:netherite_knife"
   },
   "template": {
     "item": "minecraft:netherite_upgrade_smithing_template"

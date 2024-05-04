@@ -1,13 +1,13 @@
 package com.jahirtrap.foodtxf.item;
 
+import com.jahirtrap.foodtxf.util.RepairableItem;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Rarity;
 
-
-public class JuicerItem extends Item {
+public class JuicerItem extends Item implements RepairableItem {
     public JuicerItem() {
-        super(new Item.Properties().durability(200).rarity(Rarity.COMMON));
+        super(new Item.Properties().durability(200));
     }
 
     @Override
@@ -18,7 +18,7 @@ public class JuicerItem extends Item {
     @Override
     public ItemStack getCraftingRemainingItem(ItemStack stack) {
         ItemStack retVal = stack.copy();
-        if (retVal.getTag() != null && retVal.getTag().getBoolean("Unbreakable")) return retVal;
+        if (retVal.getComponents().has(DataComponents.UNBREAKABLE)) return retVal;
         retVal.setDamageValue(stack.getDamageValue() + 1);
         if (retVal.getDamageValue() >= retVal.getMaxDamage()) {
             return ItemStack.EMPTY;
@@ -27,7 +27,7 @@ public class JuicerItem extends Item {
     }
 
     @Override
-    public boolean isRepairable(ItemStack stack) {
+    public boolean isRepairable() {
         return false;
     }
 

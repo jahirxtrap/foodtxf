@@ -2,6 +2,7 @@ package com.jahirtrap.foodtxf.event;
 
 import com.jahirtrap.foodtxf.init.FoodtxfDamageSources;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundSource;
@@ -11,11 +12,9 @@ import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.Objects;
 
@@ -39,16 +38,16 @@ public class PlayerDropsFleshKnifeEvent {
             mainHand = false;
         } else return;
 
-        int faLevel = 0;
-        faLevel = EnchantmentHelper.getTagEnchantmentLevel(Enchantments.FIRE_ASPECT, ist);
+        int faLevel = ist.getEnchantments().getLevel(Enchantments.FIRE_ASPECT);
 
-        if (faLevel != 0) entity.setSecondsOnFire(4 * faLevel);
+        if (faLevel != 0) entity.setRemainingFireTicks((20 * 4) * faLevel);
 
         if (player.hurt(new DamageSource(player.level().registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(FoodtxfDamageSources.SUICIDE)), 6)) {
-            if (ist.hurt(1, RandomSource.create(), null)) {
+            Runnable damageItem = () -> ist.hurtAndBreak(1, RandomSource.create(), null, () -> {
                 ist.shrink(1);
                 ist.setDamageValue(0);
-            }
+            });
+            damageItem.run();
 
             if (mainHand) player.swing(InteractionHand.MAIN_HAND, true);
             else player.swing(InteractionHand.OFF_HAND, true);
@@ -62,10 +61,10 @@ public class PlayerDropsFleshKnifeEvent {
             if (!(accesor instanceof Level level)) return;
             if (!level.isClientSide()) {
                 level.playSound(null, new BlockPos((int) x, (int) y, (int) z),
-                        Objects.requireNonNull(ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.hurt"))), SoundSource.PLAYERS,
+                        Objects.requireNonNull(BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.player.hurt"))), SoundSource.PLAYERS,
                         (float) 0.8, 1);
             } else {
-                level.playLocalSound(x, y, z, Objects.requireNonNull(ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.hurt"))),
+                level.playLocalSound(x, y, z, Objects.requireNonNull(BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.player.hurt"))),
                         SoundSource.PLAYERS, (float) 0.8, 1, false);
             }
 

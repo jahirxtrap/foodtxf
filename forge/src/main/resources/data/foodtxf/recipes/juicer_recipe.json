@@ -13,16 +13,7 @@
     }
   },
   "result": {
-    "item": "foodtxf:juicer",
+    "id": "foodtxf:juicer",
     "count": 1
-  },
-  "conditions": [
-    {
-      "type": "forge:not",
-      "value": {
-        "type": "forge:tag_empty",
-        "tag": "forge:pointed_dripstone"
-      }
-    }
-  ]
+  }
 }

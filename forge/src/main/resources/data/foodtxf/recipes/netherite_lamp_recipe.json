@@ -7,7 +7,7 @@
     "tag": "forge:ingots/netherite"
   },
   "result": {
-    "item": "foodtxf:netherite_lamp"
+    "id": "foodtxf:netherite_lamp"
   },
   "template": {
     "item": "minecraft:netherite_upgrade_smithing_template"
