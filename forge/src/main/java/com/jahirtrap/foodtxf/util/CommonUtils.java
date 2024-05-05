@@ -7,6 +7,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.Style;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundSource;
@@ -34,7 +35,7 @@ public class CommonUtils {
         ItemStack stack;
         if (entity.isOnFire()) stack = new ItemStack(FoodtxfModItems.COOKED_PLAYER_FLESH.get(), num);
         else stack = new ItemStack(FoodtxfModItems.PLAYER_FLESH.get(), num);
-        stack.set(DataComponents.LORE, new ItemLore(Collections.singletonList(Component.literal(entity.getName().getString()).withStyle(ChatFormatting.RED))));
+        stack.set(DataComponents.LORE, new ItemLore(Collections.singletonList(Component.literal(entity.getName().getString()).withStyle(Style.EMPTY.withColor(ChatFormatting.RED).withItalic(false)))));
 
         ItemEntity entityToSpawn = new ItemEntity(level, x, y, z, stack);
         entityToSpawn.setPickUpDelay(10);
