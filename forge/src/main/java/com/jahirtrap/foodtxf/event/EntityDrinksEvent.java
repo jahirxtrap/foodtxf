@@ -19,10 +19,10 @@ public class EntityDrinksEvent {
             if (!(accesor instanceof Level level)) return;
             if (!level.isClientSide()) {
                 level.playSound(null, new BlockPos(x, y, z),
-                        Objects.requireNonNull(BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.generic.extinguish_fire"))), SoundSource.PLAYERS,
+                        Objects.requireNonNull(BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.generic.extinguish_fire"))), SoundSource.PLAYERS,
                         (float) 0.6, 1);
             } else {
-                level.playLocalSound(x, y, z, Objects.requireNonNull(BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.generic.extinguish_fire"))),
+                level.playLocalSound(x, y, z, Objects.requireNonNull(BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.generic.extinguish_fire"))),
                         SoundSource.PLAYERS, (float) 0.6, 1, false);
             }
         }

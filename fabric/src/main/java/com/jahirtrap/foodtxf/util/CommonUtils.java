@@ -82,10 +82,10 @@ public class CommonUtils {
             int x = entity.getBlockX(), y = entity.getBlockY(), z = entity.getBlockZ();
             if (!level.isClientSide()) {
                 level.playSound(null, new BlockPos(x, y, z),
-                        Objects.requireNonNull(BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation(sound))), SoundSource.PLAYERS,
+                        Objects.requireNonNull(BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse(sound))), SoundSource.PLAYERS,
                         (float) 0.6, 1);
             } else {
-                level.playLocalSound(x, y, z, Objects.requireNonNull(BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation(sound))),
+                level.playLocalSound(x, y, z, Objects.requireNonNull(BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse(sound))),
                         SoundSource.PLAYERS, (float) 0.6, 1, false);
             }
         }

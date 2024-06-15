@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public class LivingEntityMixin {
 
     @Inject(method = "getEquipmentSlotForItem", at = @At("HEAD"), cancellable = true)
-    private static void getEquipmentSlotForItem(ItemStack stack, CallbackInfoReturnable<EquipmentSlot> cir) {
+    private void getEquipmentSlotForItem(ItemStack stack, CallbackInfoReturnable<EquipmentSlot> cir) {
         if (stack.getItem() instanceof WearableItem equipment) {
             cir.setReturnValue(equipment.getEquipmentSlot(stack));
         }

@@ -10,6 +10,6 @@ public class FoodtxfDamageSources {
     public static final ResourceKey<DamageType> SUICIDE = register("suicide");
 
     private static ResourceKey<DamageType> register(String name) {
-        return ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation(FoodtxfMod.MODID, name));
+        return ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.fromNamespaceAndPath(FoodtxfMod.MODID, name));
     }
 }

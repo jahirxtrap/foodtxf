@@ -102,7 +102,7 @@ public class FoodtxfModTab {
             .build();
 
     public static void init() {
-        Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, new ResourceLocation(FoodtxfMod.MODID, "tab_foodtxf"), TAB_FOOD_TXF);
+        Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, ResourceLocation.fromNamespaceAndPath(FoodtxfMod.MODID, "tab_foodtxf"), TAB_FOOD_TXF);
     }
 
 }
