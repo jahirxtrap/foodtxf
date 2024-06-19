@@ -45,7 +45,6 @@ Some useful food & cannibalism
 - <a href="https://www.curseforge.com/minecraft/mc-mods/ingotcraft" target="_blank">IngotCraft mod</a>
 - <a href="https://www.curseforge.com/minecraft/mc-mods/patchouli" target="_blank">Patchoulli mod</a>
 - <a href="https://www.curseforge.com/minecraft/mc-mods/cooking-for-blockheads" target="_blank">Cooking For Blockheads mod</a>
-- <a href="https://www.curseforge.com/minecraft/mc-mods/farming-for-blockheads" target="_blank">Farming For Blockheads mod</a>
 - <a href="https://www.curseforge.com/minecraft/mc-mods/croptopia" target="_blank">Croptopia mod</a>
 - <a href="https://www.curseforge.com/minecraft/mc-mods/farmers-delight" target="_blank">Farmer's Delight mod</a>
 - <a href="https://www.curseforge.com/minecraft/mc-mods/simple-farming" target="_blank">Simple Farming mod</a> | <a href="https://github.com/cweckerl/simplefarming/files/8192403/simplefarming-1.18.2-1.4.0.zip" target="_blank">1.18.2 version</a>
