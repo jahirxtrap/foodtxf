@@ -1,10 +1,8 @@
 {
   "modid": "foodtxf",
   "tools": [
-    "minecraft:bowl",
     "foodtxf:blender",
     "foodtxf:cutting_board",
-    "foodtxf:glass",
     "foodtxf:mixing_bowl",
     "foodtxf:juicer",
     "foodtxf:wooden_knife",
@@ -23,8 +21,7 @@
     "foodtxf:enderite_skillet",
     "foodtxf:steel_skillet",
     "foodtxf:bronze_skillet",
-    "foodtxf:rolling_pin",
-    "foodtxf:thermos"
+    "foodtxf:rolling_pin"
   ],
   "water": [
     "foodtxf:water_thermos"
