@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "#foodtxf:cutting_boards",
+    "#foodtxf:juicers",
+    "#foodtxf:knives",
+    "#foodtxf:mixing_bowls",
+    "#foodtxf:rolling_pins",
+    "#foodtxf:skillets"
+  ]
+}
