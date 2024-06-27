@@ -39,12 +39,11 @@ public class PlayerDropsFleshKnifeEvent {
             mainHand = false;
         } else return;
 
-        int faLevel = 0;
-        faLevel = EnchantmentHelper.getTagEnchantmentLevel(Enchantments.FIRE_ASPECT, ist);
+        int faLevel = EnchantmentHelper.getTagEnchantmentLevel(Enchantments.FIRE_ASPECT, ist);
 
         if (faLevel != 0) entity.setSecondsOnFire(4 * faLevel);
 
-        if (player.hurt(new DamageSource(player.level().registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(FoodtxfDamageSources.SUICIDE)), 6)) {
+        if (player.hurt(new DamageSource(accesor.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(FoodtxfDamageSources.SUICIDE)), 6)) {
             if (ist.hurt(1, RandomSource.create(), null)) {
                 ist.shrink(1);
                 ist.setDamageValue(0);

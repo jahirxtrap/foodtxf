@@ -1,12 +1,12 @@
 package com.jahirtrap.foodtxf.item;
 
+import net.fabricmc.fabric.api.item.v1.FabricItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Rarity;
 
-public class BaseReusableItem extends Item {
+public class BaseReusableItem extends Item implements FabricItem {
     public BaseReusableItem() {
-        super(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON));
+        super(new Item.Properties().stacksTo(1));
     }
 
     @Override

@@ -14,7 +14,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;
-import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent.EntityInteract;
 import net.neoforged.neoforge.items.ItemHandlerHelper;
 
 import static com.jahirtrap.foodtxf.util.CommonUtils.*;
@@ -22,7 +22,7 @@ import static com.jahirtrap.foodtxf.util.CommonUtils.*;
 @Mod.EventBusSubscriber
 public class FillMilkEvent {
     @SubscribeEvent
-    public static void onRightClickEntity(PlayerInteractEvent.EntityInteract event) {
+    public static void onPlayerInteractEntity(EntityInteract event) {
         if (event.getHand() != event.getEntity().getUsedItemHand()) return;
         execute(event.getLevel(), event.getTarget(), event.getEntity());
     }

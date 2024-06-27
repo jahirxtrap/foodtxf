@@ -2,11 +2,10 @@ package com.jahirtrap.foodtxf.item;
 
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Rarity;
 
 public class BaseReusableItem extends Item {
     public BaseReusableItem() {
-        super(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON));
+        super(new Item.Properties().stacksTo(1));
     }
 
     @Override
