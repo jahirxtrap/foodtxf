@@ -91,8 +91,6 @@ public class FoodtxfModItems {
     public static final Item BLENDER = RegistryObject("blender", new BaseReusableItem());
     public static final Item BLACK_KITCHEN_BLOCK = block("black_kitchen_block", FoodtxfModBlocks.BLACK_KITCHEN_BLOCK);
     public static final Item WHITE_KITCHEN_BLOCK = block("white_kitchen_block", FoodtxfModBlocks.WHITE_KITCHEN_BLOCK);
-    public static final Item LAMP = Registry.register(Registry.ITEM, new ResourceLocation(MODID, "lamp"), new BaseWearableItem(FoodtxfModBlocks.LAMP, new Item.Properties()));
-    public static final Item NETHERITE_LAMP = Registry.register(Registry.ITEM, new ResourceLocation(MODID, "netherite_lamp"), new NetheriteLampItem(FoodtxfModBlocks.NETHERITE_LAMP, new Item.Properties()));
     public static final Item RECIPE_BOOK = RegistryObject("recipe_book", new RecipeBookItem());
 
     public static void init() {
