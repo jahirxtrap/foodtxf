@@ -1,7 +1,5 @@
 {
   "block.foodtxf.black_kitchen_block": "Black Kitchen Block",
-  "block.foodtxf.lamp": "Lamp",
-  "block.foodtxf.netherite_lamp": "Netherite Lamp",
   "block.foodtxf.white_kitchen_block": "White Kitchen Block",
   "book.foodtxf.landing_text": "Food TXF recipe book",
   "death.attack.suicide": "%1$s has committed suicide",
