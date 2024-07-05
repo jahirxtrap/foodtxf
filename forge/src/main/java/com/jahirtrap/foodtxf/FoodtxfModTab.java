@@ -92,8 +92,6 @@ public class FoodtxfModTab {
                     event.accept(FoodtxfModItems.BLENDER.get());
                     event.accept(FoodtxfModItems.BLACK_KITCHEN_BLOCK.get());
                     event.accept(FoodtxfModItems.WHITE_KITCHEN_BLOCK.get());
-                    event.accept(FoodtxfModItems.LAMP.get());
-                    event.accept(FoodtxfModItems.NETHERITE_LAMP.get());
                     event.accept(FoodtxfModItems.RECIPE_BOOK.get());
                 })
                 .title(Component.translatable("itemGroup.foodtxf.tab_foodtxf"))
@@ -103,4 +101,5 @@ public class FoodtxfModTab {
     public static void init(IEventBus bus) {
         bus.addListener(FoodtxfModTab::register);
     }
+
 }
