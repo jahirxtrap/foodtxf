@@ -33,7 +33,6 @@ Some useful food & cannibalism
 - Rolling Pin (Wooden)
 - Skillet (Iron, Golden, Diamond, Netherite, Enderite, Steel, Bronze)
 - Kitchen Block (Black, White, shows tooltip if <a href="https://www.curseforge.com/minecraft/mc-mods/cooking-for-blockheads" target="_blank">Cooking For Blockheads mod</a> is loaded)
-- Lamp (Iron, Netherite) => Can be equipped on head
 - Player Flesh (Raw, Cooked, Golden) => Can be obtained when player dies or by shifting and right clicking with a knife in hand, credits to <a href="https://www.curseforge.com/minecraft/mc-mods/cannibalism" target="_blank">Cannibalism mod</a>
 - Recipe Book (if <a href="https://www.curseforge.com/minecraft/mc-mods/patchouli" target="_blank">Patchouli mod</a> is loaded) => Book + Toasted Bread
 
@@ -62,6 +61,6 @@ Some useful food & cannibalism
 <details>
   <summary>Spoiler</summary>
 
-<img src="https://cdn.modrinth.com/data/gHfCZDqf/images/4edce8f549f1ef196006c16a9ce35e71fba16674.png" width="500">
+<img src="https://cdn.modrinth.com/data/gHfCZDqf/images/1bee10397db44c195bd4df6d82f24e740d9e1ace.png" width="500">
 
 </details>
