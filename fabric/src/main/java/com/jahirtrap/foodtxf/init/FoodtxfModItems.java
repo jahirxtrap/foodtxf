@@ -87,8 +87,6 @@ public class FoodtxfModItems {
     public static final Item ROLLING_PIN = RegistryObject("rolling_pin", new RollingPinItem());
     public static final Item JUICER = RegistryObject("juicer", new JuicerItem());
     public static final Item BLENDER = RegistryObject("blender", new BaseReusableItem());
-    public static final Item LAMP = Registry.register(BuiltInRegistries.ITEM, ResourceLocation.fromNamespaceAndPath(MODID, "lamp"), new BaseWearableItem(FoodtxfModBlocks.LAMP, new Item.Properties()));
-    public static final Item NETHERITE_LAMP = Registry.register(BuiltInRegistries.ITEM, ResourceLocation.fromNamespaceAndPath(MODID, "netherite_lamp"), new NetheriteLampItem(FoodtxfModBlocks.NETHERITE_LAMP, new Item.Properties()));
     public static final Item RECIPE_BOOK = RegistryObject("recipe_book", new RecipeBookItem());
 
     public static void init() {
