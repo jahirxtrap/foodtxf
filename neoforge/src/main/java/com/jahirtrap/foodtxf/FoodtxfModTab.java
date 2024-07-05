@@ -96,8 +96,6 @@ public class FoodtxfModTab {
                 event.accept(FoodtxfModItems.BLENDER);
                 event.accept(FoodtxfModItems.BLACK_KITCHEN_BLOCK);
                 event.accept(FoodtxfModItems.WHITE_KITCHEN_BLOCK);
-                event.accept(FoodtxfModItems.LAMP);
-                event.accept(FoodtxfModItems.NETHERITE_LAMP);
                 event.accept(FoodtxfModItems.RECIPE_BOOK);
             })
             .title(Component.translatable("itemGroup.foodtxf.tab_foodtxf"))

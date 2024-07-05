@@ -92,8 +92,6 @@ public class FoodtxfModItems {
     public static final DeferredItem<Item> BLENDER = REGISTRY.register("blender", BaseReusableItem::new);
     public static final DeferredItem<Item> BLACK_KITCHEN_BLOCK = block(FoodtxfModBlocks.BLACK_KITCHEN_BLOCK);
     public static final DeferredItem<Item> WHITE_KITCHEN_BLOCK = block(FoodtxfModBlocks.WHITE_KITCHEN_BLOCK);
-    public static final DeferredItem<Item> LAMP = REGISTRY.register("lamp", () -> new BaseWearableItem(FoodtxfModBlocks.LAMP.get(), new Item.Properties()));
-    public static final DeferredItem<Item> NETHERITE_LAMP = REGISTRY.register("netherite_lamp", () -> new NetheriteLampItem(FoodtxfModBlocks.NETHERITE_LAMP.get(), new Item.Properties()));
     public static final DeferredItem<Item> RECIPE_BOOK = REGISTRY.register("recipe_book", RecipeBookItem::new);
 
     private static DeferredItem<Item> block(DeferredBlock<Block> block) {
