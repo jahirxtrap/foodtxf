@@ -8,6 +8,7 @@ import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tier;
 
 import static com.jahirtrap.foodtxf.FoodtxfModTab.TAB_FOOD_TXF;
+import static com.jahirtrap.foodtxf.util.CommonUtils.hurt;
 
 public class BaseSkilletItem extends SwordItem implements ContainerItem, RepairableItem, FabricItem {
     public BaseSkilletItem(Tier tier, Properties properties) {
@@ -21,13 +22,7 @@ public class BaseSkilletItem extends SwordItem implements ContainerItem, Repaira
 
     @Override
     public ItemStack getContainerItem(ItemStack stack) {
-        ItemStack retVal = stack.copy();
-        if (retVal.getTag() != null && retVal.getTag().getBoolean("Unbreakable")) return retVal;
-        retVal.setDamageValue(stack.getDamageValue() + 1);
-        if (retVal.getDamageValue() >= retVal.getMaxDamage()) {
-            return ItemStack.EMPTY;
-        }
-        return retVal;
+        return hurt(1, stack);
     }
 
     @Override

@@ -1,6 +1,10 @@
 {
   "replace": false,
   "values": [
+    "#c:seeds/beetroot",
+    "#c:seeds/melon",
+    "#c:seeds/pumpkin",
+    "#c:seeds/wheat",
     { "id": "chococraft:gysahl_green_seeds", "required": false }
   ]
 }

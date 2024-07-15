@@ -3,11 +3,9 @@ package com.jahirtrap.foodtxf.item;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
-import static com.jahirtrap.foodtxf.FoodtxfModTab.TAB_FOOD_TXF;
-
-public class BaseReusableItem extends Item {
+public class BaseReusableItem extends BaseItem {
     public BaseReusableItem() {
-        super(new Item.Properties().tab(TAB_FOOD_TXF).stacksTo(1));
+        super(new Item.Properties().stacksTo(1));
     }
 
     @Override
@@ -17,6 +15,6 @@ public class BaseReusableItem extends Item {
 
     @Override
     public ItemStack getContainerItem(ItemStack stack) {
-        return new ItemStack(this);
+        return stack;
     }
 }

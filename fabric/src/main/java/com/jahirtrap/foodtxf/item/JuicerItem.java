@@ -6,11 +6,11 @@ import net.fabricmc.fabric.api.item.v1.FabricItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
-import static com.jahirtrap.foodtxf.FoodtxfModTab.TAB_FOOD_TXF;
+import static com.jahirtrap.foodtxf.util.CommonUtils.hurt;
 
-public class JuicerItem extends Item implements ContainerItem, RepairableItem, FabricItem {
+public class JuicerItem extends BaseItem implements ContainerItem, RepairableItem, FabricItem {
     public JuicerItem() {
-        super(new Item.Properties().tab(TAB_FOOD_TXF).durability(200));
+        super(new Item.Properties().durability(200));
     }
 
     @Override
@@ -20,13 +20,7 @@ public class JuicerItem extends Item implements ContainerItem, RepairableItem, F
 
     @Override
     public ItemStack getContainerItem(ItemStack stack) {
-        ItemStack retVal = stack.copy();
-        if (retVal.getTag() != null && retVal.getTag().getBoolean("Unbreakable")) return retVal;
-        retVal.setDamageValue(stack.getDamageValue() + 1);
-        if (retVal.getDamageValue() >= retVal.getMaxDamage()) {
-            return ItemStack.EMPTY;
-        }
-        return retVal;
+        return hurt(1, stack);
     }
 
     @Override
