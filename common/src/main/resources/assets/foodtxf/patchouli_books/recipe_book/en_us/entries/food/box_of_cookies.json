@@ -6,7 +6,7 @@
     {
       "type": "patchouli:crafting",
       "recipe": "foodtxf:box_of_cookies_recipe",
-	"recipe2": "foodtxf:cookies_recipe",
+      "recipe2": "foodtxf:cookies_recipe",
       "title": " "
     }
   ]

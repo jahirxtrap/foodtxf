@@ -1,6 +1,5 @@
 package com.jahirtrap.foodtxf.block;
 
-import com.jahirtrap.foodtxf.util.TextUtils;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.network.chat.Component;
@@ -16,6 +15,8 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
+import static com.jahirtrap.foodtxf.util.CommonUtils.coloredTextComponent;
+
 public class BaseKitchenBlock extends Block {
     public BaseKitchenBlock() {
         super(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).sound(SoundType.STONE).strength(0.8f, 3f).lightLevel($ -> 0).requiresCorrectToolForDrops());
@@ -24,9 +25,9 @@ public class BaseKitchenBlock extends Block {
     @Override
     public void appendHoverText(ItemStack stack, @Nullable BlockGetter level, List<Component> tooltip, TooltipFlag flag) {
         if (ModList.get().isLoaded("cookingforblockheads")) {
-            tooltip.add(TextUtils.coloredTextComponent("tooltip.cookingforblockheads:multiblock_kitchen", ChatFormatting.YELLOW));
+            tooltip.add(coloredTextComponent("tooltip.cookingforblockheads:multiblock_kitchen", ChatFormatting.YELLOW));
             for (String s : I18n.get("tooltip.cookingforblockheads:kitchen_floor.description").split("\\\\n")) {
-                tooltip.add(TextUtils.coloredTextComponent(s, ChatFormatting.GRAY));
+                tooltip.add(coloredTextComponent(s, ChatFormatting.GRAY));
             }
         }
     }

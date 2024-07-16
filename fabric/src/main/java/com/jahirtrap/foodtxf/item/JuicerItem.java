@@ -5,6 +5,8 @@ import net.fabricmc.fabric.api.item.v1.FabricItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
+import static com.jahirtrap.foodtxf.util.CommonUtils.hurt;
+
 public class JuicerItem extends Item implements RepairableItem, FabricItem {
     public JuicerItem() {
         super(new Item.Properties().durability(200));
@@ -17,13 +19,7 @@ public class JuicerItem extends Item implements RepairableItem, FabricItem {
 
     @Override
     public ItemStack getRecipeRemainder(ItemStack stack) {
-        ItemStack retVal = stack.copy();
-        if (retVal.getTag() != null && retVal.getTag().getBoolean("Unbreakable")) return retVal;
-        retVal.setDamageValue(stack.getDamageValue() + 1);
-        if (retVal.getDamageValue() >= retVal.getMaxDamage()) {
-            return ItemStack.EMPTY;
-        }
-        return retVal;
+        return hurt(1, stack);
     }
 
     @Override
