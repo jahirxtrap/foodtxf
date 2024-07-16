@@ -39,6 +39,12 @@
       "title": " "
     },
     {
+      "type": "patchouli:spotlight",
+      "item": "foodtxf:chocomilk_thermos",
+      "text": "Right click on cow/goat with thermos in hand and 2 cocoa beans in other hand",
+      "title": " "
+    },
+    {
       "type": "patchouli:relations",
       "entries": [
         "foodtxf:misc/box",

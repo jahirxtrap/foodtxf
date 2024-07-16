@@ -1,48 +1,78 @@
 package com.jahirtrap.foodtxf.event;
 
 import com.jahirtrap.foodtxf.init.FoodtxfModItems;
+import com.jahirtrap.foodtxf.item.FluidContainerItem;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.animal.Cow;
+import net.minecraft.world.entity.animal.goat.Goat;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraftforge.items.ItemHandlerHelper;
+import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.HitResult;
 
-import static com.jahirtrap.foodtxf.util.CommonUtils.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public class FillFluidEvent {
-    public static void execute(LevelAccessor accesor, Entity entity) {
-        if (!(entity instanceof Player player)) return;
-        Item mainHandItem = player.getMainHandItem().getItem(), offHandItem = player.getOffhandItem().getItem();
-        Item thermosItem = FoodtxfModItems.THERMOS.get();
-        boolean mainHand;
-        String sound;
+    public static boolean execute(Level level, Player player, ItemStack stack, LivingEntity target, BlockHitResult hitResult, InteractionHand hand, int type) {
+        if (!(stack.getItem() instanceof FluidContainerItem)) return false;
+        ItemStack mainHandIst = player.getMainHandItem(), offHandIst = player.getOffhandItem();
+        Map<ItemStack, Integer> addition = new HashMap<>();
+        ItemStack result = ItemStack.EMPTY;
+        SoundEvent sound = null;
 
-        Block block = getViewedBlock(accesor, entity);
-        if (mainHandItem == offHandItem) return;
-        if (mainHandItem == thermosItem) mainHand = true;
-        else if (offHandItem == thermosItem) mainHand = false;
-        else return;
+        if (target != null && !target.isBaby()) {
+            if (target instanceof Cow || target instanceof Goat) {
+                if (mainHandIst.is(Items.COCOA_BEANS) || offHandIst.is(Items.COCOA_BEANS)) {
+                    if (type == 0) result = new ItemStack(FoodtxfModItems.CHOCOMILK_THERMOS.get());
+                    else if (type == 1) result = new ItemStack(FoodtxfModItems.GLASS_OF_CHOCOMILK.get());
+                    addition.put(mainHandIst.is(Items.COCOA_BEANS) ? mainHandIst : offHandIst, type == 0 ? 2 : type == 1 ? 1 : 0);
+                } else {
+                    if (type == 0) result = new ItemStack(FoodtxfModItems.MILK_THERMOS.get());
+                    else if (type == 1) result = new ItemStack(FoodtxfModItems.GLASS_OF_MILK.get());
+                }
+            } else return false;
+            if (target instanceof Cow) sound = SoundEvents.COW_MILK;
+            else if (target instanceof Goat) sound = SoundEvents.GOAT_MILK;
+        } else if (hitResult != null && hitResult.getType() == HitResult.Type.BLOCK) {
+            Block block = level.getBlockState(hitResult.getBlockPos()).getBlock();
+            if (block == Blocks.WATER) {
+                if (type == 0) result = new ItemStack(FoodtxfModItems.WATER_THERMOS.get());
+                else if (type == 1) result = new ItemStack(FoodtxfModItems.GLASS_OF_WATER.get());
+                sound = SoundEvents.BUCKET_FILL;
+            } else if (block == Blocks.LAVA) {
+                if (type == 0) result = new ItemStack(FoodtxfModItems.LAVA_THERMOS.get());
+                else if (type == 1) result = new ItemStack(FoodtxfModItems.GLASS_OF_LAVA.get());
+                sound = SoundEvents.BUCKET_FILL_LAVA;
+            } else return false;
+        } else return false;
 
-        ItemStack Ist;
-        if (block == Blocks.WATER) {
-            Ist = new ItemStack(FoodtxfModItems.WATER_THERMOS.get());
-            sound = "item.bucket.fill";
-        } else if (block == Blocks.LAVA) {
-            Ist = new ItemStack(FoodtxfModItems.LAVA_THERMOS.get());
-            sound = "item.bucket.fill_lava";
-        } else return;
+        return fillItem(player, result, stack, hand, addition, sound);
+    }
 
-        ItemStack thermosIst = new ItemStack(FoodtxfModItems.THERMOS.get());
-        consumeItem(player, thermosIst, mainHand);
+    private static boolean fillItem(Player player, ItemStack result, ItemStack stack, InteractionHand hand, Map<ItemStack, Integer> addition, SoundEvent sound) {
+        if (!player.getAbilities().instabuild) {
+            if (!addition.isEmpty()) {
+                ItemStack key = addition.keySet().iterator().next();
+                if (key.getCount() < addition.get(key)) return false;
+                key.shrink(addition.get(key));
+            }
+            if (stack.getCount() == 1) {
+                player.setItemInHand(hand, result);
+            } else {
+                stack.shrink(1);
+                if (!player.getInventory().add(result)) player.drop(result, false);
+            }
+        } else if (!player.getInventory().add(result)) player.drop(result, false);
 
-        if (mainHand) player.swing(InteractionHand.MAIN_HAND, true);
-        else player.swing(InteractionHand.OFF_HAND, true);
-        Ist.setCount(1);
-        ItemHandlerHelper.giveItemToPlayer(player, Ist);
-        playSound(accesor, entity, sound);
+        player.playSound(sound, 1, 1);
+        return true;
     }
 }

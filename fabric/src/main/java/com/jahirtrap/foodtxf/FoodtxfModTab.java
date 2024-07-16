@@ -69,6 +69,7 @@ public class FoodtxfModTab {
                     event.accept(FoodtxfModItems.GLASS_OF_CHOCOMILK);
                     event.accept(FoodtxfModItems.GLASS_OF_CHOCOMILK_AND_COOKIES);
                     event.accept(FoodtxfModItems.GLASS_OF_CHOCOMILK_AND_TOASTED_BREAD);
+                    event.accept(FoodtxfModItems.BOX_OF_CEREAL);
                     event.accept(FoodtxfModItems.BOX_OF_COOKIES);
                     event.accept(FoodtxfModItems.WOODEN_KNIFE);
                     event.accept(FoodtxfModItems.STONE_KNIFE);

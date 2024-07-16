@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "eatinganimation:item/foodtxf/box_of_cereal_eating_0"
+  }
+}

@@ -1,6 +1,7 @@
 package com.jahirtrap.foodtxf.item;
 
 import net.minecraft.ChatFormatting;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
@@ -12,7 +13,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.fml.ModList;
-import net.minecraftforge.registries.ForgeRegistries;
 import vazkii.patchouli.api.PatchouliAPI;
 
 import java.util.List;
@@ -27,11 +27,9 @@ public class RecipeBookItem extends Item {
         InteractionResultHolder<ItemStack> holder = super.use(level, player, hand);
         ItemStack stack = player.getItemInHand(hand);
 
-        if (player instanceof ServerPlayer serverPlayer && ModList.get().isLoaded("patchouli")) {
-            PatchouliAPI.get().openBookGUI(serverPlayer, ForgeRegistries.ITEMS.getKey(this));
-        } else {
-            return holder;
-        }
+        if (player instanceof ServerPlayer serverPlayer && ModList.get().isLoaded("patchouli"))
+            PatchouliAPI.get().openBookGUI(serverPlayer, BuiltInRegistries.ITEM.getKey(this));
+        else return holder;
 
         return new InteractionResultHolder<>(InteractionResult.SUCCESS, stack);
     }
