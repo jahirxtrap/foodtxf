@@ -10,11 +10,9 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
-import static com.jahirtrap.foodtxf.FoodtxfModTab.TAB_FOOD_TXF;
-
-public class RollingPinItem extends Item implements FabricItem {
+public class RollingPinItem extends BaseItem implements FabricItem {
     public RollingPinItem() {
-        super(new Item.Properties().tab(TAB_FOOD_TXF).stacksTo(1));
+        super(new Item.Properties().stacksTo(1));
     }
 
     @Override
@@ -38,6 +36,6 @@ public class RollingPinItem extends Item implements FabricItem {
 
     @Override
     public ItemStack getRecipeRemainder(ItemStack stack) {
-        return new ItemStack(this);
+        return stack;
     }
 }

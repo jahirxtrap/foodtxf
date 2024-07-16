@@ -39,6 +39,12 @@
       "title": " "
     },
     {
+      "type": "patchouli:spotlight",
+      "item": "foodtxf:chocomilk_thermos",
+      "text": "Clic derecho sobre vaca/cabra con un termo en la mano y 2 semillas de cacao en la otra mano",
+      "title": " "
+    },
+    {
       "type": "patchouli:relations",
       "entries": [
         "foodtxf:misc/box",

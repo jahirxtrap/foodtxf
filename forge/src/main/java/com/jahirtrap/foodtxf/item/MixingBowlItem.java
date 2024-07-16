@@ -3,11 +3,9 @@ package com.jahirtrap.foodtxf.item;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
-import static com.jahirtrap.foodtxf.FoodtxfModTab.TAB_FOOD_TXF;
-
-public class MixingBowlItem extends Item {
+public class MixingBowlItem extends BaseItem {
     public MixingBowlItem() {
-        super(new Item.Properties().tab(TAB_FOOD_TXF).stacksTo(1));
+        super(new Item.Properties().stacksTo(1));
     }
 
     @Override
@@ -17,6 +15,6 @@ public class MixingBowlItem extends Item {
 
     @Override
     public ItemStack getCraftingRemainingItem(ItemStack stack) {
-        return new ItemStack(this);
+        return stack;
     }
 }

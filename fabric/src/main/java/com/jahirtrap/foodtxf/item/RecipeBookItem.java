@@ -17,11 +17,9 @@ import vazkii.patchouli.api.PatchouliAPI;
 
 import java.util.List;
 
-import static com.jahirtrap.foodtxf.FoodtxfModTab.TAB_FOOD_TXF;
-
-public class RecipeBookItem extends Item {
+public class RecipeBookItem extends BaseItem {
     public RecipeBookItem() {
-        super(new Item.Properties().tab(TAB_FOOD_TXF).stacksTo(1));
+        super(new Item.Properties().stacksTo(1));
     }
 
     @Override
@@ -29,11 +27,9 @@ public class RecipeBookItem extends Item {
         InteractionResultHolder<ItemStack> holder = super.use(level, player, hand);
         ItemStack stack = player.getItemInHand(hand);
 
-        if (player instanceof ServerPlayer serverPlayer && FabricLoader.getInstance().isModLoaded("patchouli")) {
+        if (player instanceof ServerPlayer serverPlayer && FabricLoader.getInstance().isModLoaded("patchouli"))
             PatchouliAPI.get().openBookGUI(serverPlayer, Registry.ITEM.getKey(this));
-        } else {
-            return holder;
-        }
+        else return holder;
 
         return new InteractionResultHolder<>(InteractionResult.SUCCESS, stack);
     }

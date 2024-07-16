@@ -1,40 +1,27 @@
 package com.jahirtrap.foodtxf.event;
 
-import net.minecraft.core.BlockPos;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.sounds.SoundSource;
-import net.minecraft.world.entity.Entity;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraftforge.registries.ForgeRegistries;
-
-import java.util.Objects;
 
 public class EntityDrinksEvent {
-    public static void water(LevelAccessor accesor, int x, int y, int z, Entity entity) {
-        if (entity == null) return;
+    public static void execute(LivingEntity entity, int fluidType) {
+        if (fluidType == 1) EntityDrinksEvent.water(entity);
+        else if (fluidType == 2) EntityDrinksEvent.lava(entity);
+        else if (fluidType == 3) EntityDrinksEvent.milk(entity);
+    }
+
+    private static void water(LivingEntity entity) {
         if (entity.isOnFire()) {
             entity.clearFire();
-            if (!(accesor instanceof Level level)) return;
-            if (!level.isClientSide()) {
-                level.playSound(null, new BlockPos(x, y, z),
-                        Objects.requireNonNull(ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.extinguish_fire"))), SoundSource.PLAYERS,
-                        (float) 0.6, 1);
-            } else {
-                level.playLocalSound(x, y, z, Objects.requireNonNull(ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.extinguish_fire"))),
-                        SoundSource.PLAYERS, (float) 0.6, 1, false);
-            }
+            entity.playSound(SoundEvents.GENERIC_EXTINGUISH_FIRE, 1, 1);
         }
     }
 
-    public static void lava(Entity entity) {
-        if (!(entity instanceof LivingEntity livEnt)) return;
-        livEnt.setSecondsOnFire(6);
+    private static void lava(LivingEntity entity) {
+        entity.setSecondsOnFire(6);
     }
 
-    public static void milk(Entity entity) {
-        if (!(entity instanceof LivingEntity livEnt)) return;
-        livEnt.removeAllEffects();
+    private static void milk(LivingEntity entity) {
+        entity.removeAllEffects();
     }
 }
