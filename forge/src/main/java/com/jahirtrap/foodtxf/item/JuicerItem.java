@@ -1,9 +1,10 @@
 package com.jahirtrap.foodtxf.item;
 
 import com.jahirtrap.foodtxf.util.RepairableItem;
-import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+
+import static com.jahirtrap.foodtxf.util.CommonUtils.hurt;
 
 public class JuicerItem extends Item implements RepairableItem {
     public JuicerItem() {
@@ -17,13 +18,7 @@ public class JuicerItem extends Item implements RepairableItem {
 
     @Override
     public ItemStack getCraftingRemainingItem(ItemStack stack) {
-        ItemStack retVal = stack.copy();
-        if (retVal.getComponents().has(DataComponents.UNBREAKABLE)) return retVal;
-        retVal.setDamageValue(stack.getDamageValue() + 1);
-        if (retVal.getDamageValue() >= retVal.getMaxDamage()) {
-            return ItemStack.EMPTY;
-        }
-        return retVal;
+        return hurt(1, stack);
     }
 
     @Override
