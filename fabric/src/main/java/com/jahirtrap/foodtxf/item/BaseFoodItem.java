@@ -20,6 +20,6 @@ public class BaseFoodItem extends Item {
 
     @Override
     public int getUseDuration(ItemStack stack) {
-        return this.useDuration;
+        return useDuration;
     }
 }

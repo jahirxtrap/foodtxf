@@ -16,6 +16,6 @@ public class BaseReusableItem extends Item implements FabricItem {
 
     @Override
     public ItemStack getRecipeRemainder(ItemStack stack) {
-        return new ItemStack(this);
+        return stack;
     }
 }

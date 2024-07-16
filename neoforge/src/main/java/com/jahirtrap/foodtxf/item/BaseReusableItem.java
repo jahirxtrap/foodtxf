@@ -15,6 +15,6 @@ public class BaseReusableItem extends Item {
 
     @Override
     public ItemStack getCraftingRemainingItem(ItemStack stack) {
-        return new ItemStack(this);
+        return stack;
     }
 }

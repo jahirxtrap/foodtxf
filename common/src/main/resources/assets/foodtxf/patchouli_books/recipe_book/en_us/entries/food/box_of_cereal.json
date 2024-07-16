@@ -1,0 +1,12 @@
+{
+  "name": "Box of Cereal",
+  "icon": "foodtxf:box_of_cereal",
+  "category": "foodtxf:food",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "foodtxf:box_of_cereal_recipe",
+      "title": " "
+    }
+  ]
+}
