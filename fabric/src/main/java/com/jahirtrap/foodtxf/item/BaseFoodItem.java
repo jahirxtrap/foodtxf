@@ -21,6 +21,6 @@ public class BaseFoodItem extends Item {
 
     @Override
     public int getUseDuration(ItemStack stack, LivingEntity entity) {
-        return this.useDuration;
+        return useDuration;
     }
 }

@@ -1,10 +1,11 @@
 package com.jahirtrap.foodtxf.item;
 
 import com.jahirtrap.foodtxf.util.RepairableItem;
-import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tier;
+
+import static com.jahirtrap.foodtxf.util.CommonUtils.hurt;
 
 public class BaseSkilletItem extends SwordItem implements RepairableItem {
     public BaseSkilletItem(Tier tier, Properties properties) {
@@ -12,19 +13,13 @@ public class BaseSkilletItem extends SwordItem implements RepairableItem {
     }
 
     @Override
-    public boolean hasCraftingRemainingItem(ItemStack stack) {
+    public boolean hasCraftingRemainingItem() {
         return true;
     }
 
     @Override
     public ItemStack getCraftingRemainingItem(ItemStack stack) {
-        ItemStack retVal = stack.copy();
-        if (retVal.getComponents().has(DataComponents.UNBREAKABLE)) return retVal;
-        retVal.setDamageValue(stack.getDamageValue() + 1);
-        if (retVal.getDamageValue() >= retVal.getMaxDamage()) {
-            return ItemStack.EMPTY;
-        }
-        return retVal;
+        return hurt(1, stack);
     }
 
     @Override
