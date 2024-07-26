@@ -1,7 +1,7 @@
 package com.jahirtrap.foodtxf.item;
 
 import com.jahirtrap.foodtxf.event.PlayerDropsFleshKnifeEvent;
-import com.jahirtrap.foodtxf.init.FoodtxfModConfig;
+import com.jahirtrap.foodtxf.init.ModConfig;
 import com.jahirtrap.foodtxf.util.RepairableItem;
 import net.fabricmc.fabric.api.item.v1.FabricItem;
 import net.minecraft.world.InteractionHand;
@@ -25,7 +25,7 @@ public class BaseKnifeItem extends SwordItem implements RepairableItem, FabricIt
         InteractionResultHolder<ItemStack> holder = super.use(level, player, hand);
         ItemStack stack = player.getItemInHand(hand);
 
-        if (FoodtxfModConfig.enableCannibalism && FoodtxfModConfig.knifeDropFlesh)
+        if (ModConfig.enableCannibalism && ModConfig.knifeDropFlesh)
             if (PlayerDropsFleshKnifeEvent.execute(level, player, hand))
                 return new InteractionResultHolder<>(InteractionResult.SUCCESS, stack);
 

@@ -1,0 +1,4 @@
+- Mutton, Chicken, Rabbit (Golden)
+- Baguette Sword
+- Update textures
+- New logo

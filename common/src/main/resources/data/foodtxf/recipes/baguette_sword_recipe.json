@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "foodtxf:baguette"
+    }
+  ],
+  "result": {
+    "id": "foodtxf:baguette_sword",
+    "count": 1
+  }
+}

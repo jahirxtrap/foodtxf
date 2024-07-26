@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "minecraft:porkchop",
     "foodtxf:player_flesh",
     { "id": "alexsdelight:bison_mince", "required": false },
     { "id": "alexsdelight:kangaroo_shank", "required": false },

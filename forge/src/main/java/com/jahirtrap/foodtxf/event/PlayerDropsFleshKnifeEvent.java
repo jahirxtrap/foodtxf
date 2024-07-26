@@ -5,19 +5,19 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
 
-import static com.jahirtrap.foodtxf.init.FoodtxfDamageSources.SUICIDE;
+import static com.jahirtrap.foodtxf.init.ModDamageSources.SUICIDE;
 import static com.jahirtrap.foodtxf.util.CommonUtils.checkCreativeMode;
 import static com.jahirtrap.foodtxf.util.CommonUtils.dropFlesh;
 
 public class PlayerDropsFleshKnifeEvent {
     public static boolean execute(Level level, Player player, InteractionHand hand) {
-        if (!player.isCrouching()) return false;
+        if (!player.isShiftKeyDown()) return false;
         ItemStack mainHandIst = player.getMainHandItem(), offHandIst = player.getOffhandItem(), stack = ItemStack.EMPTY;
 
         if (isKnife(mainHandIst)) stack = mainHandIst;
@@ -27,7 +27,7 @@ public class PlayerDropsFleshKnifeEvent {
         if (faLevel != 0) player.setRemainingFireTicks(20 * 4 * faLevel);
 
         if (player.hurt(new DamageSource(level.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(SUICIDE)), 6)) {
-            stack.hurtAndBreak(1, player, hand == InteractionHand.MAIN_HAND ? EquipmentSlot.MAINHAND : EquipmentSlot.OFFHAND);
+            stack.hurtAndBreak(1, player, LivingEntity.getSlotForHand(hand));
             level.addFreshEntity(dropFlesh(player, level, 1));
             return true;
         } else if (checkCreativeMode(player)) {
