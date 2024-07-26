@@ -1,6 +1,6 @@
 package com.jahirtrap.foodtxf.event;
 
-import com.jahirtrap.foodtxf.init.FoodtxfModConfig;
+import com.jahirtrap.foodtxf.init.ModConfig;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
@@ -15,7 +15,7 @@ import static com.jahirtrap.foodtxf.util.CommonUtils.dropFlesh;
 public class PlayerDropsFleshEvent {
     @SubscribeEvent
     public static void onLivingDeath(LivingDeathEvent event) {
-        if (FoodtxfModConfig.enableCannibalism && FoodtxfModConfig.playerDropFlesh)
+        if (ModConfig.enableCannibalism && ModConfig.playerDropFlesh)
             if (event.getEntity() instanceof Player player) execute(player.level, player);
     }
 

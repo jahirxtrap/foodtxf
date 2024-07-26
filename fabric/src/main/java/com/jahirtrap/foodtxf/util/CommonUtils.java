@@ -1,13 +1,16 @@
 package com.jahirtrap.foodtxf.util;
 
-import com.jahirtrap.foodtxf.init.FoodtxfModItems;
+import com.jahirtrap.foodtxf.init.ModItems;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
+import net.minecraft.core.Registry;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.nbt.StringTag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -21,12 +24,12 @@ import java.util.Arrays;
 import java.util.List;
 
 public class CommonUtils {
-    public static final List<Item> container = new ArrayList<>(Arrays.asList(FoodtxfModItems.BOX, Items.BOWL, FoodtxfModItems.GLASS, Items.STICK, FoodtxfModItems.THERMOS));
+    public static final List<Item> container = new ArrayList<>(Arrays.asList(ModItems.BOX, Items.BOWL, ModItems.GLASS, Items.STICK, ModItems.THERMOS));
 
     public static ItemEntity dropFlesh(Player player, Level level, int num) {
         ItemStack stack;
-        if (player.isOnFire()) stack = new ItemStack(FoodtxfModItems.COOKED_PLAYER_FLESH, num);
-        else stack = new ItemStack(FoodtxfModItems.PLAYER_FLESH, num);
+        if (player.isOnFire()) stack = new ItemStack(ModItems.COOKED_PLAYER_FLESH, num);
+        else stack = new ItemStack(ModItems.PLAYER_FLESH, num);
         CompoundTag compoundTag = stack.getOrCreateTag();
         ListTag loreTag = new ListTag();
 
@@ -64,5 +67,9 @@ public class CommonUtils {
         if (stack.getDamageValue() >= stack.getMaxDamage()) stack.shrink(1);
 
         return stack;
+    }
+
+    public static TagKey<Item> itemTag(String string) {
+        return TagKey.create(Registry.ITEM_REGISTRY, new ResourceLocation(string));
     }
 }

@@ -5,7 +5,7 @@ Some useful food & cannibalism
 
 <strong>This mod adds:</strong>
 
-- Beef (Golden)
+- Beef, Chicken, Fish, Mutton, Porkchop, Potato, Rabbit (Golden)
 - Beetroot (Cooked, Golden)
 - Berries (Golden Sweet, Golden Glow)
 - Box (Empty, Cereal, Cookies)
@@ -14,10 +14,7 @@ Some useful food & cannibalism
 - Cheese (Normal, Slice)
 - Dough Ball (Wheat)
 - Empanada (Raw Cheese, Raw Meat, Cheese, Meat)
-- Fish (Golden)
 - Glass (Empty, Water, Lava, Milk, Chocomilk, Water and Bread, Fruit Juice, Vegetable Juice, Mixed Juice, Milk and Cookies, Chocomilk and Cookies, Milk and Toasted Bread, Chocomilk and Toasted Bread)
-- Porkchop (Golden)
-- Potato (Golden)
 - Pufferfish (Clean, Cooked)
 - Pumpkin (Slice, Glistering Slice)
 - Salad (Fruit, Vegetable, Mixed)
@@ -54,13 +51,13 @@ Some useful food & cannibalism
 
 - <a href="https://modrinth.com/mod/modmenu" target="_blank">Mod Menu mod</a> <strong>(Optional)</strong>
 
-<img src="https://cdn.modrinth.com/data/gHfCZDqf/images/b4a7135b6c3adcb22bb264ce345442a9b7f325b0.png"><br>
+<img src="https://cdn.modrinth.com/data/gHfCZDqf/images/fc49cc44c32c44c15998bdb8776133a9e1bbf0dc.png"><br>
 
 <strong>This mod uses Tags therefore it is compatible with other mods</strong>
 
 <details>
   <summary>Spoiler</summary>
 
-<img src="https://cdn.modrinth.com/data/gHfCZDqf/images/cd845a1ed59da457e5964062eef7744c21d45b4a.png" width="500">
+<img src="https://cdn.modrinth.com/data/gHfCZDqf/images/a152051a387ba4796b0f4a4bfa2f66fe7148dc56.png" width="500">
 
 </details>
