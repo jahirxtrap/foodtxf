@@ -6,6 +6,7 @@
     {
       "type": "patchouli:crafting",
       "recipe": "foodtxf:baguette_recipe",
+      "recipe2": "foodtxf:baguette_sword_recipe",
       "title": " "
     }
   ]

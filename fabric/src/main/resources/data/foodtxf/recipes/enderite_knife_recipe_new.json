@@ -4,7 +4,7 @@
     "item": "foodtxf:netherite_knife"
   },
   "addition": {
-    "item": "enderitemod:enderite_ingot"
+    "tag": "c:enderite_ingots"
   },
   "result": {
     "item": "foodtxf:enderite_knife"
