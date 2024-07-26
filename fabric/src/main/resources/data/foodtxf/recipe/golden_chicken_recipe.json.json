@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GGG",
+    "GCG",
+    "GGG"
+  ],
+  "key": {
+    "G": {
+      "tag": "c:nuggets/gold"
+    },
+    "C": {
+      "item": "minecraft:cooked_chicken"
+    }
+  },
+  "result": {
+    "id": "foodtxf:golden_chicken",
+    "count": 1
+  }
+}

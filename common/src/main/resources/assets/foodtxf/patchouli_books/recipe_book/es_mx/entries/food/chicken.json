@@ -1,0 +1,12 @@
+{
+  "name": "Pollo",
+  "icon": "foodtxf:golden_chicken",
+  "category": "foodtxf:food",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "foodtxf:golden_chicken_recipe",
+      "title": " "
+    }
+  ]
+}

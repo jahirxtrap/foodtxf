@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GGG",
+    "GCG",
+    "GGG"
+  ],
+  "key": {
+    "G": {
+      "tag": "c:nuggets/gold"
+    },
+    "C": {
+      "item": "minecraft:cooked_mutton"
+    }
+  },
+  "result": {
+    "id": "foodtxf:golden_mutton",
+    "count": 1
+  }
+}

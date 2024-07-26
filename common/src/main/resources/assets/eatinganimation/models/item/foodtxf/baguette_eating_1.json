@@ -1,5 +1,5 @@
 {
-  "parent": "foodtxf:item/baguette_template",
+  "parent": "item/handheld",
   "textures": {
     "layer0": "eatinganimation:item/foodtxf/baguette_eating_1"
   }
