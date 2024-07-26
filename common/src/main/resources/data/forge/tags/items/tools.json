@@ -6,6 +6,7 @@
     "#foodtxf:juicers",
     "#foodtxf:knives",
     "#foodtxf:mixing_bowls",
-    "#foodtxf:skillets"
+    "#foodtxf:skillets",
+    "#forge:tools/swords"
   ]
 }

@@ -1,0 +1,12 @@
+{
+  "name": "Rabbit",
+  "icon": "foodtxf:golden_rabbit",
+  "category": "foodtxf:food",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "foodtxf:golden_rabbit_recipe",
+      "title": " "
+    }
+  ]
+}

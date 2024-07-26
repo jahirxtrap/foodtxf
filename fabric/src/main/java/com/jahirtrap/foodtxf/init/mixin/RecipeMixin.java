@@ -13,6 +13,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(Recipe.class)
 public interface RecipeMixin<C extends Container> {
+
     @Inject(method = "getRemainingItems", at = @At("HEAD"), cancellable = true)
     private void remainder(C container, CallbackInfoReturnable<NonNullList<ItemStack>> cir) {
         NonNullList<ItemStack> nonNullList = NonNullList.withSize(container.getContainerSize(), ItemStack.EMPTY);

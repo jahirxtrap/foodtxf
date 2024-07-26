@@ -1,6 +1,6 @@
 package com.jahirtrap.foodtxf.event;
 
-import com.jahirtrap.foodtxf.init.FoodtxfModConfig;
+import com.jahirtrap.foodtxf.init.ModConfig;
 import net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
@@ -12,7 +12,7 @@ import static com.jahirtrap.foodtxf.util.CommonUtils.dropFlesh;
 public class PlayerDropsFleshEvent {
     public PlayerDropsFleshEvent() {
         ServerPlayerEvents.ALLOW_DEATH.register((player, damageSource, amount) -> {
-            if (FoodtxfModConfig.enableCannibalism && FoodtxfModConfig.playerDropFlesh)
+            if (ModConfig.enableCannibalism && ModConfig.playerDropFlesh)
                 if (player != null) execute(player.level, player);
             return true;
         });

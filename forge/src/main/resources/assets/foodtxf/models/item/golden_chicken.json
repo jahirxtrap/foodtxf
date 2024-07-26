@@ -1,0 +1,29 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "foodtxf:item/golden_chicken"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "eatinganimation:eating": 1.0,
+        "eatinganimation:eat": 0.35
+      },
+      "model": "eatinganimation:item/foodtxf/golden_chicken_eating_0"
+    },
+    {
+      "predicate": {
+        "eatinganimation:eating": 1.0,
+        "eatinganimation:eat": 0.7
+      },
+      "model": "eatinganimation:item/foodtxf/golden_chicken_eating_1"
+    },
+    {
+      "predicate": {
+        "eatinganimation:eating": 1.0,
+        "eatinganimation:eat": 0.9
+      },
+      "model": "eatinganimation:item/foodtxf/golden_chicken_eating_2"
+    }
+  ]
+}

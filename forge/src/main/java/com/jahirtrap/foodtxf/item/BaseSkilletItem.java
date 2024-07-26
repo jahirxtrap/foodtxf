@@ -4,7 +4,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tier;
 
-import static com.jahirtrap.foodtxf.FoodtxfModTab.TAB_FOOD_TXF;
+import static com.jahirtrap.foodtxf.init.ModTab.TAB_FOOD_TXF;
 import static com.jahirtrap.foodtxf.util.CommonUtils.hurt;
 
 public class BaseSkilletItem extends SwordItem {
