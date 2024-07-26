@@ -1,6 +1,6 @@
 package com.jahirtrap.foodtxf.event;
 
-import com.jahirtrap.foodtxf.init.FoodtxfModItems;
+import com.jahirtrap.foodtxf.init.ModItems;
 import com.jahirtrap.foodtxf.item.FluidContainerItem;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
@@ -31,12 +31,12 @@ public class FillFluidEvent {
         if (target != null && !target.isBaby()) {
             if (target instanceof Cow || target instanceof Goat) {
                 if (mainHandIst.is(Items.COCOA_BEANS) || offHandIst.is(Items.COCOA_BEANS)) {
-                    if (type == 0) result = new ItemStack(FoodtxfModItems.CHOCOMILK_THERMOS.get());
-                    else if (type == 1) result = new ItemStack(FoodtxfModItems.GLASS_OF_CHOCOMILK.get());
+                    if (type == 0) result = new ItemStack(ModItems.CHOCOMILK_THERMOS.get());
+                    else if (type == 1) result = new ItemStack(ModItems.GLASS_OF_CHOCOMILK.get());
                     addition.put(mainHandIst.is(Items.COCOA_BEANS) ? mainHandIst : offHandIst, type == 0 ? 2 : type == 1 ? 1 : 0);
                 } else {
-                    if (type == 0) result = new ItemStack(FoodtxfModItems.MILK_THERMOS.get());
-                    else if (type == 1) result = new ItemStack(FoodtxfModItems.GLASS_OF_MILK.get());
+                    if (type == 0) result = new ItemStack(ModItems.MILK_THERMOS.get());
+                    else if (type == 1) result = new ItemStack(ModItems.GLASS_OF_MILK.get());
                 }
             } else return false;
             if (target instanceof Cow) sound = SoundEvents.COW_MILK;
@@ -44,12 +44,12 @@ public class FillFluidEvent {
         } else if (hitResult != null && hitResult.getType() == HitResult.Type.BLOCK) {
             Block block = level.getBlockState(hitResult.getBlockPos()).getBlock();
             if (block == Blocks.WATER) {
-                if (type == 0) result = new ItemStack(FoodtxfModItems.WATER_THERMOS.get());
-                else if (type == 1) result = new ItemStack(FoodtxfModItems.GLASS_OF_WATER.get());
+                if (type == 0) result = new ItemStack(ModItems.WATER_THERMOS.get());
+                else if (type == 1) result = new ItemStack(ModItems.GLASS_OF_WATER.get());
                 sound = SoundEvents.BUCKET_FILL;
             } else if (block == Blocks.LAVA) {
-                if (type == 0) result = new ItemStack(FoodtxfModItems.LAVA_THERMOS.get());
-                else if (type == 1) result = new ItemStack(FoodtxfModItems.GLASS_OF_LAVA.get());
+                if (type == 0) result = new ItemStack(ModItems.LAVA_THERMOS.get());
+                else if (type == 1) result = new ItemStack(ModItems.GLASS_OF_LAVA.get());
                 sound = SoundEvents.BUCKET_FILL_LAVA;
             } else return false;
         } else return false;
