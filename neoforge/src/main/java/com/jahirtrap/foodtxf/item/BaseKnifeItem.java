@@ -1,7 +1,7 @@
 package com.jahirtrap.foodtxf.item;
 
 import com.jahirtrap.foodtxf.event.PlayerDropsFleshKnifeEvent;
-import com.jahirtrap.foodtxf.init.FoodtxfModConfig;
+import com.jahirtrap.foodtxf.init.ModConfig;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResultHolder;
@@ -23,7 +23,7 @@ public class BaseKnifeItem extends SwordItem {
         InteractionResultHolder<ItemStack> holder = super.use(level, player, hand);
         ItemStack stack = player.getItemInHand(hand);
 
-        if (FoodtxfModConfig.enableCannibalism && FoodtxfModConfig.knifeDropFlesh)
+        if (ModConfig.enableCannibalism && ModConfig.knifeDropFlesh)
             if (PlayerDropsFleshKnifeEvent.execute(level, player, hand))
                 return new InteractionResultHolder<>(InteractionResult.SUCCESS, stack);
 

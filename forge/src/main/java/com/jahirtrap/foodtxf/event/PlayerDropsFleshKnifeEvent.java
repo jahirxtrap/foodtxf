@@ -11,13 +11,13 @@ import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
 
-import static com.jahirtrap.foodtxf.init.FoodtxfDamageSources.SUICIDE;
+import static com.jahirtrap.foodtxf.init.ModDamageSources.SUICIDE;
 import static com.jahirtrap.foodtxf.util.CommonUtils.checkCreativeMode;
 import static com.jahirtrap.foodtxf.util.CommonUtils.dropFlesh;
 
 public class PlayerDropsFleshKnifeEvent {
     public static boolean execute(Level level, Player player, InteractionHand hand) {
-        if (!player.isCrouching()) return false;
+        if (!player.isShiftKeyDown()) return false;
         ItemStack mainHandIst = player.getMainHandItem(), offHandIst = player.getOffhandItem(), stack = ItemStack.EMPTY;
 
         if (isKnife(mainHandIst)) stack = mainHandIst;

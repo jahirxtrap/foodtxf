@@ -1,8 +1,8 @@
 package com.jahirtrap.foodtxf;
 
-import com.jahirtrap.foodtxf.init.FoodtxfModBlocks;
-import com.jahirtrap.foodtxf.init.FoodtxfModConfig;
-import com.jahirtrap.foodtxf.init.FoodtxfModItems;
+import com.jahirtrap.foodtxf.init.ModConfig;
+import com.jahirtrap.foodtxf.init.ModItems;
+import com.jahirtrap.foodtxf.init.ModTab;
 import com.jahirtrap.foodtxf.util.configlib.TXFConfig;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModLoadingContext;
@@ -15,12 +15,11 @@ public class FoodtxfMod {
     public static final String MODID = "foodtxf";
 
     public FoodtxfMod(IEventBus bus) {
-        TXFConfig.init(MODID, FoodtxfModConfig.class);
+        TXFConfig.init(MODID, ModConfig.class);
         ModLoadingContext.get().registerExtensionPoint(ConfigScreenHandler.ConfigScreenFactory.class, () ->
                 new ConfigScreenHandler.ConfigScreenFactory((client, parent) -> TXFConfig.getScreen(parent, MODID)));
 
-        FoodtxfModBlocks.REGISTRY.register(bus);
-        FoodtxfModItems.REGISTRY.register(bus);
-        FoodtxfModTab.init(bus);
+        ModItems.init(bus);
+        ModTab.init(bus);
     }
 }

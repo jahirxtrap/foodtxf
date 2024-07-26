@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:item/generated",
+  "parent": "item/generated",
   "textures": {
     "layer0": "eatinganimation:item/foodtxf/dough_ball_eating_0"
   }
