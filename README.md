@@ -58,6 +58,6 @@ Some useful food & cannibalism
 <details>
   <summary>Spoiler</summary>
 
-<img src="https://cdn.modrinth.com/data/gHfCZDqf/images/a152051a387ba4796b0f4a4bfa2f66fe7148dc56.png" width="500">
+<img src="https://cdn.modrinth.com/data/gHfCZDqf/images/fccd825b190caa5aefcf534502f412981f53eeaa.png" width="500">
 
 </details>
