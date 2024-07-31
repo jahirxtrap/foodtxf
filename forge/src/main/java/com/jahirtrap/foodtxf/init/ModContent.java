@@ -16,7 +16,7 @@ import java.util.function.Supplier;
 import static com.jahirtrap.foodtxf.FoodtxfMod.MODID;
 import static com.jahirtrap.foodtxf.init.ModTab.TAB_FOOD_TXF;
 
-public class ModItems {
+public class ModContent {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(Registry.BLOCK_REGISTRY, MODID);
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(Registry.ITEM_REGISTRY, MODID);
 
@@ -107,8 +107,8 @@ public class ModItems {
     public static final RegistryObject<Item> RECIPE_BOOK = registerItem("recipe_book", RecipeBookItem::new);
 
     public static RegistryObject<Block> registerBlock(String name, Supplier<Block> supplier, Item.Properties properties) {
-        var block = BLOCKS.register(name, supplier);
-        ITEMS.register(name, () -> new BlockItem(block.get(), properties.tab(TAB_FOOD_TXF)));
+        var block = registerBlock(name, supplier);
+        registerItem(name, () -> new BlockItem(block.get(), properties.tab(TAB_FOOD_TXF)));
         return block;
     }
 
