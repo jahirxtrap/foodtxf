@@ -12,7 +12,7 @@ import net.minecraft.world.level.block.Block;
 import static com.jahirtrap.foodtxf.FoodtxfMod.MODID;
 import static com.jahirtrap.foodtxf.init.ModTab.TAB_FOOD_TXF;
 
-public class ModItems {
+public class ModContent {
     public static final Item PLAYER_FLESH = registerItem("player_flesh", new BaseFoodItem(4, 0.375f));
     public static final Item COOKED_PLAYER_FLESH = registerItem("cooked_player_flesh", new BaseFoodItem(8, 0.8f));
     public static final Item CLEAN_PUFFERFISH = registerItem("clean_pufferfish", new BaseFoodItem(2, 0.1f));
@@ -100,8 +100,8 @@ public class ModItems {
     public static final Item RECIPE_BOOK = registerItem("recipe_book", new RecipeBookItem());
 
     public static Block registerBlock(String name, Block block, Item.Properties properties) {
-        Registry.register(Registry.ITEM, new ResourceLocation(MODID, name), new BlockItem(block, properties.tab(TAB_FOOD_TXF)));
-        return Registry.register(Registry.BLOCK, new ResourceLocation(MODID, name), block);
+        registerItem(name, new BlockItem(block, properties.tab(TAB_FOOD_TXF)));
+        return registerBlock(name, block);
     }
 
     public static Block registerBlock(String name, Block block) {

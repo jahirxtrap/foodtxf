@@ -10,7 +10,7 @@ public class ModTab {
         TAB_FOOD_TXF = new CreativeModeTab("foodtxf.tab_foodtxf") {
             @Override
             public ItemStack makeIcon() {
-                return new ItemStack(ModItems.NETHERITE_SKILLET.get());
+                return new ItemStack(ModContent.NETHERITE_SKILLET.get());
             }
         };
     }

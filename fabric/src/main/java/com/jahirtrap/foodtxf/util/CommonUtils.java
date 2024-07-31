@@ -1,6 +1,6 @@
 package com.jahirtrap.foodtxf.util;
 
-import com.jahirtrap.foodtxf.init.ModItems;
+import com.jahirtrap.foodtxf.init.ModContent;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.Registry;
@@ -24,12 +24,12 @@ import java.util.Arrays;
 import java.util.List;
 
 public class CommonUtils {
-    public static final List<Item> container = new ArrayList<>(Arrays.asList(ModItems.BOX, Items.BOWL, ModItems.GLASS, Items.STICK, ModItems.THERMOS));
+    public static final List<Item> container = new ArrayList<>(Arrays.asList(ModContent.BOX, Items.BOWL, ModContent.GLASS, Items.STICK, ModContent.THERMOS));
 
     public static ItemEntity dropFlesh(Player player, Level level, int num) {
         ItemStack stack;
-        if (player.isOnFire()) stack = new ItemStack(ModItems.COOKED_PLAYER_FLESH, num);
-        else stack = new ItemStack(ModItems.PLAYER_FLESH, num);
+        if (player.isOnFire()) stack = new ItemStack(ModContent.COOKED_PLAYER_FLESH, num);
+        else stack = new ItemStack(ModContent.PLAYER_FLESH, num);
         CompoundTag compoundTag = stack.getOrCreateTag();
         ListTag loreTag = new ListTag();
 

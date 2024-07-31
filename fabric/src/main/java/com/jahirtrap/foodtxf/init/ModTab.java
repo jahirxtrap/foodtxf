@@ -9,7 +9,7 @@ import static com.jahirtrap.foodtxf.FoodtxfMod.MODID;
 
 public class ModTab {
     public static CreativeModeTab TAB_FOOD_TXF = FabricItemGroupBuilder.build(
-            new ResourceLocation(MODID, "tab_foodtxf"), () -> new ItemStack(ModItems.NETHERITE_SKILLET));
+            new ResourceLocation(MODID, "tab_foodtxf"), () -> new ItemStack(ModContent.NETHERITE_SKILLET));
 
     public static void init() {
     }
