@@ -1,7 +1,7 @@
 package com.jahirtrap.foodtxf;
 
 import com.jahirtrap.foodtxf.init.ModConfig;
-import com.jahirtrap.foodtxf.init.ModItems;
+import com.jahirtrap.foodtxf.init.ModContent;
 import com.jahirtrap.foodtxf.init.ModTab;
 import com.jahirtrap.foodtxf.util.configlib.TXFConfig;
 import com.jahirtrap.foodtxf.util.configlib.TXFConfigClient;
@@ -23,7 +23,7 @@ public class FoodtxfMod {
         ModLoadingContext.get().registerExtensionPoint(ConfigScreenHandler.ConfigScreenFactory.class, () ->
                 new ConfigScreenHandler.ConfigScreenFactory((client, parent) -> TXFConfigClient.getScreen(parent, MODID)));
 
-        ModItems.init(bus);
+        ModContent.init(bus);
         ModTab.init(bus);
     }
 }
