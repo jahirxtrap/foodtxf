@@ -1,6 +1,6 @@
 package com.jahirtrap.foodtxf.util;
 
-import com.jahirtrap.foodtxf.init.ModItems;
+import com.jahirtrap.foodtxf.init.ModContent;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.component.DataComponents;
@@ -25,12 +25,12 @@ import java.util.Collections;
 import java.util.List;
 
 public class CommonUtils {
-    public static final List<Item> container = new ArrayList<>(Arrays.asList(ModItems.BOX.get(), Items.BOWL, ModItems.GLASS.get(), Items.STICK, ModItems.THERMOS.get()));
+    public static final List<Item> container = new ArrayList<>(Arrays.asList(ModContent.BOX.get(), Items.BOWL, ModContent.GLASS.get(), Items.STICK, ModContent.THERMOS.get()));
 
     public static ItemEntity dropFlesh(Player player, Level level, int num) {
         ItemStack stack;
-        if (player.isOnFire()) stack = new ItemStack(ModItems.COOKED_PLAYER_FLESH.get(), num);
-        else stack = new ItemStack(ModItems.PLAYER_FLESH.get(), num);
+        if (player.isOnFire()) stack = new ItemStack(ModContent.COOKED_PLAYER_FLESH.get(), num);
+        else stack = new ItemStack(ModContent.PLAYER_FLESH.get(), num);
         stack.set(DataComponents.LORE, new ItemLore(Collections.singletonList(Component.literal(player.getName().getString()).withStyle(Style.EMPTY.withColor(ChatFormatting.RED).withItalic(false)))));
 
         ItemEntity entityToSpawn = new ItemEntity(level, player.getX(), player.getY(), player.getZ(), stack);
