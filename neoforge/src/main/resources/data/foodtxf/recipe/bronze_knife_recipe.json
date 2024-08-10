@@ -15,5 +15,14 @@
   "result": {
     "id": "foodtxf:bronze_knife",
     "count": 1
-  }
+  },
+  "conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:ingots/bronze"
+      }
+    }
+  ]
 }

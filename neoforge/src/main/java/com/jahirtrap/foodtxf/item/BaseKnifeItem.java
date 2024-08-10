@@ -20,8 +20,6 @@ public class BaseKnifeItem extends SwordItem {
 
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
-        ItemStack stack = player.getItemInHand(hand);
-
         if (ModConfig.enableCannibalism && ModConfig.knifeDropFlesh)
             if (PlayerDropsFleshKnifeEvent.execute(level, player, hand))
                 return new InteractionResultHolder<>(InteractionResult.SUCCESS, player.getItemInHand(hand));

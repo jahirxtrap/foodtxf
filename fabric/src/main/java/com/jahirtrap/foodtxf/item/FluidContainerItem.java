@@ -26,7 +26,7 @@ public class FluidContainerItem extends Item {
         BlockHitResult hitResult = FluidContainerItem.getPlayerPOVHitResult(level, player, ClipContext.Fluid.SOURCE_ONLY);
 
         if (FillFluidEvent.execute(level, player, stack, null, hitResult, hand, type))
-            return new InteractionResultHolder<>(InteractionResult.SUCCESS, player.getItemInHand(hand));
+            return new InteractionResultHolder<>(InteractionResult.SUCCESS, stack);
 
         return super.use(level, player, hand);
     }

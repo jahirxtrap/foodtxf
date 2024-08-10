@@ -4,12 +4,18 @@
     "item": "foodtxf:netherite_knife"
   },
   "addition": {
-    "tag": "c:ingots/enderite"
+    "item": "enderitemod:enderite_ingot"
   },
   "result": {
     "id": "foodtxf:enderite_knife"
   },
   "template": {
     "item": "enderitemod:enderite_upgrade_smithing_template"
-  }
+  },
+  "conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "enderitemod"
+    }
+  ]
 }

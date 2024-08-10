@@ -16,5 +16,14 @@
   "result": {
     "id": "foodtxf:steel_skillet",
     "count": 1
-  }
+  },
+  "conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:ingots/steel"
+      }
+    }
+  ]
 }
