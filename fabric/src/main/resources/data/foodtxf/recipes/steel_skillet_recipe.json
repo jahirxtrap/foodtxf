@@ -7,14 +7,22 @@
   ],
   "key": {
     "I": {
-      "tag": "c:ingots/steel"
+      "tag": "c:steel_ingots"
     },
     "R": {
-      "tag": "c:rods/wooden"
+      "tag": "c:wooden_rods"
     }
   },
   "result": {
     "id": "foodtxf:steel_skillet",
     "count": 1
-  }
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:steel_ingots"
+      ]
+    }
+  ]
 }
