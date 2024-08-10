@@ -16,5 +16,13 @@
   "result": {
     "item": "foodtxf:steel_skillet",
     "count": 1
-  }
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:steel_ingots"
+      ]
+    }
+  ]
 }
