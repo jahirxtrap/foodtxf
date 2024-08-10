@@ -15,5 +15,13 @@
   "result": {
     "item": "foodtxf:bronze_knife",
     "count": 1
-  }
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:tags_populated",
+      "values": [
+        "c:bronze_ingots"
+      ]
+    }
+  ]
 }

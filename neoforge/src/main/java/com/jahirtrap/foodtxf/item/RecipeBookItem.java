@@ -24,14 +24,11 @@ public class RecipeBookItem extends Item {
 
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
-        InteractionResultHolder<ItemStack> holder = super.use(level, player, hand);
-        ItemStack stack = player.getItemInHand(hand);
-
         if (player instanceof ServerPlayer serverPlayer && ModList.get().isLoaded("patchouli"))
             PatchouliAPI.get().openBookGUI(serverPlayer, BuiltInRegistries.ITEM.getKey(this));
-        else return holder;
+        else return super.use(level, player, hand);
 
-        return new InteractionResultHolder<>(InteractionResult.SUCCESS, stack);
+        return new InteractionResultHolder<>(InteractionResult.SUCCESS, player.getItemInHand(hand));
     }
 
     @Override

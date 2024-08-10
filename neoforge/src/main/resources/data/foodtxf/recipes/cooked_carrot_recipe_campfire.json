@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:campfire_cooking",
-  "experience": 0,
-  "cookingtime": 600,
-  "ingredient": {
-    "item": "minecraft:carrot"
-  },
-  "result": "foodtxf:cooked_carrot"
-}
