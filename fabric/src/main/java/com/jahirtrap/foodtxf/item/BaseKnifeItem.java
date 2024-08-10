@@ -24,14 +24,11 @@ public class BaseKnifeItem extends SwordItem implements ContainerItem, Repairabl
 
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
-        InteractionResultHolder<ItemStack> holder = super.use(level, player, hand);
-        ItemStack stack = player.getItemInHand(hand);
-
         if (ModConfig.enableCannibalism && ModConfig.knifeDropFlesh)
             if (PlayerDropsFleshKnifeEvent.execute(level, player, hand))
-                return new InteractionResultHolder<>(InteractionResult.SUCCESS, stack);
+                return new InteractionResultHolder<>(InteractionResult.SUCCESS, player.getItemInHand(hand));
 
-        return holder;
+        return super.use(level, player, hand);
     }
 
     @Override

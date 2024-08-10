@@ -4,9 +4,17 @@
     "item": "foodtxf:netherite_skillet"
   },
   "addition": {
-    "tag": "c:enderite_ingots"
+    "item": "enderitemod:enderite_ingot"
   },
   "result": {
     "item": "foodtxf:enderite_skillet"
-  }
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:any_mod_loaded",
+      "values": [
+        "enderitemod"
+      ]
+    }
+  ]
 }
