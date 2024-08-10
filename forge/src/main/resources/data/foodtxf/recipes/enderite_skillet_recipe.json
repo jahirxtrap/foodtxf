@@ -4,9 +4,15 @@
     "item": "foodtxf:netherite_skillet"
   },
   "addition": {
-    "tag": "forge:ingots/enderite"
+    "item": "enderitemod:enderite_ingot"
   },
   "result": {
     "item": "foodtxf:enderite_skillet"
-  }
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "enderitemod"
+    }
+  ]
 }

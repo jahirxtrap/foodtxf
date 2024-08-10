@@ -7,7 +7,7 @@
     {
       "predicate": {
         "eating": 1.0,
-        "eat": 0.35
+        "eat": 0.4
       },
       "model": "eatinganimation:item/foodtxf/baguette_eating_0"
     },
