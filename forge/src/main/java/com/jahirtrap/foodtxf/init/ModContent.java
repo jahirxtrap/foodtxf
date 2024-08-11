@@ -107,9 +107,9 @@ public class ModContent {
     public static final RegistryObject<Item> RECIPE_BOOK = registerItem("recipe_book", RecipeBookItem::new);
 
     public static RegistryObject<Block> registerBlock(String name, Supplier<Block> supplier, Item.Properties properties) {
-        var block = registerBlock(name, supplier);
-        registerItem(name, () -> new BlockItem(block.get(), properties.tab(TAB_FOOD_TXF)));
-        return block;
+        var Block = registerBlock(name, supplier);
+        registerItem(name, () -> new BlockItem(Block.get(), properties.tab(TAB_FOOD_TXF)));
+        return Block;
     }
 
     public static RegistryObject<Block> registerBlock(String name, Supplier<Block> supplier) {

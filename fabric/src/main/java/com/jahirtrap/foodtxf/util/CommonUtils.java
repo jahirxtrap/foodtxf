@@ -39,10 +39,10 @@ public class CommonUtils {
         compoundTag.put("display", new CompoundTag());
         compoundTag.getCompound("display").put("Lore", loreTag);
 
-        ItemEntity entityToSpawn = new ItemEntity(level, player.getX(), player.getY(), player.getZ(), stack);
-        entityToSpawn.setPickUpDelay(10);
+        ItemEntity itemEntity = new ItemEntity(level, player.getX(), player.getY(), player.getZ(), stack);
+        itemEntity.setDefaultPickUpDelay();
 
-        return entityToSpawn;
+        return itemEntity;
     }
 
     public static boolean checkCreativeMode(Player player) {
