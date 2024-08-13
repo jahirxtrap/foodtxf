@@ -6,10 +6,10 @@
   ],
   "key": {
     "I": {
-      "tag": "c:steel_ingots"
+      "tag": "c:ingots/steel"
     },
     "R": {
-      "tag": "c:wooden_rods"
+      "tag": "c:rods/wooden"
     }
   },
   "result": {
@@ -20,7 +20,7 @@
     {
       "condition": "fabric:tags_populated",
       "values": [
-        "c:steel_ingots"
+        "c:ingots/steel"
       ]
     }
   ]

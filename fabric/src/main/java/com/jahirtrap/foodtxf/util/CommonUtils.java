@@ -33,10 +33,10 @@ public class CommonUtils {
         else stack = new ItemStack(ModContent.PLAYER_FLESH, num);
         stack.set(DataComponents.LORE, new ItemLore(Collections.singletonList(Component.literal(player.getName().getString()).withStyle(Style.EMPTY.withColor(ChatFormatting.RED).withItalic(false)))));
 
-        ItemEntity entityToSpawn = new ItemEntity(level, player.getX(), player.getY(), player.getZ(), stack);
-        entityToSpawn.setPickUpDelay(10);
+        ItemEntity itemEntity = new ItemEntity(level, player.getX(), player.getY(), player.getZ(), stack);
+        itemEntity.setDefaultPickUpDelay();
 
-        return entityToSpawn;
+        return itemEntity;
     }
 
     public static boolean checkCreativeMode(Player player) {
