@@ -10,9 +10,14 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Tiers;
 import net.minecraft.world.level.block.Block;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static com.jahirtrap.foodtxf.FoodtxfMod.MODID;
 
 public class ModContent {
+    public static final List<Item> ITEMS = new ArrayList<>();
+
     public static final Item PLAYER_FLESH = registerItem("player_flesh", new BaseFoodItem(4, 0.375f));
     public static final Item COOKED_PLAYER_FLESH = registerItem("cooked_player_flesh", new BaseFoodItem(8, 0.8f));
     public static final Item CLEAN_PUFFERFISH = registerItem("clean_pufferfish", new BaseFoodItem(2, 0.1f));
@@ -109,7 +114,9 @@ public class ModContent {
     }
 
     public static Item registerItem(String name, Item item) {
-        return Registry.register(BuiltInRegistries.ITEM, ResourceLocation.fromNamespaceAndPath(MODID, name), item);
+        var itemReg = Registry.register(BuiltInRegistries.ITEM, ResourceLocation.fromNamespaceAndPath(MODID, name), item);
+        ITEMS.add(itemReg);
+        return itemReg;
     }
 
     public static void init() {

@@ -106,9 +106,9 @@ public class ModContent {
     public static final DeferredItem<Item> RECIPE_BOOK = registerItem("recipe_book", RecipeBookItem::new);
 
     public static DeferredBlock<Block> registerBlock(String name, Supplier<Block> supplier, Item.Properties properties) {
-        var Block = registerBlock(name, supplier);
-        registerItem(name, () -> new BlockItem(Block.get(), properties));
-        return Block;
+        var blockReg = registerBlock(name, supplier);
+        registerItem(name, () -> new BlockItem(blockReg.get(), properties));
+        return blockReg;
     }
 
     public static DeferredBlock<Block> registerBlock(String name, Supplier<Block> supplier) {
