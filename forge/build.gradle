@@ -7,10 +7,8 @@ plugins {
 }
 
 version = "${version}-forge"
-
-base {
-    archivesName = mod_id
-}
+jarJar.enable()
+base.archivesName = mod_id
 
 mixin {
     add(sourceSets.main, "${mod_id}.refmap.json")
@@ -86,21 +84,21 @@ dependencies {
     runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:1.20.1-81-FORGE")
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    jarJar "com.jahirtrap:configlibtxf:[${configlibtxf_version}-forge,)"
 }
 
 tasks.withType(JavaCompile).configureEach {
     source(project(":common").sourceSets.main.allSource)
 }
 
-def resourceTargets = ['META-INF/mods.toml', 'META-INF/jarjar/metadata.json', 'pack.mcmeta']
+def resourceTargets = ['META-INF/mods.toml', 'pack.mcmeta']
 def replaceProperties = [
         minecraft_version: minecraft_version, minecraft_version_range: forge_minecraft_version_range,
         forge_version: forge_version, forge_version_range: forge_version_range,
         loader_version_range: forge_loader_version_range,
         mod_id: mod_id, mod_name: mod_name, mod_license: mod_license, mod_version: version,
         mod_author: mod_author, mod_description: mod_description,
-        mod_url: mod_url, mod_issues: mod_issues, side: forge_side,
-        configlibtxf_version: configlibtxf_version
+        mod_url: mod_url, mod_issues: mod_issues, side: forge_side
 ]
 
 processResources {
@@ -114,15 +112,11 @@ processResources {
     from project(":common").sourceSets.main.resources
 }
 
-jar {
-    from('libs') {
-        include '*.jar'
-        into('META-INF/jarjar')
-    }
-}
+tasks.jarJar.setArchiveClassifier('')
+jar.finalizedBy('jarJar')
 
 publishMods {
-    file = jar.archiveFile
+    file = tasks.jarJar.archiveFile
     displayName = "${mod_name} ${project.version}"
     type = STABLE
     modLoaders.addAll("forge")

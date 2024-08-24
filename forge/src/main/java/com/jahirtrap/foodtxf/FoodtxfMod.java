@@ -1,13 +1,10 @@
 package com.jahirtrap.foodtxf;
 
+import com.jahirtrap.configlib.TXFConfig;
 import com.jahirtrap.foodtxf.init.ModConfig;
 import com.jahirtrap.foodtxf.init.ModContent;
 import com.jahirtrap.foodtxf.init.ModTab;
-import com.jahirtrap.foodtxf.util.configlib.TXFConfig;
-import com.jahirtrap.foodtxf.util.configlib.TXFConfigClient;
-import net.minecraftforge.client.ConfigScreenHandler;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
@@ -20,9 +17,6 @@ public class FoodtxfMod {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
         TXFConfig.init(MODID, ModConfig.class);
-        ModLoadingContext.get().registerExtensionPoint(ConfigScreenHandler.ConfigScreenFactory.class, () ->
-                new ConfigScreenHandler.ConfigScreenFactory((client, parent) -> TXFConfigClient.getScreen(parent, MODID)));
-
         ModContent.init(bus);
         ModTab.init(bus);
     }
