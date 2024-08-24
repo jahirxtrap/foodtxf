@@ -10,6 +10,9 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Tiers;
 import net.minecraft.world.level.block.Block;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static com.jahirtrap.foodtxf.FoodtxfMod.MODID;
 
 public class ModContent {
