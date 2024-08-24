@@ -1,6 +1,6 @@
 package com.jahirtrap.foodtxf.init;
 
-import com.jahirtrap.foodtxf.util.configlib.TXFConfig;
+import com.jahirtrap.configlib.TXFConfig;
 
 public class ModConfig extends TXFConfig {
     @Entry(name = "Enable Cannibalism")
