@@ -1,1 +1,2 @@
 - Updated config lib
+- Fixed interactions
