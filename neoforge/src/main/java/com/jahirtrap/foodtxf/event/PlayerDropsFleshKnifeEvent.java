@@ -3,6 +3,7 @@ package com.jahirtrap.foodtxf.event;
 import com.jahirtrap.foodtxf.item.BaseKnifeItem;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.player.Player;
@@ -31,7 +32,7 @@ public class PlayerDropsFleshKnifeEvent {
             level.addFreshEntity(dropFlesh(player, level, 1));
             return true;
         } else if (checkCreativeMode(player)) {
-            player.playSound(SoundEvents.PLAYER_HURT, 1, 1);
+            level.playSound(null, player.blockPosition(), SoundEvents.PLAYER_HURT, SoundSource.PLAYERS, 1, 1);
             level.addFreshEntity(dropFlesh(player, level, 1));
             return true;
         }
