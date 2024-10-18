@@ -6,10 +6,10 @@
   ],
   "key": {
     "I": {
-      "tag": "forge:ingots/bronze"
+      "tag": "c:ingots/bronze"
     },
     "R": {
-      "tag": "forge:rods/wooden"
+      "tag": "c:rods/wooden"
     }
   },
   "result": {
@@ -21,7 +21,7 @@
       "type": "forge:not",
       "value": {
         "type": "forge:tag_empty",
-        "tag": "forge:ingots/bronze"
+        "tag": "c:ingots/bronze"
       }
     }
   ]

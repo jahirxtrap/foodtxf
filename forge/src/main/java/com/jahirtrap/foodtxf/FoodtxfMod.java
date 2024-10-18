@@ -13,8 +13,8 @@ public class FoodtxfMod {
 
     public static final String MODID = "foodtxf";
 
-    public FoodtxfMod() {
-        IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+    public FoodtxfMod(FMLJavaModLoadingContext context) {
+        IEventBus bus = context.getModEventBus();
 
         TXFConfig.init(MODID, ModConfig.class);
         ModContent.init(bus);

@@ -2,13 +2,13 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "tag": "forge:raw_fishes"
+      "tag": "c:foods/raw_fish"
     },
     {
       "item": "minecraft:stick"
     },
     {
-      "tag": "forge:raw_fishes"
+      "tag": "c:foods/raw_fish"
     }
   ],
   "result": {

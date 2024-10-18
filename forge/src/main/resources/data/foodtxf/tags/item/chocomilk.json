@@ -1,7 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    "foodtxf:chocomilk_thermos",
-    { "id": "#forge:buckets/chocomilk", "required": false }
-  ]
-}

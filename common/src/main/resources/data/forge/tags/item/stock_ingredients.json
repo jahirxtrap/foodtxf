@@ -1,8 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    "foodtxf:player_flesh",
-    "foodtxf:clean_pufferfish",
-    { "id": "decade_of_digging:raw_tuna", "required": false }
-  ]
-}
