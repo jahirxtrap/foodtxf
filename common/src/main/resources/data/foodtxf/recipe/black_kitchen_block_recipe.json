@@ -6,12 +6,8 @@
     "BBB"
   ],
   "key": {
-    "B": {
-      "item": "minecraft:blackstone"
-    },
-    "Q": {
-      "item": "minecraft:quartz_block"
-    }
+    "B": "minecraft:blackstone",
+    "Q": "minecraft:quartz_block"
   },
   "result": {
     "id": "foodtxf:black_kitchen_block",

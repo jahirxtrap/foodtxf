@@ -6,12 +6,8 @@
     "GGG"
   ],
   "key": {
-    "G": {
-      "tag": "c:nuggets/gold"
-    },
-    "B": {
-      "item": "minecraft:baked_potato"
-    }
+    "G": "#c:nuggets/gold",
+    "B": "minecraft:baked_potato"
   },
   "result": {
     "id": "foodtxf:golden_potato",

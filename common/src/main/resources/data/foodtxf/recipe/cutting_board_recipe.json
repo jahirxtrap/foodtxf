@@ -5,9 +5,7 @@
     "##"
   ],
   "key": {
-    "#": {
-      "tag": "minecraft:wooden_slabs"
-    }
+    "#": "#minecraft:wooden_slabs"
   },
   "result": {
     "id": "foodtxf:cutting_board",

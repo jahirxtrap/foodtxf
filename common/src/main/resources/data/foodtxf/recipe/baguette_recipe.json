@@ -6,9 +6,7 @@
     "B  "
   ],
   "key": {
-    "B": {
-      "item": "minecraft:bread"
-    }
+    "B": "minecraft:bread"
   },
   "result": {
     "id": "foodtxf:baguette",

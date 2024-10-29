@@ -7,27 +7,17 @@ import net.minecraft.world.item.ItemStack;
 import static com.jahirtrap.foodtxf.util.CommonUtils.hurt;
 
 public class JuicerItem extends Item implements RepairableItem {
-    public JuicerItem() {
-        super(new Item.Properties().durability(200));
+    public JuicerItem(Properties properties) {
+        super(properties.durability(200).enchantable(5));
     }
 
     @Override
-    public boolean hasCraftingRemainingItem() {
-        return true;
-    }
-
-    @Override
-    public ItemStack getCraftingRemainingItem(ItemStack stack) {
+    public ItemStack getCraftingRemainder(ItemStack stack) {
         return hurt(1, stack);
     }
 
     @Override
     public boolean isRepairable() {
         return false;
-    }
-
-    @Override
-    public int getEnchantmentValue() {
-        return 5;
     }
 }

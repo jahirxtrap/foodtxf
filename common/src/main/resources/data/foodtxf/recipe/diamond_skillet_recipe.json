@@ -6,12 +6,8 @@
     "R  "
   ],
   "key": {
-    "G": {
-      "tag": "c:gems/diamond"
-    },
-    "R": {
-      "tag": "c:rods/wooden"
-    }
+    "G": "#c:gems/diamond",
+    "R": "#c:rods/wooden"
   },
   "result": {
     "id": "foodtxf:diamond_skillet",

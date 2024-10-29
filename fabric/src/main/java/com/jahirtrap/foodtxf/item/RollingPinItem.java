@@ -9,8 +9,8 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
 
 public class RollingPinItem extends Item implements FabricItem {
-    public RollingPinItem() {
-        super(new Item.Properties().stacksTo(1).attributes(createAttributes()));
+    public RollingPinItem(Properties properties) {
+        super(properties.stacksTo(1).attributes(createAttributes()));
     }
 
     public static ItemAttributeModifiers createAttributes() {
@@ -20,11 +20,6 @@ public class RollingPinItem extends Item implements FabricItem {
                 .add(Attributes.ATTACK_SPEED,
                         new AttributeModifier(BASE_ATTACK_SPEED_ID, -2.8F, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.MAINHAND)
                 .build();
-    }
-
-    @Override
-    public boolean hasCraftingRemainingItem() {
-        return true;
     }
 
     @Override

@@ -1,9 +1,6 @@
 {
   "type": "cookingforblockheads:toaster",
-  "ingredient": {
-    "item": "foodtxf:bread_slice"
-  },
-  "result": {
-    "item": "foodtxf:toasted_bread_slice"
+  "ingredient": "foodtxf:bread_slice",
+  "result": "foodtxf:toasted_bread_slice"
   }
 }

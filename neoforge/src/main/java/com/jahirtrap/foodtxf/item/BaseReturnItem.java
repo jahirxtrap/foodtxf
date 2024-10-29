@@ -6,17 +6,18 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.component.Consumables;
 import net.minecraft.world.level.Level;
 
 public class BaseReturnItem extends Item {
     private final Item itemRet;
     private final int fluidType;
 
-    public BaseReturnItem(Item item, int type, int stack, FoodProperties foodProperties) {
-        super(new Item.Properties().stacksTo(stack)
-                .food(foodProperties));
-        this.itemRet = item;
-        this.fluidType = type;
+    public BaseReturnItem(Item itemRet, int fluidType, int stack, FoodProperties foodProperties, boolean drink, Properties properties) {
+        super(properties.stacksTo(stack)
+                .food(foodProperties, drink ? Consumables.DEFAULT_DRINK : Consumables.DEFAULT_FOOD));
+        this.itemRet = itemRet;
+        this.fluidType = fluidType;
     }
 
     @Override

@@ -6,7 +6,6 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -18,17 +17,17 @@ import vazkii.patchouli.api.PatchouliAPI;
 import java.util.List;
 
 public class RecipeBookItem extends Item {
-    public RecipeBookItem() {
-        super(new Item.Properties().stacksTo(1));
+    public RecipeBookItem(Properties properties) {
+        super(properties.stacksTo(1));
     }
 
     @Override
-    public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
+    public InteractionResult use(Level level, Player player, InteractionHand hand) {
         if (player instanceof ServerPlayer serverPlayer && ModList.get().isLoaded("patchouli"))
             PatchouliAPI.get().openBookGUI(serverPlayer, BuiltInRegistries.ITEM.getKey(this));
         else return super.use(level, player, hand);
 
-        return new InteractionResultHolder<>(InteractionResult.SUCCESS, player.getItemInHand(hand));
+        return InteractionResult.SUCCESS;
     }
 
     @Override

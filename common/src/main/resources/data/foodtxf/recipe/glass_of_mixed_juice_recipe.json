@@ -1,18 +1,10 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "tag": "foodtxf:juicers"
-    },
-    {
-      "tag": "foodtxf:fruits"
-    },
-    {
-      "item": "foodtxf:glass"
-    },
-    {
-      "tag": "foodtxf:vegetables"
-    }
+    "#foodtxf:juicers",
+    "#foodtxf:fruits",
+    "foodtxf:glass",
+    "#foodtxf:vegetables"
   ],
   "result": {
     "id": "foodtxf:glass_of_mixed_juice",

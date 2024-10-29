@@ -2,9 +2,7 @@
   "type": "minecraft:smelting",
   "experience": 0.35,
   "cookingtime": 200,
-  "ingredient": {
-    "item": "minecraft:carrot"
-  },
+  "ingredient": "minecraft:carrot",
   "result": {
     "id": "foodtxf:cooked_carrot"
   }

@@ -1,33 +1,15 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "tag": "c:seeds"
-    },
-    {
-      "tag": "c:seeds"
-    },
-    {
-      "tag": "c:seeds"
-    },
-    {
-      "tag": "c:seeds"
-    },
-    {
-      "tag": "c:seeds"
-    },
-    {
-      "tag": "c:seeds"
-    },
-    {
-      "tag": "c:seeds"
-    },
-    {
-      "tag": "c:seeds"
-    },
-    {
-      "item": "foodtxf:box"
-    }
+    "#c:seeds",
+    "#c:seeds",
+    "#c:seeds",
+    "#c:seeds",
+    "#c:seeds",
+    "#c:seeds",
+    "#c:seeds",
+    "#c:seeds",
+    "foodtxf:box"
   ],
   "result": {
     "id": "foodtxf:box_of_cereal",

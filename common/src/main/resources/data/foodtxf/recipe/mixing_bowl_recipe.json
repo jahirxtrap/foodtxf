@@ -1,12 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "tag": "minecraft:stone_tool_materials"
-    },
-    {
-      "item": "minecraft:bowl"
-    }
+    "#minecraft:stone_tool_materials",
+    "minecraft:bowl"
   ],
   "result": {
     "id": "foodtxf:mixing_bowl",

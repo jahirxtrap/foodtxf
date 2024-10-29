@@ -5,9 +5,7 @@
     "##"
   ],
   "key": {
-    "#": {
-      "item": "foodtxf:pumpkin_slice"
-    }
+    "#": "foodtxf:pumpkin_slice"
   },
   "result": {
     "id": "minecraft:pumpkin",

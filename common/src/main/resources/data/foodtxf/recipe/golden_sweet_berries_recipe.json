@@ -6,12 +6,8 @@
     "GGG"
   ],
   "key": {
-    "G": {
-      "tag": "c:nuggets/gold"
-    },
-    "S": {
-      "item": "minecraft:sweet_berries"
-    }
+    "G": "#c:nuggets/gold",
+    "S": "minecraft:sweet_berries"
   },
   "result": {
     "id": "foodtxf:golden_sweet_berries",

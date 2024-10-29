@@ -1,15 +1,9 @@
 {
   "type": "minecraft:smithing_transform",
-  "base": {
-    "item": "foodtxf:diamond_skillet"
-  },
-  "addition": {
-    "tag": "c:ingots/netherite"
-  },
+  "base": "foodtxf:diamond_skillet",
+  "addition": "#c:ingots/netherite",
   "result": {
     "id": "foodtxf:netherite_skillet"
   },
-  "template": {
-    "item": "minecraft:netherite_upgrade_smithing_template"
-  }
+  "template": "minecraft:netherite_upgrade_smithing_template"
 }

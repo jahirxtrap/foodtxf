@@ -5,12 +5,8 @@
     "R "
   ],
   "key": {
-    "P": {
-      "tag": "minecraft:planks"
-    },
-    "R": {
-      "tag": "c:rods/wooden"
-    }
+    "P": "#minecraft:planks",
+    "R": "#c:rods/wooden"
   },
   "result": {
     "id": "foodtxf:wooden_knife",

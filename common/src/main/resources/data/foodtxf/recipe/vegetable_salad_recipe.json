@@ -1,21 +1,11 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "tag": "foodtxf:knives"
-    },
-    {
-      "tag": "foodtxf:vegetables"
-    },
-    {
-      "item": "minecraft:bowl"
-    },
-    {
-      "tag": "foodtxf:cutting_boards"
-    },
-    {
-      "tag": "foodtxf:vegetables"
-    }
+    "#foodtxf:knives",
+    "#foodtxf:vegetables",
+    "minecraft:bowl",
+    "#foodtxf:cutting_boards",
+    "#foodtxf:vegetables"
   ],
   "result": {
     "id": "foodtxf:vegetable_salad",

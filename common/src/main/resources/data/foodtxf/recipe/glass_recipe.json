@@ -6,9 +6,7 @@
     " # "
   ],
   "key": {
-    "#": {
-      "tag": "c:glass_blocks/colorless"
-    }
+    "#": "#c:glass_blocks/colorless"
   },
   "result": {
     "id": "foodtxf:glass",

@@ -1,15 +1,14 @@
 package com.jahirtrap.foodtxf.item;
 
-import com.jahirtrap.foodtxf.init.ModTiers;
+import com.jahirtrap.foodtxf.init.ModMaterials;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.SwordItem;
 
 public class BaguetteItem extends SwordItem {
-    public BaguetteItem() {
-        super(ModTiers.BREAD, new Item.Properties().attributes(createAttributes(ModTiers.BREAD, 3, -2.4F))
+    public BaguetteItem(Properties properties) {
+        super(ModMaterials.Tool.BREAD, 3f, -2.4f, properties
                 .food((new FoodProperties.Builder()).nutrition(15).saturationModifier(0.6f)
                         .build()));
     }

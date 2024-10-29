@@ -6,12 +6,8 @@
     "I"
   ],
   "key": {
-    "I": {
-      "tag": "c:ingots/iron"
-    },
-    "G": {
-      "tag": "c:glass_blocks/colorless"
-    }
+    "I": "#c:ingots/iron",
+    "G": "#c:glass_blocks/colorless"
   },
   "result": {
     "id": "foodtxf:thermos",

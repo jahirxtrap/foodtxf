@@ -6,12 +6,8 @@
     "R  "
   ],
   "key": {
-    "R": {
-      "tag": "c:rods/wooden"
-    },
-    "L": {
-      "tag": "minecraft:logs"
-    }
+    "R": "#c:rods/wooden",
+    "L": "#minecraft:logs"
   },
   "result": {
     "id": "foodtxf:rolling_pin",

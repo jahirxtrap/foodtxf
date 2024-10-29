@@ -1,17 +1,11 @@
 {
   "type": "minecraft:smithing_transform",
-  "base": {
-    "item": "foodtxf:netherite_knife"
-  },
-  "addition": {
-    "item": "enderitemod:enderite_ingot"
-  },
+  "base": "foodtxf:netherite_knife",
+  "addition": "enderitemod:enderite_ingot",
   "result": {
     "id": "foodtxf:enderite_knife"
   },
-  "template": {
-    "item": "enderitemod:enderite_upgrade_smithing_template"
-  },
+  "template": "enderitemod:enderite_upgrade_smithing_template",
   "conditions": [
     {
       "type": "neoforge:mod_loaded",

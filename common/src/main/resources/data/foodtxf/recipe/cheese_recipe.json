@@ -1,12 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "tag": "foodtxf:milk"
-    },
-    {
-      "tag": "c:mushrooms"
-    }
+    "#foodtxf:milk",
+    "#c:mushrooms"
   ],
   "result": {
     "id": "foodtxf:cheese",

@@ -1,15 +1,9 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "tag": "foodtxf:knives"
-    },
-    {
-      "tag": "foodtxf:cutting_boards"
-    },
-    {
-      "item": "minecraft:pumpkin"
-    }
+    "#foodtxf:knives",
+    "#foodtxf:cutting_boards",
+    "minecraft:pumpkin"
   ],
   "result": {
     "id": "foodtxf:pumpkin_slice",

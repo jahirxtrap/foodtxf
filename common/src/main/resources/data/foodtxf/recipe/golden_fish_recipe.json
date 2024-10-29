@@ -6,12 +6,8 @@
     "GGG"
   ],
   "key": {
-    "G": {
-      "tag": "c:nuggets/gold"
-    },
-    "F": {
-      "tag": "minecraft:fishes"
-    }
+    "G": "#c:nuggets/gold",
+    "F": "#minecraft:fishes"
   },
   "result": {
     "id": "foodtxf:golden_fish",

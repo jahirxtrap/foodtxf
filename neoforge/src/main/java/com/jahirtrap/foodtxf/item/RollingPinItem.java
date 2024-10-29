@@ -8,8 +8,8 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
 
 public class RollingPinItem extends Item {
-    public RollingPinItem() {
-        super(new Item.Properties().stacksTo(1).attributes(createAttributes()));
+    public RollingPinItem(Properties properties) {
+        super(properties.stacksTo(1).attributes(createAttributes()));
     }
 
     public static ItemAttributeModifiers createAttributes() {
@@ -22,12 +22,7 @@ public class RollingPinItem extends Item {
     }
 
     @Override
-    public boolean hasCraftingRemainingItem() {
-        return true;
-    }
-
-    @Override
-    public ItemStack getCraftingRemainingItem(ItemStack stack) {
+    public ItemStack getCraftingRemainder(ItemStack stack) {
         return stack;
     }
 }

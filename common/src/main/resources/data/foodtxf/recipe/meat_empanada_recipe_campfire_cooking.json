@@ -2,9 +2,7 @@
   "type": "minecraft:campfire_cooking",
   "experience": 0.35,
   "cookingtime": 600,
-  "ingredient": {
-    "item": "foodtxf:raw_meat_empanada"
-  },
+  "ingredient": "foodtxf:raw_meat_empanada",
   "result": {
     "id": "foodtxf:meat_empanada"
   }

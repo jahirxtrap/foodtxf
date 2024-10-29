@@ -27,11 +27,11 @@ public class PlayerDropsFleshKnifeEvent {
         if (isKnife(mainHandIst)) stack = mainHandIst;
         else if (isKnife(offHandIst)) stack = offHandIst;
 
-        Holder<Enchantment> faHolder = level.registryAccess().registryOrThrow(Registries.ENCHANTMENT).getHolderOrThrow(Enchantments.FIRE_ASPECT);
+        Holder<Enchantment> faHolder = level.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FIRE_ASPECT);
         int faLevel = EnchantmentHelper.getItemEnchantmentLevel(faHolder, stack);
         if (faLevel != 0) player.setRemainingFireTicks(20 * 4 * faLevel);
 
-        if (player.hurt(new DamageSource(level.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(SUICIDE)), 6)) {
+        if (player.hurtOrSimulate(new DamageSource(level.registryAccess().lookupOrThrow(Registries.DAMAGE_TYPE).getOrThrow(SUICIDE)), 6)) {
             stack.hurtAndBreak(1, player, LivingEntity.getSlotForHand(hand));
             level.addFreshEntity(dropFlesh(player, level, 1));
             return true;

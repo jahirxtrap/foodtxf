@@ -6,12 +6,8 @@
     "GGG"
   ],
   "key": {
-    "G": {
-      "tag": "c:nuggets/gold"
-    },
-    "C": {
-      "item": "minecraft:cooked_mutton"
-    }
+    "G": "#c:nuggets/gold",
+    "C": "minecraft:cooked_mutton"
   },
   "result": {
     "id": "foodtxf:golden_mutton",

@@ -2,9 +2,7 @@
   "type": "minecraft:smoking",
   "experience": 0.35,
   "cookingtime": 100,
-  "ingredient": {
-    "item": "minecraft:tropical_fish"
-  },
+  "ingredient": "minecraft:tropical_fish",
   "result": {
     "id": "foodtxf:cooked_tropical_fish"
   }

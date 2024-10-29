@@ -6,12 +6,8 @@
     "GGG"
   ],
   "key": {
-    "G": {
-      "tag": "c:nuggets/gold"
-    },
-    "B": {
-      "item": "minecraft:beetroot"
-    }
+    "G": "#c:nuggets/gold",
+    "B": "minecraft:beetroot"
   },
   "result": {
     "id": "foodtxf:golden_beetroot",

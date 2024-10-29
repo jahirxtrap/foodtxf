@@ -1,15 +1,9 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "tag": "foodtxf:water"
-    },
-    {
-      "item": "foodtxf:mixing_bowl"
-    },
-    {
-      "item": "minecraft:wheat"
-    }
+    "#foodtxf:water",
+    "foodtxf:mixing_bowl",
+    "minecraft:wheat"
   ],
   "result": {
     "id": "foodtxf:dough_ball",

@@ -1,15 +1,9 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "item": "foodtxf:toasted_bread_slice"
-    },
-    {
-      "item": "foodtxf:cheese_slice"
-    },
-    {
-      "item": "foodtxf:toasted_bread_slice"
-    }
+    "foodtxf:toasted_bread_slice",
+    "foodtxf:cheese_slice",
+    "foodtxf:toasted_bread_slice"
   ],
   "result": {
     "id": "foodtxf:cheese_sandwich",

@@ -6,21 +6,11 @@
     "ISI"
   ],
   "key": {
-    "G": {
-      "tag": "c:glass_blocks/colorless"
-    },
-    "D": {
-      "tag": "c:dusts/redstone"
-    },
-    "W": {
-      "tag": "minecraft:wooden_buttons"
-    },
-    "I": {
-      "tag": "c:ingots/iron"
-    },
-    "S": {
-      "tag": "c:storage_blocks/iron"
-    }
+    "G": "#c:glass_blocks/colorless",
+    "D": "#c:dusts/redstone",
+    "W": "#minecraft:wooden_buttons",
+    "I": "#c:ingots/iron",
+    "S": "#c:storage_blocks/iron"
   },
   "result": {
     "id": "foodtxf:blender",

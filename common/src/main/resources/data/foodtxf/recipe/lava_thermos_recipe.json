@@ -1,12 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "item": "foodtxf:thermos"
-    },
-    {
-      "tag": "c:buckets/lava"
-    }
+    "foodtxf:thermos",
+    "#c:buckets/lava"
   ],
   "result": {
     "id": "foodtxf:lava_thermos",

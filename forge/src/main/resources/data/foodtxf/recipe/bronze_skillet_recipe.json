@@ -6,12 +6,8 @@
     "R  "
   ],
   "key": {
-    "I": {
-      "tag": "c:ingots/bronze"
-    },
-    "R": {
-      "tag": "c:rods/wooden"
-    }
+    "I": "#c:ingots/bronze",
+    "R": "#c:rods/wooden"
   },
   "result": {
     "id": "foodtxf:bronze_skillet",

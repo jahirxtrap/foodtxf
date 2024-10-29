@@ -1,12 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "item": "foodtxf:glass_of_chocomilk"
-    },
-    {
-      "item": "foodtxf:toasted_bread"
-    }
+    "foodtxf:glass_of_chocomilk",
+    "foodtxf:toasted_bread"
   ],
   "result": {
     "id": "foodtxf:glass_of_chocomilk_and_toasted_bread",

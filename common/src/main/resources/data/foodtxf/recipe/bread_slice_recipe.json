@@ -1,12 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "tag": "foodtxf:knives"
-    },
-    {
-      "item": "minecraft:bread"
-    }
+    "#foodtxf:knives",
+    "minecraft:bread"
   ],
   "result": {
     "id": "foodtxf:bread_slice",

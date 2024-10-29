@@ -1,12 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "item": "foodtxf:fruit_salad"
-    },
-    {
-      "item": "foodtxf:vegetable_salad"
-    }
+    "foodtxf:fruit_salad",
+    "foodtxf:vegetable_salad"
   ],
   "result": {
     "id": "foodtxf:mixed_salad",

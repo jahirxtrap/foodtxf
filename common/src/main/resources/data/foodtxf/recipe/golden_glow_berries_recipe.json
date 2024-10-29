@@ -6,12 +6,8 @@
     "GGG"
   ],
   "key": {
-    "G": {
-      "tag": "c:nuggets/gold"
-    },
-    "L": {
-      "item": "minecraft:glow_berries"
-    }
+    "G": "#c:nuggets/gold",
+    "L": "minecraft:glow_berries"
   },
   "result": {
     "id": "foodtxf:golden_glow_berries",

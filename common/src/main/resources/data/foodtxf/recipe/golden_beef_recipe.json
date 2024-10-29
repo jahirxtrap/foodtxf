@@ -6,12 +6,8 @@
     "GGG"
   ],
   "key": {
-    "G": {
-      "tag": "c:nuggets/gold"
-    },
-    "C": {
-      "item": "minecraft:cooked_beef"
-    }
+    "G": "#c:nuggets/gold",
+    "C": "minecraft:cooked_beef"
   },
   "result": {
     "id": "foodtxf:golden_beef",

@@ -8,14 +8,14 @@ import net.minecraft.world.item.ItemStack;
 public class BaseFoodItem extends Item {
     private int useDuration = 32;
 
-    public BaseFoodItem(int nutrition, float saturation) {
-        super(new Item.Properties().stacksTo(64)
+    public BaseFoodItem(int nutrition, float saturation, Properties properties) {
+        super(properties.stacksTo(64)
                 .food((new FoodProperties.Builder()).nutrition(nutrition).saturationModifier(saturation)
                         .build()));
     }
 
-    public BaseFoodItem(int nutrition, float saturation, int useDuration) {
-        this(nutrition, saturation);
+    public BaseFoodItem(int nutrition, float saturation, int useDuration, Properties properties) {
+        this(nutrition, saturation, properties);
         this.useDuration = useDuration;
     }
 

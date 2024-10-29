@@ -1,15 +1,9 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "tag": "foodtxf:knives"
-    },
-    {
-      "tag": "foodtxf:cutting_boards"
-    },
-    {
-      "item": "foodtxf:cheese"
-    }
+    "#foodtxf:knives",
+    "#foodtxf:cutting_boards",
+    "foodtxf:cheese"
   ],
   "result": {
     "id": "foodtxf:cheese_slice",

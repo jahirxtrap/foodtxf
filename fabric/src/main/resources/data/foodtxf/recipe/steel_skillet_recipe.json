@@ -6,12 +6,8 @@
     "R  "
   ],
   "key": {
-    "I": {
-      "tag": "c:ingots/steel"
-    },
-    "R": {
-      "tag": "c:rods/wooden"
-    }
+    "I": "#c:ingots/steel",
+    "R": "#c:rods/wooden"
   },
   "result": {
     "id": "foodtxf:steel_skillet",

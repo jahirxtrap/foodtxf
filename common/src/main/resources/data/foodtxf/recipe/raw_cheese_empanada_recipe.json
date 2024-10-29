@@ -1,15 +1,9 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "item": "foodtxf:cheese_slice"
-    },
-    {
-      "item": "foodtxf:dough_ball"
-    },
-    {
-      "item": "foodtxf:rolling_pin"
-    }
+    "foodtxf:cheese_slice",
+    "foodtxf:dough_ball",
+    "foodtxf:rolling_pin"
   ],
   "result": {
     "id": "foodtxf:raw_cheese_empanada",

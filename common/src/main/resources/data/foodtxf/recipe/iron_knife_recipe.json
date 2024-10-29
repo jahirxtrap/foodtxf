@@ -5,12 +5,8 @@
     "R "
   ],
   "key": {
-    "I": {
-      "tag": "c:ingots/iron"
-    },
-    "R": {
-      "tag": "c:rods/wooden"
-    }
+    "I": "#c:ingots/iron",
+    "R": "#c:rods/wooden"
   },
   "result": {
     "id": "foodtxf:iron_knife",

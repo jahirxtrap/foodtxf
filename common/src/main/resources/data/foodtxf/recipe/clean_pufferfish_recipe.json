@@ -1,15 +1,9 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "tag": "foodtxf:knives"
-    },
-    {
-      "tag": "foodtxf:cutting_boards"
-    },
-    {
-      "item": "minecraft:pufferfish"
-    }
+    "#foodtxf:knives",
+    "#foodtxf:cutting_boards",
+    "minecraft:pufferfish"
   ],
   "result": {
     "id": "foodtxf:clean_pufferfish",

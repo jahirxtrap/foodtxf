@@ -6,12 +6,8 @@
     "GGG"
   ],
   "key": {
-    "G": {
-      "tag": "c:nuggets/gold"
-    },
-    "C": {
-      "item": "minecraft:cooked_porkchop"
-    }
+    "G": "#c:nuggets/gold",
+    "C": "minecraft:cooked_porkchop"
   },
   "result": {
     "id": "foodtxf:golden_porkchop",

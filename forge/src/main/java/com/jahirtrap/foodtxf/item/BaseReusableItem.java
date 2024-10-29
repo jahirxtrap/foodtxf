@@ -4,17 +4,12 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
 public class BaseReusableItem extends Item {
-    public BaseReusableItem() {
-        super(new Item.Properties().stacksTo(1));
+    public BaseReusableItem(Properties properties) {
+        super(properties.stacksTo(1));
     }
 
     @Override
-    public boolean hasCraftingRemainingItem() {
-        return true;
-    }
-
-    @Override
-    public ItemStack getCraftingRemainingItem(ItemStack stack) {
+    public ItemStack getCraftingRemainder(ItemStack stack) {
         return stack;
     }
 }

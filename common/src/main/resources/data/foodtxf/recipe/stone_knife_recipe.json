@@ -5,12 +5,8 @@
     "R "
   ],
   "key": {
-    "S": {
-      "tag": "minecraft:stone_tool_materials"
-    },
-    "R": {
-      "tag": "c:rods/wooden"
-    }
+    "S": "#minecraft:stone_tool_materials",
+    "R": "#c:rods/wooden"
   },
   "result": {
     "id": "foodtxf:stone_knife",

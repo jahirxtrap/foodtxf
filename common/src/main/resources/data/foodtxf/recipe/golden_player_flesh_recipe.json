@@ -6,12 +6,8 @@
     "GGG"
   ],
   "key": {
-    "G": {
-      "tag": "c:nuggets/gold"
-    },
-    "C": {
-      "item": "foodtxf:cooked_player_flesh"
-    }
+    "G": "#c:nuggets/gold",
+    "C": "foodtxf:cooked_player_flesh"
   },
   "result": {
     "id": "foodtxf:golden_player_flesh",
