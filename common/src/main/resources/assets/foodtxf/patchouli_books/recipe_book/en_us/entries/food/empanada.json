@@ -11,8 +11,8 @@
     },
     {
       "type": "patchouli:smelting",
-      "recipe": "foodtxf:cheese_empanada_recipe_furnace",
-      "recipe2": "foodtxf:meat_empanada_recipe_furnace",
+      "recipe": "foodtxf:cheese_empanada_recipe_smelting",
+      "recipe2": "foodtxf:meat_empanada_recipe_smelting",
       "title": " "
     }
   ]

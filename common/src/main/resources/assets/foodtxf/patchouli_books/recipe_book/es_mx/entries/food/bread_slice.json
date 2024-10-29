@@ -11,13 +11,13 @@
     },
     {
       "type": "patchouli:smelting",
-      "recipe": "foodtxf:toasted_bread_slice_recipe_furnace",
+      "recipe": "foodtxf:toasted_bread_slice_recipe_smelting",
       "title": " "
     },
     {
       "type": "patchouli:crafting",
       "recipe": "foodtxf:golden_bread_slice_recipe",
-      "recipe2": "foodtxf:golden_bread_slice_recipe_alt",
+      "recipe2": "foodtxf:golden_bread_slice_recipe_1",
       "title": " "
     },
     {
