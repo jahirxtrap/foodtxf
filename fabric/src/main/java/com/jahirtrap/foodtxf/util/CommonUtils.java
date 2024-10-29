@@ -4,12 +4,9 @@ import com.jahirtrap.foodtxf.init.ModContent;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.component.DataComponents;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.Style;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -62,9 +59,5 @@ public class CommonUtils {
         if (stack.getDamageValue() >= stack.getMaxDamage()) stack.shrink(1);
 
         return stack;
-    }
-
-    public static TagKey<Item> itemTag(String string) {
-        return TagKey.create(Registries.ITEM, ResourceLocation.parse(string));
     }
 }

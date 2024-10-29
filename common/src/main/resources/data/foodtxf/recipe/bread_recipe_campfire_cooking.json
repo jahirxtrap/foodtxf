@@ -1,11 +1,11 @@
 {
   "type": "minecraft:campfire_cooking",
-  "experience": 0,
+  "experience": 0.35,
   "cookingtime": 600,
   "ingredient": {
-    "item": "foodtxf:raw_cheese_empanada"
+    "item": "foodtxf:dough_ball"
   },
   "result": {
-    "id": "foodtxf:cheese_empanada"
+    "id": "minecraft:bread"
   }
 }

@@ -9,13 +9,11 @@ import net.minecraft.world.level.block.Block;
 
 import java.util.function.Supplier;
 
-import static com.jahirtrap.foodtxf.util.CommonUtils.itemTag;
-
 public enum ModTiers implements Tier {
     BREAD(BlockTags.INCORRECT_FOR_WOODEN_TOOL, 80, 2f, 1f, 15, () -> Ingredient.of(Items.BREAD)),
-    STEEL(BlockTags.INCORRECT_FOR_IRON_TOOL, 501, 6.5f, 2f, 14, () -> Ingredient.of(itemTag("c:ingots/steel"))),
-    BRONZE(BlockTags.INCORRECT_FOR_IRON_TOOL, 350, 7f, 2f, 16, () -> Ingredient.of(itemTag("c:ingots/bronze"))),
-    ENDERITE(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 4096, 15f, 5f, 17, () -> Ingredient.of(itemTag("c:ingots/enderite")));
+    STEEL(BlockTags.INCORRECT_FOR_IRON_TOOL, 501, 6.5f, 2f, 14, () -> Ingredient.of(ModTags.Items.STEEL_INGOTS)),
+    BRONZE(BlockTags.INCORRECT_FOR_IRON_TOOL, 350, 7f, 2f, 16, () -> Ingredient.of(ModTags.Items.BRONZE_INGOTS)),
+    ENDERITE(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 4096, 15f, 5f, 17, () -> Ingredient.of(ModTags.Items.ENDERITE_INGOTS));
 
     private final TagKey<Block> incorrect;
     private final int uses;

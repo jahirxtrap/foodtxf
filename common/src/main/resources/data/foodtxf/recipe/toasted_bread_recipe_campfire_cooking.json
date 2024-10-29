@@ -1,11 +1,11 @@
 {
   "type": "minecraft:campfire_cooking",
-  "experience": 0,
+  "experience": 0.35,
   "cookingtime": 600,
   "ingredient": {
-    "item": "minecraft:beetroot"
+    "item": "minecraft:bread"
   },
   "result": {
-    "id": "foodtxf:cooked_beetroot"
+    "id": "foodtxf:toasted_bread"
   }
 }

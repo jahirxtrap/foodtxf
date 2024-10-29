@@ -1,11 +1,11 @@
 {
   "type": "minecraft:campfire_cooking",
-  "experience": 0,
+  "experience": 0.35,
   "cookingtime": 600,
   "ingredient": {
-    "item": "foodtxf:clean_pufferfish"
+    "item": "minecraft:beetroot"
   },
   "result": {
-    "id": "foodtxf:cooked_pufferfish"
+    "id": "foodtxf:cooked_beetroot"
   }
 }

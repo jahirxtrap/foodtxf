@@ -5,8 +5,8 @@
   "pages": [
     {
       "type": "patchouli:smelting",
-      "recipe": "foodtxf:bread_recipe_furnace",
-      "recipe2": "foodtxf:toasted_bread_recipe_furnace",
+      "recipe": "foodtxf:bread_recipe_smelting",
+      "recipe2": "foodtxf:toasted_bread_recipe_smelting",
       "title": " "
     },
     {
