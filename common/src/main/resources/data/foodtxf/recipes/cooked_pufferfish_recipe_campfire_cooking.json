@@ -1,11 +1,11 @@
 {
   "type": "minecraft:campfire_cooking",
-  "experience": 0,
+  "experience": 0.35,
   "cookingtime": 600,
   "ingredient": {
-    "item": "foodtxf:dough_ball"
+    "item": "foodtxf:clean_pufferfish"
   },
   "result": {
-    "id": "minecraft:bread"
+    "id": "foodtxf:cooked_pufferfish"
   }
 }

@@ -11,8 +11,8 @@
     },
     {
       "type": "patchouli:smelting",
-      "recipe": "foodtxf:cooked_pufferfish_recipe_furnace",
-      "recipe2": "foodtxf:cooked_tropical_fish_recipe_furnace",
+      "recipe": "foodtxf:cooked_pufferfish_recipe_smelting",
+      "recipe2": "foodtxf:cooked_tropical_fish_recipe_smelting",
       "title": " "
     },
     {

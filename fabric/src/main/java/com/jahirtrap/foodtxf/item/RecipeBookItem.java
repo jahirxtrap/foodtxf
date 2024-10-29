@@ -32,7 +32,7 @@ public class RecipeBookItem extends Item {
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, TooltipContext tooltipContext, List<Component> tooltip, TooltipFlag tooltipFlag) {
+    public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltip, TooltipFlag tooltipFlag) {
         if (!FabricLoader.getInstance().isModLoaded("patchouli")) {
             tooltip.add(Component.translatable("tooltip.foodtxf.patchouli").withStyle(ChatFormatting.GRAY));
         } else {
