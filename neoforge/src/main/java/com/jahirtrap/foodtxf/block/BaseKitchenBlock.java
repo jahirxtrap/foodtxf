@@ -7,9 +7,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.MapColor;
 import net.neoforged.fml.ModList;
 import org.jetbrains.annotations.Nullable;
 
@@ -18,8 +15,8 @@ import java.util.List;
 import static com.jahirtrap.foodtxf.util.CommonUtils.coloredTextComponent;
 
 public class BaseKitchenBlock extends Block {
-    public BaseKitchenBlock() {
-        super(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).sound(SoundType.STONE).strength(0.8f, 3f).lightLevel($ -> 0).requiresCorrectToolForDrops());
+    public BaseKitchenBlock(Properties properties) {
+        super(properties);
     }
 
     @Override

@@ -1,9 +1,9 @@
 {
   "type": "minecraft:campfire_cooking",
-  "experience": 0,
+  "experience": 0.35,
   "cookingtime": 600,
   "ingredient": {
-    "item": "foodtxf:dough_ball"
+    "item": "minecraft:bread"
   },
-  "result": "minecraft:bread"
+  "result": "foodtxf:toasted_bread"
 }

@@ -6,13 +6,11 @@ import net.minecraft.world.item.crafting.Ingredient;
 
 import java.util.function.Supplier;
 
-import static com.jahirtrap.foodtxf.util.CommonUtils.itemTag;
-
 public enum ModTiers implements Tier {
     BREAD(0, 80, 2f, 1f, 15, () -> Ingredient.of(Items.BREAD)),
-    STEEL(2, 501, 6.5f, 2f, 14, () -> Ingredient.of(itemTag("forge:ingots/steel"))),
-    BRONZE(2, 350, 7f, 2f, 16, () -> Ingredient.of(itemTag("forge:ingots/bronze"))),
-    ENDERITE(4, 4096, 15f, 5f, 17, () -> Ingredient.of(itemTag("forge:ingots/enderite")));
+    STEEL(2, 501, 6.5f, 2f, 14, () -> Ingredient.of(ModTags.Items.STEEL_INGOTS)),
+    BRONZE(2, 350, 7f, 2f, 16, () -> Ingredient.of(ModTags.Items.BRONZE_INGOTS)),
+    ENDERITE(4, 4096, 15f, 5f, 17, () -> Ingredient.of(ModTags.Items.ENDERITE_INGOTS));
 
     private final int level;
     private final int uses;
