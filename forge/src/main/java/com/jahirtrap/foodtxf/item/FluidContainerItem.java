@@ -14,7 +14,7 @@ import net.minecraft.world.phys.BlockHitResult;
 public class FluidContainerItem extends BaseItem {
     private final int type;
 
-    public FluidContainerItem(Properties properties, int type) {
+    public FluidContainerItem(int type, Properties properties) {
         super(properties);
         this.type = type;
     }

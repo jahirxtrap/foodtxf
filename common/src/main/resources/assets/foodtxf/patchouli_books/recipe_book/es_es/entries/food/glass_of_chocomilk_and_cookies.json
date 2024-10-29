@@ -6,12 +6,12 @@
     {
       "type": "patchouli:crafting",
       "recipe": "foodtxf:glass_of_chocomilk_and_cookies_recipe",
-      "recipe2": "foodtxf:glass_of_chocomilk_and_cookies_recipe_alt",
+      "recipe2": "foodtxf:glass_of_chocomilk_and_cookies_recipe_1",
       "title": " "
     },
     {
       "type": "patchouli:crafting",
-      "recipe": "foodtxf:glass_of_chocomilk_and_cookies_recipe_alt_1",
+      "recipe": "foodtxf:glass_of_chocomilk_and_cookies_recipe_2",
       "title": " "
     }
   ]
