@@ -7,6 +7,9 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Tiers;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.material.MaterialColor;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
@@ -54,8 +57,8 @@ public class ModContent {
     public static final RegistryObject<Item> CHEESE_EMPANADA = registerItem("cheese_empanada", () -> new BaseFoodItem(9, 0.6f));
     public static final RegistryObject<Item> MEAT_EMPANADA = registerItem("meat_empanada", () -> new BaseFoodItem(9, 0.6f));
     public static final RegistryObject<Item> CHEESE_SANDWICH = registerItem("cheese_sandwich", () -> new BaseFoodItem(10, 0.7f));
-    public static final RegistryObject<Item> THERMOS = registerItem("thermos", () -> new FluidContainerItem(new Item.Properties(), 0));
-    public static final RegistryObject<Item> GLASS = registerItem("glass", () -> new FluidContainerItem(new Item.Properties(), 1));
+    public static final RegistryObject<Item> THERMOS = registerItem("thermos", () -> new FluidContainerItem(0));
+    public static final RegistryObject<Item> GLASS = registerItem("glass", () -> new FluidContainerItem(1));
     public static final RegistryObject<Item> BOX = registerItem("box", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> FRUIT_SALAD = registerItem("fruit_salad", () -> new ContainerFoodItem(1, 6, 0.65f));
     public static final RegistryObject<Item> VEGETABLE_SALAD = registerItem("vegetable_salad", () -> new ContainerFoodItem(1, 6, 0.65f));
@@ -97,17 +100,17 @@ public class ModContent {
     public static final RegistryObject<Item> STEEL_SKILLET = registerItem("steel_skillet", () -> new BaseSkilletItem(ModTiers.STEEL, new Item.Properties()));
     public static final RegistryObject<Item> BRONZE_SKILLET = registerItem("bronze_skillet", () -> new BaseSkilletItem(ModTiers.BRONZE, new Item.Properties()));
     public static final RegistryObject<Item> CUTTING_BOARD = registerItem("cutting_board", BaseReusableItem::new);
-    public static final RegistryObject<Item> MIXING_BOWL = registerItem("mixing_bowl", MixingBowlItem::new);
+    public static final RegistryObject<Item> MIXING_BOWL = registerItem("mixing_bowl", BaseReusableItem::new);
     public static final RegistryObject<Item> ROLLING_PIN = registerItem("rolling_pin", RollingPinItem::new);
     public static final RegistryObject<Item> JUICER = registerItem("juicer", JuicerItem::new);
     public static final RegistryObject<Item> BLENDER = registerItem("blender", BaseReusableItem::new);
-    public static final RegistryObject<Block> BLACK_KITCHEN_BLOCK = registerBlock("black_kitchen_block", BaseKitchenBlock::new, new Item.Properties());
-    public static final RegistryObject<Block> WHITE_KITCHEN_BLOCK = registerBlock("white_kitchen_block", BaseKitchenBlock::new, new Item.Properties());
+    public static final RegistryObject<Block> BLACK_KITCHEN_BLOCK = registerBlock("black_kitchen_block", () -> new BaseKitchenBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_BLACK).strength(0.8f, 3f).requiresCorrectToolForDrops()), new Item.Properties());
+    public static final RegistryObject<Block> WHITE_KITCHEN_BLOCK = registerBlock("white_kitchen_block", () -> new BaseKitchenBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.SNOW).strength(0.8f, 3f).requiresCorrectToolForDrops()), new Item.Properties());
     public static final RegistryObject<Item> RECIPE_BOOK = registerItem("recipe_book", RecipeBookItem::new);
 
-    public static RegistryObject<Block> registerBlock(String name, Supplier<Block> supplier, Item.Properties properties) {
+    public static RegistryObject<Block> registerBlock(String name, Supplier<Block> supplier, Item.Properties itemProp) {
         var blockReg = registerBlock(name, supplier);
-        registerItem(name, () -> new BlockItem(blockReg.get(), properties));
+        registerItem(name, () -> new BlockItem(blockReg.get(), itemProp));
         return blockReg;
     }
 

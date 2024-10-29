@@ -9,6 +9,9 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Tiers;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.material.MaterialColor;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -53,8 +56,8 @@ public class ModContent {
     public static final Item CHEESE_EMPANADA = registerItem("cheese_empanada", new BaseFoodItem(9, 0.6f));
     public static final Item MEAT_EMPANADA = registerItem("meat_empanada", new BaseFoodItem(9, 0.6f));
     public static final Item CHEESE_SANDWICH = registerItem("cheese_sandwich", new BaseFoodItem(10, 0.7f));
-    public static final Item THERMOS = registerItem("thermos", new FluidContainerItem(new Item.Properties(), 0));
-    public static final Item GLASS = registerItem("glass", new FluidContainerItem(new Item.Properties(), 1));
+    public static final Item THERMOS = registerItem("thermos", new FluidContainerItem(0));
+    public static final Item GLASS = registerItem("glass", new FluidContainerItem(1));
     public static final Item BOX = registerItem("box", new Item(new Item.Properties()));
     public static final Item FRUIT_SALAD = registerItem("fruit_salad", new ContainerFoodItem(1, 6, 0.65f));
     public static final Item VEGETABLE_SALAD = registerItem("vegetable_salad", new ContainerFoodItem(1, 6, 0.65f));
@@ -96,16 +99,16 @@ public class ModContent {
     public static final Item STEEL_SKILLET = registerItem("steel_skillet", new BaseSkilletItem(ModTiers.STEEL, new Item.Properties()));
     public static final Item BRONZE_SKILLET = registerItem("bronze_skillet", new BaseSkilletItem(ModTiers.BRONZE, new Item.Properties()));
     public static final Item CUTTING_BOARD = registerItem("cutting_board", new BaseReusableItem());
-    public static final Item MIXING_BOWL = registerItem("mixing_bowl", new MixingBowlItem());
+    public static final Item MIXING_BOWL = registerItem("mixing_bowl", new BaseReusableItem());
     public static final Item ROLLING_PIN = registerItem("rolling_pin", new RollingPinItem());
     public static final Item JUICER = registerItem("juicer", new JuicerItem());
     public static final Item BLENDER = registerItem("blender", new BaseReusableItem());
-    public static final Block BLACK_KITCHEN_BLOCK = registerBlock("black_kitchen_block", new BaseKitchenBlock(), new Item.Properties());
-    public static final Block WHITE_KITCHEN_BLOCK = registerBlock("white_kitchen_block", new BaseKitchenBlock(), new Item.Properties());
+    public static final Block BLACK_KITCHEN_BLOCK = registerBlock("black_kitchen_block", new BaseKitchenBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_BLACK).strength(0.8f, 3f).requiresCorrectToolForDrops()), new Item.Properties());
+    public static final Block WHITE_KITCHEN_BLOCK = registerBlock("white_kitchen_block", new BaseKitchenBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.SNOW).strength(0.8f, 3f).requiresCorrectToolForDrops()), new Item.Properties());
     public static final Item RECIPE_BOOK = registerItem("recipe_book", new RecipeBookItem());
 
-    public static Block registerBlock(String name, Block block, Item.Properties properties) {
-        registerItem(name, new BlockItem(block, properties));
+    public static Block registerBlock(String name, Block block, Item.Properties itemProp) {
+        registerItem(name, new BlockItem(block, itemProp));
         return registerBlock(name, block);
     }
 

@@ -5,7 +5,7 @@
   "pages": [
     {
       "type": "patchouli:smelting",
-      "recipe": "foodtxf:cooked_carrot_recipe_furnace",
+      "recipe": "foodtxf:cooked_carrot_recipe_smelting",
       "title": " "
     }
   ]
