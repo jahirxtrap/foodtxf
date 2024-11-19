@@ -16,7 +16,7 @@ public class PlayerDropsFleshEvent {
     @SubscribeEvent
     public static void onLivingDeath(LivingDeathEvent event) {
         if (ModConfig.enableCannibalism && ModConfig.playerDropFlesh)
-            if (event.getEntity() instanceof Player player) execute(player.level, player);
+            if (event.getEntity() instanceof Player player) execute(player.getLevel(), player);
     }
 
     private static void execute(Level level, Player player) {

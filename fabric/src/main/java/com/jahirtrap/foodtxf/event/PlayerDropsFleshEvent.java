@@ -13,7 +13,7 @@ public class PlayerDropsFleshEvent {
     public PlayerDropsFleshEvent() {
         ServerPlayerEvents.ALLOW_DEATH.register((player, damageSource, amount) -> {
             if (ModConfig.enableCannibalism && ModConfig.playerDropFlesh)
-                if (player != null) execute(player.level, player);
+                if (player != null) execute(player.getLevel(), player);
             return true;
         });
     }

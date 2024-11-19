@@ -45,7 +45,7 @@ public class CommonUtils {
     public static boolean checkCreativeMode(Player player) {
         if (player instanceof ServerPlayer serverPlayer)
             return serverPlayer.gameMode.getGameModeForPlayer() == GameType.CREATIVE;
-        else if (player.level.isClientSide())
+        else if (player.getLevel().isClientSide())
             return Minecraft.getInstance().getConnection().getPlayerInfo(player.getGameProfile().getId()).getGameMode() == GameType.CREATIVE;
 
         return false;
