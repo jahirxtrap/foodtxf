@@ -13,7 +13,7 @@ public class EntityDrinksEvent {
     private static void water(LivingEntity entity) {
         if (entity.isOnFire()) {
             entity.clearFire();
-            entity.playSound(SoundEvents.GENERIC_EXTINGUISH_FIRE, 1, 1);
+            entity.playSound(SoundEvents.GENERIC_EXTINGUISH_FIRE);
         }
     }
 

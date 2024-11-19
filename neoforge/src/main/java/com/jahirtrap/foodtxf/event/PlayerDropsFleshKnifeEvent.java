@@ -36,7 +36,7 @@ public class PlayerDropsFleshKnifeEvent {
             level.addFreshEntity(dropFlesh(player, level, 1));
             return true;
         } else if (checkCreativeMode(player)) {
-            level.playSound(null, player.blockPosition(), SoundEvents.PLAYER_HURT, SoundSource.PLAYERS, 1, 1);
+            level.playSound(null, player.blockPosition(), SoundEvents.PLAYER_HURT, SoundSource.PLAYERS);
             level.addFreshEntity(dropFlesh(player, level, 1));
             return true;
         }
