@@ -32,7 +32,7 @@ public class FluidContainerItem extends BaseItem {
 
     @Override
     public InteractionResult interactLivingEntity(ItemStack stack, Player player, LivingEntity target, InteractionHand hand) {
-        if (FillFluidEvent.execute(player.level, player, stack, target, null, hand, type))
+        if (FillFluidEvent.execute(player.getLevel(), player, stack, target, null, hand, type))
             return InteractionResult.SUCCESS;
 
         return super.interactLivingEntity(stack, player, target, hand);
