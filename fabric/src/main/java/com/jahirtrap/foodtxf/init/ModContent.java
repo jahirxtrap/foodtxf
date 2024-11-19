@@ -20,6 +20,7 @@ import static com.jahirtrap.foodtxf.FoodtxfMod.MODID;
 
 public class ModContent {
     public static final List<Item> ITEMS = new ArrayList<>();
+    public static final List<Item> EXCLUDE_ITEMS = new ArrayList<>();
 
     public static final Item PLAYER_FLESH = registerItem("player_flesh", new BaseFoodItem(4, 0.375f));
     public static final Item COOKED_PLAYER_FLESH = registerItem("cooked_player_flesh", new BaseFoodItem(8, 0.8f));
@@ -123,5 +124,6 @@ public class ModContent {
     }
 
     public static void init() {
+        EXCLUDE_ITEMS.add(BAGUETTE_SWORD);
     }
 }
