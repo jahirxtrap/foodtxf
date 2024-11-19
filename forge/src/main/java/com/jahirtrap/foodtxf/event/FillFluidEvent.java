@@ -72,7 +72,7 @@ public class FillFluidEvent {
             }
         } else if (!player.getInventory().add(result)) player.drop(result, false);
 
-        player.playSound(sound, 1, 1);
+        player.playSound(sound);
         return true;
     }
 }
