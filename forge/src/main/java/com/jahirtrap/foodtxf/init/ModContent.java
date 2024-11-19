@@ -15,6 +15,8 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.function.Function;
 
 import static com.jahirtrap.foodtxf.FoodtxfMod.MODID;
@@ -22,6 +24,7 @@ import static com.jahirtrap.foodtxf.FoodtxfMod.MODID;
 public class ModContent {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(Registries.BLOCK, MODID);
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(Registries.ITEM, MODID);
+    public static final List<RegistryObject<Item>> EXCLUDE_ITEMS = new ArrayList<>();
 
     public static final RegistryObject<Item> PLAYER_FLESH = registerItem("player_flesh", (p) -> new BaseFoodItem(4, 0.375f, p), new Item.Properties());
     public static final RegistryObject<Item> COOKED_PLAYER_FLESH = registerItem("cooked_player_flesh", (p) -> new BaseFoodItem(8, 0.8f, p), new Item.Properties());
@@ -124,6 +127,7 @@ public class ModContent {
     }
 
     public static void init(IEventBus bus) {
+        EXCLUDE_ITEMS.add(BAGUETTE_SWORD);
         BLOCKS.register(bus);
         ITEMS.register(bus);
     }
