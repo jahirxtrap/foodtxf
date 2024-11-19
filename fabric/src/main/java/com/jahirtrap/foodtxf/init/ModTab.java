@@ -16,7 +16,7 @@ public class ModTab {
             .icon(() -> new ItemStack(ModContent.NETHERITE_SKILLET))
             .displayItems((features, event) -> {
                 for (Item item : ModContent.ITEMS)
-                    event.accept(item);
+                    if (!ModContent.EXCLUDE_ITEMS.contains(item)) event.accept(item);
             })
             .title(Component.translatable("itemGroup.foodtxf.tab_foodtxf"))
             .build();
