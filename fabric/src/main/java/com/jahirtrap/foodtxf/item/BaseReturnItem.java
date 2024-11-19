@@ -28,7 +28,7 @@ public class BaseReturnItem extends Item {
         if (stack.isEmpty()) {
             return retVal;
         } else {
-            if (entity instanceof Player player && !player.getAbilities().instabuild) {
+            if (entity instanceof Player player && !player.hasInfiniteMaterials()) {
                 if (!player.getInventory().add(retVal)) player.drop(retVal, false);
             }
             return stack;

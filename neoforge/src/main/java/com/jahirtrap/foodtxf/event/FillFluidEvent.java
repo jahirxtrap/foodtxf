@@ -58,21 +58,21 @@ public class FillFluidEvent {
     }
 
     private static boolean fillItem(Player player, ItemStack result, ItemStack stack, InteractionHand hand, Map<ItemStack, Integer> addition, SoundEvent sound) {
-        if (!player.getAbilities().instabuild) {
+        if (!player.hasInfiniteMaterials()) {
             if (!addition.isEmpty()) {
                 ItemStack key = addition.keySet().iterator().next();
                 if (key.getCount() < addition.get(key)) return false;
-                key.shrink(addition.get(key));
+                key.consume(addition.get(key), player);
             }
             if (stack.getCount() == 1) {
                 player.setItemInHand(hand, result);
             } else {
-                stack.shrink(1);
+                stack.consume(1, player);
                 if (!player.getInventory().add(result)) player.drop(result, false);
             }
         } else if (!player.getInventory().add(result)) player.drop(result, false);
 
-        player.playSound(sound, 1, 1);
+        player.playSound(sound);
         return true;
     }
 }

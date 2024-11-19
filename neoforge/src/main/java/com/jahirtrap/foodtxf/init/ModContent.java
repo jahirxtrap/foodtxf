@@ -13,6 +13,8 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.function.Supplier;
 
 import static com.jahirtrap.foodtxf.FoodtxfMod.MODID;
@@ -20,6 +22,7 @@ import static com.jahirtrap.foodtxf.FoodtxfMod.MODID;
 public class ModContent {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(MODID);
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MODID);
+    public static final List<DeferredItem<Item>> EXCLUDE_ITEMS = new ArrayList<>();
 
     public static final DeferredItem<Item> PLAYER_FLESH = registerItem("player_flesh", () -> new BaseFoodItem(4, 0.375f));
     public static final DeferredItem<Item> COOKED_PLAYER_FLESH = registerItem("cooked_player_flesh", () -> new BaseFoodItem(8, 0.8f));
@@ -122,6 +125,7 @@ public class ModContent {
     }
 
     public static void init(IEventBus bus) {
+        EXCLUDE_ITEMS.add(BAGUETTE_SWORD);
         BLOCKS.register(bus);
         ITEMS.register(bus);
     }
