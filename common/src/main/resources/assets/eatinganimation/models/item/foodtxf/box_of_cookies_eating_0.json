@@ -1,6 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "eatinganimation:item/foodtxf/box_of_cookies_eating_0"
+    "layer0": "eatinganimation:item/foodtxf/box_of_cookies_eating_0",
+    "particle": "eatinganimation:item/foodtxf/particle/cookies_eating_0"
   }
 }
