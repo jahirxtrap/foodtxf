@@ -32,11 +32,11 @@ Some useful food & cannibalism
 - Kitchen Block (Black, White, shows tooltip if <a href="https://www.curseforge.com/minecraft/mc-mods/cooking-for-blockheads" target="_blank">Cooking For Blockheads mod</a> is loaded)
 - Player Flesh (Raw, Cooked, Golden) => Can be obtained when player dies or by shifting and right clicking with a knife in hand, credits to <a href="https://www.curseforge.com/minecraft/mc-mods/cannibalism" target="_blank">Cannibalism mod</a>
 - Recipe Book (if <a href="https://www.curseforge.com/minecraft/mc-mods/patchouli" target="_blank">Patchouli mod</a> is loaded) => Book + Toasted Bread
+- Eating animations for all food
 
 <strong>Compatible with:</strong>
 
 - <a href="https://www.curseforge.com/minecraft/mc-mods/better-combat-by-daedelus" target="_blank">Better Combat mod</a>
-- <a href="https://www.curseforge.com/minecraft/mc-mods/eating-animation-forge" target="_blank">Eating Animation mod</a>
 - <a href="https://www.curseforge.com/minecraft/mc-mods/enderite-mod-for-forge" target="_blank">Enderite mod</a>
 - <a href="https://www.curseforge.com/minecraft/mc-mods/ingotcraft" target="_blank">IngotCraft mod</a>
 - <a href="https://www.curseforge.com/minecraft/mc-mods/patchouli" target="_blank">Patchoulli mod</a>
