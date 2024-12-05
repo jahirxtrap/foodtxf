@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "foodtxf:item/box_of_cookies_eating_2",
+    "particle": "foodtxf:item/particle/cookies_eating_2"
+  }
+}

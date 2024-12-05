@@ -1,7 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "eatinganimation:item/foodtxf/glass_of_chocomilk_and_toasted_bread_eating_1",
-    "particle": "eatinganimation:item/foodtxf/particle/toasted_bread_eating_1"
-  }
-}

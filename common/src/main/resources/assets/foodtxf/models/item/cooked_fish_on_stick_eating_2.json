@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "foodtxf:item/cooked_fish_on_stick_eating_2",
+    "particle": "foodtxf:item/particle/cooked_fish_eating_2"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "foodtxf:item/glass_of_water_and_bread",
+    "particle": "foodtxf:item/particle/bread"
+  }
+}

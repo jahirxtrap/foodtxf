@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "foodtxf:item/glass_of_chocomilk_and_toasted_bread_eating_2",
+    "particle": "foodtxf:item/particle/toasted_bread_eating_2"
+  }
+}

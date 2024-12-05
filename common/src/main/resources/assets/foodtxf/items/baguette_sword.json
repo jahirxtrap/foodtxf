@@ -1,0 +1,34 @@
+{
+  "model": {
+    "type": "minecraft:range_dispatch",
+    "property": "minecraft:use_duration",
+    "scale": 0.03125,
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "foodtxf:item/baguette"
+    },
+    "entries": [
+      {
+        "threshold": 1.35,
+        "model": {
+          "type": "minecraft:model",
+          "model": "foodtxf:item/baguette_eating_0"
+        }
+      },
+      {
+        "threshold": 1.7,
+        "model": {
+          "type": "minecraft:model",
+          "model": "foodtxf:item/baguette_eating_1"
+        }
+      },
+      {
+        "threshold": 1.9,
+        "model": {
+          "type": "minecraft:model",
+          "model": "foodtxf:item/baguette_eating_2"
+        }
+      }
+    ]
+  }
+}

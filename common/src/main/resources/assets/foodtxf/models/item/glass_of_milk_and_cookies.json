@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "foodtxf:item/glass_of_milk_and_cookies",
+    "particle": "foodtxf:item/particle/cookies"
+  }
+}

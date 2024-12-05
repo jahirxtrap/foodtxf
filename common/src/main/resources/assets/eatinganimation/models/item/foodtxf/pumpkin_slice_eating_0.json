@@ -1,6 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "eatinganimation:item/foodtxf/pumpkin_slice_eating_0"
-  }
-}

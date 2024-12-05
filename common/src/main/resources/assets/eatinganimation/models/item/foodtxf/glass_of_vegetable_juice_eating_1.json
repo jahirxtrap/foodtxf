@@ -1,6 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "eatinganimation:item/foodtxf/glass_of_vegetable_juice_eating_1"
-  }
-}

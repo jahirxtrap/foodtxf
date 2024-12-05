@@ -1,0 +1,34 @@
+{
+  "model": {
+    "type": "minecraft:range_dispatch",
+    "property": "minecraft:use_duration",
+    "scale": 0.03125,
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "foodtxf:item/golden_beetroot"
+    },
+    "entries": [
+      {
+        "threshold": 0.35,
+        "model": {
+          "type": "minecraft:model",
+          "model": "foodtxf:item/golden_beetroot_eating_0"
+        }
+      },
+      {
+        "threshold": 0.7,
+        "model": {
+          "type": "minecraft:model",
+          "model": "foodtxf:item/golden_beetroot_eating_1"
+        }
+      },
+      {
+        "threshold": 0.9,
+        "model": {
+          "type": "minecraft:model",
+          "model": "foodtxf:item/golden_beetroot_eating_2"
+        }
+      }
+    ]
+  }
+}

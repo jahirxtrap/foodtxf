@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "foodtxf:item/fruit_salad",
+    "particle": "foodtxf:item/particle/fruit_salad"
+  }
+}
