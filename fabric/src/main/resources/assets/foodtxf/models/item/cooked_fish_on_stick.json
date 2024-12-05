@@ -2,7 +2,7 @@
   "parent": "item/handheld",
   "textures": {
     "layer0": "foodtxf:item/cooked_fish_on_stick",
-    "particle": "foodtxf:item/particle/cooked_fish_on_stick"
+    "particle": "foodtxf:item/particle/cooked_fish"
   },
   "overrides": [
     {
