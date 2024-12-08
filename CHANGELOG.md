@@ -1,2 +1,1 @@
-- Update to 1.21.4
-- Eating animations now use the new vanilla item model system
+- Fixed sweep attack on knife and skillet
