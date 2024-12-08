@@ -1,1 +1,1 @@
-- Some fixes
+- Fixed sweep attack on knife and skillet
