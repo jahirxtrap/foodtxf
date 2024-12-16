@@ -1,1 +1,1 @@
-- Fixed sweep attack on knife and skillet
+- Update NeoForge version
