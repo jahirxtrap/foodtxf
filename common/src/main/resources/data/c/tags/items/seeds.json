@@ -4,6 +4,7 @@
     "#c:seeds/beetroot",
     "#c:seeds/melon",
     "#c:seeds/pumpkin",
+    "#c:seeds/rice",
     "#c:seeds/wheat",
     { "id": "chococraft:gysahl_green_seeds", "required": false }
   ]

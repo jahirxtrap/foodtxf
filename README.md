@@ -17,6 +17,7 @@ Some useful food & cannibalism
 - Glass (Empty, Water, Lava, Milk, Chocomilk, Water and Bread, Fruit Juice, Vegetable Juice, Mixed Juice, Milk and Cookies, Chocomilk and Cookies, Milk and Toasted Bread, Chocomilk and Toasted Bread)
 - Pufferfish (Clean, Cooked)
 - Pumpkin (Slice, Glistering Slice)
+- Rice (Crop, Ball, Bowl) => Trade with farmer villagers, it's planted underwater on dirt or mud blocks
 - Salad (Fruit, Vegetable, Mixed)
 - Sandwich (Cheese)
 - Stick (Fish, Cooked Fish)
@@ -58,6 +59,6 @@ Some useful food & cannibalism
 <details>
   <summary>Spoiler</summary>
 
-<img src="https://cdn.modrinth.com/data/gHfCZDqf/images/fccd825b190caa5aefcf534502f412981f53eeaa.png" width="500">
+<img src="https://cdn.modrinth.com/data/gHfCZDqf/images/16cc955a9997f110f03c347107816986442b88e1.png" width="500">
 
 </details>
