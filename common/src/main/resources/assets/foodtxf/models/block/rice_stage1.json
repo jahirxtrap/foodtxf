@@ -1,0 +1,6 @@
+{
+  "parent": "foodtxf:block/rice_crop",
+  "textures": {
+    "crop": "foodtxf:block/rice_stage1"
+  }
+}
