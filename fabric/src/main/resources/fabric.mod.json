@@ -17,6 +17,9 @@
 	"entrypoints": {
 		"main": [
 			"com.jahirtrap.foodtxf.FoodtxfMod"
+		],
+		"client": [
+			"com.jahirtrap.foodtxf.FoodtxfClient"
 		]
 	},
 	"mixins": [
