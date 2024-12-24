@@ -1,5 +1,6 @@
 {
   "block.foodtxf.black_kitchen_block": "Bloque de cocina negro",
+  "block.foodtxf.rice": "Arroz",
   "block.foodtxf.white_kitchen_block": "Bloque de cocina blanco",
   "book.foodtxf.landing_text": "Libro de recetas Food TXF",
   "death.attack.suicide": "%1$s se ha suicidado",
@@ -76,6 +77,8 @@
   "item.foodtxf.raw_cheese_empanada": "Empanada de queso cruda",
   "item.foodtxf.raw_meat_empanada": "Empanada de carne cruda",
   "item.foodtxf.recipe_book": "Libro de recetas",
+  "item.foodtxf.rice_ball": "Bola de arroz",
+  "item.foodtxf.rice_bowl": "Bol de arroz",
   "item.foodtxf.rolling_pin": "Rodillo de cocina",
   "item.foodtxf.skillet": "Sartén",
   "item.foodtxf.steel_knife": "Cuchillo de acero",

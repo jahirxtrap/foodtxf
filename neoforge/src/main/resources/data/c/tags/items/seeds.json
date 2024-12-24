@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "#c:seeds/rice",
     { "id": "chococraft:gysahl_green_seeds", "required": false }
   ]
 }
