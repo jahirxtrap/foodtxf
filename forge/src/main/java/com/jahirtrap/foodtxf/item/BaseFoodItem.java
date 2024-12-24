@@ -9,8 +9,7 @@ public class BaseFoodItem extends Item {
 
     public BaseFoodItem(int nutrition, float saturation) {
         super(new Item.Properties().stacksTo(64)
-                .food((new FoodProperties.Builder()).nutrition(nutrition).saturationMod(saturation)
-                        .build()));
+                .food(new FoodProperties.Builder().nutrition(nutrition).saturationMod(saturation).build()));
     }
 
     public BaseFoodItem(int nutrition, float saturation, int useDuration) {

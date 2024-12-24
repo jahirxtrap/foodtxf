@@ -9,8 +9,7 @@ import net.minecraft.world.item.SwordItem;
 public class BaguetteItem extends SwordItem {
     public BaguetteItem() {
         super(ModTiers.BREAD, 3, -2.4F, new Item.Properties()
-                .food((new FoodProperties.Builder()).nutrition(15).saturationMod(0.6f)
-                        .build()));
+                .food(new FoodProperties.Builder().nutrition(15).saturationMod(0.6f).build()));
     }
 
     @Override

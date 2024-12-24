@@ -16,7 +16,7 @@ public class ModTab {
         CreativeModeTab TAB_FOOD_TXF = register.registerCreativeModeTab(new ResourceLocation(MODID, "tab_foodtxf"), builder -> builder.icon(() -> new ItemStack(ModContent.NETHERITE_SKILLET.get()))
                 .displayItems((features, event) -> {
                     for (RegistryObject<Item> item : ModContent.ITEMS.getEntries())
-                        if (!ModContent.EXCLUDE_ITEMS.contains(item)) event.accept(item.get());
+                        if (!ModContent.EXCLUDED_ITEMS.contains(item)) event.accept(item.get());
                 })
                 .title(Component.translatable("itemGroup.foodtxf.tab_foodtxf"))
                 .build());
