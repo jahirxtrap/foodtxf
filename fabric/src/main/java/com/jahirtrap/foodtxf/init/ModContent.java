@@ -1,37 +1,50 @@
 package com.jahirtrap.foodtxf.init;
 
 import com.jahirtrap.foodtxf.block.BaseKitchenBlock;
+import com.jahirtrap.foodtxf.block.RiceCropBlock;
 import com.jahirtrap.foodtxf.item.*;
+import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tiers;
+import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Optional;
 
 import static com.jahirtrap.foodtxf.FoodtxfMod.MODID;
+import static net.minecraft.world.level.block.ComposterBlock.COMPOSTABLES;
 
 public class ModContent {
     public static final List<Item> ITEMS = new ArrayList<>();
-    public static final List<Item> EXCLUDE_ITEMS = new ArrayList<>();
+    public static final List<Item> EXCLUDED_ITEMS = new ArrayList<>();
+    public static final HashMap<ItemLike, Float> COMPOSTABLE_ITEMS = new HashMap<>();
+    public static final HashMap<ItemLike, Integer> FUEL_ITEMS = new HashMap<>();
 
     public static final Item PLAYER_FLESH = registerItem("player_flesh", new BaseFoodItem(4, 0.375f));
     public static final Item COOKED_PLAYER_FLESH = registerItem("cooked_player_flesh", new BaseFoodItem(8, 0.8f));
     public static final Item CLEAN_PUFFERFISH = registerItem("clean_pufferfish", new BaseFoodItem(2, 0.1f));
     public static final Item COOKED_PUFFERFISH = registerItem("cooked_pufferfish", new BaseFoodItem(6, 0.85f));
     public static final Item COOKED_TROPICAL_FISH = registerItem("cooked_tropical_fish", new BaseFoodItem(6, 0.85f));
+    public static final Block RICE_CROP = registerBlock("rice", new RiceCropBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.WHEAT)), new Item.Properties());
+    public static final Item RICE_BALL = registerItem("rice_ball", new BaseFoodItem(6, 0.5f));
     public static final Item DOUGH_BALL = registerItem("dough_ball", new BaseFoodItem(2, 0.2f));
     public static final Item TOASTED_BREAD = registerItem("toasted_bread", new BaseFoodItem(8, 0.75f));
     public static final Item BREAD_SLICE = registerItem("bread_slice", new BaseFoodItem(4, 0.5f));
     public static final Item TOASTED_BREAD_SLICE = registerItem("toasted_bread_slice", new BaseFoodItem(6, 0.65f));
     public static final Item BAGUETTE = registerItem("baguette", new BaseFoodItem(15, 0.6f, 64));
-    public static final Item BAGUETTE_SWORD = registerItem("baguette_sword", new BaguetteItem());
+    public static final Item BAGUETTE_SWORD = registerItem("baguette_sword", new SwordItem(ModTiers.BREAD, new Item.Properties().attributes(SwordItem.createAttributes(ModTiers.BREAD, 3, -2.4F)).food(new FoodProperties(15, 0.6f, false, 64 / 20f, Optional.empty(), List.of()))));
     public static final Item COOKED_CARROT = registerItem("cooked_carrot", new BaseFoodItem(5, 0.7f));
     public static final Item COOKED_BEETROOT = registerItem("cooked_beetroot", new BaseFoodItem(5, 0.6f));
     public static final Item PUMPKIN_SLICE = registerItem("pumpkin_slice", new BaseFoodItem(4, 0.35f));
@@ -62,6 +75,7 @@ public class ModContent {
     public static final Item FRUIT_SALAD = registerItem("fruit_salad", new ContainerFoodItem(1, 6, 0.65f));
     public static final Item VEGETABLE_SALAD = registerItem("vegetable_salad", new ContainerFoodItem(1, 6, 0.65f));
     public static final Item MIXED_SALAD = registerItem("mixed_salad", new ContainerFoodItem(1, 6, 0.65f));
+    public static final Item RICE_BOWL = registerItem("rice_bowl", new ContainerFoodItem(1, 6, 0.5f));
     public static final Item FISH_ON_STICK = registerItem("fish_on_stick", new ContainerFoodItem(3, 4, 0.25f));
     public static final Item COOKED_FISH_ON_STICK = registerItem("cooked_fish_on_stick", new ContainerFoodItem(3, 10, 0.7f));
     public static final Item WATER_THERMOS = registerItem("water_thermos", new ContainerFoodItem(1));
@@ -71,9 +85,9 @@ public class ModContent {
     public static final Item GLASS_OF_FRUIT_JUICE = registerItem("glass_of_fruit_juice", new ContainerFoodItem(2, 4, 0.75f, true));
     public static final Item GLASS_OF_VEGETABLE_JUICE = registerItem("glass_of_vegetable_juice", new ContainerFoodItem(2, 4, 0.75f, true));
     public static final Item GLASS_OF_MIXED_JUICE = registerItem("glass_of_mixed_juice", new ContainerFoodItem(2, 4, 0.75f, true));
-    public static final Item GLASS_OF_WATER = registerItem("glass_of_water", new ContainerFoodItem(2, 1, 1, true));
+    public static final Item GLASS_OF_WATER = registerItem("glass_of_water", new ContainerFoodItem(2, 1));
     public static final Item GLASS_OF_WATER_AND_BREAD = registerItem("glass_of_water_and_bread", new ContainerFoodItem(2, 6, 0.5f));
-    public static final Item GLASS_OF_LAVA = registerItem("glass_of_lava", new ContainerFoodItem(2, 1, 2, true));
+    public static final Item GLASS_OF_LAVA = registerItem("glass_of_lava", new ContainerFoodItem(2, 2));
     public static final Item GLASS_OF_MILK = registerItem("glass_of_milk", new ContainerFoodItem(2, 1, 0.5f, 3, true));
     public static final Item GLASS_OF_MILK_AND_COOKIES = registerItem("glass_of_milk_and_cookies", new ContainerFoodItem(2, 5, 0.2f));
     public static final Item GLASS_OF_MILK_AND_TOASTED_BREAD = registerItem("glass_of_milk_and_toasted_bread", new ContainerFoodItem(2, 10, 0.65f));
@@ -107,22 +121,44 @@ public class ModContent {
     public static final Block WHITE_KITCHEN_BLOCK = registerBlock("white_kitchen_block", new BaseKitchenBlock(BlockBehaviour.Properties.of().mapColor(MapColor.SNOW).strength(0.8f, 3f).requiresCorrectToolForDrops()), new Item.Properties());
     public static final Item RECIPE_BOOK = registerItem("recipe_book", new RecipeBookItem());
 
-    public static Block registerBlock(String name, Block block, Item.Properties itemProp) {
+    private static Block registerBlock(String name, Block block, Item.Properties itemProp) {
         registerItem(name, new BlockItem(block, itemProp));
         return registerBlock(name, block);
     }
 
-    public static Block registerBlock(String name, Block block) {
+    private static Block registerBlock(String name, Block block) {
         return Registry.register(BuiltInRegistries.BLOCK, ResourceLocation.fromNamespaceAndPath(MODID, name), block);
     }
 
-    public static Item registerItem(String name, Item item) {
+    private static Item registerItem(String name, Item item) {
         var itemReg = Registry.register(BuiltInRegistries.ITEM, ResourceLocation.fromNamespaceAndPath(MODID, name), item);
         ITEMS.add(itemReg);
         return itemReg;
     }
 
     public static void init() {
-        EXCLUDE_ITEMS.add(BAGUETTE_SWORD);
+        EXCLUDED_ITEMS.add(BAGUETTE_SWORD);
+
+        COMPOSTABLE_ITEMS.put(RICE_CROP, 0.3f);
+        COMPOSTABLE_ITEMS.put(RICE_BALL, 0.85f);
+        COMPOSTABLE_ITEMS.put(DOUGH_BALL, 0.65f);
+        COMPOSTABLE_ITEMS.put(TOASTED_BREAD, 1f);
+        COMPOSTABLE_ITEMS.put(BREAD_SLICE, 0.4f);
+        COMPOSTABLE_ITEMS.put(TOASTED_BREAD_SLICE, 0.75f);
+        COMPOSTABLE_ITEMS.put(BAGUETTE, 1f);
+        COMPOSTABLE_ITEMS.put(BAGUETTE_SWORD, 1f);
+        COMPOSTABLE_ITEMS.put(COOKED_CARROT, 0.85f);
+        COMPOSTABLE_ITEMS.put(COOKED_BEETROOT, 0.85f);
+        COMPOSTABLE_ITEMS.put(PUMPKIN_SLICE, 0.5f);
+        COMPOSTABLE_ITEMS.put(CHEESE, 0.65f);
+        COMPOSTABLE_ITEMS.put(CHEESE_SLICE, 0.3f);
+
+        FUEL_ITEMS.put(BOX, 200);
+        FUEL_ITEMS.put(WOODEN_KNIFE, 200);
+        FUEL_ITEMS.put(CUTTING_BOARD, 200);
+        FUEL_ITEMS.put(ROLLING_PIN, 300);
+
+        COMPOSTABLE_ITEMS.forEach((item, chance) -> COMPOSTABLES.put(item.asItem(), chance));
+        FUEL_ITEMS.forEach(FuelRegistry.INSTANCE::add);
     }
 }

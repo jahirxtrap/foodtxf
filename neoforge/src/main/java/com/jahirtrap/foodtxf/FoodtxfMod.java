@@ -4,6 +4,7 @@ import com.jahirtrap.configlib.TXFConfig;
 import com.jahirtrap.foodtxf.init.ModConfig;
 import com.jahirtrap.foodtxf.init.ModContent;
 import com.jahirtrap.foodtxf.init.ModTab;
+import com.jahirtrap.foodtxf.init.ModVillagerTrades;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 
@@ -16,5 +17,6 @@ public class FoodtxfMod {
         TXFConfig.init(MODID, ModConfig.class);
         ModContent.init(bus);
         ModTab.init(bus);
+        ModVillagerTrades.init(bus);
     }
 }
