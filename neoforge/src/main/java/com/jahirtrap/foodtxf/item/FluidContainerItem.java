@@ -22,7 +22,7 @@ public class FluidContainerItem extends Item {
     @Override
     public InteractionResult use(Level level, Player player, InteractionHand hand) {
         ItemStack stack = player.getItemInHand(hand);
-        BlockHitResult hitResult = FluidContainerItem.getPlayerPOVHitResult(level, player, ClipContext.Fluid.SOURCE_ONLY);
+        BlockHitResult hitResult = getPlayerPOVHitResult(level, player, ClipContext.Fluid.SOURCE_ONLY);
 
         if (FillFluidEvent.execute(level, player, stack, null, hitResult, hand, type))
             return InteractionResult.SUCCESS;

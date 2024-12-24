@@ -1,17 +1,23 @@
 package com.jahirtrap.foodtxf.item;
 
-import net.fabricmc.fabric.api.item.v1.FabricItem;
+import com.jahirtrap.foodtxf.event.EntityDrinksEvent;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.component.Consumables;
+import net.minecraft.world.level.Level;
 
 import static com.jahirtrap.foodtxf.util.CommonUtils.container;
 
-public class ContainerFoodItem extends BaseReturnItem implements FabricItem {
-    private final int itemRet;
+public class ContainerFoodItem extends Item {
+    private final int fluidType;
 
     public ContainerFoodItem(int itemRet, int nutrition, float saturation, int fluidType, int stack, boolean drink, Properties properties) {
-        super(container.get(itemRet), fluidType, stack, createProperties(nutrition, saturation, drink), drink, properties);
-        this.itemRet = itemRet;
+        super(properties.stacksTo(stack)
+                .food(createProperties(nutrition, saturation, drink), drink ? Consumables.DEFAULT_DRINK : Consumables.DEFAULT_FOOD)
+                .usingConvertsTo(container.get(itemRet)).craftRemainder(((itemRet == 0 || itemRet == 4) ? container.get(itemRet) : ItemStack.EMPTY.getItem())));
+        this.fluidType = fluidType;
     }
 
     public ContainerFoodItem(int itemRet, int nutrition, float saturation, int fluidType, boolean drink, Properties properties) {
@@ -26,8 +32,8 @@ public class ContainerFoodItem extends BaseReturnItem implements FabricItem {
         this(itemRet, nutrition, saturation, 0, 64, false, properties);
     }
 
-    public ContainerFoodItem(int itemRet, int nutrition, int fluidType, boolean drink, Properties properties) {
-        this(itemRet, nutrition, 0, fluidType, 64, drink, properties);
+    public ContainerFoodItem(int itemRet, int fluidType, Properties properties) {
+        this(itemRet, 0, 0, fluidType, 64, true, properties);
     }
 
     public ContainerFoodItem(int fluidType, Properties properties) {
@@ -43,8 +49,8 @@ public class ContainerFoodItem extends BaseReturnItem implements FabricItem {
     }
 
     @Override
-    public ItemStack getRecipeRemainder(ItemStack stack) {
-        if (itemRet == 0 || itemRet == 4) return new ItemStack(container.get(itemRet));
-        return ItemStack.EMPTY;
+    public ItemStack finishUsingItem(ItemStack stack, Level level, LivingEntity entity) {
+        EntityDrinksEvent.execute(entity, fluidType);
+        return super.finishUsingItem(stack, level, entity);
     }
 }

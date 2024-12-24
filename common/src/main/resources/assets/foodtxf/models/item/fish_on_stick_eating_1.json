@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:item/handheld",
+  "parent": "item/handheld",
   "textures": {
     "layer0": "foodtxf:item/fish_on_stick_eating_1",
     "particle": "foodtxf:item/particle/fish_eating_1"

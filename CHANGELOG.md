@@ -1,1 +1,3 @@
-- Update NeoForge version
+- Added Rice crop, Rice Ball, and Rice Bowl
+- Some items are now compostable and others are fuel
+- Internal changes

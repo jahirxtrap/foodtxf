@@ -9,14 +9,14 @@
     },
     "entries": [
       {
-        "threshold": 1.35,
+        "threshold": 0.4,
         "model": {
           "type": "minecraft:model",
           "model": "foodtxf:item/baguette_eating_0"
         }
       },
       {
-        "threshold": 1.7,
+        "threshold": 1.1,
         "model": {
           "type": "minecraft:model",
           "model": "foodtxf:item/baguette_eating_1"

@@ -1,5 +1,6 @@
 {
   "block.foodtxf.black_kitchen_block": "Black Kitchen Block",
+  "block.foodtxf.rice": "Rice",
   "block.foodtxf.white_kitchen_block": "White Kitchen Block",
   "book.foodtxf.landing_text": "Food TXF recipe book",
   "death.attack.suicide": "%1$s has committed suicide",
@@ -76,6 +77,8 @@
   "item.foodtxf.raw_cheese_empanada": "Raw Cheese Empanada",
   "item.foodtxf.raw_meat_empanada": "Raw Meat Empanada",
   "item.foodtxf.recipe_book": "Recipe Book",
+  "item.foodtxf.rice_ball": "Rice Ball",
+  "item.foodtxf.rice_bowl": "Rice Bowl",
   "item.foodtxf.rolling_pin": "Rolling Pin",
   "item.foodtxf.skillet": "Skillet",
   "item.foodtxf.steel_knife": "Steel Knife",
