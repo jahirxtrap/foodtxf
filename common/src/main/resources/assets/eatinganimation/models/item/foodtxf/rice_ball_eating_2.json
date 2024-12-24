@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "eatinganimation:item/foodtxf/rice_ball_eating_2"
+  }
+}

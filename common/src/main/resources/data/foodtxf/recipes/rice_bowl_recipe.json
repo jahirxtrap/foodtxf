@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "foodtxf:rice"
+    },
+    {
+      "item": "foodtxf:rice"
+    },
+    {
+      "item": "foodtxf:rice"
+    },
+    {
+      "item": "minecraft:bowl"
+    }
+  ],
+  "result": {
+    "item": "foodtxf:rice_bowl",
+    "count": 1
+  }
+}

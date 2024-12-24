@@ -1,0 +1,12 @@
+{
+  "name": "Rice Ball",
+  "icon": "foodtxf:rice_ball",
+  "category": "foodtxf:food",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "foodtxf:rice_ball_recipe",
+      "title": " "
+    }
+  ]
+}

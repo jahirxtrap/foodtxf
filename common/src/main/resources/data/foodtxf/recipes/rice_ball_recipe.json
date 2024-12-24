@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "foodtxf:rice"
+    },
+    {
+      "item": "foodtxf:rice"
+    },
+    {
+      "item": "foodtxf:rice"
+    },
+    {
+      "item": "minecraft:dried_kelp"
+    }
+  ],
+  "result": {
+    "item": "foodtxf:rice_ball",
+    "count": 1
+  }
+}
