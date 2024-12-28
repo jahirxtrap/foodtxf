@@ -10,6 +10,7 @@ import java.util.List;
 
 public class ModVillagerTrades {
     private static void addTrades(FMLCommonSetupEvent event) {
+        if (!ModConfig.addVillagerTrades) return;
         create(VillagerProfession.FARMER, 1, new VillagerTrades.ItemsForEmeralds(ModContent.RICE_CROP.get(), 1, 9, 16, 1));
     }
 
