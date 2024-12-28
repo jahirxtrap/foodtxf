@@ -3,6 +3,7 @@ package com.jahirtrap.foodtxf.init;
 import com.jahirtrap.foodtxf.block.BaseKitchenBlock;
 import com.jahirtrap.foodtxf.block.RiceCropBlock;
 import com.jahirtrap.foodtxf.item.*;
+import net.minecraft.world.food.FoodConstants;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -49,7 +50,7 @@ public class ModContent {
     public static final DeferredItem<Item> BREAD_SLICE = registerItem("bread_slice", () -> new BaseFoodItem(4, 0.5f));
     public static final DeferredItem<Item> TOASTED_BREAD_SLICE = registerItem("toasted_bread_slice", () -> new BaseFoodItem(6, 0.65f));
     public static final DeferredItem<Item> BAGUETTE = registerItem("baguette", () -> new BaseFoodItem(15, 0.6f, 64));
-    public static final DeferredItem<Item> BAGUETTE_SWORD = registerItem("baguette_sword", () -> new SwordItem(ModTiers.BREAD, new Item.Properties().attributes(SwordItem.createAttributes(ModTiers.BREAD, 3, -2.4F)).food(new FoodProperties(15, 0.6f, false, 64 / 20f, List.of()))));
+    public static final DeferredItem<Item> BAGUETTE_SWORD = registerItem("baguette_sword", () -> new SwordItem(ModTiers.BREAD, new Item.Properties().attributes(SwordItem.createAttributes(ModTiers.BREAD, 3, -2.4F)).food(new FoodProperties(15, FoodConstants.saturationByModifier(15, 0.6f), false, 64 / 20f, List.of()))));
     public static final DeferredItem<Item> COOKED_CARROT = registerItem("cooked_carrot", () -> new BaseFoodItem(5, 0.7f));
     public static final DeferredItem<Item> COOKED_BEETROOT = registerItem("cooked_beetroot", () -> new BaseFoodItem(5, 0.6f));
     public static final DeferredItem<Item> PUMPKIN_SLICE = registerItem("pumpkin_slice", () -> new BaseFoodItem(4, 0.35f));
