@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.food.FoodConstants;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -44,7 +45,7 @@ public class ModContent {
     public static final Item BREAD_SLICE = registerItem("bread_slice", new BaseFoodItem(4, 0.5f));
     public static final Item TOASTED_BREAD_SLICE = registerItem("toasted_bread_slice", new BaseFoodItem(6, 0.65f));
     public static final Item BAGUETTE = registerItem("baguette", new BaseFoodItem(15, 0.6f, 64));
-    public static final Item BAGUETTE_SWORD = registerItem("baguette_sword", new SwordItem(ModTiers.BREAD, new Item.Properties().attributes(SwordItem.createAttributes(ModTiers.BREAD, 3, -2.4F)).food(new FoodProperties(15, 0.6f, false, 64 / 20f, Optional.empty(), List.of()))));
+    public static final Item BAGUETTE_SWORD = registerItem("baguette_sword", new SwordItem(ModTiers.BREAD, new Item.Properties().attributes(SwordItem.createAttributes(ModTiers.BREAD, 3, -2.4F)).food(new FoodProperties(15, FoodConstants.saturationByModifier(15, 0.6f), false, 64 / 20f, Optional.empty(), List.of()))));
     public static final Item COOKED_CARROT = registerItem("cooked_carrot", new BaseFoodItem(5, 0.7f));
     public static final Item COOKED_BEETROOT = registerItem("cooked_beetroot", new BaseFoodItem(5, 0.6f));
     public static final Item PUMPKIN_SLICE = registerItem("pumpkin_slice", new BaseFoodItem(4, 0.35f));
