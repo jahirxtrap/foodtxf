@@ -8,6 +8,7 @@ import java.util.List;
 
 public class ModVillagerTrades {
     private static void addTrades() {
+        if (!ModConfig.addVillagerTrades) return;
         create(VillagerProfession.FARMER, 1, new VillagerTrades.ItemsForEmeralds(ModContent.RICE_CROP, 1, 9, 16, 1));
     }
 
