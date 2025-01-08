@@ -1,2 +1,1 @@
-- `addVillagerTrades` config option
 - Updated config lib
