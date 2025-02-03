@@ -4,8 +4,8 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
 public class BaseReusableItem extends Item {
-    public BaseReusableItem() {
-        super(new Item.Properties().stacksTo(1));
+    public BaseReusableItem(Properties properties) {
+        super(properties.stacksTo(1));
     }
 
     @Override
@@ -15,6 +15,6 @@ public class BaseReusableItem extends Item {
 
     @Override
     public ItemStack getCraftingRemainingItem(ItemStack stack) {
-        return stack;
+        return stack.copy();
     }
 }

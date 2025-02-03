@@ -1,22 +1,22 @@
 {
   "type": "minecraft:smithing_transform",
   "base": {
-    "item": "foodtxf:netherite_knife"
+    "item": "foodtxf:iron_skillet"
   },
   "addition": {
-    "item": "enderitemod:enderite_ingot"
+    "item": "kuromaterials:zurite_ingot"
   },
   "result": {
-    "item": "foodtxf:enderite_knife"
+    "item": "foodtxf:zurite_skillet"
   },
   "template": {
-    "item": "minecraft:netherite_upgrade_smithing_template"
+    "item": "kuromaterials:zurite_upgrade_smithing_template"
   },
   "fabric:load_conditions": [
     {
       "condition": "fabric:any_mod_loaded",
       "values": [
-        "enderitemod"
+        "kuromaterials"
       ]
     }
   ]

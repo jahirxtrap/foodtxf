@@ -9,6 +9,7 @@ public class ModTags {
     public interface Items {
         TagKey<Item> STEEL_INGOTS = create(new ResourceLocation("c:steel_ingots"));
         TagKey<Item> BRONZE_INGOTS = create(new ResourceLocation("c:bronze_ingots"));
+        TagKey<Item> ZURITE_INGOTS = create(new ResourceLocation("c:zurite_ingots"));
         TagKey<Item> ENDERITE_INGOTS = create(new ResourceLocation("c:enderite_ingots"));
 
         private static TagKey<Item> create(ResourceLocation name) {
