@@ -14,7 +14,7 @@ import static com.jahirtrap.foodtxf.util.CommonUtils.hurt;
 
 public class BaseKnifeItem extends SwordItem {
     public BaseKnifeItem(ToolMaterial material, Properties properties) {
-        super(material, 1f, -2f, properties);
+        super(material, 1f, -2f, properties.setNoCombineRepair());
     }
 
     @Override
@@ -29,10 +29,5 @@ public class BaseKnifeItem extends SwordItem {
     @Override
     public ItemStack getCraftingRemainder(ItemStack stack) {
         return hurt(1, stack);
-    }
-
-    @Override
-    public boolean isCombineRepairable(ItemStack stack) {
-        return false;
     }
 }

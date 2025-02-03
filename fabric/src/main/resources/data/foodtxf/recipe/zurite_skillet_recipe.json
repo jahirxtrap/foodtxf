@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:smithing_transform",
+  "base": "foodtxf:iron_skillet",
+  "addition": "kuromaterials:zurite_ingot",
+  "result": {
+    "id": "foodtxf:zurite_skillet"
+  },
+  "template": "kuromaterials:zurite_upgrade_smithing_template",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:any_mods_loaded",
+      "values": [
+        "kuromaterials"
+      ]
+    }
+  ]
+}
