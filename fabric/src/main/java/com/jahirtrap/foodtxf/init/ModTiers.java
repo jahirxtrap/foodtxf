@@ -10,6 +10,7 @@ public enum ModTiers implements Tier {
     BREAD(0, 80, 2f, 1f, 15, () -> Ingredient.of(Items.BREAD)),
     STEEL(2, 501, 6.5f, 2f, 14, () -> Ingredient.of(ModTags.Items.STEEL_INGOTS)),
     BRONZE(2, 350, 7f, 2f, 16, () -> Ingredient.of(ModTags.Items.BRONZE_INGOTS)),
+    ZURITE(4, 1320, 8.5f, 4f, 16, () -> Ingredient.of(ModTags.Items.ZURITE_INGOTS)),
     ENDERITE(4, 4096, 15f, 5f, 17, () -> Ingredient.of(ModTags.Items.ENDERITE_INGOTS));
 
     private final int level;

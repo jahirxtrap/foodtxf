@@ -5,8 +5,8 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
 public class BaseReusableItem extends BaseItem implements FabricItem {
-    public BaseReusableItem() {
-        super(new Item.Properties().stacksTo(1));
+    public BaseReusableItem(Properties properties) {
+        super(properties.stacksTo(1));
     }
 
     @Override
@@ -16,6 +16,6 @@ public class BaseReusableItem extends BaseItem implements FabricItem {
 
     @Override
     public ItemStack getRecipeRemainder(ItemStack stack) {
-        return stack;
+        return stack.copy();
     }
 }

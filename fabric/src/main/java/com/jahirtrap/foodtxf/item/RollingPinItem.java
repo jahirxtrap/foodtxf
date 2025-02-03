@@ -2,17 +2,15 @@ package com.jahirtrap.foodtxf.item;
 
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
-import net.fabricmc.fabric.api.item.v1.FabricItem;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
 
-public class RollingPinItem extends BaseItem implements FabricItem {
+public class RollingPinItem extends BaseReusableItem {
     public RollingPinItem() {
-        super(new Item.Properties().stacksTo(1));
+        super(new Item.Properties());
     }
 
     @Override
@@ -27,15 +25,5 @@ public class RollingPinItem extends BaseItem implements FabricItem {
             return builder.build();
         }
         return super.getDefaultAttributeModifiers(slot);
-    }
-
-    @Override
-    public boolean hasCraftingRemainingItem() {
-        return true;
-    }
-
-    @Override
-    public ItemStack getRecipeRemainder(ItemStack stack) {
-        return stack;
     }
 }
