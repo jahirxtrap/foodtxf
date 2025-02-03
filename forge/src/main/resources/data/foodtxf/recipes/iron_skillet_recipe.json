@@ -7,14 +7,14 @@
   ],
   "key": {
     "I": {
-      "tag": "c:ingots/iron"
+      "tag": "forge:ingots/iron"
     },
     "R": {
-      "tag": "c:rods/wooden"
+      "tag": "forge:rods/wooden"
     }
   },
   "result": {
-    "id": "foodtxf:skillet",
+    "id": "foodtxf:iron_skillet",
     "count": 1
   }
 }

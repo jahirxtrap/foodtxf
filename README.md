@@ -26,10 +26,10 @@ Some useful food & cannibalism
 - Blender (Iron)
 - Cutting Board (Wooden)
 - Juicer (Dripstone)
-- Knife (Wooden, Stone, Iron, Golden, Diamond, Netherite, Enderite, Steel, Bronze)
+- Knife (Wooden, Stone, Iron, Golden, Diamond, Netherite, Enderite, Steel, Bronze, Zurite)
 - Mixin Bowl (Stone)
 - Rolling Pin (Wooden)
-- Skillet (Iron, Golden, Diamond, Netherite, Enderite, Steel, Bronze)
+- Skillet (Iron, Golden, Diamond, Netherite, Enderite, Steel, Bronze, Zurite)
 - Kitchen Block (Black, White, shows tooltip if <a href="https://www.curseforge.com/minecraft/mc-mods/cooking-for-blockheads" target="_blank">Cooking For Blockheads mod</a> is loaded)
 - Player Flesh (Raw, Cooked, Golden) => Can be obtained when player dies or by shifting and right clicking with a knife in hand, credits to <a href="https://www.curseforge.com/minecraft/mc-mods/cannibalism" target="_blank">Cannibalism mod</a>
 - Recipe Book (if <a href="https://www.curseforge.com/minecraft/mc-mods/patchouli" target="_blank">Patchouli mod</a> is loaded) => Book + Toasted Bread
@@ -40,6 +40,7 @@ Some useful food & cannibalism
 - <a href="https://www.curseforge.com/minecraft/mc-mods/better-combat-by-daedelus" target="_blank">Better Combat mod</a>
 - <a href="https://www.curseforge.com/minecraft/mc-mods/enderite-mod-for-forge" target="_blank">Enderite mod</a>
 - <a href="https://www.curseforge.com/minecraft/mc-mods/ingotcraft" target="_blank">IngotCraft mod</a>
+- <a href="https://www.curseforge.com/minecraft/mc-mods/kuro-materials" target="_blank">Kuro Materials mod</a>
 - <a href="https://www.curseforge.com/minecraft/mc-mods/patchouli" target="_blank">Patchoulli mod</a>
 - <a href="https://www.curseforge.com/minecraft/mc-mods/cooking-for-blockheads" target="_blank">Cooking For Blockheads mod</a>
 - <a href="https://www.curseforge.com/minecraft/mc-mods/croptopia" target="_blank">Croptopia mod</a>
@@ -59,6 +60,6 @@ Some useful food & cannibalism
 <details>
   <summary>Spoiler</summary>
 
-<img src="https://cdn.modrinth.com/data/gHfCZDqf/images/16cc955a9997f110f03c347107816986442b88e1.png" width="500">
+<img src="https://cdn.modrinth.com/data/gHfCZDqf/images/11aaf6862fd7f645f2448cfcfa557eb459ddfe8a.png" width="500">
 
 </details>
