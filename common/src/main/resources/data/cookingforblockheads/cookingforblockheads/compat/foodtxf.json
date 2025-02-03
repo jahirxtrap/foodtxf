@@ -14,13 +14,15 @@
     "foodtxf:enderite_knife",
     "foodtxf:steel_knife",
     "foodtxf:bronze_knife",
-    "foodtxf:skillet",
+    "foodtxf:zurite_knife"
+    "foodtxf:iron_skillet",
     "foodtxf:golden_skillet",
     "foodtxf:diamond_skillet",
     "foodtxf:netherite_skillet",
     "foodtxf:enderite_skillet",
     "foodtxf:steel_skillet",
     "foodtxf:bronze_skillet",
+    "foodtxf:zurite_skillet"
     "foodtxf:rolling_pin"
   ],
   "water": [

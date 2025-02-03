@@ -1,11 +1,11 @@
 {
   "name": "Sartén",
-  "icon": "foodtxf:skillet",
+  "icon": "foodtxf:iron_skillet",
   "category": "foodtxf:tool",
   "pages": [
     {
       "type": "patchouli:crafting",
-      "recipe": "foodtxf:skillet_recipe",
+      "recipe": "foodtxf:iron_skillet_recipe",
       "recipe2": "foodtxf:golden_skillet_recipe",
       "title": " "
     },
