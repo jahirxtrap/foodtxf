@@ -10,6 +10,6 @@ public class BaseReusableItem extends Item {
 
     @Override
     public ItemStack getCraftingRemainder(ItemStack stack) {
-        return stack;
+        return stack.copy();
     }
 }

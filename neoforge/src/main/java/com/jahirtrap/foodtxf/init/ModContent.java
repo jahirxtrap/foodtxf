@@ -114,13 +114,15 @@ public class ModContent {
     public static final DeferredItem<Item> ENDERITE_KNIFE = registerItem("enderite_knife", (p) -> new BaseKnifeItem(ModMaterials.Tool.ENDERITE, p), new Item.Properties().fireResistant());
     public static final DeferredItem<Item> STEEL_KNIFE = registerItem("steel_knife", (p) -> new BaseKnifeItem(ModMaterials.Tool.STEEL, p), new Item.Properties());
     public static final DeferredItem<Item> BRONZE_KNIFE = registerItem("bronze_knife", (p) -> new BaseKnifeItem(ModMaterials.Tool.BRONZE, p), new Item.Properties());
-    public static final DeferredItem<Item> SKILLET = registerItem("skillet", (p) -> new BaseSkilletItem(ToolMaterial.IRON, p), new Item.Properties());
+    public static final DeferredItem<Item> ZURITE_KNIFE = registerItem("zurite_knife", (p) -> new BaseKnifeItem(ModMaterials.Tool.ZURITE, p), new Item.Properties().fireResistant());
+    public static final DeferredItem<Item> IRON_SKILLET = registerItem("iron_skillet", (p) -> new BaseSkilletItem(ToolMaterial.IRON, p), new Item.Properties());
     public static final DeferredItem<Item> GOLDEN_SKILLET = registerItem("golden_skillet", (p) -> new BaseSkilletItem(ToolMaterial.GOLD, p), new Item.Properties());
     public static final DeferredItem<Item> DIAMOND_SKILLET = registerItem("diamond_skillet", (p) -> new BaseSkilletItem(ToolMaterial.DIAMOND, p), new Item.Properties());
     public static final DeferredItem<Item> NETHERITE_SKILLET = registerItem("netherite_skillet", (p) -> new BaseSkilletItem(ToolMaterial.NETHERITE, p), new Item.Properties().fireResistant());
     public static final DeferredItem<Item> ENDERITE_SKILLET = registerItem("enderite_skillet", (p) -> new BaseSkilletItem(ModMaterials.Tool.ENDERITE, p), new Item.Properties().fireResistant());
     public static final DeferredItem<Item> STEEL_SKILLET = registerItem("steel_skillet", (p) -> new BaseSkilletItem(ModMaterials.Tool.STEEL, p), new Item.Properties());
     public static final DeferredItem<Item> BRONZE_SKILLET = registerItem("bronze_skillet", (p) -> new BaseSkilletItem(ModMaterials.Tool.BRONZE, p), new Item.Properties());
+    public static final DeferredItem<Item> ZURITE_SKILLET = registerItem("zurite_skillet", (p) -> new BaseSkilletItem(ModMaterials.Tool.ZURITE, p), new Item.Properties().fireResistant());
     public static final DeferredItem<Item> CUTTING_BOARD = registerItem("cutting_board", BaseReusableItem::new, new Item.Properties());
     public static final DeferredItem<Item> MIXING_BOWL = registerItem("mixing_bowl", BaseReusableItem::new, new Item.Properties());
     public static final DeferredItem<Item> ROLLING_PIN = registerItem("rolling_pin", RollingPinItem::new, new Item.Properties());
