@@ -2,12 +2,11 @@ package com.jahirtrap.foodtxf.item;
 
 import com.jahirtrap.foodtxf.util.ContainerItem;
 import net.fabricmc.fabric.api.item.v1.FabricItem;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
 public class BaseReusableItem extends BaseItem implements ContainerItem, FabricItem {
-    public BaseReusableItem() {
-        super(new Item.Properties().stacksTo(1));
+    public BaseReusableItem(Properties properties) {
+        super(properties.stacksTo(1));
     }
 
     @Override
@@ -17,6 +16,6 @@ public class BaseReusableItem extends BaseItem implements ContainerItem, FabricI
 
     @Override
     public ItemStack getContainerItem(ItemStack stack) {
-        return stack;
+        return stack.copy();
     }
 }

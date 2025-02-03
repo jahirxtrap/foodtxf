@@ -7,11 +7,10 @@ import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
 
-public class RollingPinItem extends BaseItem {
+public class RollingPinItem extends BaseReusableItem {
     public RollingPinItem() {
-        super(new Item.Properties().stacksTo(1));
+        super(new Item.Properties());
     }
 
     @Override
@@ -26,15 +25,5 @@ public class RollingPinItem extends BaseItem {
             return builder.build();
         }
         return super.getDefaultAttributeModifiers(slot);
-    }
-
-    @Override
-    public boolean hasContainerItem(ItemStack stack) {
-        return true;
-    }
-
-    @Override
-    public ItemStack getContainerItem(ItemStack stack) {
-        return stack;
     }
 }

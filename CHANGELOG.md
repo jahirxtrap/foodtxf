@@ -1,2 +1,2 @@
-- `addVillagerTrades` config option
-- Updated config lib
+- Kuro Materials mod compat
+- Fixed reusable items ([Issue #5](https://github.com/jahirxtrap/foodtxf/issues/5))
