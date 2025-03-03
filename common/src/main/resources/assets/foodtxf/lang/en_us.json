@@ -93,6 +93,5 @@
   "item.foodtxf.zurite_knife": "Zurite Knife",
   "item.foodtxf.zurite_skillet": "Zurite Skillet",
   "itemGroup.foodtxf.tab_foodtxf": "Food TXF",
-  "tooltip.foodtxf.patchouli": "Patchouli is not installed",
-  "foodtxf.config.title": "Food TXF"
+  "tooltip.foodtxf.patchouli": "Patchouli is not installed"
 }
