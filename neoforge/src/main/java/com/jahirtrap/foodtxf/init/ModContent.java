@@ -1,6 +1,5 @@
 package com.jahirtrap.foodtxf.init;
 
-import com.jahirtrap.foodtxf.block.BaseKitchenBlock;
 import com.jahirtrap.foodtxf.block.RiceCropBlock;
 import com.jahirtrap.foodtxf.item.*;
 import net.minecraft.core.registries.Registries;
@@ -9,7 +8,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.ToolMaterial;
 import net.minecraft.world.item.component.Consumables;
 import net.minecraft.world.level.ItemLike;
@@ -53,7 +51,7 @@ public class ModContent {
     public static final DeferredItem<Item> BREAD_SLICE = registerItem("bread_slice", (p) -> new BaseFoodItem(4, 0.5f, p), new Item.Properties());
     public static final DeferredItem<Item> TOASTED_BREAD_SLICE = registerItem("toasted_bread_slice", (p) -> new BaseFoodItem(6, 0.65f, p), new Item.Properties());
     public static final DeferredItem<Item> BAGUETTE = registerItem("baguette", (p) -> new BaseFoodItem(15, 0.6f, 64, p), new Item.Properties());
-    public static final DeferredItem<Item> BAGUETTE_SWORD = registerItem("baguette_sword", (p) -> new SwordItem(ModMaterials.Tool.BREAD, 3f, -2.4f, p), new Item.Properties().food(new FoodProperties.Builder().nutrition(15).saturationModifier(0.6f).build(), Consumables.defaultFood().consumeSeconds(64 / 20f).build()));
+    public static final DeferredItem<Item> BAGUETTE_SWORD = registerItem("baguette_sword", (p) -> new Item(p.sword(ModMaterials.Tool.BREAD, 3f, -2.4f)), new Item.Properties().food(new FoodProperties.Builder().nutrition(15).saturationModifier(0.6f).build(), Consumables.defaultFood().consumeSeconds(64 / 20f).build()));
     public static final DeferredItem<Item> COOKED_CARROT = registerItem("cooked_carrot", (p) -> new BaseFoodItem(5, 0.7f, p), new Item.Properties());
     public static final DeferredItem<Item> COOKED_BEETROOT = registerItem("cooked_beetroot", (p) -> new BaseFoodItem(5, 0.6f, p), new Item.Properties());
     public static final DeferredItem<Item> PUMPKIN_SLICE = registerItem("pumpkin_slice", (p) -> new BaseFoodItem(4, 0.35f, p), new Item.Properties());
@@ -128,8 +126,10 @@ public class ModContent {
     public static final DeferredItem<Item> ROLLING_PIN = registerItem("rolling_pin", RollingPinItem::new, new Item.Properties());
     public static final DeferredItem<Item> JUICER = registerItem("juicer", JuicerItem::new, new Item.Properties());
     public static final DeferredItem<Item> BLENDER = registerItem("blender", BaseReusableItem::new, new Item.Properties());
-    public static final DeferredBlock<Block> BLACK_KITCHEN_BLOCK = registerBlock("black_kitchen_block", BaseKitchenBlock::new, BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BLACK).strength(0.8f, 3f).requiresCorrectToolForDrops(), new Item.Properties());
-    public static final DeferredBlock<Block> WHITE_KITCHEN_BLOCK = registerBlock("white_kitchen_block", BaseKitchenBlock::new, BlockBehaviour.Properties.of().mapColor(MapColor.SNOW).strength(0.8f, 3f).requiresCorrectToolForDrops(), new Item.Properties());
+    public static final DeferredBlock<Block> BLACK_KITCHEN_BLOCK = registerBlock("black_kitchen_block", Block::new, BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BLACK).strength(0.8f, 3f).requiresCorrectToolForDrops());
+    public static final DeferredBlock<Block> WHITE_KITCHEN_BLOCK = registerBlock("white_kitchen_block", Block::new, BlockBehaviour.Properties.of().mapColor(MapColor.SNOW).strength(0.8f, 3f).requiresCorrectToolForDrops());
+    public static final DeferredItem<Item> BLACK_KITCHEN_BLOCK_ITEM = registerItem("black_kitchen_block", (p) -> new com.jahirtrap.foodtxf.item.BaseKitchenBlock(BLACK_KITCHEN_BLOCK.get(), p), new Item.Properties());
+    public static final DeferredItem<Item> WHITE_KITCHEN_BLOCK_ITEM = registerItem("white_kitchen_block", (p) -> new com.jahirtrap.foodtxf.item.BaseKitchenBlock(WHITE_KITCHEN_BLOCK.get(), p), new Item.Properties());
     public static final DeferredItem<Item> RECIPE_BOOK = registerItem("recipe_book", RecipeBookItem::new, new Item.Properties());
 
     private static DeferredBlock<Block> registerBlock(String name, Function<BlockBehaviour.Properties, Block> function, BlockBehaviour.Properties blockProp, Item.Properties itemProp) {

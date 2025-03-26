@@ -10,11 +10,12 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.level.Level;
 import net.neoforged.fml.ModList;
 import vazkii.patchouli.api.PatchouliAPI;
 
-import java.util.List;
+import java.util.function.Consumer;
 
 public class RecipeBookItem extends Item {
     public RecipeBookItem(Properties properties) {
@@ -31,11 +32,11 @@ public class RecipeBookItem extends Item {
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltip, TooltipFlag tooltipFlag) {
+    public void appendHoverText(ItemStack stack, TooltipContext context, TooltipDisplay display, Consumer<Component> tooltip, TooltipFlag flag) {
         if (!ModList.get().isLoaded("patchouli")) {
-            tooltip.add(Component.translatable("tooltip.foodtxf.patchouli").withStyle(ChatFormatting.GRAY));
+            tooltip.accept(Component.translatable("tooltip.foodtxf.patchouli").withStyle(ChatFormatting.GRAY));
         } else {
-            tooltip.add(Component.translatable("patchouli.gui.lexicon.edition_str", "1st").withStyle(ChatFormatting.GRAY));
+            tooltip.accept(Component.translatable("patchouli.gui.lexicon.edition_str", "1st").withStyle(ChatFormatting.GRAY));
         }
     }
 }

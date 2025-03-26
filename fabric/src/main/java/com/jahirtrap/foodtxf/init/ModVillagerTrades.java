@@ -1,5 +1,6 @@
 package com.jahirtrap.foodtxf.init;
 
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.npc.VillagerTrades;
 
@@ -12,7 +13,7 @@ public class ModVillagerTrades {
         create(VillagerProfession.FARMER, 1, new VillagerTrades.ItemsForEmeralds(ModContent.RICE_CROP, 1, 9, 16, 1));
     }
 
-    private static void create(VillagerProfession profession, int level, VillagerTrades.ItemListing itemListing) {
+    private static void create(ResourceKey<VillagerProfession> profession, int level, VillagerTrades.ItemListing itemListing) {
         var levels = VillagerTrades.TRADES.get(profession);
         var trades = new ArrayList<>(List.of(levels.get(level)));
         trades.add(itemListing);
