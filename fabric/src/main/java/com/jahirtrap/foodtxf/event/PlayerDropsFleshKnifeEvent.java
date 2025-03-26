@@ -18,7 +18,7 @@ import static com.jahirtrap.foodtxf.util.CommonUtils.dropFlesh;
 
 public class PlayerDropsFleshKnifeEvent {
     public static boolean execute(Level level, Player player, InteractionHand hand) {
-        if (!player.isShiftKeyDown()) return false;
+        if (!player.isSecondaryUseActive()) return false;
         ItemStack mainHandIst = player.getMainHandItem(), offHandIst = player.getOffhandItem(), stack = ItemStack.EMPTY;
 
         if (isKnife(mainHandIst)) stack = mainHandIst;
