@@ -2,5 +2,4 @@
   "type": "cookingforblockheads:toaster",
   "ingredient": "minecraft:bread",
   "result": "foodtxf:toasted_bread"
-  }
 }
