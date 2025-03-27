@@ -6,16 +6,16 @@ import com.jahirtrap.foodtxf.util.RepairableItem;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.ToolMaterial;
 import net.minecraft.world.level.Level;
 
 import static com.jahirtrap.foodtxf.util.CommonUtils.hurt;
 
-public class BaseKnifeItem extends SwordItem implements RepairableItem {
+public class BaseKnifeItem extends Item implements RepairableItem {
     public BaseKnifeItem(ToolMaterial material, Properties properties) {
-        super(material, 1f, -2f, properties);
+        super(properties.sword(material, 1f, -2f));
     }
 
     @Override
