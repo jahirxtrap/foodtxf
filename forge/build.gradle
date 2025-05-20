@@ -70,7 +70,7 @@ sourceSets.main.resources.srcDir 'src/generated/resources'
 
 repositories {
     maven {
-        url "https://maven.blamejared.com"
+        url "https://dl.cloudsmith.io/public/klikli-dev/mods/maven/"
     }
 }
 
@@ -78,8 +78,7 @@ dependencies {
     minecraft "net.minecraftforge:forge:${forge_version}"
     compileOnly project(":common")
 
-    compileOnly fg.deobf("vazkii.patchouli:Patchouli:1.20.1-81-FORGE:api")
-    runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:1.20.1-81-FORGE")
+    compileOnly fg.deobf("com.klikli_dev:modonomicon-1.20.6-forge:1.73.3") { exclude group: "mezz.jei" }
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     jarJar "com.jahirtrap:configlibtxf:[${configlibtxf_version}-forge,)"

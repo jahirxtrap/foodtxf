@@ -1,0 +1,13 @@
+{
+  "name": "Milk & Toasted Bread",
+  "icon": "foodtxf:glass_of_milk_and_toasted_bread",
+  "x": 1,
+  "y": 2,
+  "category": "foodtxf:food",
+  "pages": [
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "foodtxf:glass_of_milk_and_toasted_bread_recipe"
+    }
+  ]
+}

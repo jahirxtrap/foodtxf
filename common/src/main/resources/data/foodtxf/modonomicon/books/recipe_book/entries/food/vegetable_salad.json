@@ -1,0 +1,13 @@
+{
+  "name": "Vegetable Salad",
+  "icon": "foodtxf:vegetable_salad",
+  "x": 5,
+  "y": 3,
+  "category": "foodtxf:food",
+  "pages": [
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "foodtxf:vegetable_salad_recipe"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Rice",
+  "icon": "foodtxf:rice",
+  "x": 3,
+  "y": 0,
+  "category": "foodtxf:misc",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "foodtxf:rice"
+      },
+      "text": "Trade with farmer villagers, it's planted underwater on dirt or mud blocks"
+    }
+  ]
+}

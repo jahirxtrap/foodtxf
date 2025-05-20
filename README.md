@@ -32,7 +32,7 @@ Some useful food & cannibalism
 - Skillet (Iron, Golden, Diamond, Netherite, Enderite, Steel, Bronze, Zurite)
 - Kitchen Block (Black, White, shows tooltip if <a href="https://www.curseforge.com/minecraft/mc-mods/cooking-for-blockheads" target="_blank">Cooking For Blockheads mod</a> is loaded)
 - Player Flesh (Raw, Cooked, Golden) => Can be obtained when player dies or by shifting and right clicking with a knife in hand, credits to <a href="https://www.curseforge.com/minecraft/mc-mods/cannibalism" target="_blank">Cannibalism mod</a>
-- Recipe Book (if <a href="https://www.curseforge.com/minecraft/mc-mods/patchouli" target="_blank">Patchouli mod</a> is loaded) => Book + Toasted Bread
+- Recipe Book (if <a href="https://www.curseforge.com/minecraft/mc-mods/modonomicon" target="_blank">Modonomicon mod</a> is loaded) => Book + Toasted Bread
 - Eating animations for all food
 
 <strong>Compatible with:</strong>
@@ -41,7 +41,7 @@ Some useful food & cannibalism
 - <a href="https://www.curseforge.com/minecraft/mc-mods/enderite-mod-for-forge" target="_blank">Enderite mod</a>
 - <a href="https://www.curseforge.com/minecraft/mc-mods/ingotcraft" target="_blank">IngotCraft mod</a>
 - <a href="https://www.curseforge.com/minecraft/mc-mods/kuro-materials" target="_blank">Kuro Materials mod</a>
-- <a href="https://www.curseforge.com/minecraft/mc-mods/patchouli" target="_blank">Patchoulli mod</a>
+- <a href="https://www.curseforge.com/minecraft/mc-mods/modonomicon" target="_blank">Modonomicon mod</a>
 - <a href="https://www.curseforge.com/minecraft/mc-mods/cooking-for-blockheads" target="_blank">Cooking For Blockheads mod</a>
 - <a href="https://www.curseforge.com/minecraft/mc-mods/croptopia" target="_blank">Croptopia mod</a>
 - <a href="https://www.curseforge.com/minecraft/mc-mods/farmers-delight" target="_blank">Farmer's Delight mod</a>

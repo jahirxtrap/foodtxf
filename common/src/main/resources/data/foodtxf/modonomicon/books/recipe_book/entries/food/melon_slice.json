@@ -1,0 +1,13 @@
+{
+  "name": "Melon Slice",
+  "icon": "minecraft:melon_slice",
+  "x": 3,
+  "y": 2,
+  "category": "foodtxf:food",
+  "pages": [
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "foodtxf:melon_slice_recipe"
+    }
+  ]
+}

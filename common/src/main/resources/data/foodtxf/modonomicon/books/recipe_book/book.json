@@ -1,0 +1,8 @@
+{
+  "name": "item.foodtxf.recipe_book",
+  "display_mode": "index",
+  "book_content_texture": "foodtxf:textures/gui/recipe_book.png",
+  "custom_book_item": "foodtxf:recipe_book",
+  "font": "minecraft:default",
+  "generate_book_item": false
+}

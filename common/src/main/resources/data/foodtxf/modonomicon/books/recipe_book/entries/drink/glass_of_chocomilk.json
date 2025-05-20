@@ -1,0 +1,13 @@
+{
+  "name": "Chocomilk",
+  "icon": "foodtxf:glass_of_chocomilk",
+  "x": 0,
+  "y": 0,
+  "category": "foodtxf:drink",
+  "pages": [
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "foodtxf:glass_of_chocomilk_recipe"
+    }
+  ]
+}
