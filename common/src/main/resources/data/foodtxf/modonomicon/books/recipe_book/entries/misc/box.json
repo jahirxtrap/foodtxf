@@ -1,0 +1,13 @@
+{
+  "name": "Box",
+  "icon": "foodtxf:box",
+  "x": 0,
+  "y": 0,
+  "category": "foodtxf:misc",
+  "pages": [
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "foodtxf:box_recipe"
+    }
+  ]
+}

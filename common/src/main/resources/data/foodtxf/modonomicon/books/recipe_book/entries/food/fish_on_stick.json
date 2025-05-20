@@ -1,0 +1,18 @@
+{
+  "name": "Fish on Stick",
+  "icon": "foodtxf:fish_on_stick",
+  "x": 5,
+  "y": 1,
+  "category": "foodtxf:food",
+  "pages": [
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "foodtxf:fish_on_stick_recipe",
+      "recipe_id_2": "foodtxf:cooked_fish_on_stick_recipe"
+    },
+    {
+      "type": "modonomicon:smelting_recipe",
+      "recipe_id_1": "foodtxf:cooked_fish_on_stick_recipe_smelting"
+    }
+  ]
+}

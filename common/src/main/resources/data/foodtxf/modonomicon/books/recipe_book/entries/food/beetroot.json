@@ -1,0 +1,17 @@
+{
+  "name": "Beetroot",
+  "icon": "foodtxf:cooked_beetroot",
+  "x": 2,
+  "y": 0,
+  "category": "foodtxf:food",
+  "pages": [
+    {
+      "type": "modonomicon:smelting_recipe",
+      "recipe_id_1": "foodtxf:cooked_beetroot_recipe_smelting"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "foodtxf:golden_beetroot_recipe"
+    }
+  ]
+}

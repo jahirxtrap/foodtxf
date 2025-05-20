@@ -1,0 +1,13 @@
+{
+  "name": "Dough Ball",
+  "icon": "foodtxf:dough_ball",
+  "x": 2,
+  "y": 1,
+  "category": "foodtxf:food",
+  "pages": [
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "foodtxf:dough_ball_recipe"
+    }
+  ]
+}
