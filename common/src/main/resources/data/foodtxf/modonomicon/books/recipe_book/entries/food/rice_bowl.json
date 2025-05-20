@@ -1,0 +1,13 @@
+{
+  "name": "Rice Bowl",
+  "icon": "foodtxf:rice_bowl",
+  "x": 3,
+  "y": 3,
+  "category": "foodtxf:food",
+  "pages": [
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "foodtxf:rice_bowl_recipe"
+    }
+  ]
+}

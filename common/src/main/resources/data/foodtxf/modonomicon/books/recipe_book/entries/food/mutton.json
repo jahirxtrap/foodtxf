@@ -1,0 +1,13 @@
+{
+  "name": "Mutton",
+  "icon": "foodtxf:golden_mutton",
+  "x": 5,
+  "y": 2,
+  "category": "foodtxf:food",
+  "pages": [
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "foodtxf:golden_mutton_recipe"
+    }
+  ]
+}

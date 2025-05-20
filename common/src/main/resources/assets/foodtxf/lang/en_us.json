@@ -2,7 +2,6 @@
   "block.foodtxf.black_kitchen_block": "Black Kitchen Block",
   "block.foodtxf.rice": "Rice",
   "block.foodtxf.white_kitchen_block": "White Kitchen Block",
-  "book.foodtxf.landing_text": "Food TXF recipe book",
   "death.attack.suicide": "%1$s has committed suicide",
   "death.attack.suicide.player": "%1$s has committed suicide",
   "item.foodtxf.baguette": "Baguette",
@@ -93,5 +92,5 @@
   "item.foodtxf.zurite_knife": "Zurite Knife",
   "item.foodtxf.zurite_skillet": "Zurite Skillet",
   "itemGroup.foodtxf.tab_foodtxf": "Food TXF",
-  "tooltip.foodtxf.patchouli": "Patchouli is not installed"
+  "tooltip.foodtxf.modonomicon": "Modonomicon is not installed"
 }
