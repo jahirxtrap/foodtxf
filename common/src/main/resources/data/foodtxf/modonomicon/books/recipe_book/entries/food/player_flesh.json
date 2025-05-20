@@ -1,0 +1,24 @@
+{
+  "name": "Player Flesh",
+  "icon": "foodtxf:player_flesh",
+  "x": 6,
+  "y": 2,
+  "category": "foodtxf:food",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "foodtxf:player_flesh"
+      },
+      "text": "Shift Right-click with any Knife in hand"
+    },
+    {
+      "type": "modonomicon:smelting_recipe",
+      "recipe_id_1": "foodtxf:cooked_player_flesh_recipe_smelting"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "foodtxf:golden_player_flesh_recipe"
+    }
+  ]
+}

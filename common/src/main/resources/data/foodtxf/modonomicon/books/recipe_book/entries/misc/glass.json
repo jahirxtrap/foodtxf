@@ -1,0 +1,13 @@
+{
+  "name": "Glass",
+  "icon": "foodtxf:glass",
+  "x": 1,
+  "y": 0,
+  "category": "foodtxf:misc",
+  "pages": [
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "foodtxf:glass_recipe"
+    }
+  ]
+}

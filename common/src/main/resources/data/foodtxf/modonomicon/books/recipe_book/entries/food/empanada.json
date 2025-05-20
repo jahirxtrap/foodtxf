@@ -1,0 +1,19 @@
+{
+  "name": "Empanada",
+  "icon": "foodtxf:cheese_empanada",
+  "x": 3,
+  "y": 1,
+  "category": "foodtxf:food",
+  "pages": [
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "foodtxf:raw_cheese_empanada_recipe",
+      "recipe_id_2": "foodtxf:raw_meat_empanada_recipe"
+    },
+    {
+      "type": "modonomicon:smelting_recipe",
+      "recipe_id_1": "foodtxf:cheese_empanada_recipe_smelting",
+      "recipe_id_2": "foodtxf:meat_empanada_recipe_smelting"
+    }
+  ]
+}

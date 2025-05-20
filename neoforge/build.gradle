@@ -40,15 +40,14 @@ sourceSets.main.resources.srcDir 'src/generated/resources'
 
 repositories {
     maven {
-        url 'https://maven.blamejared.com'
+        url "https://dl.cloudsmith.io/public/klikli-dev/mods/maven/"
     }
 }
 
 dependencies {
     compileOnly project(":common")
 
-    compileOnly "vazkii.patchouli:Patchouli:1.20.4-85-NEOFORGE:api"
-    runtimeOnly "vazkii.patchouli:Patchouli:1.20.4-85-NEOFORGE"
+    compileOnly("com.klikli_dev:modonomicon-1.20.4-neoforge:1.73.2") { exclude group: "mezz.jei" }
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     jarJar "com.jahirtrap:configlibtxf:${configlibtxf_version}-neoforge"

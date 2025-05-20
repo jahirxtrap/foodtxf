@@ -1,0 +1,13 @@
+{
+  "name": "Juicer",
+  "icon": "foodtxf:juicer",
+  "x": 2,
+  "y": 0,
+  "category": "foodtxf:tool",
+  "pages": [
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "foodtxf:juicer_recipe"
+    }
+  ]
+}
