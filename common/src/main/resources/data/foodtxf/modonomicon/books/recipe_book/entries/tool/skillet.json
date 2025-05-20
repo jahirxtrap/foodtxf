@@ -1,0 +1,28 @@
+{
+  "name": "Skillet",
+  "icon": "foodtxf:iron_skillet",
+  "x": 6,
+  "y": 0,
+  "category": "foodtxf:tool",
+  "pages": [
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "foodtxf:iron_skillet_recipe",
+      "recipe_id_2": "foodtxf:golden_skillet_recipe"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "foodtxf:diamond_skillet_recipe"
+    },
+    {
+      "type": "modonomicon:smithing_recipe",
+      "recipe_id_1": "foodtxf:netherite_skillet_recipe",
+      "recipe_id_2": "foodtxf:enderite_skillet_recipe"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "foodtxf:steel_skillet_recipe",
+      "recipe_id_2": "foodtxf:bronze_skillet_recipe"
+    }
+  ]
+}

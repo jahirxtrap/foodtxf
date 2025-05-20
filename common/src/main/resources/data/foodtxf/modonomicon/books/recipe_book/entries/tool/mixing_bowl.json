@@ -1,0 +1,13 @@
+{
+  "name": "Mixing Bowl",
+  "icon": "foodtxf:mixing_bowl",
+  "x": 4,
+  "y": 0,
+  "category": "foodtxf:tool",
+  "pages": [
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "foodtxf:mixing_bowl_recipe"
+    }
+  ]
+}

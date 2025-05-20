@@ -1,0 +1,13 @@
+{
+  "name": "Blender",
+  "icon": "foodtxf:blender",
+  "x": 0,
+  "y": 0,
+  "category": "foodtxf:tool",
+  "pages": [
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "foodtxf:blender_recipe"
+    }
+  ]
+}

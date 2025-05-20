@@ -10,7 +10,7 @@ base.archivesName = mod_id
 
 repositories {
     maven {
-        url "https://maven.blamejared.com"
+        url "https://dl.cloudsmith.io/public/klikli-dev/mods/maven/"
     }
 }
 
@@ -22,7 +22,7 @@ dependencies {
     compileOnly project(":common")
 
     modImplementation fileTree(dir: 'libs', include: ['*.jar'])
-    modImplementation "vazkii.patchouli:Patchouli:1.21-87-FABRIC-SNAPSHOT"
+    modImplementation("com.klikli_dev:modonomicon-1.21.4-fabric:1.116.0") { exclude group: "mezz.jei" }
 }
 
 loom {
