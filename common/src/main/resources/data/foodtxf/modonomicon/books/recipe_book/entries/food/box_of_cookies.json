@@ -1,0 +1,14 @@
+{
+  "name": "Box of Cookies",
+  "icon": "foodtxf:box_of_cookies",
+  "x": 5,
+  "y": 0,
+  "category": "foodtxf:food",
+  "pages": [
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "foodtxf:box_of_cookies_recipe",
+      "recipe_id_2": "foodtxf:cookies_recipe"
+    }
+  ]
+}

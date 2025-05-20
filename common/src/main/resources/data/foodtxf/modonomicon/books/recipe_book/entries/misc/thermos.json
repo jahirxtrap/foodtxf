@@ -1,0 +1,51 @@
+{
+  "name": "Thermos",
+  "icon": "foodtxf:thermos",
+  "x": 4,
+  "y": 0,
+  "category": "foodtxf:misc",
+  "pages": [
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "foodtxf:thermos_recipe",
+      "recipe_id_2": "foodtxf:water_thermos_recipe"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "foodtxf:lava_thermos_recipe",
+      "recipe_id_2": "foodtxf:milk_thermos_recipe"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "foodtxf:chocomilk_thermos_recipe"
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "foodtxf:water_thermos"
+      },
+      "text": "Right click on water with thermos in hand"
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "foodtxf:lava_thermos"
+      },
+      "text": "Right click on lava with thermos in hand"
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "foodtxf:milk_thermos"
+      },
+      "text": "Right click on cow/goat with thermos in hand"
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "item": "foodtxf:chocomilk_thermos"
+      },
+      "text": "Right click on cow/goat with thermos in hand and 2 cocoa beans in other hand"
+    }
+  ]
+}

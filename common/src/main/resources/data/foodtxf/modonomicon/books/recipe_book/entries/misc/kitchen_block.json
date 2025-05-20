@@ -1,0 +1,14 @@
+{
+  "name": "Kitchen Block",
+  "icon": "foodtxf:black_kitchen_block",
+  "x": 2,
+  "y": 0,
+  "category": "foodtxf:misc",
+  "pages": [
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "foodtxf:black_kitchen_block_recipe",
+      "recipe_id_2": "foodtxf:white_kitchen_block_recipe"
+    }
+  ]
+}

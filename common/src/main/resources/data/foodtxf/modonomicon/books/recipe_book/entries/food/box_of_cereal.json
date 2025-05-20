@@ -1,0 +1,13 @@
+{
+  "name": "Box of Cereal",
+  "icon": "foodtxf:box_of_cereal",
+  "x": 4,
+  "y": 0,
+  "category": "foodtxf:food",
+  "pages": [
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "foodtxf:box_of_cereal_recipe"
+    }
+  ]
+}

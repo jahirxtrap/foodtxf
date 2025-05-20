@@ -1,0 +1,23 @@
+{
+  "name": "Bread Slice",
+  "icon": "foodtxf:bread_slice",
+  "x": 7,
+  "y": 0,
+  "category": "foodtxf:food",
+  "pages": [
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "foodtxf:bread_slice_recipe",
+      "recipe_id_2": "foodtxf:toasted_bread_slice_recipe"
+    },
+    {
+      "type": "modonomicon:smelting_recipe",
+      "recipe_id_1": "foodtxf:toasted_bread_slice_recipe_smelting"
+    },
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "foodtxf:golden_bread_slice_recipe",
+      "recipe_id_2": "foodtxf:golden_bread_slice_recipe_1"
+    }
+  ]
+}

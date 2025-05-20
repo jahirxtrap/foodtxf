@@ -1,1 +1,1 @@
-- Update to 1.21.5
+- Recipe book now requires [Modonomicon mod](https://www.curseforge.com/minecraft/mc-mods/modonomicon)

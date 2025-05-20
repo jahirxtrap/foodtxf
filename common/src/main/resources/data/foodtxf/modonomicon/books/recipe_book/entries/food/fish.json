@@ -1,0 +1,19 @@
+{
+  "name": "Fish",
+  "icon": "foodtxf:clean_pufferfish",
+  "x": 4,
+  "y": 1,
+  "category": "foodtxf:food",
+  "pages": [
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "foodtxf:clean_pufferfish_recipe",
+      "recipe_id_2": "foodtxf:golden_fish_recipe"
+    },
+    {
+      "type": "modonomicon:smelting_recipe",
+      "recipe_id_1": "foodtxf:cooked_pufferfish_recipe_smelting",
+      "recipe_id_2": "foodtxf:cooked_tropical_fish_recipe_smelting"
+    }
+  ]
+}

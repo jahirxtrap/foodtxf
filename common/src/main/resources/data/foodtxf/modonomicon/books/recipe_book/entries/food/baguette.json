@@ -1,0 +1,14 @@
+{
+  "name": "Baguette",
+  "icon": "foodtxf:baguette",
+  "x": 0,
+  "y": 0,
+  "category": "foodtxf:food",
+  "pages": [
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "foodtxf:baguette_recipe",
+      "recipe_id_2": "foodtxf:baguette_sword_recipe"
+    }
+  ]
+}
