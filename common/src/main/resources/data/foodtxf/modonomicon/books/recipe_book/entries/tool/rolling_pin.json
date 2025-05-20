@@ -1,0 +1,13 @@
+{
+  "name": "Rolling Pin",
+  "icon": "foodtxf:rolling_pin",
+  "x": 5,
+  "y": 0,
+  "category": "foodtxf:tool",
+  "pages": [
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "foodtxf:rolling_pin_recipe"
+    }
+  ]
+}

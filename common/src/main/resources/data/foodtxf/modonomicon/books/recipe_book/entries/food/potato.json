@@ -1,0 +1,13 @@
+{
+  "name": "Potato",
+  "icon": "foodtxf:golden_potato",
+  "x": 8,
+  "y": 2,
+  "category": "foodtxf:food",
+  "pages": [
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "foodtxf:golden_potato_recipe"
+    }
+  ]
+}

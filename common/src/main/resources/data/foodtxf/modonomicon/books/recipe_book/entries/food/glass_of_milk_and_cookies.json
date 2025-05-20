@@ -1,0 +1,13 @@
+{
+  "name": "Milk & Cookies",
+  "icon": "foodtxf:glass_of_milk_and_cookies",
+  "x": 0,
+  "y": 2,
+  "category": "foodtxf:food",
+  "pages": [
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "foodtxf:glass_of_milk_and_cookies_recipe"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Cheese",
+  "icon": "foodtxf:cheese",
+  "x": 0,
+  "y": 1,
+  "category": "foodtxf:food",
+  "pages": [
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "foodtxf:cheese_recipe",
+      "recipe_id_2": "foodtxf:cheese_slice_recipe"
+    }
+  ]
+}

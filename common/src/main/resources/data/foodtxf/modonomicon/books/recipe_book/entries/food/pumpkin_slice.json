@@ -1,0 +1,14 @@
+{
+  "name": "Pumpkin Slice",
+  "icon": "foodtxf:pumpkin_slice",
+  "x": 0,
+  "y": 3,
+  "category": "foodtxf:food",
+  "pages": [
+    {
+      "type": "modonomicon:crafting_recipe",
+      "recipe_id_1": "foodtxf:pumpkin_slice_recipe",
+      "recipe_id_2": "foodtxf:glistering_pumpkin_slice_recipe"
+    }
+  ]
+}
