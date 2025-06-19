@@ -2,9 +2,9 @@ package com.jahirtrap.foodtxf;
 
 import com.jahirtrap.foodtxf.init.ModContent;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.chunk.ChunkSectionLayer;
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.eventbus.api.listener.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 
@@ -12,6 +12,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 public class FoodtxfClient {
     @SubscribeEvent
     public static void onEvent(FMLClientSetupEvent event) {
-        ItemBlockRenderTypes.setRenderLayer(ModContent.RICE_CROP.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModContent.RICE_CROP.get(), ChunkSectionLayer.CUTOUT);
     }
 }

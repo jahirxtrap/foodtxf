@@ -15,9 +15,8 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.furnace.FurnaceFuelBurnTimeEvent;
-import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.bus.BusGroup;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
@@ -145,7 +144,7 @@ public class ModContent {
         return ITEMS.register(name, () -> function.apply(itemProp.setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(MODID, name)))));
     }
 
-    public static void init(IEventBus bus) {
+    public static void init(BusGroup bus) {
         EXCLUDED_ITEMS.add(BAGUETTE_SWORD);
         BLOCKS.register(bus);
         ITEMS.register(bus);
@@ -169,8 +168,8 @@ public class ModContent {
         FUEL_ITEMS.put(CUTTING_BOARD, 200);
         FUEL_ITEMS.put(ROLLING_PIN, 300);
 
-        bus.addListener((FMLCommonSetupEvent event) -> COMPOSTABLE_ITEMS.forEach((item, chance) -> COMPOSTABLES.put(item.get().asItem(), chance)));
-        MinecraftForge.EVENT_BUS.addListener((FurnaceFuelBurnTimeEvent event) -> FUEL_ITEMS.forEach((item, burnTime) -> {
+        FMLCommonSetupEvent.getBus(bus).addListener((FMLCommonSetupEvent event) -> COMPOSTABLE_ITEMS.forEach((item, chance) -> COMPOSTABLES.put(item.get().asItem(), chance)));
+        FurnaceFuelBurnTimeEvent.BUS.addListener((FurnaceFuelBurnTimeEvent event) -> FUEL_ITEMS.forEach((item, burnTime) -> {
             if (item.get() == event.getItemStack().getItem()) event.setBurnTime(burnTime);
         }));
     }

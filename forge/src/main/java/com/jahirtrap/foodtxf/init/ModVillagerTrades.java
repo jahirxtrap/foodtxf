@@ -3,7 +3,7 @@ package com.jahirtrap.foodtxf.init;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.npc.VillagerTrades;
-import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.bus.BusGroup;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 
 import java.util.ArrayList;
@@ -23,7 +23,7 @@ public class ModVillagerTrades {
         VillagerTrades.TRADES.put(profession, levels);
     }
 
-    public static void init(IEventBus bus) {
-        bus.addListener(ModVillagerTrades::addTrades);
+    public static void init(BusGroup bus) {
+        FMLCommonSetupEvent.getBus(bus).addListener(ModVillagerTrades::addTrades);
     }
 }
