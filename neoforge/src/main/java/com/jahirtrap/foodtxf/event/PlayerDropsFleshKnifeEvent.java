@@ -7,7 +7,6 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.Enchantment;
@@ -32,7 +31,7 @@ public class PlayerDropsFleshKnifeEvent {
         if (faLevel != 0) player.setRemainingFireTicks(20 * 4 * faLevel);
 
         if (player.hurtOrSimulate(new DamageSource(level.registryAccess().lookupOrThrow(Registries.DAMAGE_TYPE).getOrThrow(SUICIDE)), 6)) {
-            stack.hurtAndBreak(1, player, LivingEntity.getSlotForHand(hand));
+            stack.hurtAndBreak(1, player, hand.asEquipmentSlot());
             level.addFreshEntity(dropFlesh(player, level, 1));
             return true;
         } else if (checkCreativeMode(player)) {

@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "foodtxf:copper_skillet",
     "foodtxf:iron_skillet",
     "foodtxf:golden_skillet",
     "foodtxf:diamond_skillet",

@@ -26,10 +26,10 @@ Some useful food & cannibalism
 - Blender (Iron)
 - Cutting Board (Wooden)
 - Juicer (Dripstone)
-- Knife (Wooden, Stone, Iron, Golden, Diamond, Netherite, Enderite, Steel, Bronze, Zurite)
+- Knife (Wooden, Stone, Copper, Iron, Golden, Diamond, Netherite, Enderite, Steel, Bronze, Zurite)
 - Mixin Bowl (Stone)
 - Rolling Pin (Wooden)
-- Skillet (Iron, Golden, Diamond, Netherite, Enderite, Steel, Bronze, Zurite)
+- Skillet (Iron, Copper, Golden, Diamond, Netherite, Enderite, Steel, Bronze, Zurite)
 - Kitchen Block (Black, White, shows tooltip if <a href="https://www.curseforge.com/minecraft/mc-mods/cooking-for-blockheads" target="_blank">Cooking For Blockheads mod</a> is loaded)
 - Player Flesh (Raw, Cooked, Golden) => Can be obtained when player dies or by shifting and right clicking with a knife in hand, credits to <a href="https://www.curseforge.com/minecraft/mc-mods/cannibalism" target="_blank">Cannibalism mod</a>
 - Recipe Book (if <a href="https://www.curseforge.com/minecraft/mc-mods/modonomicon" target="_blank">Modonomicon mod</a> is loaded) => Book + Toasted Bread

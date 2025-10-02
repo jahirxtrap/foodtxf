@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " II",
+    " II",
+    "R  "
+  ],
+  "key": {
+    "I": "#c:ingots/copper",
+    "R": "#c:rods/wooden"
+  },
+  "result": {
+    "id": "foodtxf:copper_skillet",
+    "count": 1
+  }
+}

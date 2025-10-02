@@ -12,12 +12,13 @@
     },
     {
       "type": "modonomicon:crafting_recipe",
-      "recipe_id_1": "foodtxf:iron_knife_recipe",
-      "recipe_id_2": "foodtxf:golden_knife_recipe"
+      "recipe_id_1": "foodtxf:copper_knife_recipe",
+      "recipe_id_2": "foodtxf:iron_knife_recipe"
     },
     {
       "type": "modonomicon:crafting_recipe",
-      "recipe_id_1": "foodtxf:diamond_knife_recipe"
+      "recipe_id_1": "foodtxf:golden_knife_recipe",
+      "recipe_id_2": "foodtxf:diamond_knife_recipe"
     },
     {
       "type": "modonomicon:smithing_recipe",

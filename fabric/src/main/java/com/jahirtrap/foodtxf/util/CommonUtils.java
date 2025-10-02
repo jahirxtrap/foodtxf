@@ -40,7 +40,7 @@ public class CommonUtils {
         if (player instanceof ServerPlayer serverPlayer)
             return serverPlayer.gameMode.getGameModeForPlayer() == GameType.CREATIVE;
         else if (player.level().isClientSide())
-            return Minecraft.getInstance().getConnection().getPlayerInfo(player.getGameProfile().getId()).getGameMode() == GameType.CREATIVE;
+            return Minecraft.getInstance().getConnection().getPlayerInfo(player.getGameProfile().id()).getGameMode() == GameType.CREATIVE;
 
         return false;
     }
