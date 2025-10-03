@@ -102,6 +102,7 @@ public class ModContent {
     public static final RegistryObject<Item> BOX_OF_COOKIES = registerItem("box_of_cookies", (p) -> new ContainerFoodItem(0, 12, 0.325f, p), new Item.Properties());
     public static final RegistryObject<Item> WOODEN_KNIFE = registerItem("wooden_knife", (p) -> new BaseKnifeItem(ToolMaterial.WOOD, p), new Item.Properties());
     public static final RegistryObject<Item> STONE_KNIFE = registerItem("stone_knife", (p) -> new BaseKnifeItem(ToolMaterial.STONE, p), new Item.Properties());
+    public static final RegistryObject<Item> COPPER_KNIFE = registerItem("copper_knife", (p) -> new BaseKnifeItem(ToolMaterial.COPPER, p), new Item.Properties());
     public static final RegistryObject<Item> IRON_KNIFE = registerItem("iron_knife", (p) -> new BaseKnifeItem(ToolMaterial.IRON, p), new Item.Properties());
     public static final RegistryObject<Item> GOLDEN_KNIFE = registerItem("golden_knife", (p) -> new BaseKnifeItem(ToolMaterial.GOLD, p), new Item.Properties());
     public static final RegistryObject<Item> DIAMOND_KNIFE = registerItem("diamond_knife", (p) -> new BaseKnifeItem(ToolMaterial.DIAMOND, p), new Item.Properties());
@@ -110,6 +111,7 @@ public class ModContent {
     public static final RegistryObject<Item> STEEL_KNIFE = registerItem("steel_knife", (p) -> new BaseKnifeItem(ModMaterials.Tool.STEEL, p), new Item.Properties());
     public static final RegistryObject<Item> BRONZE_KNIFE = registerItem("bronze_knife", (p) -> new BaseKnifeItem(ModMaterials.Tool.BRONZE, p), new Item.Properties());
     public static final RegistryObject<Item> ZURITE_KNIFE = registerItem("zurite_knife", (p) -> new BaseKnifeItem(ModMaterials.Tool.ZURITE, p), new Item.Properties().fireResistant());
+    public static final RegistryObject<Item> COPPER_SKILLET = registerItem("copper_skillet", (p) -> new BaseSkilletItem(ToolMaterial.COPPER, p), new Item.Properties());
     public static final RegistryObject<Item> IRON_SKILLET = registerItem("iron_skillet", (p) -> new BaseSkilletItem(ToolMaterial.IRON, p), new Item.Properties());
     public static final RegistryObject<Item> GOLDEN_SKILLET = registerItem("golden_skillet", (p) -> new BaseSkilletItem(ToolMaterial.GOLD, p), new Item.Properties());
     public static final RegistryObject<Item> DIAMOND_SKILLET = registerItem("diamond_skillet", (p) -> new BaseSkilletItem(ToolMaterial.DIAMOND, p), new Item.Properties());
