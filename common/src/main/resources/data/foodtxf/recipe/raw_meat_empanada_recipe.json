@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    "#c:foods/raw_meats",
+    "#c:foods/raw_meat",
     "foodtxf:dough_ball",
     "foodtxf:rolling_pin"
   ],
