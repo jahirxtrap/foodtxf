@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "tag": "c:foods/raw_meats"
+      "tag": "c:foods/raw_meat"
     },
     {
       "item": "foodtxf:dough_ball"
