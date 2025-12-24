@@ -1,8 +1,8 @@
 package com.jahirtrap.foodtxf.init;
 
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.world.entity.npc.VillagerProfession;
-import net.minecraft.world.entity.npc.VillagerTrades;
+import net.minecraft.world.entity.npc.villager.VillagerProfession;
+import net.minecraft.world.entity.npc.villager.VillagerTrades;
 import net.minecraftforge.eventbus.api.bus.BusGroup;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 

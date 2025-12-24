@@ -1,7 +1,7 @@
 plugins {
     id 'idea'
     id 'java-library'
-    id 'net.neoforged.moddev' version '2.0.111'
+    id 'net.neoforged.moddev' version '2.0.134'
     id 'me.modmuss50.mod-publish-plugin' version '0.6.3'
 }
 
@@ -47,7 +47,7 @@ repositories {
 dependencies {
     compileOnly project(":common")
 
-    compileOnly("com.klikli_dev:modonomicon-1.21.5-neoforge:1.117.1") { exclude group: "mezz.jei" }
+    compileOnly("com.klikli_dev:modonomicon-1.21.11-neoforge:1.120.0") { exclude group: "mezz.jei" }
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     jarJar "com.jahirtrap:configlibtxf:${configlibtxf_version}-neoforge"
@@ -78,7 +78,7 @@ publishMods {
     type = STABLE
     modLoaders.addAll("neoforge")
     changelog = rootProject.file("CHANGELOG.md").text
-    def gameVersions = ["1.21.9", "1.21.10"]
+    def gameVersions = ["1.21.11"]
 
     curseforge {
         accessToken = System.getenv("CURSEFORGE_TOKEN")

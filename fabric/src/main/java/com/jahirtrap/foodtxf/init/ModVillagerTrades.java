@@ -1,8 +1,8 @@
 package com.jahirtrap.foodtxf.init;
 
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.world.entity.npc.VillagerProfession;
-import net.minecraft.world.entity.npc.VillagerTrades;
+import net.minecraft.world.entity.npc.villager.VillagerProfession;
+import net.minecraft.world.entity.npc.villager.VillagerTrades;
 
 import java.util.ArrayList;
 import java.util.List;
