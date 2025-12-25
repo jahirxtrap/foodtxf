@@ -25,7 +25,7 @@ public class RecipeBookItem extends Item {
     @Override
     public InteractionResult use(Level level, Player player, InteractionHand hand) {
         if (FabricLoader.getInstance().isModLoaded("modonomicon")) {
-            // BookGuiManager.get().openBook(BookAddress.defaultFor(BuiltInRegistries.ITEM.getKey(this)));
+            BookGuiManager.get().openBook(BookAddress.defaultFor(BuiltInRegistries.ITEM.getKey(this)));
             return InteractionResult.SUCCESS;
         } else return super.use(level, player, hand);
     }
