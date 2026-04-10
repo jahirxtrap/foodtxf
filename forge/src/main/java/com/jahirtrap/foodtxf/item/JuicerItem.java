@@ -3,6 +3,7 @@ package com.jahirtrap.foodtxf.item;
 import com.jahirtrap.foodtxf.util.RepairableItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ItemStackTemplate;
 
 import static com.jahirtrap.foodtxf.util.CommonUtils.hurt;
 
@@ -12,8 +13,8 @@ public class JuicerItem extends Item implements RepairableItem {
     }
 
     @Override
-    public ItemStack getCraftingRemainder(ItemStack stack) {
-        return hurt(1, stack);
+    public ItemStackTemplate getCraftingRemainder(ItemStack stack) {
+        return ItemStackTemplate.fromNonEmptyStack(hurt(1, stack));
     }
 
     @Override

@@ -2,7 +2,7 @@ package com.jahirtrap.foodtxf.init;
 
 import com.jahirtrap.foodtxf.block.RiceCropBlock;
 import com.jahirtrap.foodtxf.item.*;
-import net.fabricmc.fabric.api.registry.FuelRegistryEvents;
+import net.fabricmc.fabric.api.registry.FuelValueEvents;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -167,6 +167,6 @@ public class ModContent {
         FUEL_ITEMS.put(ROLLING_PIN, 300);
 
         COMPOSTABLE_ITEMS.forEach((item, chance) -> COMPOSTABLES.put(item.asItem(), chance));
-        FuelRegistryEvents.BUILD.register((builder, context) -> FUEL_ITEMS.forEach(builder::add));
+        FuelValueEvents.BUILD.register((builder, context) -> FUEL_ITEMS.forEach(builder::add));
     }
 }

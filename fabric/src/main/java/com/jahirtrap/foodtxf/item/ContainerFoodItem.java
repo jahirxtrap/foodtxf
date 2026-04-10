@@ -14,9 +14,9 @@ public class ContainerFoodItem extends Item {
     private final int fluidType;
 
     public ContainerFoodItem(int itemRet, int nutrition, float saturation, int fluidType, int stack, boolean drink, Properties properties) {
-        super(properties.stacksTo(stack)
+        super(((itemRet == 0 || itemRet == 4) ? properties.craftRemainder(container.get(itemRet)) : properties).stacksTo(stack)
                 .food(createProperties(nutrition, saturation, drink), drink ? Consumables.DEFAULT_DRINK : Consumables.DEFAULT_FOOD)
-                .usingConvertsTo(container.get(itemRet)).craftRemainder(((itemRet == 0 || itemRet == 4) ? container.get(itemRet) : ItemStack.EMPTY.getItem())));
+                .usingConvertsTo(container.get(itemRet)));
         this.fluidType = fluidType;
     }
 

@@ -2,6 +2,7 @@ package com.jahirtrap.foodtxf.item;
 
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ItemStackTemplate;
 
 public class BaseReusableItem extends Item {
     public BaseReusableItem(Properties properties) {
@@ -9,7 +10,7 @@ public class BaseReusableItem extends Item {
     }
 
     @Override
-    public ItemStack getCraftingRemainder(ItemStack stack) {
-        return stack.copy();
+    public ItemStackTemplate getCraftingRemainder(ItemStack stack) {
+        return ItemStackTemplate.fromNonEmptyStack(stack.copy());
     }
 }

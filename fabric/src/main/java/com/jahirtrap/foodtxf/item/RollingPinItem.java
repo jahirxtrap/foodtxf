@@ -3,10 +3,11 @@ package com.jahirtrap.foodtxf.item;
 import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
 
 public class RollingPinItem extends BaseReusableItem {
-    public RollingPinItem(Properties properties) {
+    public RollingPinItem(Item.Properties properties) {
         super(properties.attributes(createAttributes()));
     }
 

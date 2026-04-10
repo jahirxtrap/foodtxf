@@ -4,7 +4,9 @@
   "package": "com.jahirtrap.foodtxf.init.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "ComposterBlockMixin"
+    "ComposterBlockMixin",
+    "CraftingRecipeMixin",
+    "ServerPacksSourceMixin"
   ],
   "injectors": {
     "defaultRequire": 1

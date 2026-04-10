@@ -9,13 +9,14 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ItemStackTemplate;
 import net.minecraft.world.item.ToolMaterial;
 import net.minecraft.world.level.Level;
 
 import static com.jahirtrap.foodtxf.util.CommonUtils.hurt;
 
 public class BaseKnifeItem extends Item implements RepairableItem, FabricItem {
-    public BaseKnifeItem(ToolMaterial material, Properties properties) {
+    public BaseKnifeItem(ToolMaterial material, Item.Properties properties) {
         super(properties.sword(material, 1f, -2f));
     }
 
@@ -29,8 +30,8 @@ public class BaseKnifeItem extends Item implements RepairableItem, FabricItem {
     }
 
     @Override
-    public ItemStack getRecipeRemainder(ItemStack stack) {
-        return hurt(1, stack);
+    public ItemStackTemplate getCraftingRemainder(ItemStack stack) {
+        return ItemStackTemplate.fromNonEmptyStack(hurt(1, stack));
     }
 
     @Override

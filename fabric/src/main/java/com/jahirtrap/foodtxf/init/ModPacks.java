@@ -1,0 +1,42 @@
+package com.jahirtrap.foodtxf.init;
+
+import net.fabricmc.loader.api.FabricLoader;
+import net.minecraft.SharedConstants;
+import net.minecraft.network.chat.Component;
+import net.minecraft.server.packs.PackLocationInfo;
+import net.minecraft.server.packs.PackSelectionConfig;
+import net.minecraft.server.packs.PackType;
+import net.minecraft.server.packs.PathPackResources;
+import net.minecraft.server.packs.metadata.pack.PackMetadataSection;
+import net.minecraft.server.packs.repository.*;
+import net.minecraft.world.flag.FeatureFlagSet;
+
+import java.nio.file.Path;
+import java.util.List;
+import java.util.Optional;
+
+import static com.jahirtrap.foodtxf.FoodtxfMod.MODID;
+
+public class ModPacks {
+    public static void init(PackRepository repository) {
+        trades(repository);
+    }
+
+    private static void trades(PackRepository repository) {
+        if (ModConfig.addVillagerTrades) {
+            Path path = FabricLoader.getInstance().getModContainer(MODID).flatMap(container -> container.findPath("packs/trades")).orElse(null);
+            PackMetadataSection metadata = new PackMetadataSection(Component.translatable("pack.foodtxf.trades.description"), SharedConstants.getCurrentVersion().packVersion(PackType.SERVER_DATA).minorRange());
+
+            if (path != null) {
+                RepositorySource source = (consumer) -> consumer.accept(new Pack(
+                        new PackLocationInfo("foodtxf/trades", Component.translatable("pack.foodtxf.trades.title"), PackSource.BUILT_IN, Optional.empty()),
+                        new PathPackResources.PathResourcesSupplier(path),
+                        new Pack.Metadata(metadata.description(), PackCompatibility.COMPATIBLE, FeatureFlagSet.of(), List.of()),
+                        new PackSelectionConfig(true, Pack.Position.TOP, false)
+                ));
+
+                repository.sources.add(source);
+            }
+        }
+    }
+}

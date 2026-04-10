@@ -8,6 +8,7 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ItemStackTemplate;
 import net.minecraft.world.item.ToolMaterial;
 import net.minecraft.world.level.Level;
 
@@ -28,8 +29,8 @@ public class BaseKnifeItem extends Item implements RepairableItem {
     }
 
     @Override
-    public ItemStack getCraftingRemainder(ItemStack stack) {
-        return hurt(1, stack);
+    public ItemStackTemplate getCraftingRemainder(ItemStack stack) {
+        return ItemStackTemplate.fromNonEmptyStack(hurt(1, stack));
     }
 
     @Override

@@ -94,5 +94,7 @@
   "item.foodtxf.zurite_knife": "Zurite Knife",
   "item.foodtxf.zurite_skillet": "Zurite Skillet",
   "itemGroup.foodtxf.tab_foodtxf": "Food TXF",
-  "tooltip.foodtxf.modonomicon": "Modonomicon is not installed"
+  "tooltip.foodtxf.modonomicon": "Modonomicon is not installed",
+  "pack.foodtxf.trades.title": "Food TXF trades",
+  "pack.foodtxf.trades.description": "Enables Food TXF villager trades"
 }

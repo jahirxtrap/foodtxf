@@ -21,7 +21,7 @@ public class BaseKitchenBlock extends BlockItem {
 
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, TooltipDisplay display, Consumer<Component> tooltip, TooltipFlag flag) {
-        if (ModList.get().isLoaded("cookingforblockheads")) {
+        if (ModList.isLoaded("cookingforblockheads")) {
             tooltip.accept(coloredTextComponent("tooltip.cookingforblockheads.multiblock_kitchen", ChatFormatting.YELLOW));
             for (String s : I18n.get("tooltip.cookingforblockheads.kitchen_floor.description").split("\\\\n")) {
                 tooltip.accept(coloredTextComponent(s, ChatFormatting.GRAY));
