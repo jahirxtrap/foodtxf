@@ -19,8 +19,7 @@ dependencies {
 
     compileOnly("com.klikli_dev:modonomicon-26.1.2-neoforge:1.134.1") { exclude group: "mezz.jei" }
 
-    implementation "io.github.jahirxtrap:configlibtxf:${configlibtxf_version}-neoforge"
-    jarJar "io.github.jahirxtrap:configlibtxf:${configlibtxf_version}-neoforge"
+    implementation(jarJar("io.github.jahirxtrap:configlibtxf:${configlibtxf_version}-neoforge"))
 }
 
 neoForge {
