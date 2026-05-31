@@ -1,1 +1,1 @@
-- Recipe book now requires [Modonomicon mod](https://www.curseforge.com/minecraft/mc-mods/modonomicon)
+- Updated config lib
