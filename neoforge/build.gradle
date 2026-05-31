@@ -49,8 +49,7 @@ dependencies {
 
     compileOnly("com.klikli_dev:modonomicon-1.21.11-neoforge:1.120.0") { exclude group: "mezz.jei" }
 
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    jarJar "com.jahirtrap:configlibtxf:${configlibtxf_version}-neoforge"
+    implementation(jarJar("io.github.jahirxtrap:configlibtxf:${configlibtxf_version}-neoforge"))
 }
 
 def resourceTargets = ['META-INF/neoforge.mods.toml', 'pack.mcmeta']
