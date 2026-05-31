@@ -10,10 +10,24 @@ version = "${version}-forge"
 jarJar.enable()
 base.archivesName = mod_id
 
+dependencies {
+    minecraft "net.minecraftforge:forge:${forge_version}"
+    compileOnly project(":common")
+
+    compileOnly fg.deobf("com.klikli_dev:modonomicon-1.21.5-forge:1.117.1") { exclude group: "mezz.jei" }
+
+    implementation(jarJar("io.github.jahirxtrap:configlibtxf:${configlibtxf_version}-forge") {
+        transitive = false
+        jarJar.ranged(it, "[${configlibtxf_version}-forge,)")
+    })
+}
+
 mixin {
     add(sourceSets.main, "${mod_id}.refmap.json")
     config("${mod_id}.mixins.json")
 }
+
+jar.manifest.attributes('MixinConfigs': "${mod_id}.mixins.json")
 
 minecraft {
     mappings channel: 'official', version: minecraft_version
@@ -72,16 +86,6 @@ repositories {
     maven {
         url "https://dl.cloudsmith.io/public/klikli-dev/mods/maven/"
     }
-}
-
-dependencies {
-    minecraft "net.minecraftforge:forge:${forge_version}"
-    compileOnly project(":common")
-
-    compileOnly fg.deobf("com.klikli_dev:modonomicon-1.21.5-forge:1.117.1") { exclude group: "mezz.jei" }
-
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    jarJar "com.jahirtrap:configlibtxf:[${configlibtxf_version}-forge,)"
 }
 
 def resourceTargets = ['META-INF/mods.toml', 'pack.mcmeta']
