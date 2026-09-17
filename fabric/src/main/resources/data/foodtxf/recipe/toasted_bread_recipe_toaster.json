@@ -1,0 +1,13 @@
+{
+  "type": "cookingforblockheads:toaster",
+  "ingredient": "minecraft:bread",
+  "result": "foodtxf:toasted_bread",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:any_mods_loaded",
+      "values": [
+        "cookingforblockheads"
+      ]
+    }
+  ]
+}

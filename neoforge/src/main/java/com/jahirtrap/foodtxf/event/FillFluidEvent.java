@@ -4,6 +4,7 @@ import com.jahirtrap.foodtxf.init.ModContent;
 import com.jahirtrap.foodtxf.item.FluidContainerItem;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.util.Prediction;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.animal.cow.Cow;
@@ -68,9 +69,9 @@ public class FillFluidEvent {
                 player.setItemInHand(hand, result);
             } else {
                 stack.consume(1, player);
-                if (!player.getInventory().add(result)) player.drop(result, false);
+                if (!player.getInventory().add(result)) player.drop(result, false, Prediction.SERVER_ONLY);
             }
-        } else if (!player.getInventory().add(result)) player.drop(result, false);
+        } else if (!player.getInventory().add(result)) player.drop(result, false, Prediction.SERVER_ONLY);
 
         player.playSound(sound);
         return true;

@@ -2,7 +2,6 @@ package com.jahirtrap.foodtxf.init;
 
 import com.jahirtrap.foodtxf.block.RiceCropBlock;
 import com.jahirtrap.foodtxf.item.*;
-import net.fabricmc.fabric.api.registry.FuelValueEvents;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -13,42 +12,38 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ToolMaterial;
 import net.minecraft.world.item.component.Consumables;
-import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.storage.loot.providers.number.ints.ContextIntProviders;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.function.Function;
 
 import static com.jahirtrap.foodtxf.FoodtxfMod.MODID;
-import static net.minecraft.world.level.block.ComposterBlock.COMPOSTABLES;
 
 public class ModContent {
     public static final List<Item> ITEMS = new ArrayList<>();
     public static final List<Item> EXCLUDED_ITEMS = new ArrayList<>();
-    public static final HashMap<ItemLike, Float> COMPOSTABLE_ITEMS = new HashMap<>();
-    public static final HashMap<ItemLike, Integer> FUEL_ITEMS = new HashMap<>();
 
     public static final Item PLAYER_FLESH = registerItem("player_flesh", (p) -> new BaseFoodItem(4, 0.375f, p), new Item.Properties());
     public static final Item COOKED_PLAYER_FLESH = registerItem("cooked_player_flesh", (p) -> new BaseFoodItem(8, 0.8f, p), new Item.Properties());
     public static final Item CLEAN_PUFFERFISH = registerItem("clean_pufferfish", (p) -> new BaseFoodItem(2, 0.1f, p), new Item.Properties());
     public static final Item COOKED_PUFFERFISH = registerItem("cooked_pufferfish", (p) -> new BaseFoodItem(6, 0.85f, p), new Item.Properties());
     public static final Item COOKED_TROPICAL_FISH = registerItem("cooked_tropical_fish", (p) -> new BaseFoodItem(6, 0.85f, p), new Item.Properties());
-    public static final Block RICE_CROP = registerBlock("rice", RiceCropBlock::new, BlockBehaviour.Properties.ofLegacyCopy(Blocks.WHEAT), new Item.Properties());
-    public static final Item RICE_BALL = registerItem("rice_ball", (p) -> new BaseFoodItem(6, 0.5f, p), new Item.Properties());
-    public static final Item DOUGH_BALL = registerItem("dough_ball", (p) -> new BaseFoodItem(2, 0.2f, p), new Item.Properties());
-    public static final Item TOASTED_BREAD = registerItem("toasted_bread", (p) -> new BaseFoodItem(8, 0.75f, p), new Item.Properties());
-    public static final Item BREAD_SLICE = registerItem("bread_slice", (p) -> new BaseFoodItem(4, 0.5f, p), new Item.Properties());
-    public static final Item TOASTED_BREAD_SLICE = registerItem("toasted_bread_slice", (p) -> new BaseFoodItem(6, 0.65f, p), new Item.Properties());
-    public static final Item BAGUETTE = registerItem("baguette", (p) -> new BaseFoodItem(15, 0.6f, 64, p), new Item.Properties());
-    public static final Item BAGUETTE_SWORD = registerItem("baguette_sword", (p) -> new Item(p.sword(ModMaterials.Tool.BREAD, 3f, -2.4f)), new Item.Properties().food(new FoodProperties.Builder().nutrition(15).saturationModifier(0.6f).build(), Consumables.defaultFood().consumeSeconds(64 / 20f).build()));
-    public static final Item COOKED_CARROT = registerItem("cooked_carrot", (p) -> new BaseFoodItem(5, 0.7f, p), new Item.Properties());
-    public static final Item COOKED_BEETROOT = registerItem("cooked_beetroot", (p) -> new BaseFoodItem(5, 0.6f, p), new Item.Properties());
-    public static final Item PUMPKIN_SLICE = registerItem("pumpkin_slice", (p) -> new BaseFoodItem(4, 0.35f, p), new Item.Properties());
+    public static final Block RICE_CROP = registerBlock("rice", RiceCropBlock::new, BlockBehaviour.Properties.ofLegacyCopy(Blocks.WHEAT), new Item.Properties().compostable(ContextIntProviders.COMPOSTABLE_LOW));
+    public static final Item RICE_BALL = registerItem("rice_ball", (p) -> new BaseFoodItem(6, 0.5f, p), new Item.Properties().compostable(ContextIntProviders.COMPOSTABLE_MEDIUM_HIGH));
+    public static final Item DOUGH_BALL = registerItem("dough_ball", (p) -> new BaseFoodItem(2, 0.2f, p), new Item.Properties().compostable(ContextIntProviders.COMPOSTABLE_MEDIUM));
+    public static final Item TOASTED_BREAD = registerItem("toasted_bread", (p) -> new BaseFoodItem(8, 0.75f, p), new Item.Properties().compostable(ContextIntProviders.COMPOSTABLE_ALWAYS_ADD_ONE));
+    public static final Item BREAD_SLICE = registerItem("bread_slice", (p) -> new BaseFoodItem(4, 0.5f, p), new Item.Properties().compostable(ContextIntProviders.COMPOSTABLE_LOW_MEDIUM));
+    public static final Item TOASTED_BREAD_SLICE = registerItem("toasted_bread_slice", (p) -> new BaseFoodItem(6, 0.65f, p), new Item.Properties().compostable(ContextIntProviders.COMPOSTABLE_MEDIUM_HIGH));
+    public static final Item BAGUETTE = registerItem("baguette", (p) -> new BaseFoodItem(15, 0.6f, 64, p), new Item.Properties().compostable(ContextIntProviders.COMPOSTABLE_ALWAYS_ADD_ONE));
+    public static final Item BAGUETTE_SWORD = registerItem("baguette_sword", (p) -> new Item(p.sword(ModMaterials.Tool.BREAD, 3f, -2.4f)), new Item.Properties().food(new FoodProperties.Builder().nutrition(15).saturationModifier(0.6f).build(), Consumables.defaultFood().consumeSeconds(64 / 20f).build()).compostable(ContextIntProviders.COMPOSTABLE_ALWAYS_ADD_ONE));
+    public static final Item COOKED_CARROT = registerItem("cooked_carrot", (p) -> new BaseFoodItem(5, 0.7f, p), new Item.Properties().compostable(ContextIntProviders.COMPOSTABLE_MEDIUM_HIGH));
+    public static final Item COOKED_BEETROOT = registerItem("cooked_beetroot", (p) -> new BaseFoodItem(5, 0.6f, p), new Item.Properties().compostable(ContextIntProviders.COMPOSTABLE_MEDIUM_HIGH));
+    public static final Item PUMPKIN_SLICE = registerItem("pumpkin_slice", (p) -> new BaseFoodItem(4, 0.35f, p), new Item.Properties().compostable(ContextIntProviders.COMPOSTABLE_LOW_MEDIUM));
     public static final Item GOLDEN_PLAYER_FLESH = registerItem("golden_player_flesh", (p) -> new BaseFoodItem(10, 0.8f, p), new Item.Properties());
     public static final Item GOLDEN_BEEF = registerItem("golden_beef", (p) -> new BaseFoodItem(10, 0.8f, p), new Item.Properties());
     public static final Item GOLDEN_PORKCHOP = registerItem("golden_porkchop", (p) -> new BaseFoodItem(10, 0.8f, p), new Item.Properties());
@@ -63,8 +58,8 @@ public class ModContent {
     public static final Item GOLDEN_SWEET_BERRIES = registerItem("golden_sweet_berries", (p) -> new BaseFoodItem(5, 0.5f, p), new Item.Properties());
     public static final Item GOLDEN_GLOW_BERRIES = registerItem("golden_glow_berries", (p) -> new BaseFoodItem(5, 0.5f, p), new Item.Properties());
     public static final Item GLISTERING_PUMPKIN_SLICE = registerItem("glistering_pumpkin_slice", (p) -> new BaseFoodItem(7, 0.6f, p), new Item.Properties());
-    public static final Item CHEESE = registerItem("cheese", (p) -> new BaseFoodItem(4, 0.75f, p), new Item.Properties());
-    public static final Item CHEESE_SLICE = registerItem("cheese_slice", (p) -> new BaseFoodItem(2, 0.75f, p), new Item.Properties());
+    public static final Item CHEESE = registerItem("cheese", (p) -> new BaseFoodItem(4, 0.75f, p), new Item.Properties().compostable(ContextIntProviders.COMPOSTABLE_MEDIUM));
+    public static final Item CHEESE_SLICE = registerItem("cheese_slice", (p) -> new BaseFoodItem(2, 0.75f, p), new Item.Properties().compostable(ContextIntProviders.COMPOSTABLE_LOW));
     public static final Item RAW_CHEESE_EMPANADA = registerItem("raw_cheese_empanada", (p) -> new BaseFoodItem(5, 0.6f, p), new Item.Properties());
     public static final Item RAW_MEAT_EMPANADA = registerItem("raw_meat_empanada", (p) -> new BaseFoodItem(5, 0.6f, p), new Item.Properties());
     public static final Item CHEESE_EMPANADA = registerItem("cheese_empanada", (p) -> new BaseFoodItem(9, 0.6f, p), new Item.Properties());
@@ -72,7 +67,7 @@ public class ModContent {
     public static final Item CHEESE_SANDWICH = registerItem("cheese_sandwich", (p) -> new BaseFoodItem(10, 0.7f, p), new Item.Properties());
     public static final Item THERMOS = registerItem("thermos", (p) -> new FluidContainerItem(0, p), new Item.Properties());
     public static final Item GLASS = registerItem("glass", (p) -> new FluidContainerItem(1, p), new Item.Properties());
-    public static final Item BOX = registerItem("box", Item::new, new Item.Properties());
+    public static final Item BOX = registerItem("box", Item::new, new Item.Properties().cookingFuel(ContextIntProviders.COOKING_TIME_WOOD_ITEMS_LARGE));
     public static final Item FRUIT_SALAD = registerItem("fruit_salad", (p) -> new ContainerFoodItem(1, 6, 0.65f, p), new Item.Properties());
     public static final Item VEGETABLE_SALAD = registerItem("vegetable_salad", (p) -> new ContainerFoodItem(1, 6, 0.65f, p), new Item.Properties());
     public static final Item MIXED_SALAD = registerItem("mixed_salad", (p) -> new ContainerFoodItem(1, 6, 0.65f, p), new Item.Properties());
@@ -97,7 +92,7 @@ public class ModContent {
     public static final Item GLASS_OF_CHOCOMILK_AND_TOASTED_BREAD = registerItem("glass_of_chocomilk_and_toasted_bread", (p) -> new ContainerFoodItem(2, 10, 0.7f, p), new Item.Properties());
     public static final Item BOX_OF_CEREAL = registerItem("box_of_cereal", (p) -> new ContainerFoodItem(0, 4, 0.5f, p), new Item.Properties());
     public static final Item BOX_OF_COOKIES = registerItem("box_of_cookies", (p) -> new ContainerFoodItem(0, 12, 0.325f, p), new Item.Properties());
-    public static final Item WOODEN_KNIFE = registerItem("wooden_knife", (p) -> new BaseKnifeItem(ToolMaterial.WOOD, p), new Item.Properties());
+    public static final Item WOODEN_KNIFE = registerItem("wooden_knife", (p) -> new BaseKnifeItem(ToolMaterial.WOOD, p), new Item.Properties().cookingFuel(ContextIntProviders.COOKING_TIME_WOOD_ITEMS_LARGE));
     public static final Item STONE_KNIFE = registerItem("stone_knife", (p) -> new BaseKnifeItem(ToolMaterial.STONE, p), new Item.Properties());
     public static final Item COPPER_KNIFE = registerItem("copper_knife", (p) -> new BaseKnifeItem(ToolMaterial.COPPER, p), new Item.Properties());
     public static final Item IRON_KNIFE = registerItem("iron_knife", (p) -> new BaseKnifeItem(ToolMaterial.IRON, p), new Item.Properties());
@@ -117,9 +112,9 @@ public class ModContent {
     public static final Item STEEL_SKILLET = registerItem("steel_skillet", (p) -> new BaseSkilletItem(ModMaterials.Tool.STEEL, p), new Item.Properties());
     public static final Item BRONZE_SKILLET = registerItem("bronze_skillet", (p) -> new BaseSkilletItem(ModMaterials.Tool.BRONZE, p), new Item.Properties());
     public static final Item ZURITE_SKILLET = registerItem("zurite_skillet", (p) -> new BaseSkilletItem(ModMaterials.Tool.ZURITE, p), new Item.Properties().fireResistant());
-    public static final Item CUTTING_BOARD = registerItem("cutting_board", BaseReusableItem::new, new Item.Properties());
+    public static final Item CUTTING_BOARD = registerItem("cutting_board", BaseReusableItem::new, new Item.Properties().cookingFuel(ContextIntProviders.COOKING_TIME_WOOD_ITEMS_LARGE));
     public static final Item MIXING_BOWL = registerItem("mixing_bowl", BaseReusableItem::new, new Item.Properties());
-    public static final Item ROLLING_PIN = registerItem("rolling_pin", RollingPinItem::new, new Item.Properties());
+    public static final Item ROLLING_PIN = registerItem("rolling_pin", RollingPinItem::new, new Item.Properties().cookingFuel(ContextIntProviders.COOKING_TIME_WOOD_ITEMS_SMALL));
     public static final Item JUICER = registerItem("juicer", JuicerItem::new, new Item.Properties());
     public static final Item BLENDER = registerItem("blender", BaseReusableItem::new, new Item.Properties());
     public static final Block BLACK_KITCHEN_BLOCK = registerBlock("black_kitchen_block", Block::new, BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BLACK).strength(0.8f, 3f).requiresCorrectToolForDrops());
@@ -146,27 +141,5 @@ public class ModContent {
 
     public static void init() {
         EXCLUDED_ITEMS.add(BAGUETTE_SWORD);
-
-        COMPOSTABLE_ITEMS.put(RICE_CROP, 0.3f);
-        COMPOSTABLE_ITEMS.put(RICE_BALL, 0.85f);
-        COMPOSTABLE_ITEMS.put(DOUGH_BALL, 0.65f);
-        COMPOSTABLE_ITEMS.put(TOASTED_BREAD, 1f);
-        COMPOSTABLE_ITEMS.put(BREAD_SLICE, 0.4f);
-        COMPOSTABLE_ITEMS.put(TOASTED_BREAD_SLICE, 0.75f);
-        COMPOSTABLE_ITEMS.put(BAGUETTE, 1f);
-        COMPOSTABLE_ITEMS.put(BAGUETTE_SWORD, 1f);
-        COMPOSTABLE_ITEMS.put(COOKED_CARROT, 0.85f);
-        COMPOSTABLE_ITEMS.put(COOKED_BEETROOT, 0.85f);
-        COMPOSTABLE_ITEMS.put(PUMPKIN_SLICE, 0.5f);
-        COMPOSTABLE_ITEMS.put(CHEESE, 0.65f);
-        COMPOSTABLE_ITEMS.put(CHEESE_SLICE, 0.3f);
-
-        FUEL_ITEMS.put(BOX, 200);
-        FUEL_ITEMS.put(WOODEN_KNIFE, 200);
-        FUEL_ITEMS.put(CUTTING_BOARD, 200);
-        FUEL_ITEMS.put(ROLLING_PIN, 300);
-
-        COMPOSTABLE_ITEMS.forEach((item, chance) -> COMPOSTABLES.put(item.asItem(), chance));
-        FuelValueEvents.BUILD.register((builder, context) -> FUEL_ITEMS.forEach(builder::add));
     }
 }

@@ -1,0 +1,11 @@
+{
+  "type": "cookingforblockheads:toaster",
+  "ingredient": "minecraft:bread",
+  "result": "foodtxf:toasted_bread",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "cookingforblockheads"
+    }
+  ]
+}

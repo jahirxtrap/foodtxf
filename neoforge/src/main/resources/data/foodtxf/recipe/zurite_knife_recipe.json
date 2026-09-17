@@ -6,7 +6,7 @@
     "id": "foodtxf:zurite_knife"
   },
   "template": "kuromaterials:zurite_upgrade_smithing_template",
-  "conditions": [
+  "neoforge:conditions": [
     {
       "type": "neoforge:mod_loaded",
       "modid": "kuromaterials"

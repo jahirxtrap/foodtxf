@@ -12,7 +12,7 @@
     "id": "foodtxf:bronze_knife",
     "count": 1
   },
-  "conditions": [
+  "neoforge:conditions": [
     {
       "type": "neoforge:not",
       "value": {
