@@ -6,10 +6,8 @@
     "id": "foodtxf:enderite_skillet"
   },
   "template": "enderitemod:enderite_upgrade_smithing_template",
-  "conditions": [
-    {
-      "type": "forge:mod_loaded",
-      "modid": "enderitemod"
-    }
-  ]
+  "forge:condition": {
+    "type": "forge:mod_loaded",
+    "modid": "enderitemod"
+  }
 }

@@ -1,0 +1,9 @@
+{
+  "type": "cookingforblockheads:toaster",
+  "ingredient": "foodtxf:bread_slice",
+  "result": "foodtxf:toasted_bread_slice",
+  "forge:condition": {
+    "type": "forge:mod_loaded",
+    "modid": "cookingforblockheads"
+  }
+}

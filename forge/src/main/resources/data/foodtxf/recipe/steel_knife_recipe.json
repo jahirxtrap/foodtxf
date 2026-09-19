@@ -12,13 +12,11 @@
     "id": "foodtxf:steel_knife",
     "count": 1
   },
-  "conditions": [
-    {
-      "type": "forge:not",
-      "value": {
-        "type": "forge:tag_empty",
-        "tag": "c:ingots/steel"
-      }
+  "forge:condition": {
+    "type": "forge:not",
+    "value": {
+      "type": "forge:tag_empty",
+      "tag": "c:ingots/steel"
     }
-  ]
+  }
 }
